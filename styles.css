@@ -74,7 +74,7 @@ body {margin:0;font-family:Arial}
 
 /* --- HEADER Section --- */
 
-  header {
+  /*header {*/
     
     background-repeat: no-repeat;
     height: 0px;
@@ -86,12 +86,12 @@ body {margin:0;font-family:Arial}
     background-attachment: fixed;
     background-size: cover;*/
 
-  }
+  /*}
 
   header p {
     margin: 0;
     font-size: 20px;
-  }
+  }*/
 
 
   .btn-work {
