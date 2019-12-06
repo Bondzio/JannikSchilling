@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Dirac">
+<title>Der Dirac-Formalismus und die Bra-Ket-Notation</title>
+<meta name="description" content="In der Quantenmechanik wählen wir anstatt des Vektorformalismus den Diracformalismus, der auf abstrakte Weise die Quantenmechanik repräsentiert.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body>
+
+    <header class='masthead'>
+  
+      </header>
+      
+<div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+  <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+      
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        
+
+<div class="main">
+    <h1>Der Hamilton-Operator</h1>
+    <h2 id="one">Definition</h2>
+    <p>In ihrer kompaktesten Form lässt sich die Schrödingergleichung mit dem Hamilton-Operator $\hat{H}$ und den Energieeigenwerten $E_n$ darstellen.
+    </p>
+    \begin{align}
+    \hat{H}\psi=E_n\psi.
+    \end{align}
+    Hierbei ist der Hamilton-Operator der Operator für die Energie eines Systems. Er setzt sich aus zwei Teilen zusammen. Der Bewegungsenergie und der potentiellen Energie.
+    $$\hat{H}=\frac{\hat{p}^2}{2m}+V(\hat{x}).$$
+    <h2 id="two">Der Hamilton-Operator eines Zwei-Niveau-Systems</h2>
+    Der Hamilton-Operator eines Zwei-Niveau-Systems sei durch
+    $$\hat{H}=\epsilon(|1\rangle\langle 1|-|2\rangle\langle 2|+|1\rangle\langle 2|+|2\rangle\langle 1|)$$
+    <p>gegeben. Hierbei seien $|i\rangle$ ($i\in\{0,1\}$) die orthnomierten Basiszustände des Systems und $\epsilon$ ein Parameter mit Einheiten der Energie.</p>
+    <p>Wir wollen nun die Matrixdarstellung von $\hat{H}$ bestimmen.</p>
+    <p>Dazu bestimmen wir zunächst die Eigenwertgleichungen.</p>
+    \begin{align}
+    \hat{H}|1\rangle=\epsilon (|1\rangle+|2\rangle)\\
+    \hat{H}|2\rangle=\epsilon (|1\rangle-|2\rangle)
+    \end{align}
+    Wir erhalten durch Multiplikation mit $\langle i|$ die  Matrixelemente:
+    \begin{align}
+    \hat{H}\langle 1|1\rangle =\epsilon && \hat{H}\langle 2|1\rangle&=\epsilon\\
+    \hat{H}\langle 1|2\rangle =\epsilon && \hat{H}\langle 2|2\rangle&=-\epsilon
+    \end{align}
+    Also erhalten wir als Matrixdarstellung:
+    \begin{align}
+    \hat{H}=\epsilon\begin{pmatrix}
+    1&1\\
+    1&-1
+    \end{pmatrix}.
+    \end{align}
+    <p>Wir erhalten zwei mögliche Messwerte $\lambda_{1,2}=\pm\sqrt{2}\epsilon$ aus der Bestimmungsgleichung $\operatorname{det}(\hat{H}-\lambda I)$.</p>
+    <p>Durch Ausrechnen der entsprechenden Eigenvektoren erhalten wir die Eigenzustände des Hamilton-Operators.</p>
+    \begin{align}
+    \vec{v}_1=\begin{pmatrix}
+    \frac{1}{\sqrt{2}-1}\\
+    1
+    \end{pmatrix} && \vec{v}_2=\begin{pmatrix}
+    \frac{-1}{\sqrt{2}+1}\\
+    -1
+    \end{pmatrix}.
+    \end{align}
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script>
+        function Graviwellenfunc() {
+          //alert("Gravitationswellen");
+          self.location="Gravitationswellen.html";
+        }function KoE(){
+          self.location="ElekKovar.html"
+        }
+      </script>
+
+    <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+</body>
+</html>
+

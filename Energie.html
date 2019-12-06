@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Energie">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+
+  
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+ 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  
+  </header>
+
+
+
+  <div class="main">
+    <h1>Energie</h1>
+    Im folgenden betrachten wir erneut die Vierer-Kraft um die Energie in der Speziellen Relativitätstheorie herzuleiten. Es gilt allgemein für die Kraft
+    \begin{align}
+        F^{\mu}=\gamma\begin{pmatrix}
+            \frac{\vec{v}\cdot \vec{F}^N}{c}\\
+            \vec{F}^N
+        \end{pmatrix}
+    \end{align}
+    und speziell für die nullte Komponente gilt
+    \begin{align}
+        F^0=m\frac{\mathrm{d}u^0}{\mathrm{d}\tau}=m\gamma \frac{\d}{\mathrm{d}t}(\gamma c)=\gamma\frac{\vec{v}\cdot \vec{F}^N}{c}.
+    \end{align}
+
+    Mit etwas rumprobieren können wir den Zusammenhang 
+    \begin{align}
+    \frac{\mathrm{d}{\mathrm{d}t}(m\gamma c^2)=\vec{v}\cdot \vec{F}^N=\frac{\vec{F}^N\cdot \mathrm{d}\vec{x}}{\mathrm{d}t}=\frac{\mathrm{d}W}{\mathrm{d}t}	
+    \end{align}
+    herleiten. Offensichtlich gilt also auch in der Relativitätstheorie das Newtonsche Gesetz 
+    \begin{align}
+    \mathrm{d}W=\vec{F}^N \cdot \mathrm{d}\vec{x}.
+    \end{align}
+
+    Damit gilt dann für die relativistische Energie 
+    \begin{align}
+    W=\gamma mc^2=E.
+    \end{align}
+    Die auftredende Integrationskonstante wählen wir als Ruheenergie eines Teilchens. Für ein ruhendes Teilchen gilt also die berühmte Formel
+    \begin{align}
+    E=mc^2.	
+    \end{align}
+
+    Damit folgt
+    \begin{align}
+    E=\gamma mc^2=cp^0\Leftrightarrow p^0=\frac{E}{c}.	
+    \end{align}
+
+    Für den Enegrie-Impuls-Vektor folgt damit
+    \begin{align}
+        p^{\mu}=\begin{pmatrix}
+            \frac{E}{c}\\
+            m\gamma\vec{v}
+        \end{pmatrix}=\begin{pmatrix}
+            \frac{E}{c}\\
+            \vec{p}
+        \end{pmatrix}.
+    \end{align}
+
+    Die Kontraktion des Energie-Impuls-Tensors $p^{\mu}$ gilt
+    \begin{align}
+        p_{\mu}p^{\mu}=\frac{E^2}{c^2}-\vec{p}^2=m^2c^2.
+    \end{align}
+    Das letzte Gleichheitszeichen induziert $\gamma=1$ und $\vec{p}=0$, dies ist also ein Ruhesystem eines Teilchens. Die Kontraktion $p_{\mu}p^{\mu}$ ist ein Lorentz-Skalar, somit gilt
+    \begin{align}
+    E^2=m^2c^4+c^2\vec{p}^2\Leftrightarrow E=\sqrt{m^2c^4+c^2{\vec{p}}\,^2}	.
+    \end{align}
+
+    Für kleine Impulse können wir eine Taylor-Entwicklung durchführen
+    \begin{align}
+    E=mc^2\sqrt{1+\frac{\vec{p}\, ^2}{m^2c^2}}\approx mc^2\left(1+\frac{p^2}{2m^2c^2}+...\right)=\frac{\vec{p}\, ^2}{2m}+mc^2+\mathcal O(\vec{p}^4).	
+    \end{align}
+
+    Im newtonschen Grenzfall für $v\ll c$ gilt dann
+
+    \begin{align}
+    \gamma=\frac{1}{\sqrt{1+\frac{v^2}{c^2}}}=\left(1+\frac{v^2}{c^2}\right)^{-\frac{1}{2}}\approx 1+\frac{1}{2}\frac{v^2}{c^2}.	
+    \end{align}
+
+    \begin{align}
+    E&= \left(1+\frac{1}{2}\frac{v^2}{c^2}\right)m_0c^2=m_0c^2+\frac{1}{2}m_0v^2.	
+    \end{align}
+
+    Für nicht-verschwindende Massen $m>0$ ist der folgende Zusammengang zu erkennen
+    \begin{align}
+    E\rightarrow \infty\,\,\,\, \text{ für }\, \, |\vec{v}|\rightarrow c.	
+    \end{align}
+    Da Unendlichkeiten nicht physikalisch sind, folgt, dass sich Teilchen mit einer Ruhemasse $m_0>0$ langsamer als das Licht bewegen.
+
+    <h2>Kräftefreie Teilchen</h2>
+
+    In der Newtonschen Mechanik wird ein kräftefreies Teilchen mit der Lagrange-Funktion 
+    \begin{align}
+    L_0=T-V=\frac{1}{2}mv^2 \label{eq:Lagrange_Newton}
+    \end{align}
+    beschrieben. Diese Lagrange-Funktion wollen wir nun relativistisch verallgemeinern. Die Wirkung muss ein Lorentz-Skalar sein und soll für $v\ll c$ wieder in die klassischen Gleichungen übergehen. Bekanntlich ordnet die Eigenzeit einer Weltlinie einen Lorentz-Skalar zu, und daher wählen wir die Wirkung $S_0$ durch
+
+    \begin{align}
+    S_0=-mc^2\tau.
+    \end{align}
+
+    Durch die Wahl von $E_0$ als Vorfaktor sichern wir die Einheit von $S_0$. Dann erhalten wir
+
+
+    \begin{align}
+    S_0=-mc^2\tau = -mc^2\int \sqrt{1-v^2/c^2}\, dt=\int \left(-mc^2+\frac{1}{2}mv^2+...\right)\, dt	
+    \end{align}
+
+    unser gesuchtes Ergebnis. Daher ist unsere relativistische Lagrange-Funktion gegeben durch
+
+    \begin{align}
+    L_0=-mc^2\sqrt{1-v^2/c^2},	
+    \end{align}
+
+    was im Grenzfall $v\ll c$ bis auf die Konstante $mc^2$ mit der nicht-relativistischen Lagrange-Funktion eines kräftefreien Teilchens übereinstimmt. Wir erhalten als Bewegungsgleichung 
+
+    \begin{align}
+    \frac{d}{dt}(\gamma m\vec{v})=\frac{d\vec{p}}{dt}=0,	
+    \end{align}
+
+
+    das auch die Euler-Lagrange-Gleichung zu $L_0$ ist. Wir sehen so aber nicht einfach, dass die Gleichung kovariant ist.
+
+
+</div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>

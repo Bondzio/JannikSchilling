@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Dirac">
+<title>Der Dirac-Formalismus und die Bra-Ket-Notation</title>
+<meta name="description" content="In der Quantenmechanik wählen wir anstatt des Vektorformalismus den Diracformalismus, der auf abstrakte Weise die Quantenmechanik repräsentiert.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body>
+
+    <header class='masthead'>
+  
+      </header>
+      
+<div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+  <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+      
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
+
+<div class="main">
+    <h1>Dirac-Formalismus</h1>
+    <p>In der klassischen Mechanik benutzen wir häufig den Vektorformalismus, der wichtige physikalische Größen in einem geeigneten Koordinatensystem relativ zu einem beliebigen Ursprung wiederspiegelt.</p>
+    <p>Ein Vektor ist dabei als Element eines Vektorraums zu verstehen.</p>
+    <h2>Der Hilbert-Raum</h2>
+    <p>In der Quantenmechanik betrachten wir Vektoren, die Element des Hilbertraums $\mathcal{H}$ sind. Diesen definieren wir wie folgt:</p>
+    <p>Ein Hilbertraum ist ein reeller oder komplexer Vektorraum $H$ mit einem Skalarprodukt $\langle \cdot ,\cdot\rangle$, der vollständig bezüglich der durch das Skalarprodukt induzierten Norm ist, in dem also jede Cauchy-Folge konvergiert.</p>
+    <p>In der Quantenmechanik bildet die Gesamtheit aller quadratintegrablen Funktionen über einem endlichen Intervall $x\in[a,b]$ einen Vektorraum über den komplexen Zahlen $\mathbb{C}$. Wir nennen diesen Raum $L_2(a,b)$ oder auch Hilbert-Raum.</p>
+    
+    <p><b>Definition:</b></p>
+    Sei $|v\rangle$ ein Vektor eines komplexen $m$-dimensionalen Vektorraums $\mathbb{C}^m$. Für eine bestimmte Basis lässt sich der Ket-Ausdruck $|v\rangle$ als vertikaler Vektor mit komplexen Komponenten $v_i$ darstellen.
+    $$|v\rangle\leftrightarrow\begin{pmatrix}
+    v_1\\
+    v_2\\
+    ...\\
+    v_n
+    \end{pmatrix}$$
+    <p>Wir nennen $|v\rangle$ Ket-Vektor.</p>
+    <p>Hier darf kein Gleichheitszeichen verwendet werden, da $|v\rangle$ und der Spaltenvektor mathematisch betrachtet nicht das selbe Objekt sind.</p>
+    <p>Dies wird insbesondere deutlich, da der BraKet-Vektoren invariant unter Basistransformationen sind, die Zeilen- bzw. Spaltenvektoren hingegen nicht.</p>
+    <p>Wir nennen $\langle v|$ den Bra-Vektor der als ein horizontaler Vektor mit den konjugierten Komponenten $v_i^{*}$ gebildet wird.</p>
+    $$\langle v|=(v_1^{*}\,\,\,\, v_2^{*} \,\,\,\, ...\,\,\,\, v_m^{*}.$$
+    <h2>Das Skalarprodukt</h2>
+    <p>Seien $f,g\in L_2$. Dann definieren wir das Skalarprodukt durch:</p>
+    \begin{align}
+    \langle f|g\rangle=(\langle f|)\cdot (|f\rangle)=\int_a^b f^*(x)g(x)\,\mathrm{d}x.
+    \end{align}
+    <p>Ein Skalarprodukt muss die folgenden drei Bedingungen erfüllen.</p>
+    <ul>
+        <li><b>Positive Definitheit</b>
+            \begin{align}
+                \langle f|f\rangle=0\Leftrightarrow f&=0\\
+                \langle f| f\rangle>0\, \forall f\neq 0.
+            \end{align}
+        </li>
+        <li><b>Hermizität</b>
+            \begin{align}
+            \langle f|g\rangle=\langle f|g\rangle^{*}.
+            \end{align}
+            (Damit folgt auch $\langle f|f\rangle$ ist reell).
+        </li>
+        <li><b>Bilinearität</b>
+            \begin{align}
+            \langle f|g+\lambda h\rangle&=\langle f| g\rangle+\lambda \langle f|h\rangle\\
+            \langle f+\lambda h|g\rangle&=\langle f| g\rangle+\lambda^* \langle h|g\rangle\\            
+            \end{align}
+        </li>
+    </ul>
+    Eine Funktion $f\in L_2(a,b)$ heißt normiert, falls
+    \begin{align}
+    \langle f| f\rangle=1.
+    \end{align}
+    Für quantenmechanische Zustände lässt sich die Normierungsbedingung wie folgt notieren.
+    \begin{align}
+    \langle f|f\rangle=\int_{-\infty}^{\infty} f(x)f^*(x)\, \mathrm{d}x=1.
+    \end{align}
+    Das bedeutet:
+    <p>Wellenfunktionen sind normierte Elemente des $L_2(-\infty,\infty)$.
+    </p>
+    <p>Ein Vektorraum mit Skalarproduk, der bezüglich des Skalarproduktes vollständig ist, heißt Hilbert Raum. Das heißt auch, jede Cauchy-Folge konvergiert in diesem Raum.</p>
+    <h2>Ein Zwei-Niveau-System</h2>
+    <p>Gegeben seien zwei Basiszustände $|i\rangle$ mit $i\in\{0,1\}$. Wir betrachten nun die Überlagerung dieser beiden Zustände und nennen die diesen Zustand $|\gamma\rangle$.</p>
+    $$|\gamma\rangle=\alpha |1\rangle+\beta |2\rangle.$$
+    <p>Wir nomieren nun $|\gamma\rangle$, indem wir zuerst $\langle \gamma |$ berechnen:</p>
+    $$\langle \gamma |=\alpha^{*}\langle 1|+\beta^{*}\langle 2|.$$
+    und berechnen nun $\langle \gamma |\gamma \rangle$.
+    $$\langle \gamma |\gamma\rangle=\alpha\alpha^{*}\langle 1|1\rangle+\alpha\beta^{*}\langle 1|2\rangle+\alpha^{*}\beta\langle 2|1\rangle+ \beta\beta^{*}\langle 2|2\rangle$$
+    Wegen der Orthonomalitätsrelation bzw. der Normierungsbedingung
+    $$\langle \psi_i|\psi_j\rangle=\delta_{ij}$$
+    kürzen sich die beiden Mischterme. Wir erhalten damit
+    $$\alpha\alpha^{*}+\beta\beta^{*}=1.$$
+    Systeme, die sich aus zwei Zuständen zusammensetzten, nennen wir auch Zwei-Niveau-Systeme. Diese treten sehr häufig in der Quantenmechanik auf und werden uns auch später noch beschäftigen.
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<script>
+        function Graviwellenfunc() {
+          //alert("Gravitationswellen");
+          self.location="Gravitationswellen.html";
+        }function KoE(){
+          self.location="ElekKovar.html"
+        }
+      </script>
+
+    <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
+</body>
+</html>
+

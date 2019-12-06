@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Wasserstoff">
+<title>Das Wasserstoff-Atom in der Quantenmechanik</title>
+<meta name="description" content="Die Quantenmechanik im letzten Jahrhundert eine steile Karriere hingelegt. Dies liegt auch an der ersten richitgen Beschreibung des Wasserstoffsatoms.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  header{
+  background-image: url(Nuclear_fusion.png);
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+  <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+      
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
+  <header class='masthead'>
+
+
+  </header>
+
+<div class="main">
+  <h1>Das Wasserstoffatom</h1>
+  <h2>Aufbau</h2>
+  <p>Das Wasserstoffatom besteht im Kern aus einem Proton der Masse $m$ mit der Ladung $+e$. In der Atomhülle befindet sich ein Elektron der Masse $m$ mit der Ladung $-e$</p>
+  <p>Wir beschreiben das Wasserstoffatom in Kugelkoordinaten $(r,\theta,\phi)$.</p>
+  <h2>Idealisierungen</h2>
+  <p>Damit wir das Wasserstoffatom beschreiben können, müssen wir zuerst einige Annahmen treffen:</p>
+  <ul>
+      <li>Wir beschreiben das Elektron <b>nicht-relativistisch</b>.</li>
+      <li>Der Spin (Drehun) des Elektrons <b>und</b> des Protons, als auch das daraus resultierende mnagnetische Moment werden als vernachlässigbar klein angenommen.</li>
+        <li>Vakuumfluktuationen werden wir nicht berücksichtigen.</li>
+        <li>Wir nehmen an, dass die Wechselwirkung zwischen Elektron und Proton stets durch das Coloumbpotential $V_C$ beschrieben werden kann:
+            $$
+            V_C(r)=-\vec{\nabla}\vec{F}=-\frac{e^2}{4\pi\epsilon_0 r}.
+            $$
+        </li>
+        <li>Die Masse des Protons ist viel größer als die Masse des Elektrons:
+            $$
+            m_{E}\ll M_p.
+            $$
+            Daher nehmen wir das Elektron in Ruhe an.</li>
+    </ul>
+
+    Wir beschreiben das Atom durch Kugelkoordinaten:
+    \begin{align}
+    r&=\sqrt{x^2+y^2+z^2}\\
+    \theta &=\arccos\left(\frac{z}{r}\right)\\
+    \varphi &= \arctan\left(\frac{y}{x}\right).
+    \end{align}
+    Wegen der Zeitunabhängigkeit der Energie ist $E(t)=E$ eine Konstante. Daher existieren stationäre Zustände der Form:
+    $$
+    \psi (r,\theta,\varphi)=u(r,\theta,\varphi)e^{-i\frac{Et}{\hbar}}.
+    $$
+    Die Funktion $u$ erfüllt hierbei die zeitunabhängige Schrödingergleichung:
+    $$
+    -\frac{\hbar^2}{2m}\Delta u(r,\theta,\varphi)+V_C\cdot u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    Mittels des Metriktensors können wir den Laplace-Operator in Kugelkoordinaten herleiten:
+    $$
+    \Delta = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial \varphi^2}.
+    $$
+    Damit ergibt sich die Schrödingergleichung zu
+    $$
+    -\frac{\hbar^2}{2m}\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial \varphi^2}\right)u(r,\theta,\varphi)
+    -\frac{e^2}{4\pi\epsilon_0 r}u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    Wir führen nun den Bahndrehimpulsoperator $\hat{L}$ ein:
+    $$
+    \hat{L}=-\hbar i\begin{pmatrix}
+    -\sin\varphi\frac{\partial}{\partial\theta}-\frac{\cos\theta\cos\varphi}{\sin\theta}\frac{\partial}{\partial\varphi}\\
+    \cos\varphi\frac{\partial}{\partial\theta}-\frac{\cos\theta\sin\varphi}{\sin\theta}\frac{\partial}{\partial\varphi}\\
+    \frac{\partial}{\partial\varphi}.
+    \end{pmatrix}
+    $$
+    Zur Vereinfachnug der Schrödingergleichung berechnen wir nun $\vec{L}\cdot \vec{L}$, und erhalten damit
+    $$
+    \vec{L}^2=\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2=-\hbar^2\left(\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\varphi^2}\right).
+    $$
+    Die Schrödingergleichung ist nun gegeben durch
+    $$
+    \left(-\frac{\hbar^2}{2mr^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{2mr^2}\vec{L}^2\right)u(r,\theta,\varphi)-\frac{e^2}{4\pi\epsilon_0 r}u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    <p>Für das Wasserstoffatom gelten die folgenden Kommutatorrelationen:</p>
+    \begin{align}
+    [\hat{L}_x,\hat{L}_y]&=i\hbar \hat{L}_z\\
+    [\hat{L}_y,\hat{L}_z]&= i\hbar \hat{L}_x\\
+    [\hat{L}_z,\hat{L}_x]&= i\hbar\hat{L}_y\\
+    [\vec{L}^2,\hat{L}_x]&= [\vec{L}^2,\hat{L}_y]=[\vec{L}^2,\hat{L}_z]=0\\
+    [\hat{H},\vec{L}^2]&= [\hat{H},\hat{L}_z]=0.
+    \end{align}
+    <p>Deshalb sind die Observablen $E$, $\vec{L}^2$ und $\hat{L}_z$ scharf bestimmt. Für das Wassersotffatom existieren also Funktionen, die gleichzeitig Eiegnfunktionen der Operatoren sind.</p>
+</div>
+
+  <!--<h1>Über mich</h1>
+  <h2>Einleitung</h2>
+  <p>Ich bin Juniorstudent an der Uni Hamburg im Fachbereich Physik.</p>
+  <p>Mich faszieniert insbesondere die allgemeine Relativitätstheorie, die aus ganz wenig Input so viel tolles liefert.</p>
+
+  <h2>Woher ich komme</h2>
+  <p>Ich bin in Hamburg geboren wurde und wohne in Ahrensburg.</p>
+
+  <h2>Mehr über mich</h2>
+  <h3>Was sind deine Hobbys?</h3>
+  <p>In meiner Freizeit spiele ich Wasservolleyball und ich spiele Schlagzeug. Ich programmiere sehr gerne und liebe die Physik.</p>
+  <h3>Was ist dein Traumjob?</h3>
+  <p>Physiker</p>
+  <h3>Warum Physik?</h3>
+  <p>Physik ist die Naturwissenschaft schlechthin. Wir können unsere Beobachtungen durch Formeln ausdrücken und damit die Zukunft vorraussagen.</p>
+  <h3>Star Trek oder Star Wars?</h3>
+  <p>Star Trek ist viel tiefsinniger als Star Wars und die Handlungen finde ich spannender.</p>-->
+
+
+
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<script>
+        function Graviwellenfunc() {
+          //alert("Gravitationswellen");
+          self.location="Gravitationswellen.html";
+        }function KoE(){
+          self.location="ElekKovar.html"
+        }
+      </script>
+
+    <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
+</body>
+</html>
+

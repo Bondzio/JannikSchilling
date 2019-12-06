@@ -1,0 +1,471 @@
+  
+  
+  <!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['(',')']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/SRT1">
+<title>Einführung in die Spezielle Relativitätstheorie</title>
+<meta name="description" content="Die spezielle Relativitätstheorie beschreibt die klassische Physik auch bei hohen Geschwindigkeiten.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+ 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  
+  </header>
+
+
+
+  <div class="main">
+         
+    <h1>Spezielle Relativitätstheorie und Relativistische Mechanik</h1>
+
+    <h2>Spezielle Relativitätstheorie</h2>
+
+    Die Lichtgeschwindigkeit wurde wegen ihrer enormen Bedeutung genau auf den nachfolgenden Wert festgelegt\footnote{Bei genaueren Messungen der Lichtgeschwindigkeit werden dann die Einheiten Meter bzw. Sekunde leicht verändert.}
+    \begin{align}
+        c=299.792.458\frac{\text{m}}{\text{s}}
+    \end{align}
+
+
+    Die Spezielle Relativitätstheorie basiert auf dem experimentellen Befund, dass die Messung der Vakuumlichtgeschwindigkeit in jedem Inertialsystem denselben Wert liefert, der zudem von der Ausbreitungsrichtung des Lichts unabhängig ist (Isotropie des Raumes).
+
+
+    <h3>Geschichte</h3>
+
+    Die spezielle Relativitätstheorie wird in der öffentlichen Diskussion fast ausschließlich Albert Einstein zugeschrieben. Aber auch andere Physiker, insbesondere H. Lorentz und J. Poincare haben einen großen Beitrag bei der Erschließung der neuen Theorie geleistet. Die meist-zitierten Quellen kommen von Albert Einstein, Henrik Lorentz und Poincare.
+
+    Die Lichtgeschwindigkeit hängt eng zusammen mit der Elektrodynamik von Maxwell. Licht ist nämlich nichts anderes als eine elektromagnetische Welle. Durch Lösen der Maxwell-Gleichungen im Vakuum ergibt sich dann die Ausbreitungsgeschwindigkeit einer Welle durch
+    \begin{align}
+        c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.
+    \end{align}
+
+
+
+    <h3>Galilei-Transformation</h3>
+
+    <h4>Galilei-Invarianz der Newtonschen Bewegungsgleichungen</h4>
+
+    Wir wollen die Bedingungen feststellen, die aus der Forderung der Galilei-Invarianz für ein Kraftfeld $F$ entstehen. Wir betrachten dazu die Newtonschen Bewegungsgleichungen
+    \begin{align}
+        m\ddot{x}^{i}(t)=F^{i}(x_n^{i},\dot{x}_n^{i},t).
+    \end{align}
+        
+    <h3>Probleme der Newtonschen Mechanik</h3>
+
+    In der Newtonschen Mechanik beschreiben wir die Bewegung von Teilchen durch Bahnkurven. Als mathematischen Formalismus wählen wir dazu das Prinzip des Ortsvektor $\vec{r}$. Wir wählen ein beliebiges Koordinatensystem als Basis für unsere Beschreibung der Bewegung eines Objektes. Die Spitze des Ortsvektor $\vec{r}(t)$ zeigt immer auf einen Massenpunkt (Trajektorie).
+
+    Dazu brauchen wir den Begriff der Zeit. Wir wählen einen beliebigen Zeitnullpunkt und benutzen diesen zum Beschreiben der Bewegung eines Massenpunkts. Es gilt das Prinzip der Universalität der Zeit $t=t'$.
+
+    Wir können die Bewegung eines Punktteilchens mit Masse $m$ in der Newtonschen Mechanik durch eine Differentialgleichung beschreiben. Für ein Kraftfeld $\vec{F}(\vec{r}(t), \dot{\vec{r}}, t)$ gilt mit dem zweiten Newtonschen Axiom $\vec{F}=m\vec{a}$:
+    \begin{align}
+        \vec{F}=m\vec{a}=m\ddot{\vec{r}}\Leftrightarrow \ddot{\vec{r}}=\frac{1}{m}\vec{F}(\vec{r}(t), \dot{\vec{r}}(t), t).
+    \end{align}
+    Durch lösen der auftretenden Differentialgleichung ergibt sich die Bahnkurve $\vec{r}(t)$ in drei Dimensionen (oder $x(t)$ in einer Dimension).
+
+    Das erste Newtonsche Axiom definiert den Begriff eines Inertialsystems. Ein Inertialsystem ist ein unbeschleunigtes Bezugssystem. Ein Wechsel von einem ruhenden Inertialsystem in ein mit Geschwindigkeit $\vec{v}$ bewegtes Inertialsystem $\vec{v}$. Damit gilt
+    \begin{align}
+    \vec{x}\rightarrow \vec{x}'=\vec{x}-\vec{v}t	
+    \end{align}
+    Dies ist die spezielle Galilei-Transformation. Die allgemeinste Galilei-Transformation ergibt sich mit der Drehmatrix $D$
+    \begin{align}
+    \vec{x}' &=D\vec{x}-\vec{v}t-\vec{x}_0	
+    t'&= t-t_0.
+    \end{align}
+    Die Newtonsche Mechanik ist invariant unter der Galilei-Transformation.  
+
+    <h3>Maxwell-Gleichungen</h3>
+
+    Die Maxwell-Gleichungen sind die Grundgleichungen der Elektrodynamik. Wenn wir die Verteilung der elektrischen Ladungen und die Ströme $\rho(\vec{x},t)$ sowie $\vec{j}(\vec{x},t)$ kennen, können wir die elektrischen und magnetischen Felder $\vec{E}(\vec{x},t)$ und $\vec{B}(\vec{x},t)$ bestimmen. Es gelten die Maxwell-Gleichungen in differentieller Form
+    \begin{align}
+    \operatorname{div} \vec{E} &= \frac{\rho(\vec{r})}{\epsilon_0}	 
+    \operatorname{div} \vec{B}&= 0
+    \operatorname{rot} \vec{B} &= \mu_0\left(\vec{j}+\epsilon_0\frac{\partial \vec{E}}{\partial t}\right)
+    \operatorname{rot} \vec{E} &= -\frac{\partial \vec{B}}{\partial t},
+    \end{align}
+
+    als auch in der integralen Form
+
+    \begin{align}
+    \iint \vec{E}\cdot \mathrm{d}\vec{A} &=\frac{Q}{\epsilon_0}
+    \iint \vec{B}\cdot \mathrm{d}\vec{A} &= 0
+    \oint \vec{B}\cdot \mathrm{d}\vec{r} &=\mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}
+    \oint \vec{E}\cdot \mathrm{d}\vec{r}&= -\dot{\vec{B}}(t).
+    \end{align}
+
+    Wir erhalten wir nun aus den Maxwell-Gleichung eine Wellengleichung für das Licht?
+
+    Wie betrachten zur Herstellung einer Wellengleichung die beiden Maxwell-Gleichungen 3 und 4 mit $I=0$:
+    \begin{align*}
+    \operatorname{rot}\vec{E}=-\dot{\vec{B}}	&& \operatorname{rot}\vec{B}=\mu_0\epsilon_0\dot E.
+    \end{align*}
+
+    Wir bilden jetzt von beiden Gleichungen die Rotation und erhalten damit
+    \begin{align}
+    \operatorname{rot}(\operatorname{rot}\vec{E})=-\operatorname{rot}\left(\frac{\partial\vec{B}}{\partial t}\right) && \operatorname{rot}\left(\frac{\partial \vec{B}}{\partial t }\right)=\mu_0\epsilon_0\frac{\partial^2 \vec{E}}{\partial t^2}.
+    \end{align}
+
+    Jetzt können wir die zweite Gleichung in die erste Gleichung einsetzen und erhalten damit
+    \begin{align}
+    \operatorname{rot}\operatorname{rot}\vec{E}=-\mu_0\epsilon_0\frac{\partial^2 E}{\partial t^2}.	
+    \end{align}
+
+    Mittels 
+    \begin{align}
+        \operatorname{rot}\operatorname{rot}\vec{E}=-\operatorname{div}(\operatorname{grad}\vec{E})+\operatorname{grad}(\mathrm{d}iv\vec{E})
+    \end{align}
+
+    erhalten wir die Wellengleichung der Elektrodynamik
+
+
+    <div>
+    Wellengleichung der Elektrodynamik
+    \begin{align}
+    -\left(\frac{\partial^2}{\partial^2x}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\vec{E}(\vec{r},t)&=-\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t)\notag
+    -\mathrm{d}elta \vec{E}(\vec{r},t)&= -\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t). 	
+    \end{align}
+    </div>
+
+    In der klassischen Mechanik gibt es die Wellengleichung in der Form
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\mathrm{d}elta A(\vec{r},t).	
+    \end{align}
+
+    Vergleich der beiden Formeln liefert
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\mathrm{d}elta A(\vec{r},t) && \frac{1}{\mu_0\epsilon_0}\mathrm{d}elta \vec{E}(\vec{r},t)&= \frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t).
+    \end{align}
+
+    Vergleich der beiden Vorfaktoren liefert Gleichung die Definition der Lichtgeschwindigkeit:
+    \begin{align*}
+    c^2=\frac{1}{\epsilon_0\mu_0}\Leftrightarrow c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.	
+    \end{align*}
+
+    <h4>Probleme der Klassischen Mechanik</h4>
+
+    Der Ausgangspunkt der Speziellen Relativitätstheorie knüpft nun genau hier an. Das Problem dieser Gleichungen lautet wie folgt:
+
+    <b>Die Maxwell-Gleichungen sind nicht invariant unter Galilei-Transformationen.</b>
+
+    Das ist natürlich eine Provokation für die moderne Physik: Die Newtonsche Mechanik und die Elektrodynamik sind in unterschiedlichen Bezugssystem nicht dieselben und hängen von der Wahl von Bezugssysten ab. 
+    <h4>Konsequenzen aus diesem Problem</h4>
+
+    Daraus ergeben sich drei Möglichkeiten für die Mechanik, die alle weitreichende Folgen haben.
+
+    <ul>
+        <li>Die Maxwell-Gleichungen gelten nur in einer ausgezeichneten Gruppe von Inertialsystemen.</li>
+        <li> Die Maxwell-Gleichungen sind in der obigen Form falsch und müssen modifiziert bzw. fallengelassen werden. Die Galilei-Transformation ist dann gültig.</li>
+        <li>Die Newtonsche Mechanik ist in der obigen Form nicht gültig. Dann wäre aber auch die Galilei-Transformation falsch.</li>
+    </ul>
+
+    Möglichkeit 1 wurde durch Experimente widerlegt. Es gibt keinen sogenannten Weltäther, damit gelten die Maxwell-Gleichungen in allen Inertialsystemen und auch die Lichtgeschwindigkeit ist in allen Inertialsystemen gleich. 
+
+    Stattdessen scheint Möglichkeit 3 wahr zu sein. Dieses werden wir als Ansatz wählen, um die Newtonsche Mechanik zu korrigieren. All diese Überlegungen enden in der Speziellen Relativitätstheorie.
+
+    <h3>Experimente zeigen Probleme</h3>
+
+    <h4>Experiment von Fizeau</h4>
+
+    Ein sehr spannendes Ergebnis ist das Experiment von Fizeau (1851). Dieser fand für die Lichtgeschwindigkeit in einem bewegter Flüssigkeit mit Brechungsindex $n$ und Geschwindigkeit $v$ relativ zum Laborsystem das Ergebnis
+    \begin{align}
+    c'=\frac{c}{n}+v\left(1-\frac{1}{n^2}\right)	
+    \end{align}
+    erhielt. Bis auf den $\frac{1}{n^2}$ Term war das Ergebnis wie erwartet. Dieser Term kann in der \SRT einfach durch die relativistische Geschwindigkeitsaddition erklärt werden, wenn $v\ll \frac{c}{n}$ gilt
+    \begin{align}
+        c'=\frac{\frac{c}{n}+v}{1+\frac{vc}{nc^2}}.
+    \end{align}
+
+    <h3>Axiome der Speziellen Relativitätsthoerie</h3>
+
+    <p>Wie der Name von Einsteins Arbeit ("Über die Elektrodynamik bewegter Körper") schon aussagt, war die Beschäftigung mit Relativität lange auch mit der Elektrodynamik verknüpft. Lorentz leitete den Gamma-Faktor beispielsweise aus den Maxwell-GLeichungen her, ohne viele weitere physikalische Annahmen zu treffen.</p>
+
+    <p>Heute versuchen wir die Spezielle Relativitätstheorie mit so wenig Annahmen wie möglich zu verstehen. Wir können zeigen, dass die drei folgenden Axiome bereits die Struktur der speziellen Relativitätstheorie implizieren - also auch die der Lorentz-Transformation:</p>
+
+    <ul>
+    <li>Der Raum ist homogen und isotrop.</li>
+    <li>Das Relativitätsprinzip gilt.</li>
+    <li> Die Lichtgeschwindigkeit $c$ ist in allen Bezugssystemen gleich.</li>	
+    </ul>
+
+    <p>Das erste Axiom nahm Eistein als "Erfahrungswert" an, das zweite Axiom war für Einstein die Konsequenz aus den gescheiterten Versuchen, den Äther relativ zu dem ausgezeichneten Ruhesystem nachzuweisen. Insbesondere das Michelson-Morley-Experient wurde später als das Experiment gewählt, das die Äthertheorie widerlegt. </p>
+
+    <p>Das dritte Axiom ist das Minimum, auf das sich die Aussagen der Maxwell-Gleichungen reduzieren lassen, weil erst dann die Gesetze der Relativitätstheorie zusammen mit den Axiomen 1 und 2 eindeutig werden.</p>
+
+    <h4>Längenkontraktion</h4>
+
+    Wir betrachten im folgenden zwei Koordinatensysteme $K$ und $K'$, die sich relativ zueinander mit der Geschwindigkeit $\vec{v}=v\vec{e}_x$ bewegen. Damit folgen die Gleichungen
+    \begin{align}
+    x_A'&=0=\gamma (x_A-vt)\Rightarrow x_A(t)=vt	\notag
+    x_B' &= l' =\gamma (x_B-vt)\Rightarrow x_B(t)=\frac{l'}{\gamma}+vt.
+    \end{align}
+
+    Im Koordinatensystem $K$ ergibt sich der Abstand zwischen den beiden Punkten zu 
+    \begin{align}
+    l=x_B(t)-x_A(t)=\frac{1}{\gamma}l'=\sqrt{1-\frac{v^2}{c^2}}l'.	
+    \end{align}
+
+    <h4>Zeitdilatation</h4>
+
+    Wir wählen wieder das unbewegte Koordinatensystem $K$ und das bewegte Koordinatensystem $A'$. Wir positionieren $2$ genau baugleiche und genau synchronisierte Uhren in den Koordinatenursprüngen der Koordinatensysteme.
+
+    \begin{align}
+    x'=0 &=\gamma(x-vt)\Rightarrow x(t)=vt\notag	
+    t'&= \gamma\left(t-\frac{v^2}{c^2}t\right)=\frac{1-\frac{v^2}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}t=\sqrt{1-\frac{v^2}{c^2}}t< t'.
+    \end{align}
+
+    Fazit: Bewegte Uhren gehen langsamer!
+
+    <h4>Raum-Zeit-Diagramme</h4>
+
+    Mit einem Raum-Zeit-Diagramm bzw. einem Minkowski-Diagramm können wir Ereignisse der speziellen Relativitätstheorie visualisieren.
+    Dazu führen wir das Konzept der Weltlinie ein. Eine Weltlinie verbindet alle Ereignisse, die passieren. Die Weltlinie stellt gelaufene Bahnen dar, ist also eine Trajektorie.
+
+
+    <h3>Minkowski-Raum</h3>
+
+    <h4>Definition des Minkowski-Raum</h4>
+    Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt
+    \begin{align}
+    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
+    \end{align}
+    Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch
+    \begin{align}
+    \eta_{\mu\nu}=\begin{pmatrix}
+    -c^2 &0&0&0
+    0 &1&0&0
+    0&0&1&0
+    0&0&0&1.	
+    \end{pmatrix}	
+    \end{align}
+    Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:
+    \begin{align}
+    \eta_{\mu\nu}=\begin{pmatrix}
+        -1&0&0&0
+        0&1&0&0
+        0&0&1&0
+        0&0&0&1.
+    \end{pmatrix}	
+    \end{align}	
+    Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch
+    \begin{align}
+    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
+    \end{align}
+    Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. 
+    \begin{align}
+    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
+    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
+    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
+    \end{align}
+
+    Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.
+
+    Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:
+
+    \begin{align}
+    \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
+    \end{align}
+    Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.
+
+    <h4>Anmerkungen</h4>
+    <ul>
+        <li> Wir bezeichnen dieses Produkt manchmal auch als Skalarprodukt, obwohl dieses nicht-positiv definiert ist und damit in der üblichen mathematischen Sprechweise kein Skalarprodukt ist. Im euklidischen Raum hingegen gilt
+        \begin{align}
+        (x,x)>0\;\;\; \forall x\neq 0\;\;\;\; \text{ und } \;\;\;\; (x,x)\Leftrightarrow x=0.
+        \end{align}
+        Beides gilt für einen Minkowski-Raum nicht.</li>
+        <li>Oft nennen wir dieses Produkt auch Minkowski-Produkt, nach dem Namensgeber der Minkowski-Metrik. Der Mathematiker und Physiker, der diese Prinzipien eingeführt hat, heißt Hermann Minkowski.
+        Dieses Produkt ist nicht-entartet, das bedeutet, dass es keine nicht-verschwindenden Vektoren $y$ gibt, sodass $x\cdot y=(x,y)$ für alle Vektoren $x$ gleich Null ist.</li>
+        <li>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</li>
+    </ul>
+
+
+    <h4>Herunter- und Hinaufziehen von Indizes</h4>
+    Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass 
+    \begin{align}
+    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
+    \end{align}
+    gilt. Damit finden wir, dass im Minkowski-Raum
+    \begin{align}
+    \eta^{\mu\nu}=\begin{pmatrix}
+    -1 &0&0&0
+    0&1&0&0
+    0&0&1&0
+    0&0&0&1	
+    \end{pmatrix}	
+    \end{align}
+    gilt.
+    Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.
+
+    <h4>Ko- und Kontravarianz</h4>
+    In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:
+    \begin{align}
+    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
+    \end{align}
+
+    Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. 
+
+
+    <h4>Längen berechnen</h4>
+    Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:
+    \begin{align}
+        V_n&=V^mg_{mn}
+        V^n &= V_m g^{mn}.
+    \end{align}
+    Hierbei ist der Vektor $\vec{V}$ immer derselbe physikalische Vektor. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.
+    <b>Anmerkung: </b> Wir können auch die Indizes von Tensoren mit höherem Rang als $1$ manipulieren. Sei beispielsweise der Tensor $T_{mn}$ gegeben. Dann ergibt sich $T^m_n$ durch
+    \begin{align}
+        T^m_n=g^{mr}T_{rn}.
+    \end{align}
+    Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich
+    \begin{align}
+        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
+    \end{align}
+    Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch
+    \begin{align}
+    T^m_n=\mathrm{d} x^m\mathrm{d} x_n.	
+    \end{align}
+    Wir wollen diesen Tensor nun kontrahieren. Es ergibt sich damit
+    \begin{align}
+    T^m_m=\mathrm{d} x^m\mathrm{d} x_m=\lambda.
+    \end{align}
+    Wir erhalten durch die Kontraktion des Tensors einen Transformartions-invarianten Skalar $\lambda$. Wir können nun $\mathrm{d} x_m$ durch 
+    \begin{align}
+    \mathrm{d} x_m=g_{mn}\mathrm{d} x^n	
+    \end{align}
+    ausdrücken. Somit ergibt sich für $\lambda$
+    \begin{align}
+    \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
+    \end{align}
+    Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:
+    \begin{align}
+    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
+    \end{align}
+
+    <h2>Einführung in die relativistische Mechanik</h2>
+    Unser Ziel ist die Formulierung einer Lorentz-kovarianten Mechanik. Für den Grenzfall $v\ll c$ soll diese Mechanik in die Newtonsche Mechanik übergehen. Dazu betrachten wir ein Punktteilchen in der vierdimensionalen Raum-Zeit. Zur Beschreibung benutzen wir einen kontravarianten Vierervektor der Form
+    \begin{align}
+    x^{\mu}=x^{\mu}(t)=\begin{pmatrix}
+      ct\\
+      \vec{x}(t)
+    \end{pmatrix}.	
+    \end{align}
+        </div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Delta">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  </header>
+  
+  <div class="main">
+      <h1>Delta-Distribution</h1>
+
+  
+
+      <p>In der Physik, insbesondere in der Elektrodynamik, spielt die Delta-Distribution eine elementare Bedeutung. Denn diese hat eine Selektionseigenschaft, sodass</p>
+      $$\int f(x)\delta(x)\, \mathrm{d}x=f(0).$$
+      Es gibt in der Standard-Analysis allerdings keine solche Funktion $\delta(x)$, da die $\delta$-Distribution eine irreguläre Distribution ist, die sich nicht durch eine lokal integrierbare Funktion darstellen lässt. Die obige Notation ist daher metaphorisch zu verstehen.
+      <h2>Dirac-Folgen</h2>
+      <p>Wir wollen uns der Delta-Distribution über Dirac-Folgen nähern, die die Delta-Distribution annähern.</p>
+      <div align="center">
+      <img src="Dirac_function_approximation.gif" title="Approximation der Dirac-Funktion"/>
+      </div>
+      <p>In der Physik schreiben definieren wir die Delta-Funktion über ein Integral von einer Funktionenfolge g, das aber eher als symbolische Gleichung interpretiert werden sollte. Für ein stetige Funktion f egribt sich der metaphorische Ausdruck</p>
+      $$\int_{\mathbb{R}} f(x)\delta(x)\, \mathrm{d}x=\lim_{n\rightarrow \infty} \int_{\mathbb{R}} f(x)g_n(x)\, \mathrm{d}x=f(0).$$
+      Eine Folge $(\delta_k)_{k\in \mathbb{N}}$ integrierbarer Funktionen $\delta_k\in L^1(\mathbb{R}^n)$ wird Dirac-Folge geannt, falls
+      <ul>
+        <li>für alle $x\in \mathbb{R}^n$ und alle $k\in \mathbb{N}$ die Bedingung $\delta_k(x)\geq 0$ gilt,</li>
+        <li>für alle $k\in \mathbb{N}$ die Identität $$\int_{\mathbb{R}^n} \delta_k(x)\, \mathrm{d}x=1$$ gilt und</li>
+        <li>für alle $\epsilon > 0$ die Gleichheit $$\lim_{k\rightarrow\infty} \int_{\mathbb{R}^n\backslash B_{\epsilon}(0)} \delta_k(x)\, \mathrm{d}x=0.$$</li>
+      </ul>
+      Beispiele für Dirac-Folgen sind beispielsweise:
+      <ul>
+        <li>Glockenfunktionen $$\delta_{\epsilon}(x)=\frac{1}{\sqrt{2\pi\epsilon}}\exp\left(-\frac{x^2}{2\epsilon}\right)$$</li>
+        <li>Rechteckfunktionen $$\delta_{\epsilon}(x)=\frac{\operatorname{rect}(x/\epsilon)}{\epsilon}=\begin{cases}\frac{1}{\epsilon} & |x|\leq \frac{\epsilon}{2}\\ 0 & \text{sonst}\end{cases}$$</li>
+      </ul>
+
+      Diese Eigenschaften sind mathematisch gesprochen durch eine Distribution gegeben. Das ist eine Abbildung, die vom Raum der Testfunktionen Epsilon in unseren Körper abbildet:
+      $$\delta:\epsilon\rightarrow \mathbb{K},\ f\mapsto f(0)$$
+
+      <h2>Beispiel</h2>
+      Um die Folgendefinition der Delta-Distribution besser verstehen zu können, wollen wir diese an einem Beispiel betrachten. Wir betrachten hier eine Folge $g_n$, die eine Dirac-Folge ist.
+      Sei $$g_n(x)=\begin{cases}
+          0&|x|>\frac{1}{n}\\
+          \frac{n}{2} & |x|\leq \frac{1}{n}.
+          \end{cases}$$
+        Für stetiges $n$ ist offenbar
+      \begin{align}
+      \int_{\mathbb{R}}f(x)g_n(x)\, \mathrm{d}x=\frac{n}{2}\int_{-\frac{1}{n}}^{\frac{1}{n}} f(x)\, \mathrm{d}x=\frac{n}{2}f(\bar{x})\int_{-\frac{1}{n}}^{\frac{1}{n}} \mathrm{d}x=f(\bar{x}).
+      \end{align}
+      Dann existiert der Grenzwert und ist nämlich
+      \begin{align}
+        \lim_{n\rightarrow \infty} \int_{\mathbb{R}} f(x)g_n(x)\, \mathrm{d}x=\lim_{n\rightarrow \infty} f(\bar{x})=f(0).
+      \end{align}
+    Dieses ist konform mit der Delta-Distribution in Physiker-Notation.
+
+
+      <h2>Rechenregeln</h2>
+      Für die Delta-Distribution ergeben sich einige Rechenregeln, die im Allgemeinen für alle Distributionen gelten. Hier wollen wir diese Regeln allerdings in Physiker-Notation betrachten:
+      \begin{align}
+      \int_{-\infty}^{\infty} f(x)\delta(x-x_0)\, \mathrm{d}x &=f(x_0)\\
+      \int_{-\infty}^{\infty} \delta(x-x_0)\, \mathrm{d}x &=1\\
+      \int_{-\infty}^{\infty} f(x)\delta '(x-x_0)\, \mathrm{d}x &=-f'(x_0).
+      \end{align}
+
+    Einige weitere wichtige Regeln für die Delta-Distribution sind:
+      \begin{align}
+      \delta(ax)&= \frac{1}{|a|}\delta(x)\\
+      \delta(-x) &=\delta (x)\\
+      H'(x) &= \delta (x)\\
+      \delta(h(x)) &=\sum_{\nu=1}^N \frac{1}{|h'(x_{\nu})|}\delta(x-x_{\nu}),
+      \end{align}
+      wobei $x_{\nu}$ die Nullstellen der Funktion $h(x)$ seien.
+      
+      <h2>Diracsche Delta-Distribution in drei Dimensionen</h2>
+      Wir können die Delta-Distribution, die wir bis jetzt für eine Dimension definiert haben, auch für drei Dimensionen definieren. In kartesichen Koordinaten ist die dreidimensionale Delta-Funktion einfach als das Produkt der Delta-Funktionen für die jeweilige Dimension gegeben:
+      \begin{align}
+      \delta^{(3)}(\vec{r}-\vec{r}_0):=\delta(x-x_0)\cdot \delta(y-y_0)\cdot \delta(z-z_0).
+      \end{align}
+      Analog zu der Definition für eine Dimension ergibt sich die Integralformel
+      \begin{align}
+      \iiint_{\mathbb{R}^3} f(\vec{r})\delta^{(3)}(\vec{r}-\vec{r}_0)\, \mathrm{d}V=1.
+      \end{align}
+
+      <h2>Die Heaviside-Sprungfunktionen</h2>
+      Es sei $H$ die Heaviside-Funktion:
+      \begin{align}
+      H:\, \, &\mathbb{R} \rightarrow \{0,1\}\\
+      & x\mapsto \begin{cases}
+      0: & x<0\\
+      1: & x \geq 0.
+      \end{cases}
+      \end{align}
+    </div>
+
+
+
+  <div id="disqus_thread"></div>
+<script>
+
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>

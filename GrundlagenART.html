@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+  <html lang="de">
+  <head>
+    <title>Jannik Schilling</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#1d8a8a"
+        },
+        "button": {
+          "background": "#62ffaa"
+        }
+      },
+      "position": "bottom-right",
+      "content": {
+        "message": "Diese Website verwendet Cookies. Mehr dazu finden Sie in unser Datenschutzerklärung.",
+        "dismiss": "Okay",
+        "link": "Erfahre mehr",
+        "href": "datenschutz.html"
+      }
+    })});
+    </script>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/GrundlagenART">
+<title>Allgemeine Relativitätstheorie</title>
+<meta name="description" content="Die Allgemeine Relativitätstheorie ist die ultimative Theorie von Albert Einstein, die die Gravitationskraft mit beeindruckender Genauigkeit beschreibt.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+   <style>
+      header{
+        background-image: url(graviwellen.jpg);
+      }
+    
+    </style>
+    </head>
+    <body>
+    
+
+      
+    
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+      <a href="relativ.html">Relativitätstheorie</a>
+      <a href="klassisch.html">Klassische Physik</a>
+      <a href="alltag.html">Physik im Alltag</a>
+      <a href="quantum.html">Quantenphysik</a>
+    
+      <div class="dropdown">
+        <button class="dropbtn">Sonstiges 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Politik.html">Politik</a>
+          <a href="Wirtschaft.html">Wirtschaft</a>
+          <a href="Latex.html">Latex</a>
+        </div>
+      </div> 
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <header class='masthead'>
+      
+      </header>
+    
+    
+    
+      <div class="main">
+        <h1>Physikalische Grundlagen der Allgemeinen Relativitätstheorie</h1>
+
+        <h2>Massen-Äquivalenz</h2>
+    
+        <p><b>Achtung! </b> Massenäquivalenz meint hier nicht $E=mc^2$, sondern das Verhältnis aus schwerer Masse und träger Masse!</p>
+    
+        <p>Wir wollen nun drei verschiedene Gleichungen der Newtonschen Mechanik betrachten. In all diesen drei Gleichungen treten verschiedene Arten von Masse auf.</p>
+    
+        <ul>
+        <li>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt
+        \begin{align}
+        m_t \ddot x=F	
+        \end{align}</li>
+        <li> Die passive Gravitationsmasse $m_g$ ist als Faktor mit
+    
+        \begin{align}
+        F=-m_G\nabla\phi	
+        \end{align}
+    
+        definiert ist.</li>
+        <li> Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit
+    
+        \begin{align}
+        \phi=-\frac{GM_G}{r}.	
+        \end{align}</li>
+        </ul>
+    
+        <h2>Schwaches Äquivalenzprinzip</h2>
+    
+        <p>Die schwere Masse bezeichnet die Eigenschaft eines beliebigen Körpers in einem Gravitationsfeld einer anderen Masse eine Kraft zu erfahren.</p>
+    
+        <p>In der Elektrodynamik bezeichnen wir diese schwere Masse als Gravitationsladung $q$ im Gravitationsfeld der Gravitationsladung $Q$. Dann gilt</p>
+    
+        \begin{align}
+        \vec{F}_{Grav}=-\frac{qQ}{r^2}\alpha	\vec{e}_r.
+        \end{align}
+    
+        <p>Die Massen $m_t$ und $m_t^{'}$ erfahren in dem Gravitationsfeld $Q$ eine Kraft, und besitzen somit auch schwere schwere Massen $q_1$ und $q_2$. Wenn wir nun diese Objekte fallen lassen, kommen wir zu der Erkenntnis, dass beide Objekte unabhängig von ihrer trägen Masse gleich schnell fallen. Das bedeutet für die Beschleunigungen der Objekte $\partial_t^2\vec{r}_1$ und $\partial_t^2\vec{r}_2$, dass beide Beschleunigungen gleich groß sind</p> 
+    
+        \begin{align}
+        \partial_t^2\vec{r}_1=\\partial_t^2 \vec{r}_2.	
+        \end{align}
+    
+        <p>Dies können wir nun mit dem zweiten Newtonschen Axiom ($F=ma$, wenn $m(t)$ konstant ist) formulieren durch</p>
+    
+        \begin{align}
+        m_t\cdot r_1 &= F_{Q_1}\\
+        m_t^{'}\cdot r_1 &= F_{Q_2}.	
+        \end{align}
+    
+        <p>Durch erhalten wir die Relationsgleichungen</p>
+    
+        \begin{align}
+        \frac{m_t}{m_t^{'}} &= \frac{F_{Q_1}}{F_{Q_2}}=\frac{q_1}{q_2}	\\
+        \Rightarrow \frac{m_t}{q_1}&=\frac{m_t^{'}}{q_2}.
+        \end{align}
+    
+        <p>Das schwache Äquivalenzprinzip stellt nun die träge Masse mit der schweren Masse ins Verhältnis</p>
+    
+        \begin{align}
+        \frac{m_s}{m_t}=\text{const.}	
+        \end{align}
+    
+        <p>und stellt die These auf, das das Verhältnis aus schwerer und träger Masse immer konstant ist, wenn alle anderen Kräfte ausgeschaltet werden (Reibung etc.). Diese Proportionalitätskonstante kann bei geeigneten Einheiten genau auf Eins normiert werden.</p>
+    
+        <b>Physikalische Interpretation: </b> Wenn das Verhältnis aus schwerer Masse und träger Masse immer gleich ist, also nicht von der Masse eines Objektes abhängt, ist dies äquivalent dazu, dass alle Objekte gleich schnell in einem Gravitationsfeld fallen. Zumindestens wenn die Gravitation als Kraft beschrieben wird, wie wir es zum Beispiel die Newtonsche Mechanik gemacht haben.
+        <p>Wenn wir im Vakuum (dort gibt es keine störenden Kräfte) zwei Objekte im selben Gravitationsfeld aus der selben Höhe fallen lassen, fallen sie ganz genau gleich schnell. Auch eine Feder und ein Stein gehorchen diesem Gesetz.</p>
+        <b>Wir halten fest: </b>
+        <p>Objekte mit unterschiedlicher träger Masse erfahren im Schwerefeld eines Objektes bei gleichen Anfangsbedingungen die gleichen Beschleunigungen. Das Verhältnis aus schwerer Masse ($m_s$) und träger Masse ($m_s$) ist für alle Körper gleich und kann bei geeigneter Einheitenwahl auf Eins normiert werden.</p>
+    
+        <h2>Fahrstuhlexperimente</h2>
+    
+        <h3>Starkes Äquivalenzprinzip</h3>
+        <p><b>Wir halten fest: </b></p>
+        <p>In einem kleinen Labor, das in einem Schwerefeld fällt, sind die Gesetze der Physik dieselben wie jene, die in Abwesenheit eines Schwerefeldes in einem Newtonschen Inertialsystem beobachtet werden.</p>
+    
+        <h2>Bewegung im Gravitationsfeld: Geodätengleichung der ART</h2>
+    
+        <p>Um die Geodätengleichung der Allgemeinen Relativitätstheorie zu finden, betrachten wir zuerst das Quadrat des Linienelementes $ds$. In der Speziellen Relativitätstheorie finden wir dieses durch </p>
+    
+        \begin{align}
+        ds^2=-dt^2+dx^2+dy^2+dz^2	
+        \end{align}
+    
+        <p>mit natürlichen Einheiten, d.h. $c=1$. Wir haben hier die "West Coast Metric" gewählt, das bedeutet, dass</p>
+    
+        \begin{align}
+        \eta_{\mu\nu}=\begin{pmatrix}
+        -1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1	
+        \end{pmatrix}	
+        \end{align}
+    
+        <p>gilt. Analog würde sich die "East Coast Metric" ergeben, die durch Vorzeichenänderung aller Elemente entsteht. Beide Minkowski-Metriken sind äquivalent.</p>
+    
+        <p>In der allgemeinen Relativitätstheorie ergibt sich das Linienelement mit Hilfe des allgemeinen metrischen Tensors $g_{\mu\nu}$ zu der folgenden Form</p>
+    
+        \begin{align}
+        ds^2 = g_{\mu\nu}dx^{\mu}dx^{\nu}	,
+        \end{align}
+    
+        <p>wobei hier über $\mu$ und $\nu$ summiert werden muss. Durch Radizieren erhalten wir </p>
+    
+        \begin{align}
+        ds=\sqrt{g_{\mu\nu}x^{\mu}x^{\nu}}.	
+        \end{align}
+    
+        In der Speziellen Relativiätstheorie haben wie gesehen, dass ein Teilchen auf einer Bahn laufen soll, für die die Variation verschwindet, also
+    
+        \begin{align}
+        \delta \int ds =0	
+        \end{align}
+    
+        gilt. Wenn wir nun den eben bestimmten Term für $ds$ einsetzen und dann mit $ds$ erweitern erhalten wir das folgende Integral
+    
+        \begin{align}
+        \delta \int ds =\delta \int \sqrt{g_{\mu\nu}dx^{\mu}dx^{\nu}}	\cdot \frac{ds}{ds}= \delta \int \sqrt{g_{\mu\nu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}}ds=\delta \int \mathcal{L}\left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)\, ds.
+        \end{align}
+    
+        Wir sehen durch Vergleich der entstandenden Gleichungskette, dass $\mathcal{L} \left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)$ entlang des gesamten Weges $1$ sein muss. Wir stellen die Euler-Lagrange-Gleichung zur Variation
+    
+        \begin{align}
+        \delta \int \mathcal{L}\left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)ds=0	
+        \end{align}
+    
+        auf. Aus der eben betrachtete Formulierung folgt sofort, dass
+    
+        \begin{align}
+        \frac{d}{ds}\left(\frac{\partial \mathcal{L}}{\partial \left(\frac{dx^{\alpha}}{ds}\right)}\right)-\frac{\partial \mathcal{L}}{\partial x^{\alpha}}=0 	
+        \end{align}
+    
+        gilt. Jetzt bestimmen wir die einzelner Glieder der neu entstandenden Gleichung. Für den ersten Teil der Euler-Lagrange-Gleichung ergibt sich
+    
+        \begin{align}
+        \frac{\partial \mathcal{L}}{\partial \left(\frac{dx^{\alpha}}{ds}\right)}=\frac{1}{2\mathcal{L}}\left(g_{\alpha\nu}\frac{dx^{\nu}}{ds}+g_{\mu \alpha}\frac{dx^{\mu}}{ds}\right)=\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{dx^{\nu}}{ds}.
+        \end{align}
+        
+        Für den Term $\frac{\partial \mathcal{L}}{\partial x^{\alpha}}$ ergibt sich 
+    
+        \begin{align}
+        \frac{\partial \mathcal{L}}{\partial x^{\alpha}}=\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu \nu}}{\partial x^{\alpha}}\frac{\partial x^{\mu}}{ds}\frac{dx^{\nu}}{ds}.	
+        \end{align}
+    
+        Wenn wir alles in die Euler-Lagrange-Gleichung einsetzen, ergibt sich
+    
+        \begin{align}
+        \frac{d}{ds}\left[\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{dx^{\nu}}{ds}\right]-\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu \nu}}{\partial x^{\alpha}}\frac{\partial x^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
+        \end{align}
+    
+        Unter Aussnutzung von
+    
+        \begin{align}
+        \frac{d}{ds}g_{\alpha\nu}=\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}\frac{dx^{\mu}}{ds} 	
+        \end{align}
+    
+        erhalten wir
+    
+        \begin{align}
+        \frac{1}{\mathcal{L}}\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}\frac{dx^{\nu}}{ds}\frac{dx^{\nu}}{ds}+\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{d^2 x^{\nu}}{ds^2}-\frac{1}{\mathcal{L}^2}\frac{\partial \mathcal{L}}{ds}g_{\alpha\nu}\frac{dx^{\nu}}{ds}-\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu\nu}}{\partial x^{\alpha}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.	
+        \end{align}
+    
+        Wie wir schon gesehen haben, ist $\mathcal{L}=1$ entlang des gesamten Weges. Das bedeutet, dass
+    
+        \begin{align}
+        \frac{\partial \mathcal{L}}{ds}=0	
+        \end{align}
+    
+        gilt und somit der ganze Term verschwindet. Die übrigbleibenden Terme werden jetzt mit $\mathcal{L}$ multipliziert und wir erhalten
+    
+        \begin{align}
+        \frac{\partial g_{\alpha\nu}}{\partial x^{\mu}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}+g_{\alpha\nu}\frac{d^2x^{\nu}}{ds^2}-\frac{1}{2}\frac{\partial g_{\mu\nu}}{\partial x^{\alpha}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
+        \end{align}
+    
+        Nun ist 
+    
+        \begin{align}
+        \frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}=\frac{1}{2}\frac{\partial g_{\alpha\mu}}{\partial x^{\mu}}+\frac{1}{2}\frac{\partial g_{\mu\alpha}}{\partial x^{\mu}}= \frac{1}{2}\frac{\partial g_{\alpha\nu}}{\partial x^{\mu}}+\frac{1}{2}\frac{\partial g_{\mu\alpha}}{\partial x^{\nu}}	
+        \end{align}
+    
+        und somit
+    
+        \begin{align}
+        g_{\alpha \nu}\frac{d^2 x^{\nu}}{ds^2}+\frac{1}{2}\left(\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}+\frac{\partial g_{\mu \alpha}}{\partial x^{\nu}} - \frac{\partial g_{\mu\nu}}{\partial x^{\alpha}} \right)\frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0.	
+        \end{align}
+    
+        
+        Somit erhalten wir für die Christoffelsymbole zweiter Art das Folgende
+    
+        \begin{align}
+        \Gamma^{\sigma}_{\cdot \mu\nu} = g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}=\frac{1}{2} g^{\sigma\alpha}\left(\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}+\frac{\partial g_{\mu \alpha}}{\partial x^{\nu}} - \frac{\partial g_{\mu\nu}}{\partial x^{\alpha}} \right).	
+        \end{align}
+    
+        Nun können wir die Geodätengleichung der ART aufstellen, dies können wir mit beiden Christoffelsymbolen aufstellen, wir erhalten also als erste Form
+    
+        \begin{align}
+        g_{\alpha\nu}\frac{d^2x^{\nu}}{ds^2}+\Gamma_{\alpha\mu\nu}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
+        \end{align}
+    
+        Die zweite Form erhalten wir durch multiplizieren mit $g^{\sigma\alpha}$:
+    
+        \begin{align}
+        g^{\sigma\alpha}g_{\alpha \nu}\frac{d^2x^{\nu}}{ds^2}+g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds} &= 0.	
+        \end{align}
+    
+        Per Definition ist $g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}$ gleich $\Gamma_{\cdot \mu\nu}^{\sigma}$, und für das Produkt der Metriktensoren ergibt sich Kronecker-Delta nach der Folgenden Form.
+    
+        \begin{align}
+        g^{\alpha\sigma}g_{\alpha\nu}=\delta^{\sigma}_{\nu}
+        \end{align}
+    
+        <p>Damit ergibt sich die Geodätengleichung der Allgemeinen Relativitätstheorie.</p>
+    
+        <p><b>Die Geodätengleichung der Allgemeinen Relativitätstheorie</b></p>
+    
+        \begin{align}
+        \frac{d^2 x^{\sigma}}{ds^2}+\Gamma_{\cdot \mu\nu}^{\sigma}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0	
+        \end{align}
+    
+        <h2>Beispiel für die Geodätengleichung</h2>
+        <p><b>Beispiel: </b> Geodätengleichung einer Einheitskugel</p>
+        <p>Im Rahmen der Vektoralgebra haben wir den Metriktensor der Oberfläche einer Einheitskugel bestimmt. Dieser ergibt sich durch</p>
+    
+        \begin{align}
+        g_{ij}=\begin{pmatrix}
+        1 &0\\
+        0&\sin^2(\vartheta)	
+        \end{pmatrix}.
+        \end{align}
+    
+        Unser Ziel ist es jetzt, den Umgang mit der Geodätengleichung und den darin auftretenden Symbolen zu üben. Dazu wollen wir als erstes die Christoffelsymbole in der Geodätengleichung berechnen.
+    
+        <p>Die Christoffelsymbole 1. Art $\Gamma_{\alpha\mu\nu}$ ergeben sich durch Ableitung des Metriktensors.</p>
+    
+        \begin{align}
+        \frac{\partial g_{ij}}{\partial x^k}=0 && \text{außer} &&	\frac{\partial g_{22}}{\partial x^1}
+        \end{align}
+    
+        Somit erhalten wir alle Christoffelsymbole durch 
+    
+        \begin{align}
+        \Gamma_{111} &= \Gamma_{112}=\Gamma_{121}=\Gamma_{222}=\Gamma_{211}=0\\
+        \Gamma_{122} &= -\sin(\vartheta)\cos(\vartheta)\\
+        \Gamma_{212} &= \Gamma_{221}=\sin(\vartheta)\cos(\vartheta).
+        \end{align}
+    
+        Mit der Geodätengleichung
+    
+        \begin{align}
+        \frac{d^2 x^{\alpha}}{ds^2}+\Gamma_{\mu\nu}^{\alpha}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0	
+        \end{align}
+    
+        und 
+    
+        \begin{align}
+        \Gamma^{\alpha}_{\mu\nu}=g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}	
+        \end{align}
+    
+        ergibt sich für $\alpha=1$
+    
+        \begin{align}
+        \frac{d^2\vartheta}{ds^2}-\sin(\vartheta)\cos(\vartheta)\left(\frac{d\varphi}{ds}\right)^2=0,	
+        \end{align}
+    
+        und für $\alpha=2$ ergibt sich
+    
+        \begin{align}
+        \sin^2(\vartheta)\frac{d^2\varphi}{ds^2}+2\sin(\vartheta)\cos(\vartheta)\left(\frac{d\vartheta}{ds}\right)\left(\frac{d\varphi}{ds}\right)=0.	
+        \end{align}
+    
+        <h2>Physikalische Interpretation der Geodätengleichung</h2>
+    
+        <p>In der Herleitung der Geodätengleichung haben wir ein wichtiges Prinzip der Physik verwendet, ein sogenanntes Variationsprinzip. Dieses entstand ursprünglich im Rahmen der Newtonschen Mechanik, kann aber auf fast alle physikalische Probleme angewandt werden. Dieses Prinzip entstand durch die Frage, wie sich Objekte im Raum bewegen: im Newtonschen Grenzfall auf "Geraden". Ein Apfel, der von einem Baum fällt, fällt "gerade" auf den Boden und trifft dort eventuell Jemanden.</p>
+    
+        <p>Aus unser Alltagserfahrung wissen wir auch, dass dieser Apfel nicht in Schlangenbewegungen fällt, da dieser Weg nicht der kürzeste Weg ist. So ist es in einer flachen Raumzeit, wo der Metriktensor in die Minkowski-Metrik übergeht. Doch wie sieht das ganze in einer gekrümmten Raumzeit aus?</p>
+    
+        <p>Die Teilchen bewegen sich in gekrümmter Raumzeit auch auf den kürzesten Bahnen. Nur dass diese im allgemeinen keine Gerade sind.</p>
+    
+        <p>Die Geodätengleichung gibt nun an, wie sich Objekte bewegen. Auch in gekrümmter Raumzeit.</p>
+        
+
+    </div>
+    
+            <div id="disqus_thread"></div>
+    <script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+          
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+    
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+    
+    <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+    </body>
+    </html>
+    
+    

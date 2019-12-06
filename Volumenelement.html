@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Volumenelement">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+
+  
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+ 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  
+  </header>
+
+
+
+  <div class="main">
+      <h1>Volumenelement</h1>
+        Das Linienelement ist für $n$ Dimensionen in kartesischen Koordinaten durch
+    \begin{align}
+    \mathrm{d}s^2=\sum_{i=1}^n \mathrm{d}x^{i}
+    \end{align}
+    definiert. Für das Volumenelement $\mathrm{d}V$ wird in kartesischen Koordinaten nur das Summenzeichnen mit dem Produktzeichen ausgetauscht. Somit gilt dann
+    \begin{align}
+        \mathrm{d}V=\prod_{i=1}^n \mathrm{d}x^{i}.
+    \end{align}
+    Bei einer Transformation durch $x^{\mu}=x^{\mu}(\bar{x}^{\alpha}$ ergibt sich
+    \begin{align}
+    \mathrm{d}x^{\mu}=\frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\mathrm{d}\bar{x}^{\alpha}
+    \end{align}
+    und damit folgt für das Volumenelement
+    \begin{align}
+    dV=\prod_{i=1}^n \mathrm{d}x^{i}=\prod_{i=1}^n \frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\mathrm{d}\bar{x}^{\alpha}=\det\left(\frac{\partial x^{i}}{\partial \bar{x}^j}\right)\prod_{k=1}^n \mathrm{d}\bar{x}^k=\mathrm{d}\bar{V}.	
+    \end{align}
+    Wir führen jetzt die Jacobi-Matrix $\mathcal{J}$ ein
+    \begin{align}
+    \mathcal{J}=\frac{\partial x^{i}}{\partial \bar{x}^j}.	
+    \end{align}
+
+    Wir wollen jetzt $\mathrm{d}\bar{V}$ in kartesischen Koordinaten berechnen. Dazu werden wir die folgenden Eigenschaften der Determinante einer Matrix berechnen
+    \begin{align}
+    \det(A\cdot B) &=\det A\cdot \det B\\
+    \det(\delta_{\mu\nu}) &=1.	
+    \end{align}
+    In kartesischen Koordinaten ist der Metriktensor äquivalent zu dem Metrik-Tensor einer Lorentz-Mannigfaltigkeit. Es gilt also
+    \begin{align}
+    g_{\mu\nu}=\delta_{\mu\nu}.	
+    \end{align}
+    Damit gilt aber auch
+    \begin{align}
+    \bar{g}_{\alpha\beta}=\frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\frac{\partial x^{\nu}}{\partial \bar{x}^{\beta}}.\delta_{\mu\nu}	
+    \end{align}
+    Im folgenden bezeichnet $g$ die Determinante des Metriktensors
+    \begin{align}
+    g=\det(g_{\mu\nu}).	
+    \end{align}
+    Damit folgt für die Determinate $\bar{g}$ der Determinante von $\bar{g}_{\alpha\beta}$ der folgende Zusammenhang
+    \begin{align}
+    \bar{g}&=\det(g_{\alpha\beta})=\det\left(\frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\frac{\partial x^{\nu}}{\partial \bar{x}	^{\beta}}\eta_{\mu\nu}\right)=\det\left(\frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\right)\cdot \det\left(\frac{\partial x^{\nu}}{\partial \bar{x}^{\beta}}\right)\cdot \det\left(\delta_{\mu\nu}\right)\notag\\
+    &= \left(\det\left(\frac{\partial x^{\mu}}{\partial \bar{x}^{\alpha}}\right)\right)^2.	
+    \end{align}
+    Damit folgt für das Volumenelement $\mathrm{d}\bar{V}$
+    \begin{align}
+    \mathrm{d}\bar{V}=\sqrt{\bar{g}}\prod_{i=1}^n \mathrm{d}x^{i}. 	
+    \end{align}
+    Für krummlinige Koordinaten gilt allgemein
+    \begin{align}
+    \mathrm{d}\bar{V}=\sqrt{g}\prod_{\mu} \mathrm{d}x^{\mu}.	
+    \end{align}
+
+    In dem obigen Volumenelement bezeichnet $g$ die Determinante des Metriktensors $g_{\mu\nu}$ mit
+    \begin{align}
+    g=\det(g_{\mu\nu}).	
+    \end{align}
+
+</div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+

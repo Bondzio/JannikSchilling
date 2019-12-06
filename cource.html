@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/cource">
+<title>Der Dirac-Formalismus und die Bra-Ket-Notation</title>
+<meta name="description" content="In der Quantenmechanik wählen wir anstatt des Vektorformalismus den Diracformalismus, der auf abstrakte Weise die Quantenmechanik repräsentiert.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="kurse/css/bootstrap.min.css">
+    <link rel="stylesheet" href="kurse/css/animate.css">
+    <link rel="stylesheet" href="kurse/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="kurse/css/themify-icons.css">
+    <link rel="stylesheet" href="kurse/css/flaticon.css">
+    <link rel="stylesheet" href="kurse/css/magnific-popup.css">
+    <link rel="stylesheet" href="kurse/css/slick.css">
+    <link rel="stylesheet" href="kurse/css/style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+        <header class="main_menu single_page_menu">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                                <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+        
+                                <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                                    id="navbarSupportedContent">
+                                    <ul class="navbar-nav align-items-center">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html">Über mich</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        
+            <section class="breadcrumb breadcrumb_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb_iner text-center">
+                                <div class="breadcrumb_iner_item">
+                                    <h2>Kurse</h2>
+                                    <p>Home<span>/</span>Kurse</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!--::review_part start::-->
+    <section class="special_cource padding_top">
+        <div class="container">
+            <h1>Kurse</h1>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                        <div class="single_special_cource">
+                            <img src="Bilder/alltag.jpg" class="special_img" alt="">
+                            <div class="special_cource_text">
+                                <a href="course-details.html" class="btn_4">Alltag</a>
+                                <h4>0,00€</h4>
+                                <a href="https://www.jannik-schilling.com/PhysikAlltag">
+                                    <h3>Physik im Alltag</h3>
+                                </a>
+                                <p>Physik hat nichts mit dem Alltag zu tun? Natürlich nicht! Denn wie könnten wir sonst Fragen zum Fallschirmsprung, Klimawandel oder zur Atomkraft beantworten...</p>
+                                <div class="author_info">
+                                    <div class="author_img">
+                                        <img src="jannik_about.jpg" height="50px" alt="">
+                                        <div class="author_info_text">
+                                            <p>Autor:</p>
+                                            <h5><a href="#">J. Schilling</a></h5>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_special_cource">
+                        <img src="ART.jpeg" class="special_img" alt="">
+                        <div class="special_cource_text">
+                            <a href="course-details.html" class="btn_4">Theo. Physik</a>
+                            <h4>0,00€</h4>
+                            <a href="https://www.jannik-schilling.com/PhysikART">
+                                <h3>Allgemeine Relativitätstheorie</h3>
+                            </a>
+                            <p>Albert Einstein? Albert Einstein ist wohl einer der bekanntesten Physiker der Geschichte. Aber warum eigentlich? In diesem Kurs gehe ich auf die Feldgleichungen und Gravitationswellen ein.</p>
+                            <div class="author_info">
+                                <div class="author_img">
+                                    <img src="jannik_about.jpg" height="50px" alt="">
+                                    <div class="author_info_text">
+                                        <p>Autor:</p>
+                                        <h5><a href="#">J. Schilling</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_special_cource">
+                        <img src="quanten.jpg" class="special_img" alt="">
+                        <div class="special_cource_text">
+                            <a href="course-details.html" class="btn_4">Theo. Physik</a>
+                            <h4>0,00€</h4>
+                            <a href="https://www.jannik-schilling.com/ART">
+                                <h3>Quantenphysik</h3>
+                            </a>
+                            <p>Ein Atom besteht aus einem Atomkern und einer Atomhülle? Falsch gedacht! Denn die Quantenphysik stellte die gesamte Physik auf den Kopf und ist heute eine der am stärksten verifizierten Theorien.</p>
+                            <div class="author_info">
+                                <div class="author_img">
+                                    <img src="jannik_about.jpg" height="50px" alt="">
+                                    <div class="author_info_text">
+                                        <p>Autor:</p>
+                                        <h5><a href="#">J. Schilling</a></h5>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                        <div class="single_special_cource">
+                            <img src="kettenkarusell.jpg" class="special_img" alt="">
+                            <div class="special_cource_text">
+                                <a href="course-details.html" class="btn_4">Theo. Physik</a>
+                                <h4>0,00€</h4>
+                                <a href="https://www.jannik-schilling.com/">
+                                    <h3>Klassische Physik</h3>
+                                </a>
+                                <p>Am Anfang schuf Gott die Klassische Physik. Oder war es doch Isaac Newton?</p>
+                                <p>In diesem Kurs möchte ich Ihnen die klassische Phsik näherbringen und erläutern.</p>
+                                <div class="author_info">
+                                    <div class="author_img">
+                                        <img src="jannik_about.jpg" height="50px" alt="">
+                                        <div class="author_info_text">
+                                            <p>Autor:</p>
+                                            <h5><a href="#">J. Schilling</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <br>
+                   
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="single_special_cource">
+                                    <img src="venus.jpg" class="special_img" alt="">
+                                    <div class="special_cource_text">
+                                        <a href="course-details.html" class="btn_4">Theo. Physik</a>
+                                        <h4>0,00€</h4>
+                                        <a href="https://www.jannik-schilling.com/SRT">
+                                            <h3>Spezielle Relativitätstheorie</h3>
+                                        </a>
+                                        <p>Albert Einstein? Albert Einstein ist wohl einer der bekanntesten Physiker der Geschichte. Aber warum eigentlich? In diesem Kurs gehe ich auf die Revolution der Speziellen Relativitätstheorie.</p>
+                                        <div class="author_info">
+                                            <div class="author_img">
+                                                <img src="jannik_about.jpg" height="50px" alt="">
+                                                <div class="author_info_text">
+                                                    <p>Autor:</p>
+                                                    <h5><a href="#">J. Schilling</a></h5>
+                                                </div>
+                                            </div>                           
+                                    
+            
+                          
+                            </div>
+</div>
+</div>
+</div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="single_special_cource">
+                                    <img src="handtke.jpg" class="special_img" alt="">
+                                    <div class="special_cource_text">
+                                        <a href="course-details.html" class="btn_4">Mathematik</a>
+                                        <h4>0,00€</h4>
+                                        <a href="https://www.jannik-schilling.com/MathSRT">
+                                            <h3>Mathematik der SRT</h3>
+                                        </a>
+                                        <p>Die Spezielle Relativitätstheorie benötigt bereits einige Mathematik, die über die Grundkenntnisse hinausreicht. In diesem Kurs erkläre ich, was Tensoren und Differentialgleichungen sind.</p>
+                                        <div class="author_info">
+                                            <div class="author_img">
+                                                <img src="jannik_about.jpg" height="50px" alt="">
+                                                <div class="author_info_text">
+                                                    <p>Autor:</p>
+                                                    <h5><a href="#">J. Schilling</a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+            </div>
+        </div>
+    </section>
+    <!—::blog_part end::—>
+
+       
+<footer class="footer-distributed">
+ 
+        <div class="footer-left">
+            <img src="Jannik_mini.jpg">
+          <h3>Jannik<span>Schilling</span></h3>
+    
+          <p class="footer-links">
+            <a href="https://www.jannik-schilling.com/">Home</a>
+            |
+            <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+            |
+            <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+            |
+            <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+    
+          </p>
+    
+          <p class="footer-company-name"> &copy;<script>document.write(new Date().getFullYear());</script> Jannik Schilling | All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+        </div>
+    
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+              <p><span>Espluguesring 23,
+               22926 Ahrensburg</span>
+              Deutschland</p>
+          </div>
+    
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+49 152 33765747</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>Über mich</span>
+            Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+          <div class="footer-icons">
+            <!—<a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>—>
+            <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+
+</html>

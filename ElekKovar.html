@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/ElekKovar">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+
+
+<div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+  <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+      
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
+
+<div class="main">
+    <h1>Kovariante Formulierung der Elektrodynamik</h1>
+    <p>Wir haben bereits gesehen: Die Newtonsche Mechanik ist invariant unter der Galilei-Transformation, aber nicht unter der Lorentztransformation. Die Maxwell-Gleichungen hingegen sind mit der Speziellen Relativitätstheorie kompatibel, da sie forminvariant unter einer Lorentztransformation sind. Aus den Maxwell-Gleichungen in differentieller geht dies aber nicht gut hervor, wehsalb wir die Elektrodynamik nun kovariant formulieren wollen.</p>
+    Ausgangspunkt sind die Maxwell-Gleichungen:
+    \begin{align}
+    \vec{\nabla}\cdot \vec{E}&= \frac{\rho}{\epsilon_0}\\
+    \vec{\nabla}\cdot \vec{B}&= 0\\
+    \vec{\nabla}\times \vec{E}&= -\frac{\partial\vec{B}}{\partial t}\\
+    \vec{\nabla}\times \vec{B}&= \mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t}.
+    \end{align}
+
+    <p>Noch wichtiger für uns ist der Potentialformalismus</p>
+    \begin{align}
+    \vec{E}&=-\vec{\nabla}\phi-\partial_t \vec{A}\\
+    \vec{B}&= \vec{\nabla}\times \vec{A}.
+    \end{align}
+
+    Wir fassen diese beiden Potentiale nun in dem Viererpotential $A^{\mu}$ zusammen:
+    \begin{align}
+    A^{\mu}=\left(\frac{\phi}{c},\vec{A}\right).
+    \end{align}
+    Analog fassen wir die Ladungsdichte $\rho$ und die Stromdichte $\vec{j}$ zu der Viererstromdichte $j^{\mu}$ zusammen:
+    \begin{align}
+    j^{\mu}=(c\rho, \vec{j}).
+    \end{align}
+    Wir führen jetzt den elekrodynamischen Tensor $F^{\mu\nu}$ ein, der alle möglichen $\vec{E}$- und $\vec{B}$-Felder zu einer Größe zusammenfasst:
+    \begin{align}
+    F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}.
+    \end{align}
+    Durch Nachrechnen lässt sich zeigen:
+    \begin{align}
+    F^{\mu\nu}=\begin{pmatrix}
+    0 & -\frac{E_x}{c} & -\frac{E_y}{c} & -\frac{E_z}{c}\\
+    \frac{E_x}{c} & 0 & -B_z & B_y\\
+    \frac{E_y}{c}&B_z & 0 & -B_x\\
+    \frac{E_z}{c} & -B_y & B_x & 0.
+    \end{pmatrix}
+    \end{align}
+    In der mathematischen Vorbereitung zur Speziellen Relativitätstheorie haben wir den Vierergradienten $\partial^{\mu}$ eingeführt:
+    \begin{align}
+    \partial^{\mu}=\left(-\frac{1}{c}\frac{\partial}{\partial t},\vec{\nabla}\right), 
+    \end{align}
+    bzw.
+    \begin{align}
+    \partial_{\mu}=\left(\frac{1}{c}\frac{\partial}{\partial t}, -\vec{\nabla}\right).
+    \end{align}
+    Außerdem haben wir dort die Differentiale eingeführt
+    \begin{align}
+    \mathrm{d}x^{\alpha}=(c\mathrm{d}t, \mathrm{d}x,\mathrm{d}y,\mathrm{d}z).
+    \end{align}
+
+    Nun können wir die inhomogenen Maxwell-Gleichungen einfach kovariant formulieren:
+    \begin{align}
+    \partial_{\mu}F^{\mu\nu}=\mu_0j^{\nu}.
+    \end{align}
+    Wegen der Antisymmetrie des Feldstärketensors folgt auch die Kontinuitätsgleichung:
+    \begin{align}
+    \mu_0(\partial_t\rho+\vec{\nabla}\vec{j})=\mu_0\partial_{\nu}j^{\nu}=\partial_{\mu}\partial_{\nu}F^{\mu\nu}=0.
+    \end{align}
+    Wir können die beiden homogenen Maxwellgleichungen manifest kovariant notieren durch:
+    \begin{align}
+    \partial_{\mu}F_{\nu\omega}+\partial_{\nu}F_{\omega\mu}+\partial_{\omega}F_{\mu\nu}=0.
+    \end{align}
+    Mit dem Levi-Civita-Tensor können wir auch schreiben:
+    \begin{align}
+    \epsilon^{\alpha\beta\gamma\delta}\partial_{\alpha}F_{\gamma\delta}=0.
+    \end{align}
+
+    Wenn wir den dualen Feldstärketensor $\hat{F}^{\mu\nu}$ definieren, erhalten wir:
+    \begin{align}
+    \hat{F}^{\mu\nu}:=\frac{1}{2}\epsilon^{\mu\nu\alpha\beta}F_{\alpha\beta}.
+    \end{align}
+
+</div>
+
+  <!--<h1>Über mich</h1>
+  <h2>Einleitung</h2>
+  <p>Ich bin Juniorstudent an der Uni Hamburg im Fachbereich Physik.</p>
+  <p>Mich faszieniert insbesondere die allgemeine Relativitätstheorie, die aus ganz wenig Input so viel tolles liefert.</p>
+
+  <h2>Woher ich komme</h2>
+  <p>Ich bin in Hamburg geboren wurde und wohne in Ahrensburg.</p>
+
+  <h2>Mehr über mich</h2>
+  <h3>Was sind deine Hobbys?</h3>
+  <p>In meiner Freizeit spiele ich Wasservolleyball und ich spiele Schlagzeug. Ich programmiere sehr gerne und liebe die Physik.</p>
+  <h3>Was ist dein Traumjob?</h3>
+  <p>Physiker</p>
+  <h3>Warum Physik?</h3>
+  <p>Physik ist die Naturwissenschaft schlechthin. Wir können unsere Beobachtungen durch Formeln ausdrücken und damit die Zukunft vorraussagen.</p>
+  <h3>Star Trek oder Star Wars?</h3>
+  <p>Star Trek ist viel tiefsinniger als Star Wars und die Handlungen finde ich spannender.</p>-->
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<script>
+        function Graviwellenfunc() {
+          //alert("Gravitationswellen");
+          self.location="Gravitationswellen.html";
+        }
+      </script>
+
+    <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
+</body>
+</html>
+

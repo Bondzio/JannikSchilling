@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Krummung">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+
+  
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+ 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  
+  </header>
+
+
+
+  <div class="main">
+    <h1>Riemannscher Krümmungstensor</h1>
+    Für die Feldgleichungen brauchen wir ein Maß um die Krümmung des Raumes zu beschreiben. Wir haben tensorielle Feldgleichungen gefordert. Der Metriktensor ist zwar ein Tensor, aber er kann bei geeigneter Koordinatenwahl immer in die Form
+
+    \begin{align}
+    g_{\mu\nu}=\eta_{\mu\nu}	
+    \end{align}
+
+    gebracht werden.
+    <p>Dies sagt der Satz von Sylvester aus, der in der Differentialgeometrie behandelt wird.</p>
+    <p>Weiterhin ist es möglich Koordinaten zu wählen, sodass die ersten Ableitungen des Metriktensors verschwinden (Ein lokales Inertialsystem liegt vor) Das ist der Grund, warum die Metrik und ihre erste Ableitung als globales Maß der Krümmung ausscheiden.\footnote{Mit der Metrik können wir die Krümmung des Raumes global beschreiben, allerdings nicht lokal. Für die Differentialgleichungen der Allgemeinen Relativitätstheorie hilft uns das aber nicht.} Die zweiten Ableitungen der Metrik hingegen eignen sich sehr gut für eine lokale tensorielle Beschreibung der Raumzeit. Sie zum Verschwinden zu bringen ist im Allgemeinen durch die Wahl des Koordinatensystems nicht möglich. Die zweite Ableitung von $g_{\mu\nu}$ könnte also ein geeignetes Maß für die Raumzeitkrümmung sein.</p>
+
+    <h2>Definition Krümmungstensor</h2>
+
+    <br><b>Definition:</b> Krümmungstensor
+    \begin{align}
+    R_{\cdot \beta\gamma\delta}^{\alpha}=\frac{\partial \Gamma^{\alpha}_{\cdot \beta \delta}}{\partial x^{\gamma}}-\frac{\partial \Gamma^{\alpha}_{\cdot \beta\gamma}}{\partial x^{\delta}}+\Gamma^{\alpha}_{\cdot \gamma\epsilon}\Gamma^{\epsilon}_{\cdot \beta\delta} - \Gamma^{\alpha}_{\cdot \gamma\epsilon}\Gamma^{\epsilon}_{\cdot \beta \gamma}
+    \end{align}
+
+    <b>Anmerkung: </b>
+    Der Krümmungstensor ist so gewählt, dass er bei einer flachen Raumzeit verschwindet, also
+
+    \begin{align}
+    R^{\alpha}_{\cdot \beta \gamma\delta}=0	
+    \end{align}
+
+    gilt.
+
+   <br>
+   <b>Satz: </b>Eigenschaften des Krümmungstensors <br>
+
+    <p>Der Krümmungstensor ist antisymetrisch. Das Vertauschen zweier Indizes ändert das Vorzeichnen des Krümmungstensors. Es gilt somit also</p>
+
+    \begin{align}
+    R_{\mu\rho\nu\sigma} &= -R_{\rho\mu\nu\sigma}\\
+    R_{\mu\rho\nu\sigma} &= -R_{\mu\rho\sigma\nu}.	
+    \end{align}
+
+    <br><b>Satz:</b>Bianchi-Identität<br>
+
+    <p>Die Bianchi-Identität ist ein wichtiger Satz im Umgang mit dem Krümmungstensor. Es gilt</p>
+
+    \begin{align}
+        \nabla_{\kappa}R_{\nu\sigma\lambda\mu}+\nabla_{\mu}R_{\nu\sigma\kappa\lambda}+\nabla_{\lambda}R_{\nu\sigma\mu\kappa}=0.
+    \end{align}
+    <br>
+
+    Der Riemannsche Krümmungstensor ist ebenso Ausgangspunkt für den Ricci-Tensor und den Ricci-Skalar. Diese beiden Größen sind für die Allgemeine Relativitätstheorie von elementarer Bedeutung (in den Feldgleichungen tritt der Krümmungstensor nicht auf, der Ricci-Tensor und der Ricci-Skalar hingegen schon).
+
+    <br><b>Definition: </b> Ricci-Tensor<br>
+    Der Ricci-Tensor ergibt sich durch Verjüngung des Riemannschen Krümmungstensors, wir erhalten diesen also durch
+
+    \begin{align}
+    R_{\rho\sigma}=R^{\mu}_{\cdot \rho\mu\sigma}.	
+    \end{align}
+    <br>
+
+    <br><b>Definition: </b> Ricci-Skalar<br>
+    Der Ricci-Skalar $R$ entsteht durch erneute Verjüngung des Riemannschen Tensors bzw. durch Verjüngung des Ricci-Tensors. Die Definition lautet damit
+
+    \begin{align}
+    R=R^{\rho}_{\cdot \rho}.	
+    \end{align}
+  </div>        
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+

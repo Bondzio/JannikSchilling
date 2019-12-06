@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Metrik2">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+
+  
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+ 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!--<header class='masthead'>
+  
+  </header>-->
+
+
+
+  <div class="main">
+
+        <h2>Das Linienelement und differentieller Metriktensor</h2>
+        </h2>
+        Das (infinitesimale Wegelement) können wir durch 
+
+        \begin{align}
+        ds^2=g_{\mu\nu}x^{\mu}x^{\nu}	
+        \end{align}
+
+        beschreiben. Nun wollen wir die Koordinatentransformation
+
+        \begin{align}
+        x^{\mu} &= x^{\mu}\left(\overline{x}^{\alpha}\right)\\
+        dx^{\mu} &= \frac{\partial x^{\mu}}{\partial \overline{x}^{\alpha} }dx^{\alpha}	
+        \end{align}
+
+        betrachten. Wenn wir in dem Linienelement alle Einträge nach der Transformationsvorschrift ändern, erhalten wir
+
+        \begin{align}
+        \overline{g}_{\gamma\delta}=\frac{\partial x^{\mu}}{\partial \overline{x}^{\gamma}}\frac{\partial x^{\nu}}{\partial \overline{x}^{\delta}}g_{\mu\nu}.	
+        \end{align}
+
+        Mit dieser Transformation können wir den Metriktensor auf eine andere Weise berechnen. Außerdem haben wir erkannt, dass der Metriktensor folgende Eigenschaft aufweist.
+
+        <ul>
+        <li>Symetrie bezüglich Vertauschung der Indizes
+
+        \begin{align}
+        g_{\mu\nu}=g_{\nu\mu}	
+        \end{align}</li>
+        <li>Der Metriktensor transformiert kovariant.</li>
+        <li>Jeder Metriktensor ist eine doppelt indizierte Größe.</li>
+        </ul>
+
+        <h2>Metriktensor in zwei Dimensionen</h2>
+        Wir wollen jetzt eine zweidimensionale Ebene betrachten. Für diese gilt in kartesischen Koordinaten 
+
+        \begin{align}
+        x^1=x && x^2=y && ds^2=dx^2+dy^2 
+        \end{align}
+
+        mit dem Metriktensor 
+
+        \begin{align}
+        g_{ij}=\begin{pmatrix}
+        1 & 0\\
+        0 & 1	
+        \end{pmatrix}	
+        \end{align}
+        
+        Bekanntlich finden wir die Umrechnung zwischen kartesischen Koordinaten und Polarkoordinaten mit 
+
+        \begin{align}
+        x &= r\cos(\varphi)\\
+        y &= r\sin(\varphi)
+        \end{align}
+
+        und
+
+        \begin{align}
+        x^{1} &= r && x^2=\varphi
+        \end{align}
+
+        Der transformierte Metriktensor in Polarkoordinaten finden wir durch die eben hergeleitete Beziehung
+
+        \begin{align}
+        \overline{g}_{\alpha\beta}=\frac{\partial x^{\mu}}{\partial \overline{x}^{\alpha}}\frac{\partial x^{\nu}}{\partial \overline{x}^{\beta}}g_{\mu\nu}.	
+        \end{align}
+
+        Wir können unter Beachtung der Einsteinschen Summenkonvention die einzelnen Komponente des Metriktensors bestimmen
+
+        \begin{align}
+        \overline{g}_{11} &= \frac{\partial x}{\partial r}\frac{\partial x}{\partial r} + \frac{\partial y}{\partial r}\frac{\partial y}{\partial r}=\sin^2(\varphi)+\cos^2(\varphi)=1\\
+        \overline{g}_{22} &= \frac{\partial x}{\partial \varphi}\frac{\partial x}{\partial \varphi}+\frac{\partial y}{\partial \varphi}\frac{\partial y}{\partial \varphi}=(-r\sin(\varphi))^2+(r\cos(\varphi))^2=r^2\\
+        \overline{g}_{12} &= \overline{g}_{21}=\frac{\partial x}{\partial r}\frac{\partial x}{\partial \varphi}+\frac{\partial y}{\partial r}+\frac{\partial y}{\partial \varphi}=-\sin(\varphi)\cos(\phi)+\sin(\varphi)\cos(\varphi)
+        \end{align}
+
+        Für den metrischen Tensor erhalten wir dann
+
+        \begin{align}
+        \overline{g}_{ij}=\begin{pmatrix}
+        1 & 0\\
+        0 & r^2	
+        \end{pmatrix}.
+        \end{align}
+
+        Der Metriktensor ist nicht kartesisch, aber der Raum ist trotzdem flach, wie wir später mit dem Krümmungstensor sehen werden
+
+        <h2>Metriktensor in drei Dimensionen</h2>
+        Wir wollen jetzt in einem weiteren Beispiel den Umgang mit dem Metriktensor üben. Dazu werden wir den metrischen Tensor für Kugelkoordinaten bestimmen.
+
+
+        In kartesischen Koordinaten ergibt sich für die einzelnen Komponenten $x^{i}$:
+
+        \begin{align}
+        x^1=x && x^2=y && x^3=z.	
+        \end{align}
+
+        Das Linienelement finden wir einfach durch die Summe der infinitesimalen Wegelemente $dx_i$:
+
+        \begin{align}
+        ds^2 = dx^2+dy^2+dz^2,	
+        \end{align}
+
+        was den Metriktensor $g_{ij}$ impliziert
+
+        \begin{align}
+        g_{ij}=\begin{pmatrix}
+        1&0&0\\
+        0&1&0\\
+        0&0&1.	
+        \end{pmatrix}	
+        \end{align}
+
+
+        Die Umwandlung zwischen kartesischen Koordinaten und Kugelkoordinaten funktioniert durch
+
+        \begin{align}
+        x=r\sin(\vartheta)\cos(\varphi) && y=r\sin(\vartheta)\sin(\varphi) && z = r\cos(\vartheta).	
+        \end{align}
+
+        Jetzt beginnt die eigentliche Arbeit. Zuerst bestimmen wir die neuen Komponenten $\overline{x}^{i}$:
+
+        \begin{align}
+        x^1=r && x^2=\vartheta && x^3=\varphi.	
+        \end{align}
+
+        Dann können wir die Komponenten des Metriktensors einfach bestimmen.
+
+
+        \begin{align}
+        \overline{g}_{11} &= \left(\frac{\partial x}{\partial r}\right)^2+\left(\frac{\partial y}{\partial r}\right)^2+\left(\frac{\partial z}{\partial r}\right)^2=(\sin(\theta)\cos(\varphi))^2+(\sin(\vartheta)\sin(\varphi))^2+\cos^2(\vartheta)\\\notag
+        &=\sin^2(\vartheta)\cdot (sin^2\varphi+\cos^2\varphi)+cos^2\vartheta=1\\
+        \overline{g}_{22} &= \left(\frac{\partial x}{\partial \vartheta}\right)^2+\left(\frac{\partial y}{\partial \vartheta}\right)^2+\left(\frac{\partial z}{\partial \vartheta}\right)^2=(r\cos(\vartheta)\cos(\varphi))^2+(r\cos(\vartheta)\sin(\varphi))^2\\\notag
+        &+(-r\sin(\vartheta))^2=r^2(\cos^2(\vartheta)\cos^2(\varphi)+\cos^2(\vartheta)\sin^2(\varphi)+\sin^2(\vartheta))\\\notag
+        &= r^2\cos^2(\vartheta)(\cos^2(\varphi)+\sin^2(\varphi))+r^2\sin^2(\vartheta)=r^2\\
+        \overline{g}_{33} &= \left(\frac{\partial x}{\partial \varphi}\right)^2+\left(\frac{\partial y}{\partial \varphi}\right)^2+\left(\frac{\partial z}{\partial \varphi}\right)^2=(-r\sin(\vartheta)\sin(\varphi))^2+(r\sin(\vartheta)\cos(\varphi))^2\\
+        &=r^2\sin^2(\vartheta)\cdot(\sin^2(\varphi)+\cos^2(\varphi))=r^2\sin^2(\vartheta)\\
+        \overline{g}_{13}&=\overline{g}_{31}=\frac{\partial x}{\partial r}\frac{\partial x}{\partial \varphi}+\frac{\partial y}{\partial r}\frac{\partial y}{\partial \varphi}+\frac{\partial z}{\partial r}\frac{\partial z}{\partial \varphi}=(\sin(\vartheta)\cos(\varphi))(-r\sin(\vartheta)\sin(\varphi))\\\notag
+        &+(\sin(\vartheta)\sin(\varphi))(r\sin(\vartheta)\cos(\varphi))+\cos(\vartheta)\cdot 0=0\\
+        \overline{g}_{23} &= \overline{g}_{32}= \frac{\partial x}{\partial \vartheta}\frac{\partial x}{\partial \varphi}+\frac{\partial y}{\partial \vartheta}\frac{\partial y}{\partial \varphi}+\frac{\partial z}{\partial \vartheta}\frac{\partial z}{\partial \varphi}=(r\cos(\vartheta)\cos(\varphi))\cdot (-r\sin(\vartheta)\sin(\varphi))\\\notag
+        &+(r\cos(\vartheta)\sin(\varphi))\cdot (r\sin(\vartheta)\cos(\varphi))+(-r\sin(\vartheta))\cdot (0)=0\\
+        \overline{g}_{12} &= \overline{g}_{21}= \frac{\partial x}{\partial r}\frac{\partial x}{\partial \vartheta}+\frac{\partial y}{\partial r}\frac{\partial y}{\partial \vartheta}+\frac{\partial z}{\partial r}\frac{\partial z}{\partial \vartheta}=(\sin(\vartheta)\cos(\varphi))\cdot (r\cos(\vartheta)\cos(\varphi))\\\notag
+        &+ (\sin(\vartheta)\sin(\varphi))\cdot (r\cos(\vartheta)\sin(\varphi))+\cos(\vartheta)\cdot (-\sin(\vartheta))=0.
+        \end{align}
+
+        Der Metriktensor ergibt sich damit zu 
+
+        \begin{align}
+        g_{ij}=\begin{pmatrix}
+        1 &0&0\\
+        0&r^2&0\\
+        0&0&r^2\sin^2(\vartheta)	
+        \end{pmatrix}	,
+        \end{align}
+
+        beziehungsweise das Wegelement $ds^2$ zu
+
+        \begin{align}
+        ds^2=dr^2+r^2\, d\vartheta^2+r^2\sin^2(\vartheta)\, d\varphi^2.	
+        \end{align}
+
+        Mit der oben hergeleiteten Gleichung $g_{\mu\nu}g^{\mu\nu}=\delta_{\mu\nu}$ müssen wir für den kontravarianten Metriktensor einfach das Inverse des kovarianten Metriktensors berechnen:
+        \begin{align}
+        g^{ij}=\begin{pmatrix}
+        1 & 0 & 0\\
+        0 & \frac{1}{r^2} & 0\\
+        0 & 0 & \frac{1}{r^2\sin\vartheta}.
+        \end{pmatrix}
+        \end{align}
+
+        <h2>Koordinatensingularitäten: Einheitskugeloberfläche</h2>
+        Die Oberfläche einer Kugel ist kein euklidischer Raum - sie ist gekrümmt. Wir beschreiben die Kugeloberfläche ohne Einbettung in den dreidimensionalen Raum mit den Koordinaten
+
+        \begin{align}
+        x^1=\vartheta && x^2=\varphi.	
+        \end{align}
+
+        Der metrische Tensor ergibt sich dann zu 
+
+        \begin{align}
+        g_{ij}=\begin{pmatrix}
+        1 &0\\
+        0&\sin^2(\vartheta)	
+        \end{pmatrix}	,
+        \end{align}
+
+        das Linienelement ist folglich
+
+        \begin{align}
+        ds^2=(d\vartheta)^2+\sin^2(\vartheta)\, (d\varphi )^2.	
+        \end{align}
+
+        <b>Anmerkung: </b> Die Metrik $g_{ij}$ besitzt Koordinatensingularitäten, wenn $x^1$ die Werte $x^1=0$, $x^1=\pi$ oder $x^1=\lambda \pi$ annimmt, da 
+        \begin{align}
+        \sin^2(\lambda\pi)=0
+        \end{align}
+
+        ist und die Transformationsgleichung 
+
+        \begin{align}
+        0\cdot x=1	
+        \end{align}
+
+        keine gültige Lösung besitzt. 
+
+        Der kontravariante metrische Tensor ergibt sich zu 
+
+        \begin{align}
+        g^{\mu\nu}=
+        \begin{pmatrix}
+        1&0\\
+        0& \frac{1}{\sin^2(\vartheta)}.	
+        \end{pmatrix}	
+        \end{align}
+
+        </div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+

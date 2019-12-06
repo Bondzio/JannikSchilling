@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/QuantenZusammenfassung">
+<title>Physik ist nicht alles, aber alles ist Physik!</title>
+<meta name="description" content="Hast du auch schon gehört, dass Physik nichts mit der Realität zu tun habe? Ich zeige dir, dass das nicht stimmt!">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    header{
+    background-image: url(Bilder/alltag.jpg);
+  }
+</style>
+<link rel="stylesheet" href="blog/css/bootstrap.css">
+<link rel="stylesheet" href="blog/css/font-awesome.min.css">
+<link rel="stylesheet" href="blog/css/owl.carousel.min.css">
+<link rel="stylesheet" href="blog/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="blog/style.css">
+<link rel="stylesheet" href="blog/responsive.css">
+</head>
+<body>
+
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="cource.html">Kurse</a>
+    <!--<a href="relativ.html">Relativitätstheorie</a>
+  <a href="klassisch.html">Klassische Physik</a>
+  <a href="alltag.html">Physik im Alltag</a>
+  <a href="quantum.html">Quantenphysik</a>-->
+
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class='masthead'>
+  <div class="main">
+  
+  </header>
+
+  <div class="main">
+    <h1>Zusammenfassung: Quantenmechanik</h1>
+    <h2>Grundlagen der Quantenmechanik</h2>
+    <p><b>Axiom 1.1: Vektoren im Hilbert-Raum</b></p>
+    <p>Die Quantenmechanik wird durch Vektoren $|\psi\rangle \in\mathcal{H}$ in einem unendlich-dimensionalen Funktionenraum $\mathcal{H}$ beschrieben. Alle Elemente des Hilbertraums sind quadratintregrabel und normierbar $\langle\psi |\psi\rangle =1$.</p>
+    <p><b>Axiom 1.2: Operatoren</b></p>
+    <p>Jede physialische Observable $A$ wird durch einen hermiteschen Operator $\hat{A}$ des Hilbertraums beschrieben. Dessen Eigenwerte sind stets reell und sind die Messwerte der Observablen.</p>
+    <p><b>Axiom 1.3: Eigenwerte und Eigenvektoren</b></p>
+    <p>Sei $\hat{A}$ eine Observable und erfüllen die Eigenwerte und die Eigenvektoren $a_i$ und $| a_i\rangle$ die Eigenwertgleichung: 
+    </p>
+    $$\hat{A}|a_i\rangle=a_i|a_i\rangle.$$
+    Dann beträgt die Wahrscheinlichkeit $P(a_i)$ eines $g_i$-fach entartetem Eigenwert $a_i$
+    $$P_(a_i)=\sum_{k=1}^{g_i}|\langle a_i|\psi \rangle|^2$$
+    <p><b>Axiom 1.4: Kollaps der Wellenfunktion</b></p>
+    <p>Nach einer Messung des Zustandes $|\psi\rangle$, wobei das Messergebnis $a$ betrug, befindet sich das System im zugehörigen Zustand $|a\rangle$.</p>
+    <p><b>Zeitliche Entwicklung</b></p>
+    <p>Die zeitliche Entwicklung eines Systems mit dem Hamilton-Operator $\hat{H}$ wird durch die Schrödingergleichung beschrieben</p>
+    $$i\hbar\frac{\partial}{\partial t}|\psi(t)\rangle=\hat{H}(t)|\psi(t)\rangle.$$
+    <p><b>Das Skalarprodukt</b></p>
+    $$\langle \psi |\phi\rangle=\int \psi^{*}(\vec{r},t)\cdot \phi(\vec{r},t)\, \mathrm{d}^3 x.$$
+    <p><b>Die Orthonomalitätsbedingung</b></p>
+    $$\langle u_i|\psi_j=\delta_{ij}.$$
+    <p><b>Die Vollständigkeitsrelation</b></p>
+    $$\sum_i |u_i\rangle\langle u_i|=1.$$
+    <p><b>Der Kommutator</b></p>
+    $$[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}.$$
+    <p><b>Operatorfunktionen</b></p>
+    $$F(\hat{A})=\sum_{n=0}^{\infty}f_n\cdot \hat{A}$$
+</div>
+
+  
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+
+<script>
+  function AutobahnFunc() {
+    self.location="Autobahn.html";
+  }function FallschirmFunc() {
+    self.location="Fallschirmspringer.html";
+  }
+</script>
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
