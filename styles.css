@@ -34,13 +34,13 @@ body {margin:0;font-family:Arial}
   }
 
   /* --- NAVBAR SECTION --- */
-  
+  /*
   .topnav {
     overflow: hidden;
-    background-color: #bbb; /*b9b9b9*/
+    background-color: #bbb; b9b9b9
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    width: 100%; /* Full width 
     z-index: 9999;
     transition: 0.4s;
   }
@@ -55,13 +55,13 @@ body {margin:0;font-family:Arial}
     font-size: 17px;
     text-align: center;
     
-  }
+  }*/
   
   .active {
     background-color: #666;
     color: white;
   }
-  
+  /*
   .topnav .icon {
     display: none;
   }
@@ -70,7 +70,7 @@ body {margin:0;font-family:Arial}
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #333333;
-}
+}/*
 
 /* --- HEADER Section --- */
 
