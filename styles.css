@@ -39,8 +39,8 @@ body {margin:0;font-family:Arial}
     overflow: hidden;
     background-color: #bbb; b9b9b9
     position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width 
+    /*top: 0; /* Position the navbar at the top of the page */
+    /*width: 100%; /* Full width 
     z-index: 9999;
     transition: 0.4s;
   }
@@ -182,7 +182,7 @@ body {margin:0;font-family:Arial}
     display: block;
     text-align: left;
   }
-  
+  /*
   .topnav a:hover, .dropdown:hover .dropbtn {
     background-color: #FFFF;
     color: black;
@@ -195,7 +195,7 @@ body {margin:0;font-family:Arial}
   
   .dropdown:hover .dropdown-content {
     display: block;
-  }
+  }/*
 
     /* --- ABOUT ME SECTION ---*/
     .about-me{
@@ -512,7 +512,7 @@ footer{
 /* You can remove below code if you don't want Footer to be responsive */
  
 
-/* --- RESPONISVES DESIGN ---*/
+/* --- RESPONISVES DESIGN ---
 @media screen and (max-width: 500px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
       display: none;
@@ -522,7 +522,7 @@ footer{
       display: block;
   }
 
-}
+}*/
 
 
 @media screen and (max-width: 50000px) {
@@ -544,15 +544,15 @@ footer{
 
 
 @media screen and (max-width: 500px) {
-  .topnav.responsive {position: relative;}
+  /*.topnav.responsive {position: relative;}
   .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
-  }
+  }*/
   .box{
       width: auto;
-  }
+  }/*
   .topnav.responsive a {
       float: none;
       display: block;
@@ -564,7 +564,7 @@ footer{
       display: block;
       width: 100%;
       text-align: left;
-  }
+  }*/
 
   .card {
       /* Add shadows to create the "card" effect */
@@ -591,7 +591,7 @@ footer{
 
 @media (max-height:1500px){
 footer { position: static; }
-header { padding-top:40px; }
+/*header { padding-top:40px; }*/
 }
 
 
