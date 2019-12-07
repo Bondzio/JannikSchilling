@@ -97,18 +97,24 @@
    
     <h1>Die Heisenbergsche Unschärferelation</h1>
 
-    Der bekannte Physiker Werner Heisenberg machte sich Gedanken zu dem Verhalten von Quantenobjekten an einem Doppelspalt (Siehe Abbildung). Er entdeckte, dass man entweder den Impuls eines Teilchens ziemlich genau bestimmen kann oder den Ort eines Teilchens. Wenn man den einen Wert genau bestimmt folgt daraus, dass man den anderen Wert nicht genau bestimmen kann. Er fand heraus, dass das Produkt aus  der Genauigkeit des Impulses und der des Ortes gleich der Naturkonstante $\hbar$ ist.
+    <p>Der bekannte Physiker Werner Heisenberg machte sich Gedanken zu dem Verhalten von Quantenobjekten an einem Doppelspalt (Siehe Abbildung). Er entdeckte, dass man entweder den Impuls eines Teilchens ziemlich genau bestimmen kann oder den Ort eines Teilchens. Wenn man den einen Wert genau bestimmt folgt daraus, dass man den anderen Wert nicht genau bestimmen kann.</p>
+    <figure class="size-2">
+      <img scr="Bilder/doppelspalt.png" alt="Das Doppelspaltexperiment">
+      <figcaption><em>Das Doppelspaltexperiment zeigt den Wellencharakter von Strahlung. Es bildet sich hinter dem Doppelspalt ein Interferenzmuster.
+      </em></figcaption>
+    </figure>
+    <p>Die berühmteste Form von Heisenbergs Relation ergibt sich für den Spezialfall des Impuls und des Orts. Es gilt </p>
     \begin{align}  \Delta x \cdot \Delta p_x \geq \frac{\hbar}{2}. \end{align} 
 
-    Diese Formel ist ein Spezialfall von dem allgemeinen Fall:
+    <p>Diese Formel ist ein Spezialfall und ergibt sich aus der allgemeinen Relation:</p>
 
-    \begin{align} (\Delta A)_{\psi}(\Delta B)_{\psi} \geq \frac{1}{2} | \langle [\hat{a}, \hat{b}]\rangle | \end{align} 
+    \begin{align} (\Delta A)_{\psi}(\Delta B)_{\psi} \geq \frac{1}{2} | \langle [\hat{A}, \hat{B}]\rangle | \end{align} 
 
     <h2>Herleitung der allgemeinen Unschärferelation</h2>
 
     <p>Wir zeigen jetzt die Richtigkeit der Heisenbergschen Unschärferelation. Dazu betrachten wir zuerst die Schwarzsche Ungleichung.</p>
 
-    Für zwei beliebige Wellenfunktionen $\phi(x,t)$ und $\psi(x,t)$ gilt:
+    <p>Für zwei beliebige Wellenfunktionen $\phi(x,t)$ und $\psi(x,t)$ gilt:</p>
 
     \begin{align}
     \left| \int_{-\infty}^{\infty} \phi^{*}(x,t)\psi(x,t)dx\right|^2 \geq \int_{-\infty}^{\infty} |\psi(x,t)|^2\ dx \int_{-\infty}^{\infty}|\phi(x,t)|^2\ dx.	
@@ -116,59 +122,58 @@
 
     <h2>Herleitung mit schwarzer Ungleichung</h2>
 
-    Es seien $\hat{a}$ und $\hat{b}$ zwei beliebige hermetische Operatoren und $\psi(x,t)$ wie immer eine beliebige Wellenfunktion.<br>
+    <p>Es seien $\hat{a}$ und $\hat{b}$ zwei beliebige hermetische Operatoren und $\psi(x,t)$ wie immer eine beliebige Wellenfunktion.</p>
 
-    Per Definition ist das Unschärfeprodukt
+    <p>Per Definition ist das Unschärfeprodukt</p>
 
     \begin{align}
     (\Delta A)_{\psi}(\Delta B)_{\psi}=\left( \int_{-\infty}^{\infty} \psi^{*}(x,t)(\hat{A}-\langle A\rangle_{\psi})^2\psi(x,t)\ dx\right)^{\frac{1}{2}}\\ \left( \int_{-\infty}^{\infty} \psi^{*}(x,t)(\hat{B}-\langle B \rangle_{\psi})^2\psi(x,t)\ dx\right)^{\frac{1}{2}}.	
     \end{align}
 
-    Jetzt führen wir die beiden hermetischen Operatoren $\hat{X_1}$ und $\hat{X_2}$ ein
+    <p>Jetzt führen wir die beiden hermetischen Operatoren $\hat{X_1}$ und $\hat{X_2}$ ein</p>
 
     \begin{align}
     \hat{X_1}=\hat{A}-\langle A\rangle_{\psi},\\
     \hat{X_2}=\hat{B}-\langle B \rangle_{\psi}.	
     \end{align}
 
-
-    Damit können wir das Unschärfeprodukt umschreiben
+    <p>Damit lässt sich das Unschärfeprodukt schreiben als</p>
 
     \begin{align}
     (\Delta A)_{\psi}(\Delta B)_{\psi}=\left( \int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_1}^2\psi(x,t) \ dx \right)^{\frac{1}{2}}\\
     \left( \int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_2}^2\psi(x,t)\ dx\right)^{\frac{1}{2}}.	
     \end{align}
 
-    Außerdem gilt nach der Schwarzschen Ungleichung:
+    <p>Außerdem gilt nach der Schwarzschen Ungleichung:</p>
 
     \begin{align}
     \int_{-\infty}^{\infty} |\hat{X_1}\psi(x,t)|^2 \ dx\int_{-\infty}^{\infty} |\hat{X_2}\psi(x,t)|^2 \ dx \geq \left|\int_{-\infty}^{\infty} (\hat{X_1} \psi(x,t))^*\hat{X_2}\psi(x,t) \ dx \right|^2	
     \end{align}
 
-    Durch Umformung und Einsetzen ergibt sich
+    <p>Wir setzen nun die Operatoren ein und vereinfachen die Relation</p>
 
     \begin{align}
     \int_{-\infty}^{\infty}	 \hat{X_1}^*\psi^*(x,t) \hat{X_1}\psi(x,t)\ dx & \int_{-\infty}^{\infty} \hat{X_2}^*\psi^*(x,t)\hat{X_2}\psi(x,t) \ dx\\
     & \geq \left| \int_{-\infty}^{\infty} \hat{X_1}^*\psi^*(x,t)\hat{X_2}\psi(x,t)\ dx\right|
     \end{align}
 
-    Wegen der Hermitezität der Operatoren $\hat{X_1}$ und $\hat{X_2}$ können wir den Term zusammenfassen:
+    <p>Wegen der Hermitezität der Operatoren $\hat{X_1}$ und $\hat{X_2}$ können wir den Term zusammenfassen:</p>
 
     \begin{align}
     \int_{-\infty}^{\infty} \psi^*(x,t)X_1^2 \psi(x,t)\ dx &\int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_2}^2\psi(x,t)\ dx\\& \geq \left|\int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_1}\hat{X_2}\psi(x,t)\ dx \right|^2	
     \end{align}
 
-    Damit ergibt sich
+    <p>Damit ergibt sich</p>
 
     \begin{align}
     (\Delta A)_{\psi}(\Delta B)_{\psi}\geq \left|\int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_1}\hat{X_2}\psi(x,t)\ dx \right|.	
     \end{align}
 
-    Jetzt brauchen wir den Antikommutator $\{ \hat{X_1}, \hat{X_2} \}= \hat{X_1}\hat{X_2}+ \hat{X_2}\hat{X_1}$. Somit ist das Produkt $\hat{X_1}\hat{X_2}$ gleich
+    <p>Jetzt brauchen wir den Antikommutator $\{ \hat{X_1}, \hat{X_2} \}= \hat{X_1}\hat{X_2}+ \hat{X_2}\hat{X_1}$. Somit ist das Produkt $\hat{X_1}\hat{X_2}$ gegeben durch</p>
 
     \begin{align} \hat{X_1}\hat{X_2}=\frac{1}{2}\{ \hat{X_1}, \hat{X_2}\}+ \frac{1}{2}[\hat{X_1}, \hat{X_2}]. \end{align} 
 
-    Damit
+    <p>Damit ergibt sich</p>
 
     \begin{align}
     \left| \int_{-\infty}^{\infty} \psi^*(x,t)\hat{X_1}\hat{X_2}\psi(x,t) \ dx\right| &= \frac{1}{2}\left| \int_{-\infty}^{\infty} \psi^*(x,t)\{ \hat{X_1}, \ \hat{X_2}\} \psi(x,t) \ dx \right|\\
@@ -176,24 +181,24 @@
     &= \frac{1}{2}|\langle \{ \hat{X_1},\ \hat{X_2}\}\rangle_{\psi} + \langle [\hat{X_1}, \ \hat{X_2}]\rangle_{\psi}|
     \end{align}
 
-    Setzen wir wieder in die vorherige Gleichung ein
+    <p>Setzen wir wieder in die vorherige Gleichung ein</p>
 
     \begin{align}
     (\Delta A)_{\psi} (\Delta B)_\psi \geq \frac{1}{2}|\langle \{ \hat{X_1},\ \hat{X_2}\}\rangle_{\psi} + \langle [\hat{X_1}, \ \hat{X_2}]\rangle_{\psi}|.
     \end{align}
 
-    Da der Erwartungswert des Antikommutators reell und der des Kommutators imaginär, können wir umschreiben
+    <p>Da der Erwartungswert des Antikommutators reell und der des Kommutators imaginär, können wir umschreiben</p>
 
     \begin{align}
     (\Delta A)_{\psi}(\Delta B)_{\psi} &\geq \frac{1}{2} \left( |\langle \{ \hat{X_1}, \ \hat{X_2}\}\rangle|^2 + |\langle [\hat{X_1}, \ \hat{X_2}] \rangle_{\psi} |^2\right)^{\frac{1}{2}}\\
     & \geq \frac{1}{2}|\langle [\hat{X_1}, \ \hat{X_2}]\rangle_{\psi}|.
     \end{align}
 
-    Da 
+    <p>Wegen der Relation</p>
 
     \begin{align} [\hat{X_1}, \ \hat{X_2}]=[\hat{A}-\langle A \rangle_{\psi}, \ \hat{B}-\langle B\rangle_{\psi}]=[\hat{A},\ \hat{B}] \end{align} 
 
-    gilt auch das zu zeigende
+    <p>gilt auch</p>
 
     \begin{align}
     (\Delta A)_{\psi} (\Delta B)_{\psi} \geq \frac{1}{2}|\langle [\hat{A},\ \hat{B}] \rangle|.	
@@ -201,19 +206,22 @@
 
     <h2>Spezialfall: die Heisenbergsche Unschärferelation</h2>
 
-    Jetzt wollen wir zeigen, dass aus der allgemeinen Beziehung der Spezialfall für die Unschärfe des Impulses und des Ortes folgt. Dafür gilt $\hat{A}=x$ und $hat{B}=\hat{p}_x$. Setzen wir in unsere allgemeine Form ein, wodurch wir das folgende erhalten
+    <p>Jetzt wollen wir zeigen, dass aus der allgemeinen Beziehung der Spezialfall für die Unschärfe des Impulses und des Ortes folgt. Dafür gilt $\hat{A}=x$ und $\hat{B}=\hat{p}_x$. Setzen wir in unsere allgemeine Form ein, wodurch wir das folgende erhalten</p>
 
     \begin{align}
     (\Delta x)_{\psi} (\Delta p_x)_{\psi} &\geq \frac{1}{2}|\langle [\hat{x},\ \hat{p_x}]\rangle_{\psi}|\\
     &= \frac{1}{2}\left| \int_{-\infty}^{\infty} \psi^*(x,t)[\hat{x}, \hat{p_x}]\psi(x,t)\ dx \right|.	
     \end{align}
 
-    Jetzt brauchen wir eine noch nicht behandelte Gleichung, die unabhängig von der Wellenfunktion $\psi$ gültig ist. Es gilt 
+    <p>In der Lektion über Kommutatoren haben wir bereits den Kommutator von Ort und Impuls berechnet:</p>
 
-    \begin{align} [\hat{x},\ \hat{p_x}]=i\hbar \end{align} 
+    \begin{align} [\hat{x},\ \hat{p_x}]=i\hbar. \end{align} 
 
-    Setzen wir diese Gleichung wieder in die ursprüngliche Form ein
-
+    <p>Da wir den Erwartungswert einer Observablen $\hat{O}$ durch</p>
+    \begin{align}
+    \langle \hat{O}\rangle=\langle \psi |\hat{O}|\rangle=\int_{-\infty}^{\infty} \psi(x)\hat{O}\psi^{*}(x)\, \mathrm{d}x
+    \end{align}
+    berechnen können, ist die Unschärferelation gegeben durch
     \begin{align}
     (\Delta p_x)_\psi (\Delta x)_\psi \geq &\frac{1}{2}\left| \int_{-\infty}^{\infty} \psi^*(x,t)[\hat{x}, \hat{p_x}]\psi(x,t)\ dx \right|\\
     =& \frac{1}{2}\left| \int_{-\infty}^{\infty}\psi^*(x,t)i\hbar \psi(x,t) \ dx \right|\\
@@ -221,15 +229,13 @@
     =& \frac{\hbar}{2}.
     \end{align}
 
-    D.h. wir haben die Heisenberg'sche Unschärferelation gefunden:
+    Zusammengefasst lautet die Heisenbergsche Unschärferelation also
 
     \begin{align}
     \Delta x \Delta p_x\geq \frac{\hbar}{2}.	
     \end{align}
 
-    <b>Anmerkung:</b> In der dritten Zeile verschwindet die imaginäre Zahl $i$, da der Betrag von $i$ gleich eins ist.<br>
-
-    Gönnen Sie sich nach dieser mathematisch komplizierten Herleitung ruhig eine kleine Pause. Doch keine Sorge, wir machen erst einmal wieder einfacher weiter. 
+    <p>Gönnen Sie sich nach dieser mathematisch komplizierten Herleitung ruhig eine kleine Pause. Doch keine Sorge, wir machen erst einmal wieder einfacher weiter.</p>
         </div>
 
         <div id="disqus_thread"></div>
