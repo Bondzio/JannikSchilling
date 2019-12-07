@@ -94,7 +94,7 @@
 
   <div class="main">
     <h1>Die Kovariante Ableitung</h1>
-    Das Ziel des heutigen Artikels ist es, die sog. kovariante Ableitung zu definieren. Dazu werden wir den normalen Ableitungsoperator $\frac{\partial}{\partial \tau}$ durch den kovarianten Ableitungsoperator $\frac{\mathrm{D}}{\mathrm{D}\tau}$.
+    <p>Das Ziel des heutigen Artikels ist es, die sog. kovariante Ableitung zu definieren. Dazu werden wir den normalen Ableitungsoperator $\frac{\partial}{\partial \tau}$ durch den kovarianten Ableitungsoperator $\frac{\mathrm{D}}{\mathrm{D}\tau}$ ersetzen.</p>
     <h2>Motivation</h2>
 
     <p>In der Newtonschen Physik sind die Zeit $t$ und die Eigenzeit $\tau$ stets identisch. Daher gilt die Gleichung</p>
@@ -102,7 +102,7 @@
     \frac{\mathrm{d}u^{k}}{\mathrm{d}\tau}=0,
     \end{align}
     <p>wobei $u^k$ die Geschwindigkeitskomponenten eines freien Teilchens bezeichnet.</p>
-    <p>Diese Gleichung wollen wir in die Allgemeine Relativitätstheorie übertragen. Dazu definieren wir den kovarianten Differentialoperator $\frac{\mathrm{d}}{\mathrm{d\tau}}$. Mit diesem ergibt sich</p>
+    <p>Diese Gleichung wollen wir in die Allgemeine Relativitätstheorie übertragen. Dazu definieren wir den kovarianten Differentialoperator $\frac{\mathrm{D}}{\mathrm{D\tau}}$. Mit können wir die Gleichung analog formulieren:</p>
     $$\frac{\mathrm{D}u^k}{\mathrm{d}\tau}=0.$$
     <p>Wie ich später zeigen werde, lässt sich der Operator als</p>
     $$\mathrm{D}u^{\kappa}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma^{\kappa}_{\cdot \mu\nu}\right)\mathrm{d}x^{\nu}$$
@@ -123,36 +123,37 @@
     \begin{align}
     \frac{\mathrm{d}^2x^k}{\mathrm{d}\tau^2}+\Gamma_{\mu\nu}^{\kappa}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}\tau}=0.	
     \end{align}
-    Hier ist $x^{\mu}$ der Ortsvektor der allgemeinen Relativitätstheorie. Im Gegensatz zu der Newtonschen Mechanik hat der Ortsvektor vier Komponeten und nicht drei Komponenten. Es gilt
+    <p>Hier ist $x^{\mu}$ der Ortsvektor der allgemeinen Relativitätstheorie. Im Gegensatz zu der Newtonschen Mechanik hat der Ortsvektor vier Komponeten und nicht drei Komponenten. Es gilt</p>
     \begin{align}
     x^{\mu}=\left(x^0,x^1,x^2,x^3\right).	
     \end{align}
-    Damit können wir die Geodätengleichung auch mit dem Geschwindigkeitsvekor $u^{\mu}$ schreiben
+    <p>Damit können wir die Geodätengleichung auch mit dem Geschwindigkeitsvekor $u^{\mu}$ schreiben</p>
     \begin{align}
     \frac{\mathrm{d}u^k}{\mathrm{d}\tau}=-\Gamma_{\mu\nu}^{\kappa}u^{\mu}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}\tau}\label{eq:geodateGl}.
     \end{align}
-    Hierbei ist $u^{\mu}$ dann die "normale" Ableitung des Ortsvektors
+    <p>Hierbei ist $u^{\mu}$ dann die "normale" Ableitung des Ortsvektors</p>
     \begin{align}
     u^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}.	
     \end{align}
-    Wenn wir Gleichung oben formal mit $\mathrm{d}\tau$ multiplizieren, erhalten wir die Gleichung
+    <p>Wenn wir Gleichung oben formal mit $\mathrm{d}\tau$ multiplizieren, erhalten wir die Gleichung</p>
     \begin{align}
         \mathrm{d}u^{\kappa}=-\Gamma_{\mu\nu}^{\kappa}u^{\mu}\mathrm{d}x^{\nu}\label{eq:kovarianteAbleitung1}.
     \end{align}
-    Die Differentialgeometrie lehrt uns, dass sich das totale Differential durch
+    <p>Die Differentialgeometrie lehrt uns, dass sich das totale Differential durch</p>
     \begin{align}
         \mathrm{d}u^{\kappa}=\frac{\partial u^{\kappa}}{\partial x^{\nu}}\mathrm{d}x^{\nu}
     \end{align}
-    berechnen lässt. Auf der rechten Seite wird über $\nu$ summiert. Wenn wir das Wissen um das totale Differential in Gleichung für die kovariante Ableitung einsetzen, erhalten wir
+    <p>berechnen lässt. Auf der rechten Seite wird über $\nu$ summiert. Wenn wir das Wissen um das totale Differential in Gleichung für die kovariante Ableitung einsetzen, erhalten wir</p>
     \begin{align}
     0=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}\cdot u^{\mu}\right)\mathrm{d}x^{\nu}.	
     \end{align}
     
-    Für das kovariante Differential $Du^{\kappa}$ ergibt sich
+   <p> Für das kovariante Differential $Du^{\kappa}$ ergibt sich schließlich</p>
+   <p><b>Definition: </b> Die kovariante Ableitung</p>
     \begin{align}
     Du^{\kappa}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}u^{\mu}\right).	
     \end{align}
-    Wir sagen, $\frac{\mathrm{D}u^{\kappa}}{\mathrm{d}x^{\nu}}$ ist die kovariante Ableitung von $u^{\mu}$ nach $x^{\nu}$.
+    <p>Wir sagen, $\frac{\mathrm{D}u^{\kappa}}{\mathrm{d}x^{\nu}}$ ist die kovariante Ableitung von $u^{\mu}$ nach $x^{\nu}$.</p>
     
     <h2>Fazit</h2>
   
