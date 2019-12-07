@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Christoffel">
+<link rel="canonical" href="https://www.jannik-schilling.com/ParallelTransport">
 <title>Die Christoffelsymbole</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
@@ -80,7 +80,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Die Christoffelsymbole</h2>
+                        <h2>Der Paralleltransport</h2>
                         <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
@@ -92,28 +92,41 @@
 
 
   <div class="main">
-        <h1>Die Christoffelsymbole und der Paralleltransport</h1>
-        <p><b>Definition: </b> Christoffelsymbole 1. Art</p>
-        <p>Wir definieren die Christoffelsymbole erster Art wie folgt:</p>
+        <h1>Der Paralleltransport</h1>
+        <p>Wir haben bereits gesehen, dass sich die Christoffelsymbole additiv aus Ableitungen eines Vektorfelds zusammensetzen. Denn in Zukunft wollen wir mit diesen Ableitungen das Krümmungsverhalten von Vektorfeldern bestimmen. Um diese Definition zu rechtfertigen, betrachten wir nun den Paralelltransport.</p>
+        <figure class="size-1">
+        <img style="display: block; text-align: center;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Parallel_Transport.svg/1200px-Parallel_Transport.svg.png" width="60%" alt="Parallel Transport.svg">
+        <figcaption><em>        <p><a href="https://commons.wikimedia.org/wiki/File:Parallel_Transport.svg#/media/Datei:Parallel_Transport.svg"></a><br>Von <a href="//commons.wikimedia.org/wiki/User:Fred_the_Oyster" title="User:Fred the Oyster">Fred the Oyster</a> - <a href="//commons.wikimedia.org/wiki/File:Parallel_transport.png" class="image"></a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=35124171">Link</a></p></em></figcaption>
+        </figure>
+        <p>In einem euklischen Raum können wir einfach die Vektoren am Anfang und am Ende der Bewegung vergleichen, da man die Tangentialräume kanonisch identifizieren kann.</p>
+        <p>Für eine beliebige Mannigfaltigkeit geht das natürlich nicht mehr, denn nun müssen wir auch die eigentliche Bewegung betrachten.</p>
+        <p>Wir sagen, dass der Vektor entlang der Kurve parallel verschoben wurde.</p>
+        <p>Es sei $\gamma: I\rightarrow M$ eine reguläre Kurve und $X$ ein Vektorfeld längs $\gamma$. Da $\gamma$ eine reguläre Kurve ist, ist $\gamma'\neq 0$. Wir wollen hier</p>
+        <p>Es bietet sich in diesem Kontekt an die kovariante Ableitung $\nabla_{\gamma'}X$ zu berechnen. Formal ist das aber leider nicht möglich, da weder $\gamma'$ noch $X$ Vektorfelder sind. Für $\gamma'$ lösen wir dieses Problem, indem wir an jedem Punkt $p$ das Vektorfeld $Y(p)=\gamma'(p)$ betrachten.</p>
+        <p>Für das Vektorfeld $X$ setzen wir $X$ auf einem $M$ zu einem $\hat{X}$ fort und hoffen, dass $\nabla_{\gamma'}\hat{X}$ nicht von der Wahl von $\hat{X}$ abhängt.</p>
+        <p>Es ergibt sich</p>
         \begin{align}
-        \Gamma_{\mu\nu\kappa}=\frac{1}{2}(\partial_{\mu}g_{\nu\kappa}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}).
+        \nabla_{\gamma'}\hat{X}=\sum_i\gamma^{i}\sum_k\left(\partial_i(\hat{X}^k)+\sum_j\Gamma_{\cdot ij}^{k}\hat{X}^j\right)\partial_K=D_{\gamma}\hat{X}(\gamma')+\sum \hat{X}^j\nabla_{\gamma'}\partial_j.
         \end{align}
-        <p><b>Definition: </b> Christoffelsymbole 2. Art</p>
-        <p>Von diesen gelangen wir durch Multiplikation mit dem metrischen Tensor $g^{\sigma\kappa}$ zu den Christoffelsymbolen zweiter Art:</p>
+        <p>Auf der rechten Seite wird $\hat{X}$ nur an der Stelle $\gamma'$ ausgewertet. Damit hängt $\nabla_{\gamma'}$ nur von $\hat{X}$ ab.</p>
+        <p>Dies sichert uns die Notation $\nabla_{\gamma'}\hat{X}$, da sich durch ein geeignetes $\hat{X}$ die Existenz zeigen lässt.</p>
+        <p><b>Definition: </b> Sei $\gamma: I\rightarrow M$ eine reguläre Kurve. Ein Vektorfeld $X$ längs $\gamma$ heißt parallel, falls $\nabla_{\gamma'}X=0$ gilt. Wir nennen $\gamma$ Geodätische, falls $\gamma'$ parallel ist:</p>
         \begin{align}
-        \Gamma_{\cdot\mu\nu}^{\sigma}=\frac{1}{2}g^{\sigma\kappa}g_{\mu\nu\kappa}=\frac{1}{2}g^{\sigma\kappa}(\partial_{\mu}g_{\nu\kappa}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}).
+        \nabla_{\gamma'}\gamma'=0.
         \end{align}
-        <p>Diese Koeffizienten treten in der ART besonders häufig auf.</p>
-
-        <p>In der Relativitätstheorie ist insbesondere die ältere Notation geläufig:</p>
-        $$[\mu\nu,\kappa]=\Gamma_{\mu\nu\kappa}$$
-        <p>und für Christoffelsymbole zweiter Art:</p>
-        $$\begin{pmatrix}
-        \sigma\\
-        \mu\nu
-        \end{pmatrix}=\Gamma^{\sigma}_{\cdot \mu\nu}.$$
-    
-  </div>        
+        <p><b>Lemma: </b> Sei $\gamma: I\rightarrow M$ eine reguläre Kurve, $t_0\in I,\, X_0\in T_{\gamma(t_0)}M$. Dann existiert ein eindeutiges paralleles Vektorfeld $X$ längs $\gamma$ mit $X(t_0)=X_0$.</p>
+        <p><b>Beispiel: </b> Wir betrachten eine Kugel. Auf der $S^2\subset \mathbb{R}^3$ sind Geodätische Großkreisbögen. Hierbei ist $\nabla$ die Projektion der Ableitung auf die Tangentialräume. Geodätische sind hier also Kurven, für die der Ortsvektor stets orthogonal zu der Ableitung ist.</p>
+        <p>Starten wir mit einem Tangentialvektor des Großkreises durch den Pol und transportieren diesen in Richtung Süden bis zum Äquator, so steht er dort senkrecht auf der Tangentialrichtung des Äquators. Bewegt man ihn ein Stück auf dem Großkreis und transportiert ihn wieder zum Nordpol, zeigt er nicht mehr in die ursprüngliche Richtung.</p>
+        <h2>Motivation des Krümmungstensors</h2>
+        <p>Im nächsten Kapitel werden wir uns mit dem Krümmungstensor befassen, der ein Maß für die Krümmung einer Mannigfaltigkeit ist. Für eine Kugel verschwindet der Tensor nicht, was den Paralleltransport erklärt.</p>
+        <p>Im folgenden werden wir den Krümmungstensor aus Christoffelsymbolen zusammensetzen bzw. durch den Levi-Civita-Zusammenhang</p>
+        <p><b>Definition: </b> Der Krümmungstensor</p>
+        <p>Es sei $M$ eine Semi-Riemannsche Mannigfaltigkeit mit ${R:\Gamma(TM)^3\rightarrow \Gamma(TM)}$. Dann nennen wir</p>
+        \begin{align}
+        R_{X}Z=\nabla_{[X,Y]}Z-(\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ)
+        \end{align}
+        den Krümmungstensor von $M$.
+    </div>        
 
         <div id="disqus_thread"></div>
 <script>
