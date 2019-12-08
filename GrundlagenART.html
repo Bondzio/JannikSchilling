@@ -105,18 +105,18 @@
         <p>Wir wollen nun drei verschiedene Gleichungen der Newtonschen Mechanik betrachten. In all diesen drei Gleichungen treten verschiedene Arten von Masse auf.</p>
     
         <ul>
-        <li>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt
+        <li><p>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt</p>
         \begin{align}
         m_t \ddot x=F	
         \end{align}</li>
-        <li> Die passive Gravitationsmasse $m_g$ ist als Faktor mit
+        <li><p>Die passive Gravitationsmasse $m_g$ ist als Faktor mit</p>
     
         \begin{align}
         F=-m_G\nabla\phi	
         \end{align}
     
-        definiert ist.</li>
-        <li> Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit
+        <p>definiert ist.</p></li>
+        <li><p>Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit</p>
     
         \begin{align}
         \phi=-\frac{GM_G}{r}.	
@@ -161,7 +161,7 @@
     
         <p>und stellt die These auf, das das Verhältnis aus schwerer und träger Masse immer konstant ist, wenn alle anderen Kräfte ausgeschaltet werden (Reibung etc.). Diese Proportionalitätskonstante kann bei geeigneten Einheiten genau auf Eins normiert werden.</p>
     
-        <b>Physikalische Interpretation: </b> Wenn das Verhältnis aus schwerer Masse und träger Masse immer gleich ist, also nicht von der Masse eines Objektes abhängt, ist dies äquivalent dazu, dass alle Objekte gleich schnell in einem Gravitationsfeld fallen. Zumindestens wenn die Gravitation als Kraft beschrieben wird, wie wir es zum Beispiel die Newtonsche Mechanik gemacht haben.
+        <p><b>Physikalische Interpretation: </b> Wenn das Verhältnis aus schwerer Masse und träger Masse immer gleich ist, also nicht von der Masse eines Objektes abhängt, ist dies äquivalent dazu, dass alle Objekte gleich schnell in einem Gravitationsfeld fallen. Zumindestens wenn die Gravitation als Kraft beschrieben wird, wie wir es zum Beispiel die Newtonsche Mechanik gemacht haben.</p>
         <p>Wenn wir im Vakuum (dort gibt es keine störenden Kräfte) zwei Objekte im selben Gravitationsfeld aus der selben Höhe fallen lassen, fallen sie ganz genau gleich schnell. Auch eine Feder und ein Stein gehorchen diesem Gesetz.</p>
         <b>Wir halten fest: </b>
         <p>Objekte mit unterschiedlicher träger Masse erfahren im Schwerefeld eines Objektes bei gleichen Anfangsbedingungen die gleichen Beschleunigungen. Das Verhältnis aus schwerer Masse ($m_s$) und träger Masse ($m_s$) ist für alle Körper gleich und kann bei geeigneter Einheitenwahl auf Eins normiert werden.</p>
@@ -205,104 +205,103 @@
         ds=\sqrt{g_{\mu\nu}x^{\mu}x^{\nu}}.	
         \end{align}
     
-        In der Speziellen Relativiätstheorie haben wie gesehen, dass ein Teilchen auf einer Bahn laufen soll, für die die Variation verschwindet, also
+        <p>In der Speziellen Relativiätstheorie haben wie gesehen, dass ein Teilchen auf einer Bahn laufen soll, für die die Variation verschwindet, also</p>
     
         \begin{align}
         \delta \int ds =0	
         \end{align}
     
-        gilt. Wenn wir nun den eben bestimmten Term für $ds$ einsetzen und dann mit $ds$ erweitern erhalten wir das folgende Integral
+        <p>gilt. Wenn wir nun den eben bestimmten Term für $ds$ einsetzen und dann mit $ds$ erweitern erhalten wir das folgende Integral</p>
     
         \begin{align}
         \delta \int ds =\delta \int \sqrt{g_{\mu\nu}dx^{\mu}dx^{\nu}}	\cdot \frac{ds}{ds}= \delta \int \sqrt{g_{\mu\nu}\frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}}ds=\delta \int \mathcal{L}\left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)\, ds.
         \end{align}
     
-        Wir sehen durch Vergleich der entstandenden Gleichungskette, dass $\mathcal{L} \left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)$ entlang des gesamten Weges $1$ sein muss. Wir stellen die Euler-Lagrange-Gleichung zur Variation
+        <p>Wir sehen durch Vergleich der entstandenden Gleichungskette, dass $\mathcal{L} \left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)$ entlang des gesamten Weges $1$ sein muss. Wir stellen die Euler-Lagrange-Gleichung zur Variation</p>
     
         \begin{align}
         \delta \int \mathcal{L}\left(x^{\alpha}, \frac{dx^{\alpha}}{ds}\right)ds=0	
         \end{align}
     
-        auf. Aus der eben betrachtete Formulierung folgt sofort, dass
+        <p>auf. Aus der eben betrachtete Formulierung folgt sofort, dass</p>
     
         \begin{align}
         \frac{d}{ds}\left(\frac{\partial \mathcal{L}}{\partial \left(\frac{dx^{\alpha}}{ds}\right)}\right)-\frac{\partial \mathcal{L}}{\partial x^{\alpha}}=0 	
         \end{align}
     
-        gilt. Jetzt bestimmen wir die einzelner Glieder der neu entstandenden Gleichung. Für den ersten Teil der Euler-Lagrange-Gleichung ergibt sich
+        <p>gilt. Jetzt bestimmen wir die einzelner Glieder der neu entstandenden Gleichung. Für den ersten Teil der Euler-Lagrange-Gleichung ergibt sich</p>
     
         \begin{align}
         \frac{\partial \mathcal{L}}{\partial \left(\frac{dx^{\alpha}}{ds}\right)}=\frac{1}{2\mathcal{L}}\left(g_{\alpha\nu}\frac{dx^{\nu}}{ds}+g_{\mu \alpha}\frac{dx^{\mu}}{ds}\right)=\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{dx^{\nu}}{ds}.
         \end{align}
         
-        Für den Term $\frac{\partial \mathcal{L}}{\partial x^{\alpha}}$ ergibt sich 
+        <p>Für den Term $\frac{\partial \mathcal{L}}{\partial x^{\alpha}}$ ergibt sich </p>
     
         \begin{align}
         \frac{\partial \mathcal{L}}{\partial x^{\alpha}}=\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu \nu}}{\partial x^{\alpha}}\frac{\partial x^{\mu}}{ds}\frac{dx^{\nu}}{ds}.	
         \end{align}
     
-        Wenn wir alles in die Euler-Lagrange-Gleichung einsetzen, ergibt sich
+        <p>Wenn wir alles in die Euler-Lagrange-Gleichung einsetzen, ergibt sich</p>
     
         \begin{align}
         \frac{d}{ds}\left[\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{dx^{\nu}}{ds}\right]-\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu \nu}}{\partial x^{\alpha}}\frac{\partial x^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
         \end{align}
     
-        Unter Aussnutzung von
+        <p>Unter Aussnutzung von</p>
     
         \begin{align}
         \frac{d}{ds}g_{\alpha\nu}=\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}\frac{dx^{\mu}}{ds} 	
         \end{align}
     
-        erhalten wir
+        <p>erhalten wir</p>
     
         \begin{align}
         \frac{1}{\mathcal{L}}\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}\frac{dx^{\nu}}{ds}\frac{dx^{\nu}}{ds}+\frac{1}{\mathcal{L}}g_{\alpha\nu}\frac{d^2 x^{\nu}}{ds^2}-\frac{1}{\mathcal{L}^2}\frac{\partial \mathcal{L}}{ds}g_{\alpha\nu}\frac{dx^{\nu}}{ds}-\frac{1}{2\mathcal{L}}\frac{\partial g_{\mu\nu}}{\partial x^{\alpha}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.	
         \end{align}
     
-        Wie wir schon gesehen haben, ist $\mathcal{L}=1$ entlang des gesamten Weges. Das bedeutet, dass
+        <p>Wie wir schon gesehen haben, ist $\mathcal{L}=1$ entlang des gesamten Weges. Das bedeutet, dass</p>
     
         \begin{align}
         \frac{\partial \mathcal{L}}{ds}=0	
         \end{align}
     
-        gilt und somit der ganze Term verschwindet. Die übrigbleibenden Terme werden jetzt mit $\mathcal{L}$ multipliziert und wir erhalten
+        <p>gilt und somit der ganze Term verschwindet. Die übrigbleibenden Terme werden jetzt mit $\mathcal{L}$ multipliziert und wir erhalten</p>
     
         \begin{align}
         \frac{\partial g_{\alpha\nu}}{\partial x^{\mu}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}+g_{\alpha\nu}\frac{d^2x^{\nu}}{ds^2}-\frac{1}{2}\frac{\partial g_{\mu\nu}}{\partial x^{\alpha}}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
         \end{align}
     
-        Nun ist 
+        <p>Nun ist </p>
     
         \begin{align}
         \frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}=\frac{1}{2}\frac{\partial g_{\alpha\mu}}{\partial x^{\mu}}+\frac{1}{2}\frac{\partial g_{\mu\alpha}}{\partial x^{\mu}}= \frac{1}{2}\frac{\partial g_{\alpha\nu}}{\partial x^{\mu}}+\frac{1}{2}\frac{\partial g_{\mu\alpha}}{\partial x^{\nu}}	
         \end{align}
     
-        und somit
+        <p>und somit</p>
     
         \begin{align}
         g_{\alpha \nu}\frac{d^2 x^{\nu}}{ds^2}+\frac{1}{2}\left(\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}+\frac{\partial g_{\mu \alpha}}{\partial x^{\nu}} - \frac{\partial g_{\mu\nu}}{\partial x^{\alpha}} \right)\frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}\frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0.	
         \end{align}
-    
         
-        Somit erhalten wir für die Christoffelsymbole zweiter Art das Folgende
+        <p>Mit den Christoffelsymbolen zweiter Art, die wie folgt definiert sind,</p>
     
         \begin{align}
         \Gamma^{\sigma}_{\cdot \mu\nu} = g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}=\frac{1}{2} g^{\sigma\alpha}\left(\frac{\partial g_{\alpha \nu}}{\partial x^{\mu}}+\frac{\partial g_{\mu \alpha}}{\partial x^{\nu}} - \frac{\partial g_{\mu\nu}}{\partial x^{\alpha}} \right).	
         \end{align}
     
-        Nun können wir die Geodätengleichung der ART aufstellen, dies können wir mit beiden Christoffelsymbolen aufstellen, wir erhalten also als erste Form
+        <p>können wir die Geodätengleichung der ART aufstellen, dies können wir mit beiden Christoffelsymbolen aufstellen, wir erhalten also als erste Form</p>
     
         \begin{align}
         g_{\alpha\nu}\frac{d^2x^{\nu}}{ds^2}+\Gamma_{\alpha\mu\nu}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0.
         \end{align}
     
-        Die zweite Form erhalten wir durch multiplizieren mit $g^{\sigma\alpha}$:
+        <p>Die zweite Form erhalten wir durch multiplizieren mit $g^{\sigma\alpha}$:</p>
     
         \begin{align}
         g^{\sigma\alpha}g_{\alpha \nu}\frac{d^2x^{\nu}}{ds^2}+g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds} &= 0.	
         \end{align}
     
-        Per Definition ist $g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}$ gleich $\Gamma_{\cdot \mu\nu}^{\sigma}$, und für das Produkt der Metriktensoren ergibt sich Kronecker-Delta nach der Folgenden Form.
+        <p>Per Definition ist $g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}$ gleich $\Gamma_{\cdot \mu\nu}^{\sigma}$, und für das Produkt der Metriktensoren ergibt sich Kronecker-Delta nach der Folgenden Form.</p>
     
         \begin{align}
         g^{\alpha\sigma}g_{\alpha\nu}=\delta^{\sigma}_{\nu}
@@ -327,7 +326,7 @@
         \end{pmatrix}.
         \end{align}
     
-        Unser Ziel ist es jetzt, den Umgang mit der Geodätengleichung und den darin auftretenden Symbolen zu üben. Dazu wollen wir als erstes die Christoffelsymbole in der Geodätengleichung berechnen.
+        <p>Unser Ziel ist es jetzt, den Umgang mit der Geodätengleichung und den darin auftretenden Symbolen zu üben. Dazu wollen wir als erstes die Christoffelsymbole in der Geodätengleichung berechnen.</p>
     
         <p>Die Christoffelsymbole 1. Art $\Gamma_{\alpha\mu\nu}$ ergeben sich durch Ableitung des Metriktensors.</p>
     
@@ -335,7 +334,7 @@
         \frac{\partial g_{ij}}{\partial x^k}=0 && \text{außer} &&	\frac{\partial g_{22}}{\partial x^1}
         \end{align}
     
-        Somit erhalten wir alle Christoffelsymbole durch 
+        <p>Somit erhalten wir alle Christoffelsymbole durch </p>
     
         \begin{align}
         \Gamma_{111} &= \Gamma_{112}=\Gamma_{121}=\Gamma_{222}=\Gamma_{211}=0\\
@@ -343,25 +342,25 @@
         \Gamma_{212} &= \Gamma_{221}=\sin(\vartheta)\cos(\vartheta).
         \end{align}
     
-        Mit der Geodätengleichung
+        <p>Mit der Geodätengleichung</p>
     
         \begin{align}
         \frac{d^2 x^{\alpha}}{ds^2}+\Gamma_{\mu\nu}^{\alpha}\frac{dx^{\mu}}{ds}\frac{dx^{\nu}}{ds}=0	
         \end{align}
     
-        und 
+        <p>und </p>
     
         \begin{align}
         \Gamma^{\alpha}_{\mu\nu}=g^{\sigma\alpha}\Gamma_{\alpha\mu\nu}	
         \end{align}
     
-        ergibt sich für $\alpha=1$
+        <p>ergibt sich für $\alpha=1$</p>
     
         \begin{align}
         \frac{d^2\vartheta}{ds^2}-\sin(\vartheta)\cos(\vartheta)\left(\frac{d\varphi}{ds}\right)^2=0,	
         \end{align}
     
-        und für $\alpha=2$ ergibt sich
+        <p>und für $\alpha=2$ ergibt sich</p>
     
         \begin{align}
         \sin^2(\vartheta)\frac{d^2\varphi}{ds^2}+2\sin(\vartheta)\cos(\vartheta)\left(\frac{d\vartheta}{ds}\right)\left(\frac{d\varphi}{ds}\right)=0.	
