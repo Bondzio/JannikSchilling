@@ -95,26 +95,25 @@
 
         <h2>Koordinatensysteme und Basen</h2>
         
-        Wir können Vektoren in vielen Koordinatensystemen darstellen und erhalten geometrisch immer das selbe Objekt. Nur die Komponenten des Vektors verändern sich abhängig unter der Wahl des Koordinatensystems. Dieses Transformationsverhalten von Vektoren bzw. später allgemein von Tensoren ist ein Bereich mit dem sich die Vektor- bzw. Tensoralgebra beschäftigt. Wir können alle  Koordinatensysteme in vier Untergruppen einteilen, wobei wir immer die günstigste Kategorie angeben.
-        
+        <p>Wir können Vektoren in vielen Koordinatensystemen darstellen und erhalten geometrisch immer das selbe Objekt. Nur die Komponenten des Vektors verändern sich abhängig unter der Wahl des Koordinatensystems. Dieses Transformationsverhalten von Vektoren bzw. später allgemein von Tensoren ist ein Bereich mit dem sich die Vektor- bzw. Tensoralgebra beschäftigt. Wir können alle  Koordinatensysteme in vier Untergruppen einteilen, wobei wir immer die günstigste Kategorie angeben.</p
         
         <h3>Krummlinige, Affine, Orthogonale und Kartesische Koordinatensysteme</h3>
         
         <ul>
-            <li>Krummlinige Koordinatensysteme besitzen im Allgemeinen an jedem Punkt verschiedene Basisvektoren</li>
-            <li> Affine Koordinatensysteme sind "geradlinige" Koordinatensysteme, d.h. die Basis ist an jedem Raumpunkt gleich</li>
-            <li>Orthogonale Koordinatensystemen besitzen orthogonale Basisvektoren, die auch krummlinig sein dürfen (zum Beispiel Koordinatensysteme)</li>
-            <li> Kartesische Koordinatensysteme besitzen orthogonale, affine und auf eins normiere Basisvektoren</li>
+            <li><p>Krummlinige Koordinatensysteme besitzen im Allgemeinen an jedem Punkt verschiedene Basisvektoren</p></li>
+            <li><p>Affine Koordinatensysteme sind "geradlinige" Koordinatensysteme, d.h. die Basis ist an jedem Raumpunkt gleich</p></li>
+            <li><p>Orthogonale Koordinatensystemen besitzen orthogonale Basisvektoren, die auch krummlinig sein dürfen (zum Beispiel Koordinatensysteme).</p></li>
+            <li><p>Kartesische Koordinatensysteme besitzen orthogonale, affine und auf eins normiere Basisvektoren.</p></li>
         </ul>
         
-        Im Folgenden werden kartesische Koordinatensysteme immer mit $e_{\alpha}$ ($\alpha, \beta \in \{x,\, y,\ z\}$) bezeichnet, da sie eine außerordentliche Bedeutung für die Tensorrechnung hat. Wie wir gesehen haben, besitzen die Basisvektoren die Folgenden Eigenschaften
+        <p>Im Folgenden werden kartesische Koordinatensysteme immer mit $e_{\alpha}$ ($\alpha, \beta \in \{x,\, y,\ z\}$) bezeichnet, da sie eine außerordentliche Bedeutung für die Tensorrechnung hat. Wie wir gesehen haben, besitzen die Basisvektoren die Folgenden Eigenschaften</p>
         
         \begin{align}
         |e_{\alpha}| &= 1\\
         e_{\alpha}\cdot e_{\beta} &= \delta_{\alpha \beta}.	
         \end{align}
         
-        Die oben notierten Gleichungen sind von elementarer Bedeutung für den weiteren Verlauf. Die Gleichung folgt direkt aus der Bildung des Skalarproduktes:
+        <p>Die oben notierten Gleichungen sind von elementarer Bedeutung für den weiteren Verlauf. Die Gleichung folgt direkt aus der Bildung des Skalarproduktes:</p>
         
         \begin{align}
         e_{\alpha}\cdot e_{\beta} = |e_{\alpha}||e_{\beta}|\cos(e_{\alpha},\, e_{\beta})=\cos(e_{\alpha},\, e_{\beta}).	
@@ -243,17 +242,17 @@
         \vec{u}\cdot \vec{v}=u_xv_x+u_yv_y+u_zv_z	
         \end{align}
         
-        angewandt werden.
+        <p>angewandt werden.</p>
         
         <h3>Umgang mit dem Metroktensor</h3>
-        Seien $e_1$ und $e_2$ die kovarianten Basisvektoren eines affinen Koordinatensystems. Diese Basisvektoren seien mit den kartesischen Basisvektoren $e_{\alpha}$ angegeben, da sich so die Berechnung des Metriktensors vereinfacht.
+        <p>Seien $e_1$ und $e_2$ die kovarianten Basisvektoren eines affinen Koordinatensystems. Diese Basisvektoren seien mit den kartesischen Basisvektoren $e_{\alpha}$ angegeben, da sich so die Berechnung des Metriktensors vereinfacht.</p>
         
         \begin{align}
         e_1 &= 2e_x+e_y\\
         e_2 &= e_x-e_y	
         \end{align}
         
-        Mit diesem Wissen können wir die für den Metriktensor benötigten Skalarprodukte bestimmen. In diesem Fall sind dies drei Skalarprodukte, da $e_1\cdot e_2=e_2\cdot e_1$ gilt.
+        <p>Mit diesem Wissen können wir die für den Metriktensor benötigten Skalarprodukte bestimmen. In diesem Fall sind dies drei Skalarprodukte, da $e_1\cdot e_2=e_2\cdot e_1$ gilt.</p>
         
         \begin{align}
         e_1\cdot e_1 &= |e_1|^2=5\\
@@ -261,7 +260,7 @@
         e_2\cdot e_2 &= |e_2|^2 = 1^2-1^2=0	
         \end{align}
         
-        Damit können wir den Metriktensor bestimmen.
+        <p>Damit können wir den Metriktensor bestimmen.</p>
         
         \begin{align}
         g_{ij}=\begin{pmatrix}
@@ -270,7 +269,7 @@
         \end{pmatrix}	
         \end{align}
         
-        Analog zu der Definition oben lassen sich mittels dem Skalarprodukt weitere Unterarten des Metriktensors bestimmen.
+        <p>Analog zu der Definition oben lassen sich mittels dem Skalarprodukt weitere Unterarten des Metriktensors bestimmen.</p>
         
         \begin{align}
         e_i\cdot e_j &= g_{ik} &e^{i}\cdot e^j = g^{ij}\\
@@ -278,7 +277,7 @@
         e^{i}\cdot e_j &= g^{i}_{\cdot j}=\delta^{i}_j	 &  e_i\cdot e^j=g_i^{\cdot j}=\delta_i^j 
         \end{align}
         
-        Die zu den gemischtvarianten Meriktensoren gehörenden Matrizen sind offensichtlich identisch der Identitätsmatrix $I$, bzw. gleich dem Kronecker-Delta $\delta_{ij}$.
+        <p>Die zu den gemischtvarianten Meriktensoren gehörenden Matrizen sind offensichtlich identisch der Identitätsmatrix $I$, bzw. gleich dem Kronecker-Delta $\delta_{ij}$.</p>
         
         <p>Für kartesische Koordinatensysteme gilt offensichtlich die Orthogonalität.</p>
         
@@ -286,25 +285,25 @@
         g_{\alpha\beta}=e_{\alpha}\cdot e_{\beta}=\delta_{\alpha \beta}.	
         \end{align}
         
-        Weiterhin kann man anscheinend mit dem Metriktensor die Längen von Basisvektoren bestimmen.
+        <p>Weiterhin kann man anscheinend mit dem Metriktensor die Längen von Basisvektoren bestimmen.</p>
         
         \begin{align}
         e_i\cdot e_i=g_{ii}=|e_i|^2 \Rightarrow |e_i|=\sqrt{g_{ii}} \hspace{0.5cm} \text{Analog gilt} \hspace{0.5cm} |e^{i}|=\sqrt{g^{ii}}	
         \end{align}
         
-        Wir wollen nun bestimmen, wie wir bei gegebenen kontravarianten Basisvektoren die dazu gehörige Dualbasis bestimmen können. Diese Formulierung ist äquivalent zu dem Zerlegen von $e^{i}$ in die Richtungen $e_j$. Die sog. Entwicklungskoeffizienten $a^{ij}$ ergeben sich dabei durch den Entwicklungsansatz $e^{i}=a^{ij}e_j$. Durch skalare Multiplikation mit dem Vektor $e^k$ erhalten wir schon fast das gesuchte Ergebnis.
+        <p>Wir wollen nun bestimmen, wie wir bei gegebenen kontravarianten Basisvektoren die dazu gehörige Dualbasis bestimmen können. Diese Formulierung ist äquivalent zu dem Zerlegen von $e^{i}$ in die Richtungen $e_j$. Die sog. Entwicklungskoeffizienten $a^{ij}$ ergeben sich dabei durch den Entwicklungsansatz $e^{i}=a^{ij}e_j$. Durch skalare Multiplikation mit dem Vektor $e^k$ erhalten wir schon fast das gesuchte Ergebnis.</p>
         
         \begin{align}
         e^{i}\cdot e^k = a^{ij}\cdot \delta_j^k	
         \end{align}
         
-        Wenn wir nun noch die "Überblendeigenschaft" von $\delta_j^k$ benutzen, erhalten wir das Folgende.
+        <p>Wenn wir nun noch die "Überblendeigenschaft" von $\delta_j^k$ benutzen, erhalten wir das Folgende.</p>
         
         \begin{align}
         g^{ik}=a^{ik}	
         \end{align}
         
-        Wenn wir das in unseren Ansatz einsetzen erhalten wir die Transformationsvorschrift.
+        <p>Wenn wir das in unseren Ansatz einsetzen erhalten wir die Transformationsvorschrift.</p>
         
         <h3>Umrechnung von Basen</h3>
         \begin{align}
@@ -312,14 +311,14 @@
         e_i &= g_{ij}e^j	
         \end{align}
         
-        Doch zur Umrechnung zwischen den Vektoren brauchen wir den jeweils anderen metrischen Tensor, als den, der durch $e_i\cdot e_j$ bzw. $e^{i}\cdot e^j$ berechnet werden kann. Dazu benutzen wir die folgende Beziehung.
+        <p>Doch zur Umrechnung zwischen den Vektoren brauchen wir den jeweils anderen metrischen Tensor, als den, der durch $e_i\cdot e_j$ bzw. $e^{i}\cdot e^j$ berechnet werden kann. Dazu benutzen wir die folgende Beziehung.</p>
         
         \begin{align}
         g_{ij}g^{jk}=\delta_{i}^k
         \end{align}
         
         <p><b>Beweis: Basis von Vektoren umrechnen</b></p>
-        Zu zeigen:  $$g_{ij}g^{jk}=\delta_{i}^k$$.
+        <p>Zu zeigen:</p>  $$g_{ij}g^{jk}=\delta_{i}^k$$.
         
         <p>Es gilt</p>
         
@@ -328,20 +327,20 @@
         e^{i}\cdot e^j &= g^{ij}.
         \end{align}
         
-        Dann ist $g_{ij}g^{jk}$ gegeben durch
+        <p>Dann ist $g_{ij}g^{jk}$ gegeben durch</p>
         
         \begin{align}
         g_{ij}g^{jk} &= (e_i\cdot e_j)(e^{j}\cdot e^{k})\\
         &= \underbrace{(e_i\cdot e^{j})}_{=\delta_{i}^{j}} \underbrace{(e_{j}\cdot e^k)}_{=\delta_{j}^{k}}=\delta_{i}^k.
         \end{align}
         
-        Das Produkt $\delta_i^{j}\cdot \delta_j^k$ geht nach den Regeln für das Kronecker-Delta in $\delta_i^k$. Somit haben wir gezeigt, dass
+        <p>Das Produkt $\delta_i^{j}\cdot \delta_j^k$ geht nach den Regeln für das Kronecker-Delta in $\delta_i^k$. Somit haben wir gezeigt, dass</p>
         
         \begin{align}
         g_{ij}g^{jk}=\delta_{i}^{k}	
         \end{align}
         
-        gilt.
+        <p>gilt.</p>
         
         <p>Diese Beziehung sagt uns, was wir tun müssen, um unseren Metriktensor zu bestimmen. Wir müssen das Inverse der Koeffizientenmatrix des gegebenen Tensors bestimmen, da für beliebige Matrizen $A$ und deren Inverse $A^{-1}$</p>
         
@@ -349,11 +348,11 @@
         AA^{-1}=I
         \end{align}
         
-        gilt.
+        <p>gilt.</p>
         
         <h3>Rechenoperationen mit Vektoren</h3>
         
-        Mit diesen neuen Regeln können wir die Rechenregeln von Vektoren neu definieren.
+        <p>Mit diesen neuen Regeln können wir die Rechenregeln von Vektoren neu definieren.</p>
         
         <p>Dazu werden wir die Erkenntnis verwenden, dass wir einen beliebigen Vektor auch mit seinen Komponenten und dem entsprechendem Metriktensor ausdrücken können.</p>
         
@@ -363,7 +362,7 @@
         
         <h4>Summe von Vektoren</h4>
         
-        Wir haben in der analytischen Geometrie gelernt, dass ein Vektor $\vec{a}$ addiert mit einem anderen Vektor $\vec{b}$ immer die Summe aller Komponenten ist. Wie wir gleich sehen werden, ist dies nur ein Spezialfall aus der Tensorrechunung. Um diese Summe aufzulösen, gehen wir davon aus, einen dreidimensionalen Vektor zu betrachten. Diesen schreiben wir dann als Summe der Produkte aus der jeweiligen kontravarianten Komponente mit dem kovarianten Koeffizient aus dem Metriktensor.
+        <p>Wir haben in der analytischen Geometrie gelernt, dass ein Vektor $\vec{a}$ addiert mit einem anderen Vektor $\vec{b}$ immer die Summe aller Komponenten ist. Wie wir gleich sehen werden, ist dies nur ein Spezialfall aus der Tensorrechunung. Um diese Summe aufzulösen, gehen wir davon aus, einen dreidimensionalen Vektor zu betrachten. Diesen schreiben wir dann als Summe der Produkte aus der jeweiligen kontravarianten Komponente mit dem kovarianten Koeffizient aus dem Metriktensor.</p>
         
         \begin{align}
         \vec{a}+\vec{b} &= \left( a^{i}e_i\right) +\left( b^{j}e_j \right)\\\notag
@@ -372,28 +371,28 @@
         &= (a^{i}+b^{i})e_i
         \end{align}
         
-        Dieses Prinzip lässt sich auf beliebige Dimensionen ausweiten. Wir wollen jetzt in dem folgendem Beispiel die Summe zweier Vektoren bestimmen, die als Linearkombination kartesischer Einheitsvektoren $e_{\alpha}$ darstellbar sind.
+        <p>Dieses Prinzip lässt sich auf beliebige Dimensionen ausweiten. Wir wollen jetzt in dem folgendem Beispiel die Summe zweier Vektoren bestimmen, die als Linearkombination kartesischer Einheitsvektoren $e_{\alpha}$ darstellbar sind.</p>
         
         <b>Summe von Vektoren in Kartesischen Koordinaten</b>
         
-        Seien die Vektoren $a$ und $b$ durch Linearkombination von kartesischen Einheitsvektoren wie folgt gegeben.
+        <p>Seien die Vektoren $a$ und $b$ durch Linearkombination von kartesischen Einheitsvektoren wie folgt gegeben.</p>
         
         \begin{align}
         a &= a^x e_x + a^y e_y + a^z e_z = a^{i}e_{i}\\
         b &= b^x e_x + b^y e_y + b^z e_z	= b^{i}e_{i}
         \end{align}
         
-        Damit ergibt sich für die Summe der beiden Vektoren:
+        <p>Damit ergibt sich für die Summe der beiden Vektoren:</p>
         
         \begin{align}
         a+b = a^ie_{\alpha}+b^ie_{\alpha}=e_{\alpha}(a^i+b^i).	
         \end{align}
         
-        Wir sehen also, dass egal ob $e_i$ ein beliebiger Basisvektor oder der Einheitsvektor eines kartesischen Koordinatensystems ist, die Addition von Vektoren immer auf die gleiche Weise erfolgt.	
+        <p>Wir sehen also, dass egal ob $e_i$ ein beliebiger Basisvektor oder der Einheitsvektor eines kartesischen Koordinatensystems ist, die Addition von Vektoren immer auf die gleiche Weise erfolgt.</p>	
         
         <h3>Vektor mit Skalar multiplizieren</h3>
         
-        Wir wollen jetzt untersuchen, wie sich die Multiplikation mit einem Skalar $\lambda$ auf einen Vektor ausübt.
+        <p>Wir wollen jetzt untersuchen, wie sich die Multiplikation mit einem Skalar $\lambda$ auf einen Vektor ausübt.</p>
         
         \begin{align}
         \lambda\cdot a &= \lambda \cdot (a^{i}e_i)\\
@@ -401,7 +400,7 @@
         &= (\lambda \cdot a^{i})e_i
         \end{align}
         
-        Wir sehen also, dass es gleichwertig ist, entweder das gesamte Konstrukt Vektor mit einem Skalar zu multiplizieren oder jede einzelne Komponente $x^{i}$ mit dem Skalar zu multiplizieren. 
+        <p>Wir sehen also, dass es gleichwertig ist, entweder das gesamte Konstrukt Vektor mit einem Skalar zu multiplizieren oder jede einzelne Komponente $x^{i}$ mit dem Skalar zu multiplizieren. </p>
         
       
         </div>
