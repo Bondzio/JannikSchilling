@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="canonical" href="https://www.jannik-schilling.com/GrundlagenART">
-<title>Allgemeine Relativitätstheorie</title>
-<meta name="description" content="Die Allgemeine Relativitätstheorie ist die ultimative Theorie von Albert Einstein, die die Gravitationskraft mit beeindruckender Genauigkeit beschreibt.">
+<title>Die Geodätengleichung der Allgemeinen Relativitätstheorie</title>
+<meta name="description" content="Die kürzeste Verbindung zweier Punkte? Eine Gerade? Nicht immer! Denn in gekrümmten Räumen ist diese Verbindung oft auch krumm. Um diese Bewegungsgleichungen zu bestimmen, wollen wir die Geodätengleichung der ART betrachten.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,80 +98,6 @@
       <div class="main">
         <h1>Physikalische Grundlagen der Allgemeinen Relativitätstheorie</h1>
 
-        <h2>Massen-Äquivalenz</h2>
-    
-        <p><b>Achtung! </b> Massenäquivalenz meint hier nicht $E=mc^2$, sondern das Verhältnis aus schwerer Masse und träger Masse!</p>
-    
-        <p>Wir wollen nun drei verschiedene Gleichungen der Newtonschen Mechanik betrachten. In all diesen drei Gleichungen treten verschiedene Arten von Masse auf.</p>
-    
-        <ul>
-        <li><p>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt</p>
-        \begin{align}
-        m_t \ddot x=F	
-        \end{align}</li>
-        <li><p>Die passive Gravitationsmasse $m_g$ ist als Faktor mit</p>
-    
-        \begin{align}
-        F=-m_G\nabla\phi	
-        \end{align}
-    
-        <p>definiert ist.</p></li>
-        <li><p>Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit</p>
-    
-        \begin{align}
-        \phi=-\frac{GM_G}{r}.	
-        \end{align}</li>
-        </ul>
-    
-        <h2>Schwaches Äquivalenzprinzip</h2>
-    
-        <p>Die schwere Masse bezeichnet die Eigenschaft eines beliebigen Körpers in einem Gravitationsfeld einer anderen Masse eine Kraft zu erfahren.</p>
-    
-        <p>In der Elektrodynamik bezeichnen wir diese schwere Masse als Gravitationsladung $q$ im Gravitationsfeld der Gravitationsladung $Q$. Dann gilt</p>
-    
-        \begin{align}
-        \vec{F}_{Grav}=-\frac{qQ}{r^2}\alpha	\vec{e}_r.
-        \end{align}
-    
-        <p>Die Massen $m_t$ und $m_t^{'}$ erfahren in dem Gravitationsfeld $Q$ eine Kraft, und besitzen somit auch schwere schwere Massen $q_1$ und $q_2$. Wenn wir nun diese Objekte fallen lassen, kommen wir zu der Erkenntnis, dass beide Objekte unabhängig von ihrer trägen Masse gleich schnell fallen. Das bedeutet für die Beschleunigungen der Objekte $\partial_t^2\vec{r}_1$ und $\partial_t^2\vec{r}_2$, dass beide Beschleunigungen gleich groß sind</p> 
-    
-        \begin{align}
-        \partial_t^2\vec{r}_1=\\partial_t^2 \vec{r}_2.	
-        \end{align}
-    
-        <p>Dies können wir nun mit dem zweiten Newtonschen Axiom ($F=ma$, wenn $m(t)$ konstant ist) formulieren durch</p>
-    
-        \begin{align}
-        m_t\cdot r_1 &= F_{Q_1}\\
-        m_t^{'}\cdot r_1 &= F_{Q_2}.	
-        \end{align}
-    
-        <p>Durch erhalten wir die Relationsgleichungen</p>
-    
-        \begin{align}
-        \frac{m_t}{m_t^{'}} &= \frac{F_{Q_1}}{F_{Q_2}}=\frac{q_1}{q_2}	\\
-        \Rightarrow \frac{m_t}{q_1}&=\frac{m_t^{'}}{q_2}.
-        \end{align}
-    
-        <p>Das schwache Äquivalenzprinzip stellt nun die träge Masse mit der schweren Masse ins Verhältnis</p>
-    
-        \begin{align}
-        \frac{m_s}{m_t}=\text{const.}	
-        \end{align}
-    
-        <p>und stellt die These auf, das das Verhältnis aus schwerer und träger Masse immer konstant ist, wenn alle anderen Kräfte ausgeschaltet werden (Reibung etc.). Diese Proportionalitätskonstante kann bei geeigneten Einheiten genau auf Eins normiert werden.</p>
-    
-        <p><b>Physikalische Interpretation: </b> Wenn das Verhältnis aus schwerer Masse und träger Masse immer gleich ist, also nicht von der Masse eines Objektes abhängt, ist dies äquivalent dazu, dass alle Objekte gleich schnell in einem Gravitationsfeld fallen. Zumindestens wenn die Gravitation als Kraft beschrieben wird, wie wir es zum Beispiel die Newtonsche Mechanik gemacht haben.</p>
-        <p>Wenn wir im Vakuum (dort gibt es keine störenden Kräfte) zwei Objekte im selben Gravitationsfeld aus der selben Höhe fallen lassen, fallen sie ganz genau gleich schnell. Auch eine Feder und ein Stein gehorchen diesem Gesetz.</p>
-        <b>Wir halten fest: </b>
-        <p>Objekte mit unterschiedlicher träger Masse erfahren im Schwerefeld eines Objektes bei gleichen Anfangsbedingungen die gleichen Beschleunigungen. Das Verhältnis aus schwerer Masse ($m_s$) und träger Masse ($m_s$) ist für alle Körper gleich und kann bei geeigneter Einheitenwahl auf Eins normiert werden.</p>
-    
-        <h2>Fahrstuhlexperimente</h2>
-    
-        <h3>Starkes Äquivalenzprinzip</h3>
-        <p><b>Wir halten fest: </b></p>
-        <p>In einem kleinen Labor, das in einem Schwerefeld fällt, sind die Gesetze der Physik dieselben wie jene, die in Abwesenheit eines Schwerefeldes in einem Newtonschen Inertialsystem beobachtet werden.</p>
-    
         <h2>Bewegung im Gravitationsfeld: Geodätengleichung der ART</h2>
     
         <p>Um die Geodätengleichung der Allgemeinen Relativitätstheorie zu finden, betrachten wir zuerst das Quadrat des Linienelementes $ds$. In der Speziellen Relativitätstheorie finden wir dieses durch </p>
