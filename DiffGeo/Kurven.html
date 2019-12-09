@@ -127,7 +127,7 @@
         <br><b>Definition: </b>Länge parametrisierter Kurven.
         Sei $C:[a,b]\mapsto \mathbb{R}^n$ eine parametrisierte Kurve. Dann nennen wir 
         \begin{align}
-            L[C]=\int_a^b \|\dot C(t)\|\, \mathrm{d}t
+            L[C]=\int_a^b |\dot C(t)|\, \mathrm{d}t
         \end{align}
         Länge bzw. Bogenlänge von $C$.<br>
         
@@ -139,7 +139,7 @@
             Das Lemma folgt aus der Substitutionsregel. Sei nun also $\bar{C}=C\circ \varphi$ eine Umparametrisierung von $C$ mit $\varphi: [a',b']\mapsto [a,b]$, dann gilt nämlich
         \begin{align*}
         L[\bar{C}]&=	\int_{a'}^{b'} \left|\frac{\mathrm{d}(C\circ \varphi}{\mathrm{d}t}\right|\, \mathrm{d}t	\\
-        &= \int_{a'}^{b'} \|\dot C(\varphi(t))\|\cdot |\dot \varphi(t)|\, \mathrm{d}t\\
+        &= \int_{a'}^{b'} |\dot C(\varphi(t))|\cdot |\dot \varphi(t)|\, \mathrm{d}t\\
         &= \int_a^b |C(s)|\, \mathrm{d}s=L[C].
         \end{align*}        
 
