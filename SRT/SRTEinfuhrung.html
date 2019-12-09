@@ -1,0 +1,384 @@
+  
+  
+  <!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['(',')']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/SRTEinfuhrung">
+<title>Physikalische Motivation der SRT</title>
+<meta name="description" content="Die spezielle Relativitätstheorie beschreibt die klassische Physik auch bei hohen Geschwindigkeiten.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="kurse/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="kurse/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="kurse/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="kurse/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="kurse/css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="kurse/css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="kurse/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="kurse/css/style.css">
+</head>
+
+
+<body>
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Physikalische Grundlagen</h2>
+                        <p>Home<span>/</span>SRT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <div class="main">
+         
+    <h1>Spezielle Relativitätstheorie und Relativistische Mechanik</h1>
+
+    <h2>Spezielle Relativitätstheorie</h2>
+
+    <p>Die Lichtgeschwindigkeit wurde wegen ihrer enormen Bedeutung genau auf den nachfolgenden Wert festgelegt.</p>
+    \begin{align}
+        c=299.792.458\frac{\text{m}}{\text{s}}
+    \end{align}
+
+    <p>Die Spezielle Relativitätstheorie basiert auf dem experimentellen Befund, dass die Messung der Vakuumlichtgeschwindigkeit in jedem Inertialsystem denselben Wert liefert, der zudem von der Ausbreitungsrichtung des Lichts unabhängig ist (Isotropie des Raumes).</p>
+
+    <h3>Geschichte der Speziellen Relativitätstheorie</h3>
+
+    <p>Die spezielle Relativitätstheorie wird in der öffentlichen Diskussion fast ausschließlich Albert Einstein zugeschrieben. Aber auch andere Physiker, insbesondere H. Lorentz und J. Poincare haben einen großen Beitrag bei der Erschließung der neuen Theorie geleistet. Die meist-zitierten Quellen kommen von Albert Einstein, Henrik Lorentz und Poincare.</p>
+
+    <p>Die Lichtgeschwindigkeit hängt eng zusammen mit der Elektrodynamik von Maxwell. Licht ist nämlich nichts anderes als eine elektromagnetische Welle. Durch Lösen der Maxwell-Gleichungen im Vakuum ergibt sich dann die Ausbreitungsgeschwindigkeit einer Welle durch</p>
+    \begin{align}
+        c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.
+    \end{align}
+
+    <h3>Galilei-Transformation</h3>
+
+    <p>In diesem Abschnitt wollen wir auf die Galilei-Invarianz der Newtonschen Bewegungsgleichungen eingehen und ich möchte Ihnen das Prinzip hinter Transformationsivarianz näherbringen, da wir dieses Prinzip noch zahlreich gebrauchen werden.</p>
+
+    <p>Wir wollen feststellen, welche Forderung aus der Galilei-Invarianz für ein Kraftfeld $F$ entstehen. Wir betrachten dazu die Newtonschen Bewegungsgleichungen</p>
+    \begin{align}
+        m\ddot{x}^{i}(t)=F^{i}(x_n^{i},\dot{x}_n^{i},t).
+    \end{align}
+        
+    <h3>Probleme der Newtonschen Mechanik</h3>
+
+    <p>In der Newtonschen Mechanik beschreiben wir die Bewegung von Teilchen durch Bahnkurven. Als mathematischen Formalismus wählen wir dazu das Prinzip des Ortsvektor $\vec{r}$. Wir wählen ein beliebiges Koordinatensystem als Basis für unsere Beschreibung der Bewegung eines Objektes. Die Spitze des Ortsvektor $\vec{r}(t)$ zeigt immer auf einen Massenpunkt (Trajektorie).</p>
+
+    <p>Dazu brauchen wir den Begriff der Zeit. Wir wählen einen beliebigen Zeitnullpunkt und benutzen diesen zum Beschreiben der Bewegung eines Massenpunkts. Es gilt das Prinzip der Universalität der Zeit $t=t'$.</p>
+
+    <p>Wir können die Bewegung eines Punktteilchens mit Masse $m$ in der Newtonschen Mechanik durch eine Differentialgleichung beschreiben. Für ein Kraftfeld $\vec{F}(\vec{r}(t), \dot{\vec{r}}, t)$ gilt mit dem zweiten Newtonschen Axiom $\vec{F}=m\vec{a}$:</p>
+    \begin{align}
+        \vec{F}=m\vec{a}=m\ddot{\vec{r}}\Leftrightarrow \ddot{\vec{r}}=\frac{1}{m}\vec{F}(\vec{r}(t), \dot{\vec{r}}(t), t).
+    \end{align}
+    <p>Durch lösen der auftretenden Differentialgleichung ergibt sich die Bahnkurve $\vec{r}(t)$ in drei Dimensionen (oder $x(t)$ in einer Dimension).</p>
+
+    <p>Das erste Newtonsche Axiom definiert den Begriff eines Inertialsystems. Ein Inertialsystem ist ein unbeschleunigtes Bezugssystem. Ein Wechsel von einem ruhenden Inertialsystem in ein mit Geschwindigkeit $\vec{v}$ bewegtes Inertialsystem $\vec{v}$. Damit gilt</p>
+    \begin{align}
+    \vec{x}\rightarrow \vec{x}'=\vec{x}-\vec{v}t	
+    \end{align}
+    <p>Dies ist die spezielle Galilei-Transformation. Die allgemeinste Galilei-Transformation ergibt sich mit der Drehmatrix $D$</p>
+    \begin{align}
+    \vec{x}' &=D\vec{x}-\vec{v}t-\vec{x}_0	
+    t'&= t-t_0.
+    \end{align}
+    <p>Die Newtonsche Mechanik ist also invariant unter der Galilei-Transformation.</p>  
+
+    <h3>Maxwell-Gleichungen</h3>
+
+    <p>Die Maxwell-Gleichungen sind die Grundgleichungen der Elektrodynamik. Wenn wir die Verteilung der elektrischen Ladungen und die Ströme $\rho(\vec{x},t)$ sowie $\vec{j}(\vec{x},t)$ kennen, können wir die elektrischen und magnetischen Felder $\vec{E}(\vec{x},t)$ und $\vec{B}(\vec{x},t)$ bestimmen. Es gelten die Maxwell-Gleichungen in differentieller Form</p>
+    \begin{align}
+    \operatorname{div} \vec{E} &= \frac{\rho(\vec{r})}{\epsilon_0}	 
+    \operatorname{div} \vec{B}&= 0
+    \operatorname{rot} \vec{B} &= \mu_0\left(\vec{j}+\epsilon_0\frac{\partial \vec{E}}{\partial t}\right)
+    \operatorname{rot} \vec{E} &= -\frac{\partial \vec{B}}{\partial t},
+    \end{align}
+
+    <p>als auch in der integralen Form</p>
+
+    \begin{align}
+    \iint \vec{E}\cdot \mathrm{d}\vec{A} &=\frac{Q}{\epsilon_0}
+    \iint \vec{B}\cdot \mathrm{d}\vec{A} &= 0
+    \oint \vec{B}\cdot \mathrm{d}\vec{r} &=\mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}
+    \oint \vec{E}\cdot \mathrm{d}\vec{r}&= -\dot{\vec{B}}(t).
+    \end{align}
+
+    <p>Wir erhalten wir nun aus den Maxwell-Gleichung eine Wellengleichung für das Licht?</p>
+
+    <p>Wie betrachten zur Herstellung einer Wellengleichung die beiden Maxwell-Gleichungen 3 und 4 mit $I=0$:</p>
+    \begin{align*}
+    \operatorname{rot}\vec{E}=-\dot{\vec{B}}	&& \operatorname{rot}\vec{B}=\mu_0\epsilon_0\dot E.
+    \end{align*}
+
+    <p>Wir bilden jetzt von beiden Gleichungen die Rotation und erhalten damit</p>
+    \begin{align}
+    \operatorname{rot}(\operatorname{rot}\vec{E})=-\operatorname{rot}\left(\frac{\partial\vec{B}}{\partial t}\right) && \operatorname{rot}\left(\frac{\partial \vec{B}}{\partial t }\right)=\mu_0\epsilon_0\frac{\partial^2 \vec{E}}{\partial t^2}.
+    \end{align}
+
+    <p>Jetzt können wir die zweite Gleichung in die erste Gleichung einsetzen und erhalten damit</p>
+    \begin{align}
+    \operatorname{rot}\operatorname{rot}\vec{E}=-\mu_0\epsilon_0\frac{\partial^2 E}{\partial t^2}.	
+    \end{align}
+
+    <p>Mittels</p>
+    \begin{align}
+        \operatorname{rot}\operatorname{rot}\vec{E}=-\operatorname{div}(\operatorname{grad}\vec{E})+\operatorname{grad}(\mathrm{d}iv\vec{E})
+    \end{align}
+
+    <p>erhalten wir die Wellengleichung der Elektrodynamik</p>
+
+    <p><b>Wellengleichung der Elektrodynamik</b></p>
+    \begin{align}
+    -\left(\frac{\partial^2}{\partial^2x}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\vec{E}(\vec{r},t)&=-\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t)\notag
+    -\mathrm{d}elta \vec{E}(\vec{r},t)&= -\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t). 	
+    \end{align}
+
+    <p>In der klassischen Mechanik gibt es die Wellengleichung in der Form</p>
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\mathrm{d}elta A(\vec{r},t).	
+    \end{align}
+
+    <p>Der Koeffizientenvergleich zwischen den beiden Gleichungen liefert</p>
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\mathrm{d}elta A(\vec{r},t) && \frac{1}{\mu_0\epsilon_0}\mathrm{d}elta \vec{E}(\vec{r},t)&= \frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t).
+    \end{align}
+
+    <p>Und der Vergleich der beiden Vorfaktoren liefert Gleichung die Definition der Lichtgeschwindigkeit:</p>
+    \begin{align*}
+    c^2=\frac{1}{\epsilon_0\mu_0}\Leftrightarrow c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.	
+    \end{align*}
+
+    <h3>Probleme der Klassischen Mechanik</h3>
+
+    Der Ausgangspunkt der Speziellen Relativitätstheorie knüpft nun genau hier an. Das Problem dieser Gleichungen lautet wie folgt:
+
+    <b>Die Maxwell-Gleichungen sind nicht invariant unter Galilei-Transformationen.</b>
+
+    Das ist natürlich eine Provokation für die moderne Physik: Die Newtonsche Mechanik und die Elektrodynamik sind in unterschiedlichen Bezugssystem nicht dieselben und hängen von der Wahl von Bezugssysten ab. 
+    <b>Konsequenzen aus diesem Problem</b>
+
+    Daraus ergeben sich drei Möglichkeiten für die Mechanik, die alle weitreichende Folgen haben.
+
+    <ul>
+        <li><p>Die Maxwell-Gleichungen gelten nur in einer ausgezeichneten Gruppe von Inertialsystemen.</p></li>
+        <li><p>Die Maxwell-Gleichungen sind in der obigen Form falsch und müssen modifiziert bzw. fallengelassen werden. Die Galilei-Transformation ist dann gültig.</p></li>
+        <li><p>Die Newtonsche Mechanik ist in der obigen Form nicht gültig. Dann wäre aber auch die Galilei-Transformation falsch.</p></li>
+    </ul>
+
+    <p>Möglichkeit 1 wurde durch Experimente widerlegt. Es gibt keinen sogenannten Weltäther, damit gelten die Maxwell-Gleichungen in allen Inertialsystemen und auch die Lichtgeschwindigkeit ist in allen Inertialsystemen gleich.</p>
+
+    <p>Stattdessen scheint Möglichkeit 3 wahr zu sein. Dieses werden wir als Ansatz wählen, um die Newtonsche Mechanik zu korrigieren. All diese Überlegungen enden in der Speziellen Relativitätstheorie.</p>
+
+    <h3>Ein Experimenteller Befund</h3>
+
+    <p><b>Experiment von Fizeau</b></p>
+
+    <p>Ein sehr spannendes Ergebnis ist das Experiment von Fizeau (1851). Dieser fand für die Lichtgeschwindigkeit in einem bewegter Flüssigkeit mit Brechungsindex $n$ und Geschwindigkeit $v$ relativ zum Laborsystem das Ergebnis</p>
+    \begin{align}
+    c'=\frac{c}{n}+v\left(1-\frac{1}{n^2}\right)	
+    \end{align}
+    <p>erhielt. Bis auf den $\frac{1}{n^2}$ Term war das Ergebnis wie erwartet. Dieser Term kann in der Speziellen Relativitätstheorie einfach durch die relativistische Geschwindigkeitsaddition erklärt werden, wenn $v\ll \frac{c}{n}$ gilt</p>
+    \begin{align}
+        c'=\frac{\frac{c}{n}+v}{1+\frac{vc}{nc^2}}.
+    \end{align}
+
+    <h3>Axiome der Speziellen Relativitätsthoerie</h3>
+
+    <p>Wie der Name von Einsteins Arbeit ("Über die Elektrodynamik bewegter Körper") schon aussagt, war die Beschäftigung mit Relativität lange auch mit der Elektrodynamik verknüpft. Lorentz leitete den Gamma-Faktor beispielsweise aus den Maxwell-GLeichungen her, ohne viele weitere physikalische Annahmen zu treffen.</p>
+
+    <p>Heute versuchen wir die Spezielle Relativitätstheorie mit so wenig Annahmen wie möglich zu verstehen. Wir können zeigen, dass die drei folgenden Axiome bereits die Struktur der speziellen Relativitätstheorie implizieren - also auch die der Lorentz-Transformation:</p>
+
+    <ul>
+    <li><p>Der Raum ist homogen und isotrop.</p></li>
+    <li><p>Das Relativitätsprinzip gilt.</p></li>
+    <li><p>Die Lichtgeschwindigkeit $c$ ist in allen Bezugssystemen gleich.</p></li>	
+    </ul>
+
+    <p>Das erste Axiom nahm Eistein als "Erfahrungswert" an, das zweite Axiom war für Einstein die Konsequenz aus den gescheiterten Versuchen, den Äther relativ zu dem ausgezeichneten Ruhesystem nachzuweisen. Insbesondere das Michelson-Morley-Experient wurde später als das Experiment gewählt, das die Äthertheorie widerlegt. </p>
+
+    <p>Das dritte Axiom ist das Minimum, auf das sich die Aussagen der Maxwell-Gleichungen reduzieren lassen, weil erst dann die Gesetze der Relativitätstheorie zusammen mit den Axiomen 1 und 2 eindeutig werden.</p>
+
+    <h2>Einführung in die relativistische Mechanik</h2>
+    <p>Unser Ziel ist die Formulierung einer Lorentz-kovarianten Mechanik. Für den Grenzfall $v\ll c$ soll diese Mechanik in die Newtonsche Mechanik übergehen. Dazu betrachten wir ein Punktteilchen in der vierdimensionalen Raum-Zeit. Zur Beschreibung benutzen wir einen kontravarianten Vierervektor der Form</p>
+    \begin{align}
+    x^{\mu}=x^{\mu}(t)=\begin{pmatrix}
+      ct\\
+      \vec{x}(t)
+    \end{pmatrix}.	
+    \end{align}
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>

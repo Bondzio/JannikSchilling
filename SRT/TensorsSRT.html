@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/TensorsSRT">
+<title></title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+  
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Tensoren</h2>
+                        <p>Home<span>/</span>SRT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <div class="main">
+
+      <h1>Mathematischer Formalismus der SRT</h1>
+      <h2>Definition Vierervektoren</h2>
+      Tensoren sind eine Verallgemeinierunng des Gedankens von Vektoren. Ein Vektor ist ein Tensor erster Stufe und kann im Tensorformalismus über sein Transformationsverhalten definiert werden. 
+      <h4>Definition des kontravarianten Vierervektors</h4>
+
+      Jede vierkomponentige Größe $a^{\mu}$, dies sich unter der Lorentz-Transformation mit der Lorentz-Matrix transformiert gemäß
+      \begin{align}
+      a'^{\mu}=\Lambda^{\mu}_{\cdot \nu}\alpha^{\nu}	
+      \end{align}
+      heißt kontravarianter Tensor 1. Stufe.
+
+      <h4>Definition des kovarianten Vierervektors</h4>
+      Sei $a^{\mu}$ kontravarianter Vektor mit
+      \begin{align}
+          a'^{\mu}=\Lambda^{\mu}_{\cdot \nu}\alpha^{\nu},
+      \end{align}
+      dann gilt
+      \begin{align}
+      a'_{\mu}=\eta_{\mu\alpha}a'^{\alpha}=\eta_{\mu\alpha}\Lambda^{\alpha}_{\cdot \nu}a^{\nu}=\eta_{\mu\alpha}\eta^{\nu\beta}\Lambda^{\alpha}_{\cdot \nu}a_{\beta}=\Lambda_{\mu}^{\cdot \nu}a_{\beta}.	
+      \end{align}
+      Hier ist $\Lambda_{\mu}^{\cdot \beta}$ die inverse Lorentz-Transformation. Jede vierkomponentige Größe, die sich mit der Lorentz-Matrix durch 
+      \begin{align}
+      a'_{\mu}=\Lambda_{\mu}^{\cdot \nu}a_{\nu}	
+      \end{align}
+      transformiert, heißt kovarianter Tensor 1. Stufe.
+
+      <h2>Transformationsverhalten der Differentiale</h2>
+
+      Sei $x^{\mu}$ ein kontravarianter Vektor. Somit gilt dann
+      \begin{align}
+      x'^{\mu}=\Lambda^{\mu}_{\cdot \nu}x^{\nu}.	
+      \end{align}
+      Damit gilt dann aber offensichtlich auch für die Differentiale $\mathrm{d} x'^{\mu}$ der Zusammenhang:
+      \begin{align}
+      \mathrm{d} x'^{\mu}=\Lambda^{\mu}_{\cdot \nu}\mathrm{d} x^{\nu}.	
+      \end{align}
+
+      <b>Die Differentiale $\mathrm{d} x^{\mu}$ transformieren sich wie kontravariante Vektoren.</b>
+\
+      Im folgenden sei nun $f=f(x^{\mu})$ eine skalare Funktion. Dann gilt (vgl. u.a. Kettenregel) für $\mathrm{d} f$
+      \begin{align}
+          \mathrm{d} f=\frac{\partial f}{\partial x^{\mu}}\mathrm{d} x^{\mu}
+      \end{align}
+      Mit 
+      \begin{align}
+      x'^{\mu}=\Lambda^{\mu}_{\cdot \nu}x^{\nu} && x^{\nu}=\left(\Lambda^{-1}\right)^{\nu}_{\cdot \mu}x'^{\mu}	
+      \end{align}
+      folgt für $\mathrm{d} f$ der Zusammenhang
+      \begin{align}
+      \mathrm{d} f=\frac{\partial f}{\partial x'^{\mu}}\mathrm{d} x'^{\mu}=\frac{\partial f}{\partial x^{\nu}}\frac{\partial x^{\nu}}{\partial x'^{\mu}}\mathrm{d} x'^{\mu}=\left[\left(\Lambda^{-1}\right)^{\nu}_{\cdot \mu}\frac{\partial}{\partial x^{\nu}}\right]f\mathrm{d} x'^{\mu}.	
+      \end{align}
+      Dabei gilt offensichtlich
+      \begin{align}
+      \frac{\partial x^{\nu}}{\partial x'^{\mu}}=\left(\Lambda^{-1}\right)^{\nu}_{\cdot \mu}	.
+      \end{align}
+      Ein Vergleich liefert das Resultat:
+
+      <b>Die Koordinatenableitungen</b>
+      \begin{align}
+      \frac{\partial}{\partial x^{\mu}}\equiv \partial_{\mu}	
+      \end{align}
+      <b>transformieren sich wie kovariante Vektoren.</b>
+
+      <h2>Lorentz-Skalare</h2>
+
+      Ein Lorentz-Skalar ist im Allgemeinen eine reelle Größe, die invariant unter Lorentz-Transformationen ist. Wir haben in einem Beispiel bereits einen Lorentz-Skalar kennengelernt: das Skalarprodukt zwischen zwei Lorentz-Vektoren.
+
+      <ul>
+      <li>Das Skalarprodukt zwischen Lorentz-Vektoren ist dann gegeben durch
+      \begin{align}
+      \lambda =a_{\mu}b^{\mu}, \;\;\; \lambda'=a'_{\mu}b'^{\mu}=a_{\alpha}\Lambda_{\mu}^{\cdot \alpha}\Lambda^{\mu}_{\cdot \beta}b^{\beta}=a_{\alpha}b^{\beta}\delta^{\alpha}_{\beta}=a_{\mu}b^{\mu}=\lambda.	
+      \end{align}</li>
+      <li>Die Eigenzeit $\tau$: Das Linienelement $\mathrm{d} s^2=\mathrm{d} x_{\mu}\mathrm{d} x^{\mu}=c^2\mathrm{d} t'^2-(\mathrm{d} \vec{x})^2$ ist invariant unter Lorentz-Transformationen. Dann ist aber auch
+      \begin{align}
+          \mathrm{d} \tau=\frac{1}{c}\mathrm{d} s=\frac{1}{c}\sqrt{\mathrm{d} x_{\mu}\mathrm{d} x^{\mu}}
+      \end{align} invariant unter Lorentz-Transformationen. Somit ist dann auch die Eigenzeit $\tau$ ein Lorentz-Skalar:
+      \begin{align}
+      \tau=\int_{\tau_1}^{\tau_2}\mathrm{d} \tau.	
+      \end{align}</li>
+    </ul>
+
+      <h2>Lorentz-Tensoren</h2>
+
+      Wir haben bisher Tensoren einfach als Handwerkzeug betrachtet. Nun wollen wir Tensoren von besonderer Bedeutung für die \SRT näher betrachten. Das sind
+      <ul>
+      <li>Beliebige Vierervektoren aus $\mathbb{R}^4$</li>
+      <li>$A^{\mu}_{\cdot \nu}=\Lambda^{\mu}_{\cdot \nu}$ ist die Lorentz-Transformation in der Speziellen Relativitätstheorie.</li>
+      <li>Der Metrische Tensor, dieser ist
+      \begin{align}
+      g_{\mu\nu}=\eta_{\mu\nu}=\begin{pmatrix}
+      -1 &0&0&0\\
+      0&1&0&0\\
+      0&0&1&0\\
+      0&0&0&1	
+      \end{pmatrix}.
+      \end{align}
+      Damit ergibt sich auch
+      \begin{align}
+      x_{\mu}=\eta_{\mu\nu}x^{\nu},	
+      \end{align}
+      sowie für das infintesimale Wegelement 
+      \begin{align}
+      \mathrm{d} s^2=g_{\mu\nu}\mathrm{d} x^{\mu}\mathrm{d} x^{\nu}=\eta_{\mu\nu}\mathrm{d} x^{\mu}\mathrm{d} x^{\nu}=\mathrm{d} x_{\mu}\mathrm{d} x^{\mu}.	
+      \end{align}</li>
+      <li> Der Differentialoperator in der Speziellen Relativitätstheorie ergibt sich durch
+      \begin{align}
+          \partial_{\mu}=\frac{\partial }{\partial x^{\mu}}=\left(\frac{\partial }{\partial (ct)}, \frac{\partial }{\partial x}, \frac{\partial}{\partial y}, \frac{\partial }{\partial z}\right).
+      \end{align} Das ist der Vierergradient, also die Erweiterung des bereits bekannten Gradienten aus der klassichen Vektoralgebra.
+      </li>
+      <li>Was passiert, wenn wir den Vierergradienten auf einen Lorentz-Skalar $\varphi$ anwenden?
+      Es zeigt sich, dass
+      \begin{align}
+          \partial_{\mu}\varphi\equiv \varphi_{\mu}
+      \end{align} ein kovarianter Vektor ist.}
+      \item{Wir wenden den Vierergradienten nun auf einen Vierervektor $a^{\mu}$ an. Der Ausdruck
+      \begin{align}
+      \partial_{\mu}a^{\mu}	
+      \end{align}
+      ist ein Lorentzskalar und heißt Viererdivergenz.</li>
+      <li>Wir haben nun den Gradienten und die Divergenz eines Vektorfeldes bereits neu definierten können. Jetzt fehlt noch die Neudefinition der Rotation. Diese ergibt sich durch
+      \begin{align}
+      \partial_{\nu}a_{\mu}-\partial_{\mu}a_{\nu}	
+      \end{align} und ist ein antisymetrischer kovarianter Tensor 2. Stufe und heißt Viererrotation.
+      </li>
+    </ul>	
+    </ul>
+              
+      <h2>Das Differential der Eigenzeit</h2>
+      Wir betrachten ein Teilchen, dass in einem Inertialsystem ungleichförmig bewegt wird. Im Ruhesystem des Teilchens gilt dann
+      \begin{align}
+          \mathrm{d} x=\mathrm{d} y=\mathrm{d} z=0\Rightarrow (\mathrm{d} s)^2=c^2(\mathrm{d} \tau)^2.
+      \end{align}
+      Hierbei ist $\tau$ dann die Eigenzeit im Ruhesystem des Teilchens. Das infintesimale Wegelement $\mathrm{d} s^2$ ist Lorentz-invariant. In dem Inertialsystem ergibt sich
+      \begin{align}
+      \mathrm{d} s^2 = \mathrm{d} x_{\mu}\mathrm{d} x^{\mu} &= c^2\mathrm{d} t^2-\mathrm{d} \vec{x}^2=c^2\mathrm{d} t^2-\vec{v}(t)^2\mathrm{d} t^2=c^2\left(1-\frac{v^2(t)}{c^2}\right)\mathrm{d} t^2\\
+      &=c^2(1-\beta^2(t))\mathrm{d} t^2=c^2\mathrm{d}\tau^2. 
+      \end{align}
+      Damit ergibt sich
+      \begin{align}
+      \mathrm{d} \tau =\sqrt{1-\beta^2(t)}\; \mathrm{d} t=\frac{1}{\gamma}\mathrm{d} t.	
+      \end{align}
+
+      Wir suchen die Eigenzeit, daher integrieren wir die obige Gleichung
+      \begin{align}
+      \tau=\int_{\tau_1}^{\tau_2}\mathrm{d} \tau=\tau_2-\tau_1=\int_{t_1}^{t_2}\sqrt{1-\beta^2(t)}\, \mathrm{d} t< t_2-t_1. 	
+      \end{align}
+      Damit haben wir eine wichtige Erkenntnis erlangt:
+
+      Die Eigenzeit ist ein Lorentz-Skalar aber wegabhängig.
+      
+      </div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+
+
+		

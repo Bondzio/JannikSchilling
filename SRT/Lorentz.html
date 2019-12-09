@@ -1,0 +1,416 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Lorentz">
+<title>Physik ist nicht alles, aber alles ist Physik!</title>
+<meta name="description" content="Hast du auch schon gehört, dass Physik nichts mit der Realität zu tun habe? Ich zeige dir, dass das nicht stimmt!">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="blog/css/bootstrap.css">
+<link rel="stylesheet" href="blog/css/font-awesome.min.css">
+<link rel="stylesheet" href="blog/css/owl.carousel.min.css">
+<link rel="stylesheet" href="blog/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="blog/style.css">
+<link rel="stylesheet" href="blog/responsive.css">
+</head>
+
+<body>
+
+    <header class="main_menu single_page_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                        <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Über mich</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Die Lorentz-Transformation</h2>
+                            <p>Home<span>/</span>SRT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <div class="main">
+
+        <h1>Die Lorentz-Transformation</h1>
+        <h2>Physikalische Motivation</h2>
+        <p>Aus dem Relativitätsprinzip folgt, dass geradlinige Bewegungen wieder in geradlinige Bewegungen übergehen.</p>
+        <p>Dass heißt, dass Transformation zwischen verschiedenen Koordinatensystemen ausschließlich lineare Transformation sind.</p>
+    
+        \begin{align}
+        \begin{pmatrix}
+        ct'
+        \vec{x}'	
+        \end{pmatrix}=\Lambda (\vec{v})\cdot\begin{pmatrix}
+        ct
+        \vec{x} 	
+        \end{pmatrix}.
+        \end{align}
+        
+        <p>Wir nennen die $4\times 4$-Matrix $\Lambda(\vec{v})$ Lorentz-Transformation. Diese kann  auch explizit von der Relativgeschwindigkeit $\vec{v}$ abhängen.</p>
+        <p>Die Lorentz-Transformation ist also eine bijektive affinen Koordinatentransformationen, die alle Geraden wieder in Geraden überführen. </p>
+
+        <h2>Die Galilei-Transformation</h2>
+        <p>In der Newtonschen Mechanik betrachten wir vor allem die Galilei-Transformation, da die Newtonschen Bewegungsgleichungen</p>
+        $$m\ddot x^{i}(x,\dot x,t)=\sum \vec{F}_{12}+\vec{F}_{ext}$$
+        unter diese Transformation invariant sind.
+        <p>Bevor wir also zu der Lorentz-Transformation übergehen,  betrachten wir zuerst die Galilei-Transformation.</p>
+        <p>Wir betrachten hier ein System, welches sich mit einer Relativgeschwindigkeit $v$ in der $x$-Richtung nach rechts bewegt.</p>
+        \begin{align}
+        x'=x-vt,\;\;\, y'=y,\;\;\, z'=z,\;\;\, t'=t.	
+        \end{align}
+    
+        <p>Wir betrachten einen im Raum-Zeit-Ursprung ($\vec{x}=0$ und $t=0$) startenden Lichtstrahl. Für diesen gilt:</p>
+        \begin{align}
+        x^2+y^2+z^2 &=c^2t^2
+        x'^2+y'^2+z'^2 &=c^2t'^2.	
+        \end{align}
+    
+        Umstellen der beiden Gleichungen und Gleichsetzen der beiden Gleichungen ergibt sich damit
+    
+        \begin{align}
+        x'^2+y'^2+z'^2-c^2t'^2=0=x^2+y^2+z^2-c^2t^2.	
+        \end{align}
+        Mit der Galilei-Transformations aus Gleichung ergibt sich hingegen
+        \begin{align}
+        (x-vt)^2+y^2+z^2-c^2t^2=x^2+y^2+z^2-c^2t^2 \underbrace{-2xvt+v^2t^2}_{\text{Störender Term}}.
+        \end{align}
+    
+        <p>Wir wollen nun den Term $-2xvt+v^2t^2$ wegtransformieren. Dazu müssen wir nun auch die Zeit transformieren, was uns später zu der Zeitdilatation führt.</p>
+        <p>Um uns Arbeit zu sparen, probieren wir zuerst einen linearen Ansatz, und modifizieren diesen anschließend etwas.</p>
+    
+        <ul>
+            <li>Ansatz 1: Wir wählen nun den Ansatz
+            \begin{align}
+            x'=x-vt,\;\;\, y'=y\;\;\, z'=z,\;\;\, t'=t-\alpha	
+            \end{align}. Einliefern ergibt
+            \begin{align}
+            x'^2+y'^2+z'^2-c^2t'^2=x^2+y^2+z^2-c^2t^2-2xvt+v^2t^2+2\alpha tc^2-c^2\alpha^2.	
+            \end{align}
+            Wir wählen jetzt $\alpha=\frac{xv}{c^2}$ und erhalten damit
+    
+            \begin{align}
+            x'^2+y'^2+z'^2-c^2t'^2 &=x^2-2xvt+v^2t^2+y^2+z^2-c^2t^2+2c^2t\frac{xv}{c^2}-c^2\left(\frac{xv}{c^2}\right)^2
+            &= x^2-\frac{v^2}{c^2}x^2+y^2+z^2-c^2t^2+v^2t^2
+            &= x^2\left(1-\frac{v^2}{c^2}\right)+y^2+z^2-c^2t^2\left(1-\frac{v^2}{c^2}\right).
+            \end{align}
+            Bei diesem Ansatz stören die Faktoren $\left(1-\frac{v^2}{c^2}\right)$ vor $x^2$ und $t^2$. Damit diese Faktoren verschwinden, müssen wir unseren Ansatz leicht verändern. Da jeder Faktor vor $x'$ quadriert wird, müssen wir den Reziproken der Wurzel aus dem Faktor wählen.
+        </lil>
+            <li><b>2. Ansatz: </b> Damit erhalten wir für unseren Ansatz das folgende
+        \begin{align}
+        x'=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}(x-vt) && y'=y && z'=z && t'=\frac{1}{\sqrt{1-\frac{vx}{c^2}}}t.	
+        \end{align}
+        Einsetzen liefert das gesuchte Ergebnis
+        \begin{align}
+        x'^2+y'^2+z'^2-c^2t'^2=x^2+y^2+z^2-c^2t^2.	
+        \end{align}
+        Diese Transformation ist die spezielle Loretz-Transformation für $\vec{v}=v\vec{e}_x$.</li>
+        
+    </ul>
+    
+        Anmerkungen:
+        <ul>
+            <li>Für sehr kleine Geschwindigkeiten $v\ll c$ geht die Lorentz-Transformation in die Galilei-Transformation über.</li>
+            <li>Das Linienelement $ds^2=x^2+y^2+z^2-c^2t^2$ ist invariant unter Lorentz-Transformationen.</li>
+            <li>Die Formeln für die spezielle Lorentz-Transformation gelten ebenso für ${\vec{v}=v\vec{e}_y}$ und ${\vec{v}=v\vec{e}_z}$.</li>
+        </ul>
+    
+        <h2>Matrixdarstellung der Lorentz-Transformation</h2>
+        <p>Die Lorentz-Transformationen $\Lambda$ sind alle Transformationen, welche die Minkowski-(Pseudo)-Metrik invariant lassen.</p>
+        <p>Somit folgt für alle Vierer-Vektoren $x$ und $y$</p>
+    
+        \begin{align}
+        \langle x,y\rangle=\langle\Lambda x, \Lambda y\rangle.	
+        \end{align}
+    
+        <p>Damit folgt in Komponentendarstellung</p>
+    
+        \begin{align}
+            \Lambda^{\alpha}_{\cdot \mu} \eta_{\alpha \beta} \Lambda^{\beta}_{\cdot \nu}=\eta_{\mu\nu}.
+        \end{align}
+    
+        <p>In der Kurzschreibweise ergibt sich die koordinatenünabhängige Notation</p>
+    
+        \begin{align}
+        \Lambda^T \eta \Lambda=\eta.
+        \end{align}
+    
+        <h2>Spezielle Lorentz-Transformation im Matrixformalismus</h2>
+    
+        <p>Wir haben im vorherigen Abschnitt bereits die spezielle Lorentz-Transformation für eine Raumrichtung durch Ausprobieren hergeleitet. Mit dem Matrixformalismus lässt sich diese Lösung allerdings auch algebraisch herleiten.</p>
+        <p>Dazu betrachten wir erneut die Spezielle Lorentz-Transformation für eine Raumdimension.</p>
+    
+        \begin{align}
+        \begin{pmatrix}
+        A&C
+        B&D	
+        \end{pmatrix}\begin{pmatrix}
+        1&0
+        0&-1	
+        \end{pmatrix}\begin{pmatrix}
+        A &B
+        C&D	
+        \end{pmatrix}=\begin{pmatrix}
+        1 & 0
+        0 & -1	
+        \end{pmatrix},	
+        \end{align}
+        
+        <p>Diese Matrixgleichungen führen uns zu den drei algebraischen Gleichungen</p>
+    
+        \begin{align}
+        A^2-C^2=D^2-B^2=1 && AB=CD.
+        \end{align}
+    
+        <p>Diese Gleichungen lassen bis auf das Vorzeichen eine einparametrige Schar an Lösungen zu. Eine mögliche Parametrisierung ist</p>
+    
+        \begin{align}
+        A=D=\cosh \phi && B=C=\sinh \phi.	
+        \end{align}
+    
+        <p>In diesem Kontext bezeichnen wir $\phi$ auch als Rapidität. </p>
+    
+        <p>Alternativ dazu können wir aber auch eine andere anschauliche Paramterisierung wählen. Dieses entsteht aus der Überlegung, dass die Weltlinie des räumlichen Ursprungs des $(t',x')$-Systems, also die Gerade zu $x'=0$, für den anderen Beobachter als die Gerade $x=vt$ darstellen.</p>
+    
+        <p>Daraus folgt mit einem beliebigen $v$-abhängigen Faktor $\gamma(v)$ der Zusammenhang:</p>
+    
+        \begin{align}
+        x'=\gamma(v)(x-vt)=\gamma(v)\left(x^1-\frac{v}{c}x^0\right).	
+        \end{align}
+    
+        Durch Vergleich mit der obigen Transformation folgt
+    
+        \begin{align}
+        A=D=\gamma(v) && B=C=-\gamma\frac{v}{c}.\notag	
+        \end{align}
+    
+        Aus $A^2-C^2=1$ ergibt sich schließlich
+    
+        \begin{align}
+        \gamma=\gamma(v)=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}=\frac{1}{\sqrt{1-\beta^2}}
+        \end{align}
+        mit
+        \begin{align}
+        \beta=\frac{v}{c}.	
+        \end{align}
+
+        Damit folgt dann die Lorentz-Transformation in einer Dimension:
+    
+        \begin{align}
+        \Lambda(v)=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\begin{pmatrix}
+        1 & -\frac{v}{c}
+        -\frac{v}{c} & 1	
+        \end{pmatrix}.	
+        \end{align}
+    
+        Damit können wir die spezielle Lorentz-Transformation beschreiben:
+        \begin{align}
+        x'&=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}(x-vt)	\notag
+        y' &= y\notag
+        z' &= z\notag
+        t' &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\left(t-\frac{vx}{c^2}\right).
+        \end{align}
+    
+        <b>Anmerkungen: </b>
+        <ul>
+            <li>Weiterhin ist sind die Maxwell-Gleichungen unter der Lorentz-Transformation invariant. Aus der obigen Form der Elektrodynamik ist dies noch nicht deutlich, aber wir werden später die "Kovariante Formulierung der Elektrodynamik" betrachten. In dieser ist die Invarianz unter der Lorentz-Transformation zu erkennen.</li>
+        </ul>
+    
+        Mit diesem Wissen können wir nun Ort und Zeit zu einer vierdimensionalen Raum-Zeit zusammenfassen. Im folgenden können griechische Indizes alle Werte von $0$ bis $3$ annehmen, lateinische Indizes können nur die Werte zwischen $1$ und $3$ annehmen.
+    
+        \begin{align}
+        x^0=ct && x^1=x && x^2=y && x^3=z && x^{\mu}\in\mathbb{R}^4
+        \end{align}
+        Für die transformierten Größen ergibt sich
+        \begin{align}
+        x^{0'} &= \gamma (x^0-\beta x^1)\notag
+        x^{1'} &= \gamma (x^1-\beta x^0)\notag
+        x^{2'} &= x^2\notag
+        x^{3'} &= x^3.	
+        \end{align}
+        Dies können wir nun mit einer $4\times 4$ Matrix und einem vierdimensionalem Vektor schreiben, wie wir es eben bei der zweidimensionalen Herleitung gemacht haben.
+        \begin{align}
+        \begin{pmatrix}
+        x^{0'}
+        x^{1'}
+        x^{2'}
+        x^{3'}	
+        \end{pmatrix}=\begin{pmatrix}
+        \gamma &-\beta \gamma &0 &0
+        -\beta \gamma & \gamma & 0 & 0
+        0 & 0& 1 &0
+        0&0&0&1
+        \end{pmatrix}\begin{pmatrix}
+        x^0
+        x^1
+        x^2
+        x^3	
+        \end{pmatrix}
+        \end{align}
+    
+        In Komponentenschreibweise können wir ebenso 
+        \begin{align}
+        (x^{\mu})'=\Lambda x^{\mu}	
+        \end{align}
+        schreiben. Wenn $D$ eine Drehmatrix ist, dann gilt
+        \begin{align}
+        D^tD=DD^t=E.	
+        \end{align}
+        <p>Die Lorentztransformationen lassen sich auch miteinander verknüpfen. Hierbei entspricht die Hintereinanderausführung der Lorentz-Transformationen einer Matrixmultiplikation.</p>
+    
+        <p>Einsteins Erkenntnis liegt darin, dass die Lorentz-Transformation sich nicht nur auf die Elektrodynamik beschränkt, sondern eine allgemeine Eigenschaft von Raum und Zeit ist.</p>
+    
+</div>
+
+  
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+
+<script>
+  function AutobahnFunc() {
+    self.location="Autobahn.html";
+  }function FallschirmFunc() {
+    self.location="Fallschirmspringer.html";
+  }
+</script>
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+ 
