@@ -143,28 +143,28 @@
 
 
       <h2>Rechenregeln</h2>
-      Für die Delta-Distribution ergeben sich einige Rechenregeln, die im Allgemeinen für alle Distributionen gelten. Hier wollen wir diese Regeln allerdings in Physiker-Notation betrachten:
+      <p>Für die Delta-Distribution ergeben sich einige Rechenregeln, die im Allgemeinen für alle Distributionen gelten. Hier wollen wir diese Regeln allerdings in Physiker-Notation betrachten:</p>
       \begin{align}
       \int_{-\infty}^{\infty} f(x)\delta(x-x_0)\, \mathrm{d}x &=f(x_0)\\
       \int_{-\infty}^{\infty} \delta(x-x_0)\, \mathrm{d}x &=1\\
       \int_{-\infty}^{\infty} f(x)\delta '(x-x_0)\, \mathrm{d}x &=-f'(x_0).
       \end{align}
 
-    Einige weitere wichtige Regeln für die Delta-Distribution sind:
+    <p>Einige weitere wichtige Regeln für die Delta-Distribution sind:</p>
       \begin{align}
       \delta(ax)&= \frac{1}{|a|}\delta(x)\\
       \delta(-x) &=\delta (x)\\
       H'(x) &= \delta (x)\\
       \delta(h(x)) &=\sum_{\nu=1}^N \frac{1}{|h'(x_{\nu})|}\delta(x-x_{\nu}),
       \end{align}
-      wobei $x_{\nu}$ die Nullstellen der Funktion $h(x)$ seien.
+      <p>wobei $x_{\nu}$ die Nullstellen der Funktion $h(x)$ seien.</p>
       
       <h2>Diracsche Delta-Distribution in drei Dimensionen</h2>
-      Wir können die Delta-Distribution, die wir bis jetzt für eine Dimension definiert haben, auch für drei Dimensionen definieren. In kartesichen Koordinaten ist die dreidimensionale Delta-Funktion einfach als das Produkt der Delta-Funktionen für die jeweilige Dimension gegeben:
+      <p>Wir können die Delta-Distribution, die wir bis jetzt für eine Dimension definiert haben, auch für drei Dimensionen definieren. In kartesichen Koordinaten ist die dreidimensionale Delta-Funktion einfach als das Produkt der Delta-Funktionen für die jeweilige Dimension gegeben:</p>
       \begin{align}
       \delta^{(3)}(\vec{r}-\vec{r}_0):=\delta(x-x_0)\cdot \delta(y-y_0)\cdot \delta(z-z_0).
       \end{align}
-      Analog zu der Definition für eine Dimension ergibt sich die Integralformel
+      <p>Analog zu der Definition für eine Dimension ergibt sich die Integralformel</p>
       \begin{align}
       \iiint_{\mathbb{R}^3} f(\vec{r})\delta^{(3)}(\vec{r}-\vec{r}_0)\, \mathrm{d}V=1.
       \end{align}
