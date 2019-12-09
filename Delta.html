@@ -100,7 +100,10 @@
 
       <p>In der Physik, insbesondere in der Elektrodynamik, spielt die Delta-Distribution eine elementare Bedeutung. Denn diese hat eine Selektionseigenschaft, sodass</p>
       $$\int f(x)\delta(x)\, \mathrm{d}x=f(0).$$
+      <p>Diese Eigenschaften sind mathematisch gesprochen durch eine Distribution gegeben. Das ist eine Abbildung, die vom Raum der Testfunktionen Epsilon in unseren Körper abbildet:</p>
+      $$\delta:\epsilon\rightarrow \mathbb{K},\ f\mapsto f(0)$$
       <p>Es gibt in der Standard-Analysis allerdings keine solche Funktion $\delta(x)$, da die $\delta$-Distribution eine irreguläre Distribution ist, die sich nicht durch eine lokal integrierbare Funktion darstellen lässt. Die obige Notation ist daher metaphorisch zu verstehen.</p>
+      
       <h2>Dirac-Folgen</h2>
       <p>Wir wollen uns der Delta-Distribution über Dirac-Folgen nähern, die die Delta-Distribution annähern.</p>
       <div align="center">
@@ -119,9 +122,6 @@
         <li>Glockenfunktionen $$\delta_{\epsilon}(x)=\frac{1}{\sqrt{2\pi\epsilon}}\exp\left(-\frac{x^2}{2\epsilon}\right)$$</li>
         <li>Rechteckfunktionen $$\delta_{\epsilon}(x)=\frac{\operatorname{rect}(x/\epsilon)}{\epsilon}=\begin{cases}\frac{1}{\epsilon} & |x|\leq \frac{\epsilon}{2}\\ 0 & \text{sonst}\end{cases}$$</li>
       </ul>
-
-      Diese Eigenschaften sind mathematisch gesprochen durch eine Distribution gegeben. Das ist eine Abbildung, die vom Raum der Testfunktionen Epsilon in unseren Körper abbildet:
-      $$\delta:\epsilon\rightarrow \mathbb{K},\ f\mapsto f(0)$$
 
       <h2>Von der Folge zur Distribution</h2>
       <p>Um die Folgendefinition der Delta-Distribution besser zu verstehen, wollen wir diese an einem Beispiel betrachten. Wir betrachten hier eine Folge $g_n$, die eine Dirac-Folge sei.</p>
