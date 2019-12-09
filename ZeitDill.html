@@ -12,9 +12,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Viererkraft">
-<title>Der Kraftbegriff in der Speziellen Relativitätstheorie: Die Viererkraft</title>
-<meta name="description" content="">
+<link rel="canonical" href="https://www.jannik-schilling.com/Schrod-Gl">
+<title>Die Schrödinger-Gleichung</title>
+<meta name="description" content="In der Quantenmechanik ist die Schrödinger-Gleichung von elementarer Bedeutung. Denn mit ihr kann die Dynamik von Wellenfunktionen einfach berechnet werden.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,8 +35,6 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="kurse/css/style.css">
 </head>
-
-
 
 <body>
 
@@ -83,8 +81,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Viererkraft</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Längenkontraktion und Zeitdilatation</h2>
+                        <p>Home<span>/</span>Quantenmechanik</p>
                     </div>
                 </div>
             </div>
@@ -95,51 +93,37 @@
 
 
   <div class="main">
-    <h1>Vierer-Kraft</h1>
-    <p>Der Kraftbegriff aus der Newtonschen Mechanik </p>
-    \begin{align}
-    \vec{F}=m\vec{a}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}	
-    \end{align}
-    <p>können wir formal auch in der speziellen Relativitätstheorie anwenden. Diese Anwendung ist aber nicht von großer Bedeutung, da der Begriff der Kraft in der Allgemeinen Relativitätstheorie ganz anders definiert wird.</p>
+    <h1>Relativistische Effekte in der Speziellen Relativitätstheorie</h1>
+    <h2>Die Längenkontraktion</h2>
 
-    <p>In der Newtonschen Mechanik gilt</p>
+    <p>Wir betrachten im folgenden zwei Koordinatensysteme $K$ und $K'$, die sich relativ zueinander mit der Geschwindigkeit $\vec{v}=v\vec{e}_x$ bewegen. Damit folgen die Gleichungen</p>
     \begin{align}
-        \vec{F}^N=\dot{\vec{p}}.
+    x_A'&=0=\gamma (x_A-vt)\Rightarrow x_A(t)=vt	\notag
+    x_B' &= l' =\gamma (x_B-vt)\Rightarrow x_B(t)=\frac{l'}{\gamma}+vt.
     \end{align}
 
-    <p>Für die Kraft ergibt sich somit</p>
+    <p>Im Koordinatensystem $K$ ergibt sich der Abstand zwischen den beiden Punkten zu</p> 
     \begin{align}
-        F^{\mu}=\frac{\mathrm{d}p^{\mu}}{\mathrm{d}\tau}=\gamma \frac{\mathrm{d}p^{\mu}}{\mathrm{d}t}=mb^{\mu}=\begin{pmatrix}
-            \frac{m}{c}\gamma^4\vec{v}\cdot \dot{\vec{v}}\\
-            m\gamma^2\dot{\vec{v}}+m\gamma^4\frac{\vec{v}\dot{\vec{v}}}{c^2}\cdot \vec{v}
-        \end{pmatrix}
+    l=x_B(t)-x_A(t)=\frac{1}{\gamma}l'=\sqrt{1-\frac{v^2}{c^2}}l'.	
     \end{align}
 
-    <p>Wir identifizieren $m\gamma^2\dot{\vec{v}}+m\gamma^4\frac{\vec{v}\cdot \dot{\vec{v}}}{c^2}\vec{v}$ mit $\gamma \vec{F}^N$. </p>
+    <h2>Zeitdilatation</h2>
 
-    <p><b>Anmerkung: </b> Der Kraftbegriff ist die Schwachstelle der speziellen Relativitätstheorie. Wir können nämlich nicht beweisen, dass $F^{\mu}=\mathrm{d}p^{\mu}/\mathrm{d}t$ gilt. Weiterhin können wir</p>
-    \begin{align}
-        \frac{1}{c}\gamma\vec{v}\cdot \vec{F}^N=\gamma^2 \frac{m}{c}\vec{v}\cdot\dot{\vec{v}}+\gamma^4\frac{v^2}{c^2}\frac{m}{c}\vec{v}\cdot \dot{\vec{v}}=\gamma^4\frac{m}{c}\vec{v}\cdot \dot{\vec{v}}=F^	0.
-    \end{align}  
+    <p>Wir wählen wieder das unbewegte Koordinatensystem $K$ und das bewegte Koordinatensystem $A'$. Wir positionieren $2$ genau baugleiche und genau synchronisierte Uhren in den Koordinatenursprüngen der Koordinatensysteme.</p>
 
-    <p>Damit gilt dann für $F^{\mu}$</p>
     \begin{align}
-        F^{\mu}=\gamma\begin{pmatrix}
-            \frac{\vec{F}\cdot \vec{F}^N}{c}\\
-            \vec{F}^N
-        \end{pmatrix}=mb^{\mu}.
+    x'=0 &=\gamma(x-vt)\Rightarrow x(t)=vt\notag	
+    t'&= \gamma\left(t-\frac{v^2}{c^2}t\right)=\frac{1-\frac{v^2}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}t=\sqrt{1-\frac{v^2}{c^2}}t< t'.
     \end{align}
 
-    <p>Wie auch in der Newtonschen Mechanik können wir mit der Kraft eine relativistische Bewegungsgleichung formulieren. Mit der Kräftebilanz</p>
-    \begin{align}
-    \vec{F}^N=\vec{F}(\vec{x},\vec{v},t)	
-    \end{align}
-    <p>folgt eine Differentialgleichung für $x(t)$. Wenn wir diese Differentialgleichung lösen, erhalten wir viele Informationen (siehe Kräftefreie Teilchen). </p>
-    <p>Allgemein lösen wir die Gleichung</p>
-    \begin{align}
-    \frac{\mathrm{d}}{\mathrm{d}t}\frac{m\vec{v}}{\sqrt{q-\frac{\vec{v}}{c^2}}}=0.
-    \end{align}
-</div>
+    <p><b>Fazit: Bewegte Uhren gehen langsamer!</b></p>
+
+    <h2>Raum-Zeit-Diagramme</h2>
+
+    <p>Mit einem Raum-Zeit-Diagramm bzw. einem Minkowski-Diagramm können wir Ereignisse der speziellen Relativitätstheorie visualisieren.</p>
+    <p>Dazu führen wir das Konzept der Weltlinie ein. Eine Weltlinie verbindet alle Ereignisse, die passieren. Die Weltlinie stellt gelaufene Bahnen dar, ist also eine Trajektorie.</p>
+
+  </div>
 
         <div id="disqus_thread"></div>
 <script>

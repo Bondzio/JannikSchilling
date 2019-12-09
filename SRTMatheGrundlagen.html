@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Jannik Schilling</title>
@@ -12,9 +13,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Viererkraft">
-<title>Der Kraftbegriff in der Speziellen Relativitätstheorie: Die Viererkraft</title>
-<meta name="description" content="">
+<link rel="canonical" href="https://www.jannik-schilling.com/Schrod-Gl">
+<title>Die Schrödinger-Gleichung</title>
+<meta name="description" content="In der Quantenmechanik ist die Schrödinger-Gleichung von elementarer Bedeutung. Denn mit ihr kann die Dynamik von Wellenfunktionen einfach berechnet werden.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,8 +36,6 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="kurse/css/style.css">
 </head>
-
-
 
 <body>
 
@@ -83,8 +82,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Viererkraft</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Längenkontraktion und Zeitdilatation</h2>
+                        <p>Home<span>/</span>Quantenmechanik</p>
                     </div>
                 </div>
             </div>
@@ -95,51 +94,127 @@
 
 
   <div class="main">
-    <h1>Vierer-Kraft</h1>
-    <p>Der Kraftbegriff aus der Newtonschen Mechanik </p>
-    \begin{align}
-    \vec{F}=m\vec{a}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}	
-    \end{align}
-    <p>können wir formal auch in der speziellen Relativitätstheorie anwenden. Diese Anwendung ist aber nicht von großer Bedeutung, da der Begriff der Kraft in der Allgemeinen Relativitätstheorie ganz anders definiert wird.</p>
 
-    <p>In der Newtonschen Mechanik gilt</p>
+    <h1>Der Minkowski-Raum</h1>
+
+    <p></p><b>Definition des Minkowski-Raum</b></p>
+    <p>Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt</p>
     \begin{align}
-        \vec{F}^N=\dot{\vec{p}}.
+    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
+    \end{align}
+    <p>Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
+    \begin{align}
+    \eta_{\mu\nu}=\begin{pmatrix}
+    -c^2 &0&0&0
+    0 &1&0&0
+    0&0&1&0
+    0&0&0&1.	
+    \end{pmatrix}	
+    \end{align}
+    <p>Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:</p>
+    \begin{align}
+    \eta_{\mu\nu}=\begin{pmatrix}
+        -1&0&0&0
+        0&1&0&0
+        0&0&1&0
+        0&0&0&1.
+    \end{pmatrix}	
+    \end{align}	
+    <p>Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch</p>
+    \begin{align}
+    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
+    \end{align}
+    <p>Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. </p>
+    \begin{align}
+    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
+    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
+    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
     \end{align}
 
-    <p>Für die Kraft ergibt sich somit</p>
+    <p>Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
+
+    <p>Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
+
     \begin{align}
-        F^{\mu}=\frac{\mathrm{d}p^{\mu}}{\mathrm{d}\tau}=\gamma \frac{\mathrm{d}p^{\mu}}{\mathrm{d}t}=mb^{\mu}=\begin{pmatrix}
-            \frac{m}{c}\gamma^4\vec{v}\cdot \dot{\vec{v}}\\
-            m\gamma^2\dot{\vec{v}}+m\gamma^4\frac{\vec{v}\dot{\vec{v}}}{c^2}\cdot \vec{v}
-        \end{pmatrix}
+    \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
+    \end{align}
+    <p>Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.</p>
+
+    <p><b>Anmerkungen</b></p>
+    <ul>
+        <li><p>Wir bezeichnen dieses Produkt manchmal auch als Skalarprodukt, obwohl dieses nicht-positiv definiert ist und damit in der üblichen mathematischen Sprechweise kein Skalarprodukt ist. Im euklidischen Raum hingegen gilt</p>
+        \begin{align}
+        (x,x)>0\;\;\; \forall x\neq 0\;\;\;\; \text{ und } \;\;\;\; (x,x)\Leftrightarrow x=0.
+        \end{align}
+        <p>Beides gilt für einen Minkowski-Raum nicht.</p></li>
+        <li><p>Oft nennen wir dieses Produkt auch Minkowski-Produkt, nach dem Namensgeber der Minkowski-Metrik. Der Mathematiker und Physiker, der diese Prinzipien eingeführt hat, heißt Hermann Minkowski.</p>
+        <p>Dieses Produkt ist nicht-entartet, das bedeutet, dass es keine nicht-verschwindenden Vektoren $y$ gibt, sodass $x\cdot y=(x,y)$ für alle Vektoren $x$ gleich Null ist.</p></li>
+        <li><p>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</p></li>
+    </ul>
+
+    <h2>Herunter- und Hinaufziehen von Indizes</h2>
+    <p>Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass</p>
+    \begin{align}
+    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
+    \end{align}
+    <p>gilt. Damit finden wir, dass im Minkowski-Raum</p>
+    \begin{align}
+    \eta^{\mu\nu}=\begin{pmatrix}
+    -1 &0&0&0
+    0&1&0&0
+    0&0&1&0
+    0&0&0&1	
+    \end{pmatrix}	
+    \end{align}
+    <p>gilt.</p>
+    <p>Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.</p>
+
+    <h2>Ko- und Kontravarianz</h2>
+    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
+    \begin{align}
+    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
     \end{align}
 
-    <p>Wir identifizieren $m\gamma^2\dot{\vec{v}}+m\gamma^4\frac{\vec{v}\cdot \dot{\vec{v}}}{c^2}\vec{v}$ mit $\gamma \vec{F}^N$. </p>
+    <p>Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. </p>
 
-    <p><b>Anmerkung: </b> Der Kraftbegriff ist die Schwachstelle der speziellen Relativitätstheorie. Wir können nämlich nicht beweisen, dass $F^{\mu}=\mathrm{d}p^{\mu}/\mathrm{d}t$ gilt. Weiterhin können wir</p>
-    \begin{align}
-        \frac{1}{c}\gamma\vec{v}\cdot \vec{F}^N=\gamma^2 \frac{m}{c}\vec{v}\cdot\dot{\vec{v}}+\gamma^4\frac{v^2}{c^2}\frac{m}{c}\vec{v}\cdot \dot{\vec{v}}=\gamma^4\frac{m}{c}\vec{v}\cdot \dot{\vec{v}}=F^	0.
-    \end{align}  
 
-    <p>Damit gilt dann für $F^{\mu}$</p>
+    <h3>Längen berechnen</h3>
+    <p>Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:</p>
     \begin{align}
-        F^{\mu}=\gamma\begin{pmatrix}
-            \frac{\vec{F}\cdot \vec{F}^N}{c}\\
-            \vec{F}^N
-        \end{pmatrix}=mb^{\mu}.
+        V_n&=V^mg_{mn}
+        V^n &= V_m g^{mn}.
     \end{align}
-
-    <p>Wie auch in der Newtonschen Mechanik können wir mit der Kraft eine relativistische Bewegungsgleichung formulieren. Mit der Kräftebilanz</p>
+    <p>Hierbei ist der Vektor $\vec{V}$ immer dasselbe physikalische Objekt. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.</p>
+    <p><b>Anmerkung: </b> Wir können auch die Indizes von Tensoren mit höherem Rang als $1$ manipulieren. Sei beispielsweise der Tensor $T_{mn}$ gegeben. Dann ergibt sich $T^m_n$ durch</p>
     \begin{align}
-    \vec{F}^N=\vec{F}(\vec{x},\vec{v},t)	
+        T^m_n=g^{mr}T_{rn}.
     \end{align}
-    <p>folgt eine Differentialgleichung für $x(t)$. Wenn wir diese Differentialgleichung lösen, erhalten wir viele Informationen (siehe Kräftefreie Teilchen). </p>
-    <p>Allgemein lösen wir die Gleichung</p>
+    <p>Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich</p>
     \begin{align}
-    \frac{\mathrm{d}}{\mathrm{d}t}\frac{m\vec{v}}{\sqrt{q-\frac{\vec{v}}{c^2}}}=0.
+        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
     \end{align}
-</div>
+    <p>Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch</p>
+    \begin{align}
+    T^m_n=\mathrm{d} x^m\mathrm{d} x_n.	
+    \end{align}
+    <p>Wir wollen diesen Tensor nun kontrahieren. Es ergibt sich damit</p>
+    \begin{align}
+    T^m_m=\mathrm{d} x^m\mathrm{d} x_m=\lambda.
+    \end{align}
+    <p>Wir erhalten durch die Kontraktion des Tensors einen Transformartions-invarianten Skalar $\lambda$. Wir können nun $\mathrm{d} x_m$ durch </p>
+    \begin{align}
+    \mathrm{d} x_m=g_{mn}\mathrm{d} x^n	
+    \end{align}
+    <p>ausdrücken. Somit ergibt sich für $\lambda$</p>
+    \begin{align}
+    \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
+    \end{align}
+    <p>Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:</p>
+    \begin{align}
+    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
+    \end{align}
+    
+  </div>
 
         <div id="disqus_thread"></div>
 <script>
