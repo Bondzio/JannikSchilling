@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Kurven">
+<title>Kurs Differentialgeometrie - Kurventheorie</title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
+<link rel="stylesheet" href="../kurse/css/animate.css">
+<link rel="stylesheet" href="../kurse/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../kurse/css/themify-icons.css">
+<link rel="stylesheet" href="../kurse/css/flaticon.css">
+<link rel="stylesheet" href="../kurse/css/magnific-popup.css">
+<link rel="stylesheet" href="../kurse/css/slick.css">
+<link rel="stylesheet" href="../kurse/css/style.css">
+</head>
+<body>
+  
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Kurven</h2>
+                        <p>Home<span>/</span>Differentialgeometrie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <div class="main">
+      <h1>Kurventheorie</h1>
+        <br><b>Definitinon: </b> wichtige Begriffe für die Kurventheorie.<br>
+        <ul>
+        <li>Eine parametrisierte Kurve ist eine glatte Abbildung $C:I\rightarrow \mathbb{R}^n$ mit dem Intervall $I\subset \mathbb{R}$. Das Wort \textsf{Glatt} heißt hierbei, dass die Kurve unendlich oft differenzierbar sei ($C^{\infty}$).</li>
+        <li>Die Kurve $C$ heißt hierbei regulär, wenn für alle $t\in I$ 
+        \begin{align}
+        \dot C(t):=\frac{\mathrm{d}C(t)}{\mathrm{d}t}\neq 0	
+        \end{align}
+        gilt. Wir nennen $\dot C(t)$ den Tangentialvektor der Kurve $C$ an der Stelle $t$.</li>
+        </ul>
+        <br>
+        
+        <b>Anmerkungen:</b><br>
+        <ul>
+        <li>Wir können die Kurve $C$ mit jedem Parameter $t$ parametriesieren und erhalten trotzdem immer die selbe intrinsische physikalische Größe.</li>
+        <li>Da wir uns mit der Anwendung der Differentialgeometrie in der Allgemeinen Relativtätstheorie befassen, können wir im Normalfall aber $t$ als Parametrisierung durch die Zeit interpretieren.</li>
+        </ul>
+        
+        <br><b>Definition: </b>Umparametrisierung<br>
+        
+        Sei $C:I\mapsto\mathbb{R}$ eine parametrisierte Kurve. Eine Umparametrisierung von $C$ ist dann eine Kurve $\bar{C}:J\mapsto \mathbb{R}^n$ der Form $\bar{C}=C\circ \varphi$, wobei $\varphi: J\mapsto I$ eine bijektive Abbildung ist $\varphi$, $\varphi^{-1}$ glatt sind. Ein solches heißt $\varphi$ heißt Parametertransformation.
+        
+        <br><b>Anmerkungen:</b>
+        <ul>
+        <li>Wenn $J$ das Definitionsintervall von $\varphi$ bezeichnet und $\varphi'(t)\neq 0$ für alle $t\in J$ gilt, dann gilt mittels des Zwischenwertsatzes $\varphi'(t)>0$ oder $\varphi'(t)< 0$ für alle $t\in J$.
+        Für den ersten Fall heißt $\varphi$ orientierungserhaltend, im zweiten Fall nennen wir $\varphi$ orientierungsumkehrend. So ist $\varphi(t)=2t$ eine orientierungserhaltende Parametertransformation, $\varphi(t)=-t$ hingegen eine orientierungsumkehrende Parametertransformation.</li>
+        </ul><br>
+        
+        Mit diesem Wissen können wir eine erste Definition einer Kurve hinschreiben
+        <br>
+        <b>Definition: </b> Kurve
+        <ul>
+        <li>Eine \textsf{Kurve} ist eine Äquivalenzklasse von parametrisierten Kurven, wobei $C$ und $\bar{C}$ äquivalent heißen, wenn $\bar{C}$ heißen, wenn $\bar{C}$ eine Umparametrisierung von $C$ ist.</li>
+        <li>Eine \textsf{orientierte Kurve} ist ebenfalls eine Äquivalenzklasse von parametrisierten Kurven, wobei hier $C$ und $\bar{C}$ äquivalent heißen, wenn $\bar{C}$ eine Umparametrisierung von $C$ mittels einer orientierungserhaltenden Parametertransformation ist.</li>	
+        </ul>
+        <br>
+        
+        Nun willen wir die Länge einer Kurve berechnen. Dazu führen wir die Bogenlänge ein.
+        <br><b>Definition: </b>Länge parametrisierter Kurven.
+        Sei $C:[a,b]\mapsto \mathbb{R}^n$ eine parametrisierte Kurve. Dann nennen wir 
+        \begin{align}
+            L[C]=\int_a^b \|\dot C(t)\|\, \mathrm{d}t
+        \end{align}
+        Länge bzw. Bogenlänge von $C$.<br>
+        
+        <br><b>Lemma: </b>Bogenlänge bei verschiedenen Parametrisierungen
+        
+        Die Länge einer parametrisierten Kurve $C$ ändert sich nicht bei einer Umparametrisierung.<br>
+        
+        <br><b>Beweis</b>
+            Das Lemma folgt aus der Substitutionsregel. Sei nun also $\bar{C}=C\circ \varphi$ eine Umparametrisierung von $C$ mit $\varphi: [a',b']\mapsto [a,b]$, dann gilt nämlich
+        \begin{align*}
+        L[\bar{C}]&=	\int_{a'}^{b'} \left|\frac{\mathrm{d}(C\circ \varphi}{\mathrm{d}t}\right|\, \mathrm{d}t	\\
+        &= \int_{a'}^{b'} \|\dot C(\varphi(t))\|\cdot |\dot \varphi(t)|\, \mathrm{d}t\\
+        &= \int_a^b |C(s)|\, \mathrm{d}s=L[C].
+        \end{align*}        
+
+</div>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+</body>
+</html>
+

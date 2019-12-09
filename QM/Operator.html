@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Operator">
+<title>Kurs QM - Operatoren</title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
+<link rel="stylesheet" href="../kurse/css/animate.css">
+<link rel="stylesheet" href="../kurse/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../kurse/css/themify-icons.css">
+<link rel="stylesheet" href="../kurse/css/flaticon.css">
+<link rel="stylesheet" href="../kurse/css/magnific-popup.css">
+<link rel="stylesheet" href="../kurse/css/slick.css">
+<link rel="stylesheet" href="../kurse/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Operatoren</h2>
+                        <p>Home<span>/</span>Blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="main">
+    <h1>Operator</h1>
+    In der Quantenmechanik wird eine physikalische Größe $A$ durch einen linearen Operator $\hat{A}$ repräsentiert.
+    <h2>Definition</h2>
+    Es seien $X$ und $Y$ reelle oder komplexe Vektorräume. Dann heißt eine Abbildung $$T:X\rightarrow Y$$
+    linearer Operator, wenn für alle $x,y\in X$ und $\lambda \in\mathbb{C}$ die folgenden Bedingungen gelten:
+    <ul>
+      <li>Die Abbildung $T$ ist homogen: $$T(\lambda\cdot x)=\lambda T(x)$$</li>
+      <li>$T$ ist additiv: $$T(x+y)=T(x)+T(y).$$</li>
+    </ul>
+    Operatoren in der Quantenmechanik  ordnen hedem Vektor $|x\rangle$ einen anderen Vektor $|y\rangle$ zuordnet. Das heißt:
+    $$|x\rangle\rightarrow |y\rangle.$$
+    <h2>Beispiele für Lineare Operatoren</h2>
+    <h3>Der Paritätsoperator</h3>
+    Der Paritätsoperator $\hat{P}$ ordnet jeder Funktion $\psi(x)$ die Funktion $\psi(-x)$ zu.
+    $$\hat{P}\psi(x)=\psi(-x).$$
+    <h3>Der Differentialoperator</h3>
+    Ein Operator $\hat{A}=\frac{\partial}{\partial x}$ heißt Differentialoperator, wenn er jeder Wellenfunktion $\psi(x,t)$ eine neue Funktion $\psi '(x,t)$ zuordnet.
+    $$\hat{A}\psi(x,t)=\psi'(x,t).$$
+    Hierbei bezeichnet $\psi'(x)$ die Ableitung von $\psi$.
+    <h3>Der Ortsoperator in Ortsdarstellung</h3>
+    In der Ortsdarstellung ergibt nach Anwendung des Ortsoperators $\hat{x}$ auf $\psi$ der folgende Zusammenhang:
+    $$\hat{x}\psi(x,t)=x\cdot \psi(x,t).$$
+    <h3>Impulsoperator in Ortsdarstellung</h3>
+    In Ortsdarstellung ergibt sich für den Impulsoperator die Darstellung:
+    $$\hat{p}=-i\hbar\frac{\partial}{\partial x}.$$
+    Dieser Operator ist hermitisch, da:
+    $$\langle \psi| \hat{p}|\psi^{*}\rangle=\langle \psi|\hat{p}\rangle.$$
+    Denn:
+    \begin{align}
+    \langle \psi|\hat{p}|\psi^{*}\rangle=\int \psi \left(-i\hbar\frac{\partial}{\partial x}\right)\psi^{*}\, \mathrm{d}x.
+    \end{align}
+    <h3>Der Hamilton-Operator</h3>
+    Der Hamiltonoperator eines Systems der Masse $m$ mit dem Impuls $\hat{P}$, das sich im Potential $V(\hat{x})$ befindet.
+    $$\hat{H}=\frac{\hat{p}^2}{2m}+V(\hat{x}).$$
+    <h2>Eigenwertgleichungen für Operatoren</h2>
+    Wenn wir den Differentialoperator auf die Funktion $e^{ax}$ anwenden, ergibt sich die Gleichung:
+    $$\frac{\partial}{\partial x}e^{ax}=ae^{ax}.$$
+    <p>Hier reduziert sich die Wirkung des Operators auf die Multiplikation mit einem Skalar.</p>
+    <p>Allgemein lässt sich eine sog. Eigenwertgleichung formulieren. Diese hat die Form</p>
+    $$\hat{A}|\psi_n\rangle=\omega_n|\psi_n\rangle.$$
+    Hierbei nennen wir
+    <ul>
+      <li>Der Skalar $\psi_n$ heißt <b>Eigenwert</b> zu dem Operator $\hat{A}$.</li>
+      <li>Den zu $\psi_n$ gehörigen Vektor $|\psi_n\rangle$ nennen wir Eigenvektor.</li>
+    </ul>
+</div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+        <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
+</body>
+</html>

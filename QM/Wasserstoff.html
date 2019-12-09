@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Jannik Schilling</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Wasserstoff">
+<title>Kurs QM - Das Wasserstoff-Atom</title>
+<meta name="description" content="Die Quantenmechanik im letzten Jahrhundert eine steile Karriere hingelegt. Dies liegt auch an der ersten richitgen Beschreibung des Wasserstoffsatoms.">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
+<link rel="stylesheet" href="../kurse/css/animate.css">
+<link rel="stylesheet" href="../kurse/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../kurse/css/themify-icons.css">
+<link rel="stylesheet" href="../kurse/css/flaticon.css">
+<link rel="stylesheet" href="../kurse/css/magnific-popup.css">
+<link rel="stylesheet" href="../kurse/css/slick.css">
+<link rel="stylesheet" href="../kurse/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Das Wasserstoff-Atom</h2>
+                        <p>Home<span>/</span>Quantenmechanik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="main">
+  <h1>Das Wasserstoffatom</h1>
+  <h2>Aufbau</h2>
+  <p>Das Wasserstoffatom besteht im Kern aus einem Proton der Masse $m$ mit der Ladung $+e$. In der Atomhülle befindet sich ein Elektron der Masse $m$ mit der Ladung $-e$</p>
+  <p>Wir beschreiben das Wasserstoffatom in Kugelkoordinaten $(r,\theta,\phi)$.</p>
+  <h2>Idealisierungen</h2>
+  <p>Damit wir das Wasserstoffatom beschreiben können, müssen wir zuerst einige Annahmen treffen:</p>
+  <ul>
+      <li><p>Wir beschreiben das Elektron <b>nicht-relativistisch</b>.</p></li>
+      <li><p>Der Spin (Eigendrehung) des Elektrons <b>und</b> des Protons, als auch das daraus resultierende mnagnetische Moment werden als vernachlässigbar klein angenommen.</p></li>
+        <li><p>Vakuumfluktuationen werden wir nicht berücksichtigen</p>.</li>
+        <li><p>Wir nehmen an, dass die Wechselwirkung zwischen Elektron und Proton stets durch das Coloumbpotential $V_C$ beschrieben werden kann:</p>
+            $$
+            V_C(r)=-\vec{\nabla}\vec{F}=-\frac{e^2}{4\pi\epsilon_0 r}.
+            $$
+        </li>
+        <li><p>Die Masse des Protons ist viel größer als die Masse des Elektrons:</p>
+            $$
+            m_{E}\ll M_p.
+            $$
+            <p>Daher nehmen wir das Elektron in Ruhe an.</p></li>
+    </ul>
+
+    <p>Wir beschreiben das Atom durch Kugelkoordinaten:</p>
+    \begin{align}
+    r&=\sqrt{x^2+y^2+z^2}\\
+    \theta &=\arccos\left(\frac{z}{r}\right)\\
+    \varphi &= \arctan\left(\frac{y}{x}\right).
+    \end{align}
+    <p>Wegen der Zeitunabhängigkeit der Energie ist $E(t)=E$ eine Konstante. Daher existieren stationäre Zustände der Form:</p>
+    $$
+    \psi (r,\theta,\varphi)=u(r,\theta,\varphi)e^{-i\frac{Et}{\hbar}}.
+    $$
+    <p>Die Funktion $u$ erfüllt hierbei die zeitunabhängige Schrödingergleichung:</p>
+    $$
+    -\frac{\hbar^2}{2m}\Delta u(r,\theta,\varphi)+V_C\cdot u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    <p>Mittels des Metriktensors können wir den Laplace-Operator in Kugelkoordinaten herleiten:</p>
+    $$
+    \Delta = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial \varphi^2}.
+    $$
+    <p>Damit ergibt sich die Schrödingergleichung zu</p>
+    $$
+    -\frac{\hbar^2}{2m}\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial \varphi^2}\right)u(r,\theta,\varphi)
+    -\frac{e^2}{4\pi\epsilon_0 r}u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    <p>Wir führen nun den Bahndrehimpulsoperator $\hat{L}$ ein:</p>
+    $$
+    \hat{L}=-\hbar i\begin{pmatrix}
+    -\sin\varphi\frac{\partial}{\partial\theta}-\frac{\cos\theta\cos\varphi}{\sin\theta}\frac{\partial}{\partial\varphi}\\
+    \cos\varphi\frac{\partial}{\partial\theta}-\frac{\cos\theta\sin\varphi}{\sin\theta}\frac{\partial}{\partial\varphi}\\
+    \frac{\partial}{\partial\varphi}.
+    \end{pmatrix}
+    $$
+    <p>Zur Vereinfachnug der Schrödingergleichung berechnen wir nun $\vec{L}\cdot \vec{L}$, und erhalten damit</p>
+    $$
+    \vec{L}^2=\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2=-\hbar^2\left(\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\varphi^2}\right).
+    $$
+    <p>Die Schrödingergleichung ist nun gegeben durch</p>
+    $$
+    \left(-\frac{\hbar^2}{2mr^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{2mr^2}\vec{L}^2\right)u(r,\theta,\varphi)-\frac{e^2}{4\pi\epsilon_0 r}u(r,\theta,\varphi)=Eu(r,\theta,\varphi).
+    $$
+    <p>Für das Wasserstoffatom gelten die folgenden Kommutatorrelationen:</p>
+    \begin{align}
+    [\hat{L}_x,\hat{L}_y]&=i\hbar \hat{L}_z\\
+    [\hat{L}_y,\hat{L}_z]&= i\hbar \hat{L}_x\\
+    [\hat{L}_z,\hat{L}_x]&= i\hbar\hat{L}_y\\
+    [\vec{L}^2,\hat{L}_x]&= [\vec{L}^2,\hat{L}_y]=[\vec{L}^2,\hat{L}_z]=0\\
+    [\hat{H},\vec{L}^2]&= [\hat{H},\hat{L}_z]=0.
+    \end{align}
+    <p>Deshalb sind die Observablen $E$, $\vec{L}^2$ und $\hat{L}_z$ gleichzeitig scharf bestimmt. Für das Wassersotffatom existieren also Funktionen, die gleichzeitig Eiegnfunktionen all dieser Operatoren sind.</p>
+    <h2>Lösung der Schrödinger-Gleichnug</h2>
+    <p>Durch Multiplikation mit $-\frac{2m}{\hbar^2}r^2\sin^2\theta$ erhalten wir</p>
+    \begin{align}
+    \left(\sin^2\theta\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\sin\theta\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{\partial^2}{\partial\varphi^2}\right)u(r,\theta,\varphi)+\frac{2mr^2\sin^2\theta}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E\right)u(r,\theta,\varphi)=0.
+    \end{align}
+    <p>Diese Schrödingergleichung wollen wir nun durch einen Seperationsansatz lösen. Dazu wählen wir drei Funktionen $R(r)$, $\Theta(\theta)$ und $\Phi(\varphi)$.</p>
+    \begin{align}
+    u(r,\theta,\varphi)=R(r)\Theta(\theta)\Phi(\varphi).
+    \end{align}
+    <p>Ein solcher Ansatz eignet sich für alle kugelsymmetrischen Potentiale $V(r)$. Einsetzen und Division mit $u(r,\theta,\varphi)$ liefert:</p>
+    \begin{align}
+    \frac{1}{R(r)}\sin^2\theta\frac{\partial}{\partial r}\left(r^2\frac{\partial R(r)}{\partial r}\right)+\frac{1}{\Theta(\theta)}\sin\theta\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial \Theta}{\partial\theta}\right)\\
+    +\frac{1}{\Phi(varphi)}\frac{\partial^2\Phi(\varphi)}{\partial\varphi^2}+\frac{2mr^2\sin^2\theta}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E\right)=0.
+    \end{align}
+    <p>Wegen des Seperationsansatz ergbibt sich:</p>
+    \begin{align}
+    \frac{\sin^2\theta}{R(r)}\frac{\partial}{\partial r}\left(r^2\frac{\partial R(r)}{\partial r}\right)+\frac{\sin\theta}{\Theta(\theta)}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial \Theta(\theta)}{\partial\theta}\right)+\frac{2mr^2\sin^2\theta}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E\right)\\
+    =-\frac{1}{\Phi(\phi)}\frac{\partial^2}{\partial\varphi^2}=c_l^2,
+    \end{align}
+    <p>wobei $c$ eine beliebige Konstante sei.</p>
+    <p><b>Bestimmung von</b> $\varphi$</p>
+    <p>Wir erhalten zur Bestimmung von $\varphi$ die Differentialgleichung</p>
+    \begin{align}
+    -\frac{1}{\Phi(\varphi)}\frac{\partial^2\Phi(\varphi)}{\partial\varphi^2}=c_l^2.
+    \end{align}
+    <p>Diese Differentialgleichung hat die normierte Lösung</p>
+    $$\Phi_{c_l}(\varphi)=\frac{1}{\sqrt{2\pi}}e^{ic_l\varphi}.$$
+    <p><b>Bestimmung von </b> $R(r)$ und $\Theta(\theta)$</p>
+    <p>Wir betrachten nun die linke Seite der Gleichung. Wir erhalten:</p>
+    \begin{align}
+    \frac{1}{R(r)}\frac{\partial}{\partial r}\left(r^2\frac{\partial R(r)}{\partial r}\right)+\frac{2mr^2}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E\right)\\
+    =-\frac{1}{\Theta(\theta)}\frac{1}{\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta\frac{\partial\Theta(\theta)}{\partial \theta}\right)+\frac{c_l}{\sin^2\theta}=l(l+1).
+    \end{align}
+    <p>Damit erhalten wir die zwei Bestimmungsgleichungen für $R(r)$ und $\Theta(\theta)$.</p>
+    \begin{align}
+    \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial R(r)}{\partial r}\right)+\frac{2m}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E-\frac{\hbar^2(l)(l+1)}{2mr^2}\right)R(r)=0.\\
+    \frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial \Theta(\theta)}{\partial\theta}\right)+\left(l(l+1)-\frac{c_l^2}{\sin^2\theta}\right)\Theta(\theta)=0.
+    \end{align}
+    <p>Wir vereinfachen die Differenzierungen und erhalten damit:</p>
+    \begin{align}
+    \frac{\partial^2\Theta(\theta)}{\partial\theta^2}+\frac{\cos x}{\sin x}\frac{\partial \Theta(\theta)}{\partial\theta}+\left(l(l+1)-\frac{c_l^2}{\sin^2\theta}\right)\Theta(\theta)=0.
+    \end{align}
+    <p>Nun sei $x=\cos\theta$. Damit erhalten wie die entsprechende Differentialgleichung</p>
+    \begin{align}
+    (1-x^2)\frac{\partial^2\Theta(x)}{\partial x^2}-2x\frac{\partial \Theta(x)}{\partial x}+\left(l(l+1)-\frac{c_l}{1-x^2}\right)\Theta(x)=0.
+    \end{align}
+    <p>Die Lösung dieser Differentialgleichung sind die sogenannten zugeordneten Legendrepolynome $P_l^{m_l}(x)$</p>
+    \begin{align}
+    P_l^{m_l}(x)=(1-x^2)^{|m_l|/2}\frac{\partial^{|m_i|}}{\partial x^{|m_i|}}P_l(x),
+    \end{align}
+    <p>wobei die Legendre-Polynome $P_l(x)$ wie folgt defniert sind:</p>
+    \begin{align}
+    P_l(x)=\frac{1}{2^ll!}\frac{\partial^l}{\partial x^l}(x^2-1)^l.
+    \end{align}
+    <p>Die Gesamtlösung für $\Theta(\theta)$ beträgt somit</p>
+    \begin{align}
+    \Theta_{l,m_l}=\left(\frac{2l+1}{2}\frac{(l-|m_l|)!}{(l+|m_l|!)}\right)^{1/2}(1-cos^2\theta)^{|m_l|/2}\frac{\partial^{|m_l|}}{\partial cos\theta^{|m_l|}}P_l(\cos\theta).
+    \end{align}
+    <p><b>Definition: </b> Kugelflächenfunktion</p>
+    <p>Das Produkt der Winkelabhängigen Teile nennen wir Kugelflächenfunktionen. Somit gilt</p>
+    \begin{align}
+    Y_{l,m_l}(\theta,\varphi)=\Theta_{l,m_l}(\theta)\Phi_{ml}(\varphi)=\frac{1}{\sqrt{2\pi}}\left(\frac{2l+1}{2}\frac{(l-|m_l|)!}{(l+|m_l|!)}\right)^{1/2}P_l^{m_l}(cos\theta)e^{im_l\varphi}.
+    \end{align}
+    <h3>Bestimmung der Radialfunktion</h3>
+    \begin{align}
+    \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial R(r)}{\partial r}\right)+\frac{2m}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E-\frac{\hbar^2(l)(l+1)}{2mr^2}\right)R(r)=0.
+    \end{align}
+    <p>Wir wählen nun den Ansatz</p>
+    \begin{align}
+    R(r)=P(r)/r.
+    \end{align}
+    <p>Damit erhalten wir:</p>
+    \begin{align}
+    \frac{\partial^2P(r)}{\partial r^2}+\frac{2m}{\hbar^2}\left(\frac{e^2}{4\pi\epsilon_0r}+E-\frac{\hbar^2l(l+1)}{2mr^2}\right)P(r)=0.
+    \end{align}
+    <p>Schlussendlich erhalten wir durch einige weitere Umformungen die Formel für die Radialkomponente:</p>
+    \begin{align}
+    R_{n,l}(r)=-\left(\frac{(n-l-1)!}{2n((n+l)!)^3}\right)^{1/2}\left(\frac{2}{na_o}\right)^{3/2}\left(\frac{2r}{na_0}\right)^l e^{-r/a_0n}L_{n+l}^{2l+1}(2r/na_0)
+    \end{align}
+    <h2>Zusammenfassung der Lösung</h2>
+    <ul>
+      <li><p>Die Schrödinger-Gleichung des Wassersotffatoms ist gegeben durch</p>
+      $$\hat{H}u_{n,l,m_l}(r,\theta,\varphi)=E_nu_{n,l,m_l}(r,\theta,\varphi).$$
+      </li>
+      <li><p>Die Energieeigenfunktionen $E_n$ ergeben sich zu</p>
+      \begin{align}
+      E_n=-E_R\frac{1}{n^2}=-\frac{me^4}{32\pi^2\epsilon_0^2\hbar^2}\frac{1}{n^2}=-13,6\text{eV}\frac{1}{n^2}.
+      \end{align}
+      </li>
+      <li><p>Die Eigenfunktionen des Hamilton-Operators lauten</p>
+        \begin{align}
+        u_{n,l,m_l}(r,\theta,\varphi)=R_{n,l}(r)Y_{l,m_l}(\theta,\varphi)=\frac{1}{\sqrt{2\pi}}\left(\frac{(n-l-1)!}{2n((n+l)!)^3}\right)^{1/2}\left(\frac{2}{na_0}\right)^{3/2}\left(\frac{2r}{na_0}\right)^le^{-r/na_0}L_{n+l}^{2l+1}(2r/na_0P_l^{m_l}(\cos\theta)e^{im_l\varphi}
+        \end{align}
+      </li>
+    </ul>
+  </div>
+
+  <!--<h1>Über mich</h1>
+  <h2>Einleitung</h2>
+  <p>Ich bin Juniorstudent an der Uni Hamburg im Fachbereich Physik.</p>
+  <p>Mich faszieniert insbesondere die allgemeine Relativitätstheorie, die aus ganz wenig Input so viel tolles liefert.</p>
+
+  <h2>Woher ich komme</h2>
+  <p>Ich bin in Hamburg geboren wurde und wohne in Ahrensburg.</p>
+
+  <h2>Mehr über mich</h2>
+  <h3>Was sind deine Hobbys?</h3>
+  <p>In meiner Freizeit spiele ich Wasservolleyball und ich spiele Schlagzeug. Ich programmiere sehr gerne und liebe die Physik.</p>
+  <h3>Was ist dein Traumjob?</h3>
+  <p>Physiker</p>
+  <h3>Warum Physik?</h3>
+  <p>Physik ist die Naturwissenschaft schlechthin. Wir können unsere Beobachtungen durch Formeln ausdrücken und damit die Zukunft vorraussagen.</p>
+  <h3>Star Trek oder Star Wars?</h3>
+  <p>Star Trek ist viel tiefsinniger als Star Wars und die Handlungen finde ich spannender.</p>-->
+
+
+
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik.schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<script>
+        function Graviwellenfunc() {
+          //alert("Gravitationswellen");
+          self.location="Gravitationswellen.html";
+        }function KoE(){
+          self.location="ElekKovar.html"
+        }
+      </script>
+
+        <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="kurse/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="kurse/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="kurse/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="kurse/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="kurse/js/owl.carousel.min.js"></script>
+    <script src="kurse/js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="kurse/js/slick.min.js"></script>
+    <script src="kurse/js/jquery.counterup.min.js"></script>
+    <script src="kurse/js/waypoints.min.js"></script>
+    <!-- custom js -->
+    <script src="kurse/js/custom.js"></script>
+
+
+<script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
+</body>
+</html>
+
