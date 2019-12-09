@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="canonical" href="https://www.jannik-schilling.com/Lorentz">
 <title>Physik ist nicht alles, aber alles ist Physik!</title>
@@ -20,12 +20,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<link rel="stylesheet" href="blog/css/bootstrap.css">
-<link rel="stylesheet" href="blog/css/font-awesome.min.css">
-<link rel="stylesheet" href="blog/css/owl.carousel.min.css">
-<link rel="stylesheet" href="blog/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="blog/style.css">
-<link rel="stylesheet" href="blog/responsive.css">
+<link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../kurse/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="../kurse/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="../kurse/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="../kurse/css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="../kurse/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../kurse/css/style.css">
 </head>
 
 <body>
@@ -105,7 +114,7 @@
         <h2>Die Galilei-Transformation</h2>
         <p>In der Newtonschen Mechanik betrachten wir vor allem die Galilei-Transformation, da die Newtonschen Bewegungsgleichungen</p>
         $$m\ddot x^{i}(x,\dot x,t)=\sum \vec{F}_{12}+\vec{F}_{ext}$$
-        unter diese Transformation invariant sind.
+        <p>unter diese Transformation invariant sind.</p>
         <p>Bevor wir also zu der Lorentz-Transformation übergehen,  betrachten wir zuerst die Galilei-Transformation.</p>
         <p>Wir betrachten hier ein System, welches sich mit einer Relativgeschwindigkeit $v$ in der $x$-Richtung nach rechts bewegt.</p>
         \begin{align}
@@ -159,12 +168,11 @@
         Diese Transformation ist die spezielle Loretz-Transformation für $\vec{v}=v\vec{e}_x$.</li>
         
     </ul>
-    
         Anmerkungen:
         <ul>
-            <li>Für sehr kleine Geschwindigkeiten $v\ll c$ geht die Lorentz-Transformation in die Galilei-Transformation über.</li>
-            <li>Das Linienelement $ds^2=x^2+y^2+z^2-c^2t^2$ ist invariant unter Lorentz-Transformationen.</li>
-            <li>Die Formeln für die spezielle Lorentz-Transformation gelten ebenso für ${\vec{v}=v\vec{e}_y}$ und ${\vec{v}=v\vec{e}_z}$.</li>
+            <li><p>Für sehr kleine Geschwindigkeiten $v\ll c$ geht die Lorentz-Transformation in die Galilei-Transformation über.</p></li>
+            <li><p>Das Linienelement $ds^2=x^2+y^2+z^2-c^2t^2$ ist invariant unter Lorentz-Transformationen.</p></li>
+            <li><p>Die Formeln für die spezielle Lorentz-Transformation gelten ebenso für ${\vec{v}=v\vec{e}_y}$ und ${\vec{v}=v\vec{e}_z}$.</p></li>
         </ul>
     
         <h2>Matrixdarstellung der Lorentz-Transformation</h2>
@@ -230,23 +238,23 @@
         x'=\gamma(v)(x-vt)=\gamma(v)\left(x^1-\frac{v}{c}x^0\right).	
         \end{align}
     
-        Durch Vergleich mit der obigen Transformation folgt
+        <p>Durch Vergleich mit der obigen Transformation folgt</p>
     
         \begin{align}
         A=D=\gamma(v) && B=C=-\gamma\frac{v}{c}.\notag	
         \end{align}
     
-        Aus $A^2-C^2=1$ ergibt sich schließlich
+        <p>Aus $A^2-C^2=1$ folgt schließlich</p>
     
         \begin{align}
         \gamma=\gamma(v)=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}=\frac{1}{\sqrt{1-\beta^2}}
         \end{align}
-        mit
+        <p>mit</p>
         \begin{align}
         \beta=\frac{v}{c}.	
         \end{align}
 
-        Damit folgt dann die Lorentz-Transformation in einer Dimension:
+        <p>Damit folgt dann die Lorentz-Transformation in einer Dimension:</p>
     
         \begin{align}
         \Lambda(v)=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\begin{pmatrix}
@@ -255,7 +263,7 @@
         \end{pmatrix}.	
         \end{align}
     
-        Damit können wir die spezielle Lorentz-Transformation beschreiben:
+        <p>Damit können wir die spezielle Lorentz-Transformation beschreiben:</p>
         \begin{align}
         x'&=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}(x-vt)	\notag
         y' &= y\notag
@@ -263,24 +271,24 @@
         t' &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\left(t-\frac{vx}{c^2}\right).
         \end{align}
     
-        <b>Anmerkungen: </b>
+        <p><b>Anmerkungen: </b></p>
         <ul>
-            <li>Weiterhin ist sind die Maxwell-Gleichungen unter der Lorentz-Transformation invariant. Aus der obigen Form der Elektrodynamik ist dies noch nicht deutlich, aber wir werden später die "Kovariante Formulierung der Elektrodynamik" betrachten. In dieser ist die Invarianz unter der Lorentz-Transformation zu erkennen.</li>
+            <li><p>Weiterhin ist sind die Maxwell-Gleichungen unter der Lorentz-Transformation invariant. Aus der obigen Form der Elektrodynamik ist dies noch nicht deutlich, aber wir werden später die "Kovariante Formulierung der Elektrodynamik" betrachten. In dieser ist die Invarianz unter der Lorentz-Transformation zu erkennen.</p></li>
         </ul>
     
-        Mit diesem Wissen können wir nun Ort und Zeit zu einer vierdimensionalen Raum-Zeit zusammenfassen. Im folgenden können griechische Indizes alle Werte von $0$ bis $3$ annehmen, lateinische Indizes können nur die Werte zwischen $1$ und $3$ annehmen.
+        <p>Mit diesem Wissen können wir nun Ort und Zeit zu einer vierdimensionalen Raum-Zeit zusammenfassen. Im folgenden können griechische Indizes alle Werte von $0$ bis $3$ annehmen, lateinische Indizes können nur die Werte zwischen $1$ und $3$ annehmen.</p>
     
         \begin{align}
         x^0=ct && x^1=x && x^2=y && x^3=z && x^{\mu}\in\mathbb{R}^4
         \end{align}
-        Für die transformierten Größen ergibt sich
+        <p>Für die transformierten Größen ergibt sich</p>
         \begin{align}
         x^{0'} &= \gamma (x^0-\beta x^1)\notag
         x^{1'} &= \gamma (x^1-\beta x^0)\notag
         x^{2'} &= x^2\notag
         x^{3'} &= x^3.	
         \end{align}
-        Dies können wir nun mit einer $4\times 4$ Matrix und einem vierdimensionalem Vektor schreiben, wie wir es eben bei der zweidimensionalen Herleitung gemacht haben.
+        <p>Dies können wir nun mit einer $4\times 4$ Matrix und einem vierdimensionalem Vektor schreiben, wie wir es eben bei der zweidimensionalen Herleitung gemacht haben.</p>
         \begin{align}
         \begin{pmatrix}
         x^{0'}
@@ -300,11 +308,11 @@
         \end{pmatrix}
         \end{align}
     
-        In Komponentenschreibweise können wir ebenso 
+        <p>In Komponentenschreibweise können wir ebenso </p>
         \begin{align}
         (x^{\mu})'=\Lambda x^{\mu}	
         \end{align}
-        schreiben. Wenn $D$ eine Drehmatrix ist, dann gilt
+        <p>schreiben. Wenn $D$ eine Drehmatrix ist, dann gilt</p>
         \begin{align}
         D^tD=DD^t=E.	
         \end{align}
