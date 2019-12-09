@@ -7,18 +7,15 @@
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Kommutator">
-<title>Kurs ART - Schwarzschild-Metrik</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Energiemasse">
+<title></title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
@@ -31,9 +28,10 @@
 <link rel="stylesheet" href="../kurse/css/style.css">
 
 </head>
-
-
 <body>
+
+
+  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -77,8 +75,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Schwarzschild-Metrik</h2>
-                        <p>Home<span>/</span>ART</p>
+                        <h2>Energie-Massen-Äquivalenz</h2>
+                        <p>Home<span>/</span>SRT</p>
                     </div>
                 </div>
             </div>
@@ -88,50 +86,82 @@
 
 
 
-<div class="main">
-    <h1>Die Schwarzschild-Metrik</h1>
-
-    <p>Die Schwarzschild-Metrik ist eine Lösung der Einsteinschen-Feldgleichugnen für statische ($J=0$) und ungeladene ($Q=0$) Schwarze Löcher.</p>
-    <p>Die gesamte Schwarzschild-Lösung besteht aus einer inneren und äußeren Metrik, die an ihren Grenzen stetig und differenzierbar ineinander übergehen.</p>
-    <h2>Das Linienelement</h2>
-    In der Schwarzschild-Metrik betrachten wir die Zeitkoordonate $x^0\mapsto t$ und die Kugelkoordinaten ${(x^1,x^2,x^3)\mapsto (r,\theta,\varphi)}$. Außerdem definieren wir den Schwarzschild-Radius:
-    $$r_s=\frac{2GM}{c^2}.$$
-    Damit ergibt sich das Linienelement zu
+  <div class="main">
+    <h1>Äquivalenz von Masse und Energie</h1>
+    <p>Die Formel $E=mc^2$ ist wohl die bekannteste Formel der Physik überhaupt. Aber woher stammt diese Formel? Wir wollen diese anhand der speziellen Relatvitätstheorie betrachten und herleiten.</p>
+    <h2>Herleitung in der Speziellen Relativitätstheorie</h2>
+    <p>Wir betrachten erneut den kontravarianten Viererimpuls $p^{\mu}$, den wir durch die folgende Formel definiert haben:</p>
     \begin{align}
-    \mathrm{d}s^2=g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=-c^2\left(1-\frac{r_s}{r}\right)\mathrm{d}t^2+\frac{1}{1-\frac{r_s}{r}}\mathrm{d}r^2+r^2\mathrm{d}\theta^2+r^2\sin^2\theta\mathrm{d}\phi^2.
+    p^{\mu}=\begin{pmatrix}
+    \frac{E}{c}\\
+    \vec{p}	
+    \end{pmatrix}.
     \end{align}
-    Hierbei haben wir die übliche Signatur $(-,+,+,+)$ verwendet.
+    <p>Hierbei gilt</p>
+    \begin{align}
+    \vec{p}=m\gamma\vec{v}.
+    \end{align} 
+    <p>Da $p^{\mu}$ ein relativistischer Vierer-Vektor ist, ist dieser auch unter der Lorentz-Transformation. Wir wollen jetzt die spezielle Lorentz-Transformation in $x$-Richtung betrachten. Allgemein gilt für $x^{\mu}$</p>
+    \begin{align}
+        ct=\gamma(ct'+\beta x') && x=\gamma (x'+\beta c t').
+    \end{align}
+    <p>Analog ergibt sich dann die Lorentz-Transformation für $p^{\mu}$</p>
+    \begin{align}
+        \frac{E}{c}=\gamma\left(\frac{E'}{c}+\beta p_x'\right) && p_x=\gamma\left(p_x'+\beta\frac{E'}{c}\right).
+    \end{align}
+    <p>Wir betrachten nun das Ruhesystem eines Teilchens. Damit gilt</p>
+    \begin{align}
+    p_x=0 && E'=E_0'=E_0.	
+    \end{align}
+    <p>Damit gilt dann</p>
+    \begin{align}
+    E=\gamma E_0 && p_x=\gamma\beta\frac{E_0}{c}=\gamma\frac{vE_0}{c^2}=m\gamma v.	
+    \end{align}
 
-    <figure class="size-2">
-            <img src="Bilder/schwarzschild.gif" style="width:100%">
-            <figcaption>
-                    Yukterez (Simon Tyran, Vienna) [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Newton_versus_Schwarzschild_trajectories.gif">via Wikimedia Commons</a></figcaption>
-          </figure>
+    <p>Wir betrachten die letzte Gleichungskette</p>
+    \begin{align}
+    \gamma \frac{vE_0}{c^2}=m\gamma v\Leftrightarrow E_0=mc^2.	
+    \end{align}
+    <p>Die Ruheenergie im Ruhesystem eines Teilchens ergibt sich also zu</p>
+    \begin{align}
+    E_0=mc^2.	
+    \end{align}
+
+    <b>Äquivalenz von Masse und Energie</b>
+    <p>Jeder Form von Energie kann in der speziellen Relativitätstheorie eine träge Masse zugeordnet werden. Es gilt der folgende Zusammenhang:</p>
+    \begin{align}
+    E=mc^2.	
+    \end{align}
+
+    <h2>Beispiele aus der Physik</h2>
+    <ul>
+      <li><p>Vernichtungsstrahlung: wenn ein Elektron-Positronen-Paar aufeinenandertrifft, lösen sich die beiden Teilchen in Strahlung auf. Die Masse von beiden beträgt etwa $m=2\cdot 10^{-30}\text{kg}$. Es entstehen zwei Gammaquanten, die jeweils eine Energie von $511\text{eV}$ haben.</p></li>
+    </ul>
 
 </div>
 
-<div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
 <script>
-    
-    /**
-    *  RECOMMENDED CONFIGURATION VARI\hat{A}\hat{B}LES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARI\hat{A}\hat{B}LES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-vari\hat{A}\hat{B}les*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL vari\hat{A}\hat{B}le
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier vari\hat{A}\hat{B}le
-    };
-    */
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please en\hat{A}\hat{B}le JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
 <footer class="footer-distributed">
  
     <div class="footer-left">
@@ -184,27 +214,17 @@
   </footer>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
-}
-</script>
+  </script>
 
-
-<script>
-        function Graviwellenfunc() {
-          //alert("Gravitationswellen");
-          self.location="Gravitationswellen.html";
-        }function KoE(){
-          self.location="ElekKovar.html"
-        }
-      </script>
-
-        <!-- jquery plugins here-->
+    <!-- jquery plugins here-->
     <!-- jquery -->
     <script src="kurse/js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
@@ -229,6 +249,6 @@ function myFunction() {
 
 
 <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
-
 </body>
 </html>
+
