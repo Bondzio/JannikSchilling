@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Jannik Schilling</title>
@@ -8,18 +7,15 @@
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-
-
 <meta charset="UTF-8">
-<link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Schrod-Gl">
-<title>Die Schrödinger-Gleichung</title>
-<meta name="description" content="In der Quantenmechanik ist die Schrödinger-Gleichung von elementarer Bedeutung. Denn mit ihr kann die Dynamik von Wellenfunktionen einfach berechnet werden.">
+<link rel="canonical" href="https://www.jannik-schilling.com/Christoffel">
+<title>Die Christoffelsymbole</title>
+<meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
 <link rel="stylesheet" href="../kurse/css/animate.css">
@@ -29,10 +25,10 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
-
 <body>
-
+  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -76,8 +72,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Mathematik der Speziellen Relativitätstheorie</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Die Christoffelsymbole</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -88,127 +84,31 @@
 
 
   <div class="main">
-
-    <h1>Der Minkowski-Raum</h1>
-
-    <p></p><b>Definition des Minkowski-Raum</b></p>
-    <p>Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt</p>
-    \begin{align}
-    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
-    \end{align}
-    <p>Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-    -c^2 &0&0&0
-    0 &1&0&0
-    0&0&1&0
-    0&0&0&1.	
-    \end{pmatrix}	
-    \end{align}
-    <p>Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-        -1&0&0&0
-        0&1&0&0
-        0&0&1&0
-        0&0&0&1.
-    \end{pmatrix}	
-    \end{align}	
-    <p>Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch</p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
-    \end{align}
-    <p>Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. </p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
-    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
-    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
-    \end{align}
-
-    <p>Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
-
-    <p>Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
-
-    \begin{align}
-    \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
-    \end{align}
-    <p>Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.</p>
-
-    <p><b>Anmerkungen</b></p>
-    <ul>
-        <li><p>Wir bezeichnen dieses Produkt manchmal auch als Skalarprodukt, obwohl dieses nicht-positiv definiert ist und damit in der üblichen mathematischen Sprechweise kein Skalarprodukt ist. Im euklidischen Raum hingegen gilt</p>
+        <h1>Die Christoffelsymbole</h1>
+        <p><b>Definition: </b> Christoffelsymbole 1. Art</p>
+        <p>Wir definieren die Christoffelsymbole erster Art wie folgt:</p>
         \begin{align}
-        (x,x)>0\;\;\; \forall x\neq 0\;\;\;\; \text{ und } \;\;\;\; (x,x)\Leftrightarrow x=0.
+        \Gamma_{\mu\nu\kappa}=\frac{1}{2}(\partial_{\mu}g_{\nu\kappa}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}).
         \end{align}
-        <p>Beides gilt für einen Minkowski-Raum nicht.</p></li>
-        <li><p>Oft nennen wir dieses Produkt auch Minkowski-Produkt, nach dem Namensgeber der Minkowski-Metrik. Der Mathematiker und Physiker, der diese Prinzipien eingeführt hat, heißt Hermann Minkowski.</p>
-        <p>Dieses Produkt ist nicht-entartet, das bedeutet, dass es keine nicht-verschwindenden Vektoren $y$ gibt, sodass $x\cdot y=(x,y)$ für alle Vektoren $x$ gleich Null ist.</p></li>
-        <li><p>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</p></li>
-    </ul>
+        <p><b>Definition: </b> Christoffelsymbole 2. Art</p>
+        <p>Von diesen gelangen wir durch Multiplikation mit dem metrischen Tensor $g^{\sigma\kappa}$ zu den Christoffelsymbolen zweiter Art:</p>
+        \begin{align}
+        \Gamma_{\cdot\mu\nu}^{\sigma}=\frac{1}{2}g^{\sigma\kappa}g_{\mu\nu\kappa}=\frac{1}{2}g^{\sigma\kappa}(\partial_{\mu}g_{\nu\kappa}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}).
+        \end{align}
+        <p>Diese Koeffizienten treten in der ART besonders häufig auf.</p>
 
-    <h2>Herunter- und Hinaufziehen von Indizes</h2>
-    <p>Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass</p>
-    \begin{align}
-    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
-    \end{align}
-    <p>gilt. Damit finden wir, dass im Minkowski-Raum</p>
-    \begin{align}
-    \eta^{\mu\nu}=\begin{pmatrix}
-    -1 &0&0&0
-    0&1&0&0
-    0&0&1&0
-    0&0&0&1	
-    \end{pmatrix}	
-    \end{align}
-    <p>gilt.</p>
-    <p>Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.</p>
+        <p>In der Relativitätstheorie ist insbesondere die ältere Notation geläufig:</p>
+        $$[\mu\nu,\kappa]=\Gamma_{\mu\nu\kappa}$$
+        <p>und für Christoffelsymbole zweiter Art:</p>
+        $$\begin{pmatrix}
+        \sigma\\
+        \mu\nu
+        \end{pmatrix}=\Gamma^{\sigma}_{\cdot \mu\nu}.$$
 
-    <h2>Ko- und Kontravarianz</h2>
-    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
-    \begin{align}
-    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
-    \end{align}
-
-    <p>Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. </p>
-
-
-    <h3>Längen berechnen</h3>
-    <p>Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:</p>
-    \begin{align}
-        V_n&=V^mg_{mn}
-        V^n &= V_m g^{mn}.
-    \end{align}
-    <p>Hierbei ist der Vektor $\vec{V}$ immer dasselbe physikalische Objekt. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.</p>
-    <p><b>Anmerkung: </b> Wir können auch die Indizes von Tensoren mit höherem Rang als $1$ manipulieren. Sei beispielsweise der Tensor $T_{mn}$ gegeben. Dann ergibt sich $T^m_n$ durch</p>
-    \begin{align}
-        T^m_n=g^{mr}T_{rn}.
-    \end{align}
-    <p>Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich</p>
-    \begin{align}
-        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
-    \end{align}
-    <p>Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch</p>
-    \begin{align}
-    T^m_n=\mathrm{d} x^m\mathrm{d} x_n.	
-    \end{align}
-    <p>Wir wollen diesen Tensor nun kontrahieren. Es ergibt sich damit</p>
-    \begin{align}
-    T^m_m=\mathrm{d} x^m\mathrm{d} x_m=\lambda.
-    \end{align}
-    <p>Wir erhalten durch die Kontraktion des Tensors einen Transformartions-invarianten Skalar $\lambda$. Wir können nun $\mathrm{d} x_m$ durch </p>
-    \begin{align}
-    \mathrm{d} x_m=g_{mn}\mathrm{d} x^n	
-    \end{align}
-    <p>ausdrücken. Somit ergibt sich für $\lambda$</p>
-    \begin{align}
-    \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
-    \end{align}
-    <p>Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:</p>
-    \begin{align}
-    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
-    \end{align}
+        <h2>Rechenbeispiel</h2>
+        <p></p>
     
-  </div>
+  </div>        
 
         <div id="disqus_thread"></div>
 <script>
@@ -321,3 +221,4 @@ s.setAttribute('data-timestamp', +new Date());
 <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
 </body>
 </html>
+

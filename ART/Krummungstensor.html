@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Jannik Schilling</title>
@@ -13,9 +12,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Schrod-Gl">
-<title>Die Schrödinger-Gleichung</title>
-<meta name="description" content="In der Quantenmechanik ist die Schrödinger-Gleichung von elementarer Bedeutung. Denn mit ihr kann die Dynamik von Wellenfunktionen einfach berechnet werden.">
+<link rel="canonical" href="https://www.jannik-schilling.com/Krummungstensor">
+<title></title>
+<meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +28,9 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
+
 
 <body>
 
@@ -76,8 +77,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Mathematik der Speziellen Relativitätstheorie</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Krümmungstensor</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -88,127 +89,131 @@
 
 
   <div class="main">
+    <h1>Die Krümmung eines Raums</h1>
+    <p>Für die Feldgleichungen brauchen wir ein tensorielles Maß, um die Krümmung eines Raumes unabhängig von der Koordinatenwahl zu beschreiben. Der Metriktensor ist zwar ein Tensor, aber er kann bei geeigneter Koordinatenwahl immer in die Form</p>
 
-    <h1>Der Minkowski-Raum</h1>
-
-    <p></p><b>Definition des Minkowski-Raum</b></p>
-    <p>Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt</p>
     \begin{align}
-    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
-    \end{align}
-    <p>Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-    -c^2 &0&0&0
-    0 &1&0&0
-    0&0&1&0
-    0&0&0&1.	
-    \end{pmatrix}	
-    \end{align}
-    <p>Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-        -1&0&0&0
-        0&1&0&0
-        0&0&1&0
-        0&0&0&1.
-    \end{pmatrix}	
-    \end{align}	
-    <p>Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch</p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
-    \end{align}
-    <p>Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. </p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
-    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
-    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
+    g_{\mu\nu}=\eta_{\mu\nu}	
     \end{align}
 
-    <p>Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
+    <p>gebracht werden.</p>
+    <p>Dies sagt der Satz von Sylvester aus, der in der Differentialgeometrie behandelt wird.</p>
+    
+    <p>Weiterhin ist es möglich Koordinaten zu wählen, sodass die ersten Ableitungen des Metriktensors verschwinden (Ein lokales Inertialsystem liegt vor) Das ist der Grund, warum die Metrik und ihre erste Ableitung als globales Maß der Krümmung ausscheiden.</p>
+    
+    <p>Mit der Metrik können wir die Krümmung des Raumes global beschreiben, allerdings nicht lokal. Für die Differentialgleichungen der Allgemeinen Relativitätstheorie hilft uns das aber nicht.} Die zweiten Ableitungen der Metrik hingegen eignen sich sehr gut für eine lokale tensorielle Beschreibung der Raumzeit. Sie zum Verschwinden zu bringen ist im Allgemeinen durch die Wahl des Koordinatensystems nicht möglich. Die zweite Ableitung von $g_{\mu\nu}$ könnte also ein geeignetes Maß für die Raumzeitkrümmung sein.</p>
 
-    <p>Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
+    <h2>Der Krümmungstensor</h2>
+    <p>Wir definieren den Krümmungstensor mit Hilfe der Christoffelsymbole.</p>
+    <p><b>Definition:</b> Krümmungstensor</p>
+    \begin{align}
+    R_{\cdot \beta\gamma\delta}^{\alpha}=\frac{\partial \Gamma^{\alpha}_{\cdot \beta \delta}}{\partial x^{\gamma}}-\frac{\partial \Gamma^{\alpha}_{\cdot \beta\gamma}}{\partial x^{\delta}}+\Gamma^{\alpha}_{\cdot \gamma\epsilon}\Gamma^{\epsilon}_{\cdot \beta\delta} - \Gamma^{\alpha}_{\cdot \gamma\epsilon}\Gamma^{\epsilon}_{\cdot \beta \gamma}
+    \end{align}
+
+    <p><b>Anmerkung: </b></p>
+    <p>Der Krümmungstensor ist so gewählt, dass er bei einer flachen Raumzeit verschwindet:</p>
 
     \begin{align}
-    \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
+    R^{\alpha}_{\cdot \beta \gamma\delta}=0.
     \end{align}
-    <p>Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.</p>
 
-    <p><b>Anmerkungen</b></p>
+  
+    <h3>Eigenschaften des Krümmungstensors</h3>
+    <p>In der Differentialgeometrie gibt es zwei elementare Sätze. Zur Unterscheidungen nennen wir den folgenden Satz die erste Bianchi-Identität.</p>
+    <br>
+    <p><b>Satz:</b> Erste Bianchi-Identität<br></p>
+    <p>Durch Nachrechnen lässt sich leicht zeigen:</p>
+    \begin{align}
+    R_{\mu\nu\rho\sigma}+R_{\mu\rho\sigma\nu}+R_{\mu\sigma\nu\rho}=0.
+    \end{align}
+    <br>
+    <p><b>Satz:</b> Zweite Bianchi-Identität<br></p>
+
+    <p>Es gilt</p>
+    \begin{align}
+        R_{\mu\nu \rho \sigma|\kappa}+R_{\kappa\mu \rho \sigma|\nu}+R_{\nu \kappa\rho \sigma|\mu}=0.
+    \end{align}
+    <br>
+    <p>Zur Bestimmung des Krümmungstensor müssen wir in einem $n$-dimensionalen Raum $n^4$ Komponenten bestimmen. Für die vierdimensionale Raumzeit wären dies also $256$ Komponenten. Durch Symmetrien lässt sich diese Anzahl allerdings stark senken.
+    </p>
+
+    <br>
     <ul>
-        <li><p>Wir bezeichnen dieses Produkt manchmal auch als Skalarprodukt, obwohl dieses nicht-positiv definiert ist und damit in der üblichen mathematischen Sprechweise kein Skalarprodukt ist. Im euklidischen Raum hingegen gilt</p>
-        \begin{align}
-        (x,x)>0\;\;\; \forall x\neq 0\;\;\;\; \text{ und } \;\;\;\; (x,x)\Leftrightarrow x=0.
-        \end{align}
-        <p>Beides gilt für einen Minkowski-Raum nicht.</p></li>
-        <li><p>Oft nennen wir dieses Produkt auch Minkowski-Produkt, nach dem Namensgeber der Minkowski-Metrik. Der Mathematiker und Physiker, der diese Prinzipien eingeführt hat, heißt Hermann Minkowski.</p>
-        <p>Dieses Produkt ist nicht-entartet, das bedeutet, dass es keine nicht-verschwindenden Vektoren $y$ gibt, sodass $x\cdot y=(x,y)$ für alle Vektoren $x$ gleich Null ist.</p></li>
-        <li><p>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</p></li>
+    <li><p>Der Krümmungstensor ist antisymetrisch. Das Vertauschen zweier Indizes ändert das Vorzeichnen des Krümmungstensors. Es gilt</p>
+    
+    \begin{align}
+    R_{\mu\rho\nu\sigma} &= -R_{\rho\mu\nu\sigma}\\
+    R_{\mu\rho\nu\sigma} &= -R_{\mu\rho\sigma\nu}.	
+    \end{align}</li>
+    <li><p>Komponenten des Riemanntesnors mit mehr als zwei gleichen Indizes verschwinden. Somit gilt beispielsweise</p>
+      \begin{align}
+      R_{\mu\mu\mu\nu}.
+      \end{align}
+    </li>
     </ul>
 
-    <h2>Herunter- und Hinaufziehen von Indizes</h2>
-    <p>Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass</p>
+    <p>Durch diese beiden Symmetrien und durch die Bianchi-Identitäten reduziert sich die Anzahl der zu berechnenden Komponenten drastisch. Anstatt $n^4$ müssen wir nämlich nur</p>
     \begin{align}
-    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
-    \end{align}
-    <p>gilt. Damit finden wir, dass im Minkowski-Raum</p>
-    \begin{align}
-    \eta^{\mu\nu}=\begin{pmatrix}
-    -1 &0&0&0
-    0&1&0&0
-    0&0&1&0
-    0&0&0&1	
-    \end{pmatrix}	
-    \end{align}
-    <p>gilt.</p>
-    <p>Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.</p>
-
-    <h2>Ko- und Kontravarianz</h2>
-    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
-    \begin{align}
-    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
+    k_{(n)}=\frac{1}{12}n^2(n^2-1).
     \end{align}
 
-    <p>Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. </p>
+    <h2>Der Ricci-Tensor</h2>
+    <p>Im folgenden wollen wir aus dem Riemannschen Krümmungstensor weitere Größen ableiten. Dazu wollen wir die Kontraktion von $R$ berechnen. Diese führt uns zu dem Ricci-Tensor $R_{\mu\nu}$.</p>
+    <br>
+    <p><b>Definition: </b> Ricci-Tensor<p>
+    <p>Der Ricci-Tensor ergibt sich durch Verjüngung des Riemannschen Krümmungstensors, wir erhalten diesen also durch</p>
+
+    \begin{align}
+    R_{\rho\sigma}=R^{\mu}_{\cdot \rho\mu\sigma}.	
+    \end{align}
+
+    <p>Der Ricci-Tensor ist wie der Riemann-Tensor symmetrisch in der Indexvertauschung und hat somit $\frac{1}{2}n(n+1)$ unabhängige Komponenten.</p>
+
+    <h2>Der Ricci-Skalar</h2>
+    <p>Analog zu der Defintion des Ricci-Tensors gelangen wir durch erneute Kontraktion zu dem Ricci-Skalar.</p>
+    <p><b>Definition: </b> Ricci-Skalar</p>
+    <p>Der Ricci-Skalar $R$ entsteht durch erneute Verjüngung des Riemannschen Tensors bzw. durch Verjüngung des Ricci-Tensors. Die Definition lautet damit</p>
+
+    \begin{align}
+    R=R^{\rho}_{\cdot \rho}.	
+    \end{align}
+    <p>Wir nennen den Ricci-Skalar auch skalare Krümmung, da dieser ein skalares Maß für die Krümmung eines Raums ist und offensichtlich unabhängig von der Koordinatenwahl ist.</p>
+
+    <h2>Beispiel: Die Kugelfläche im $\mathbb{R}^2$</h2>
+    <p>Die Metrik sei gegeben durch</p>
+    \begin{align}
+    g_{ij}=\begin{pmatrix}
+    r^2\sin^2\theta & 0\\
+    0 & r^2.
+    \end{pmatrix}
+    \end{align}
+    <p>Durch Invertierung dieser Matrix erhalten wir die inverse Matrix</p>
+    \begin{align}
+    g_{ij}=\begin{pmatrix}
+    \frac{1}{r^2\sin^2\theta} & 0\\
+    0 & \frac{1}{r^2}.
+    \end{pmatrix}
+    \end{align}
+    <p>Damit erhalten wie die Christoffelsymbole</p>
+    \begin{align}
+      \Gamma_{\varphi\theta}^{\varphi}=\cot\varphi && \Gamma^{\theta}_{\varphi\varphi}=-\sin\theta\cos\theta.
+    \end{align}
+    <p>Für den Krümmungstensor ergibt sich mit</p>
+    \begin{align}
+      R^{\varphi}_{\theta\varphi\theta} &= \frac{\partial}{\partial \varphi}\Gamma_{\theta\theta}^{\varphi}-\frac{\partial}{\partial \theta}\Gamma_{\varphi\theta}^{\varphi}+\Gamma_{\varphi l}^{\varphi}\Gamma^l_{\theta\theta}-\Gamma_{\theta l}^{\varphi}\Gamma_{\phi\vartheta}^{l}\\
+      &= -\frac{\partial }{\partial\theta}\cot\theta-\cot^2\theta=1.
+    \end{align}
+    <p>Durch Multipikation mit $g_{\varphi\varphi}$ erhalten wir</p>
+      \begin{align}
+      R_{\varphi\theta\varphi\theta}=g_{\varphi\varphi}R^{\varphi}_{\cdot \theta\varphi\theta}=r^2\sin^2\theta.
+      \end{align}
+      <p>Durch Kontraktion erhalten wir den Ricci-Tensor</p>
+      \begin{align}
+      R_{ji}=R^k_{\cdot ikj}=g^{kl}R_{kilj}
+      \end{align}
 
 
-    <h3>Längen berechnen</h3>
-    <p>Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:</p>
-    \begin{align}
-        V_n&=V^mg_{mn}
-        V^n &= V_m g^{mn}.
-    \end{align}
-    <p>Hierbei ist der Vektor $\vec{V}$ immer dasselbe physikalische Objekt. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.</p>
-    <p><b>Anmerkung: </b> Wir können auch die Indizes von Tensoren mit höherem Rang als $1$ manipulieren. Sei beispielsweise der Tensor $T_{mn}$ gegeben. Dann ergibt sich $T^m_n$ durch</p>
-    \begin{align}
-        T^m_n=g^{mr}T_{rn}.
-    \end{align}
-    <p>Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich</p>
-    \begin{align}
-        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
-    \end{align}
-    <p>Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch</p>
-    \begin{align}
-    T^m_n=\mathrm{d} x^m\mathrm{d} x_n.	
-    \end{align}
-    <p>Wir wollen diesen Tensor nun kontrahieren. Es ergibt sich damit</p>
-    \begin{align}
-    T^m_m=\mathrm{d} x^m\mathrm{d} x_m=\lambda.
-    \end{align}
-    <p>Wir erhalten durch die Kontraktion des Tensors einen Transformartions-invarianten Skalar $\lambda$. Wir können nun $\mathrm{d} x_m$ durch </p>
-    \begin{align}
-    \mathrm{d} x_m=g_{mn}\mathrm{d} x^n	
-    \end{align}
-    <p>ausdrücken. Somit ergibt sich für $\lambda$</p>
-    \begin{align}
-    \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
-    \end{align}
-    <p>Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:</p>
-    \begin{align}
-    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
-    \end{align}
-    
-  </div>
+  </div>        
 
         <div id="disqus_thread"></div>
 <script>
@@ -321,3 +326,4 @@ s.setAttribute('data-timestamp', +new Date());
 <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
 </body>
 </html>
+

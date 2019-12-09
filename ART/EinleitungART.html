@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Jannik Schilling</title>
@@ -8,14 +7,11 @@
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-
-
 <meta charset="UTF-8">
-<link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Schrod-Gl">
-<title>Die Schrödinger-Gleichung</title>
-<meta name="description" content="In der Quantenmechanik ist die Schrödinger-Gleichung von elementarer Bedeutung. Denn mit ihr kann die Dynamik von Wellenfunktionen einfach berechnet werden.">
+<link rel="canonical" href="https://www.jannik-schilling.com/RelElektroDynamik">
+<title>Einführung in die Allgemeine Relativitätstheorie</title>
+<meta name="description" content="In diesem Artikel befassen wir uns mit den Grundlagen der Allgemeinen Relativitätstheorie und wollen damit zu einer der wichtigsten Theorie der modernen Physik schreiten.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +27,7 @@
 <link rel="stylesheet" href="../kurse/css/style.css">
 </head>
 
-<body>
-
+<body>  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -76,8 +71,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Mathematik der Speziellen Relativitätstheorie</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Einleitung</h2>
+                        <p>Home<span>/</span>Relativitätstheorie</p>
                     </div>
                 </div>
             </div>
@@ -88,128 +83,83 @@
 
 
   <div class="main">
+    <h1>Einführung in die ART</h1>
 
-    <h1>Der Minkowski-Raum</h1>
+    <h2>Massen-Äquivalenz</h2>
+    
+    <p><b>Achtung! </b> Massenäquivalenz meint hier nicht $E=mc^2$, sondern das Verhältnis aus schwerer Masse und träger Masse!</p>
 
-    <p></p><b>Definition des Minkowski-Raum</b></p>
-    <p>Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt</p>
-    \begin{align}
-    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
-    \end{align}
-    <p>Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-    -c^2 &0&0&0
-    0 &1&0&0
-    0&0&1&0
-    0&0&0&1.	
-    \end{pmatrix}	
-    \end{align}
-    <p>Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-        -1&0&0&0
-        0&1&0&0
-        0&0&1&0
-        0&0&0&1.
-    \end{pmatrix}	
-    \end{align}	
-    <p>Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch</p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
-    \end{align}
-    <p>Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. </p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
-    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
-    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
-    \end{align}
+    <p>Wir wollen nun drei verschiedene Gleichungen der Newtonschen Mechanik betrachten. In all diesen drei Gleichungen treten verschiedene Arten von Masse auf.</p>
 
-    <p>Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
-
-    <p>Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
-
-    \begin{align}
-    \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
-    \end{align}
-    <p>Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.</p>
-
-    <p><b>Anmerkungen</b></p>
     <ul>
-        <li><p>Wir bezeichnen dieses Produkt manchmal auch als Skalarprodukt, obwohl dieses nicht-positiv definiert ist und damit in der üblichen mathematischen Sprechweise kein Skalarprodukt ist. Im euklidischen Raum hingegen gilt</p>
-        \begin{align}
-        (x,x)>0\;\;\; \forall x\neq 0\;\;\;\; \text{ und } \;\;\;\; (x,x)\Leftrightarrow x=0.
-        \end{align}
-        <p>Beides gilt für einen Minkowski-Raum nicht.</p></li>
-        <li><p>Oft nennen wir dieses Produkt auch Minkowski-Produkt, nach dem Namensgeber der Minkowski-Metrik. Der Mathematiker und Physiker, der diese Prinzipien eingeführt hat, heißt Hermann Minkowski.</p>
-        <p>Dieses Produkt ist nicht-entartet, das bedeutet, dass es keine nicht-verschwindenden Vektoren $y$ gibt, sodass $x\cdot y=(x,y)$ für alle Vektoren $x$ gleich Null ist.</p></li>
-        <li><p>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</p></li>
+    <li><p>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt</p>
+    \begin{align}
+    m_t \ddot x=F	
+    \end{align}</li>
+    <li><p>Die passive Gravitationsmasse $m_g$ ist als Faktor mit</p>
+
+    \begin{align}
+    F=-m_G\nabla\phi	
+    \end{align}
+
+    <p>definiert ist.</p></li>
+    <li><p>Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit</p>
+
+    \begin{align}
+    \phi=-\frac{GM_G}{r}.	
+    \end{align}</li>
     </ul>
 
-    <h2>Herunter- und Hinaufziehen von Indizes</h2>
-    <p>Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass</p>
-    \begin{align}
-    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
-    \end{align}
-    <p>gilt. Damit finden wir, dass im Minkowski-Raum</p>
-    \begin{align}
-    \eta^{\mu\nu}=\begin{pmatrix}
-    -1 &0&0&0
-    0&1&0&0
-    0&0&1&0
-    0&0&0&1	
-    \end{pmatrix}	
-    \end{align}
-    <p>gilt.</p>
-    <p>Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.</p>
+    <h2>Schwaches Äquivalenzprinzip</h2>
 
-    <h2>Ko- und Kontravarianz</h2>
-    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
+    <p>Die schwere Masse bezeichnet die Eigenschaft eines beliebigen Körpers in einem Gravitationsfeld einer anderen Masse eine Kraft zu erfahren.</p>
+
+    <p>In der Elektrodynamik bezeichnen wir diese schwere Masse als Gravitationsladung $q$ im Gravitationsfeld der Gravitationsladung $Q$. Dann gilt</p>
+
     \begin{align}
-    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
+    \vec{F}_{Grav}=-\frac{qQ}{r^2}\alpha	\vec{e}_r.
     \end{align}
 
-    <p>Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. </p>
+    <p>Die Massen $m_t$ und $m_t^{'}$ erfahren in dem Gravitationsfeld $Q$ eine Kraft, und besitzen somit auch schwere schwere Massen $q_1$ und $q_2$. Wenn wir nun diese Objekte fallen lassen, kommen wir zu der Erkenntnis, dass beide Objekte unabhängig von ihrer trägen Masse gleich schnell fallen. Das bedeutet für die Beschleunigungen der Objekte $\partial_t^2\vec{r}_1$ und $\partial_t^2\vec{r}_2$, dass beide Beschleunigungen gleich groß sind</p> 
 
+    \begin{align}
+    \partial_t^2\vec{r}_1=\\partial_t^2 \vec{r}_2.	
+    \end{align}
 
-    <h3>Längen berechnen</h3>
-    <p>Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:</p>
+    <p>Dies können wir nun mit dem zweiten Newtonschen Axiom ($F=ma$, wenn $m(t)$ konstant ist) formulieren durch</p>
+
     \begin{align}
-        V_n&=V^mg_{mn}
-        V^n &= V_m g^{mn}.
+    m_t\cdot r_1 &= F_{Q_1}\\
+    m_t^{'}\cdot r_1 &= F_{Q_2}.	
     \end{align}
-    <p>Hierbei ist der Vektor $\vec{V}$ immer dasselbe physikalische Objekt. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.</p>
-    <p><b>Anmerkung: </b> Wir können auch die Indizes von Tensoren mit höherem Rang als $1$ manipulieren. Sei beispielsweise der Tensor $T_{mn}$ gegeben. Dann ergibt sich $T^m_n$ durch</p>
+
+    <p>Durch erhalten wir die Relationsgleichungen</p>
+
     \begin{align}
-        T^m_n=g^{mr}T_{rn}.
+    \frac{m_t}{m_t^{'}} &= \frac{F_{Q_1}}{F_{Q_2}}=\frac{q_1}{q_2}	\\
+    \Rightarrow \frac{m_t}{q_1}&=\frac{m_t^{'}}{q_2}.
     \end{align}
-    <p>Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich</p>
+
+    <p>Das schwache Äquivalenzprinzip stellt nun die träge Masse mit der schweren Masse ins Verhältnis</p>
+
     \begin{align}
-        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
+    \frac{m_s}{m_t}=\text{const.}	
     \end{align}
-    <p>Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch</p>
-    \begin{align}
-    T^m_n=\mathrm{d} x^m\mathrm{d} x_n.	
-    \end{align}
-    <p>Wir wollen diesen Tensor nun kontrahieren. Es ergibt sich damit</p>
-    \begin{align}
-    T^m_m=\mathrm{d} x^m\mathrm{d} x_m=\lambda.
-    \end{align}
-    <p>Wir erhalten durch die Kontraktion des Tensors einen Transformartions-invarianten Skalar $\lambda$. Wir können nun $\mathrm{d} x_m$ durch </p>
-    \begin{align}
-    \mathrm{d} x_m=g_{mn}\mathrm{d} x^n	
-    \end{align}
-    <p>ausdrücken. Somit ergibt sich für $\lambda$</p>
-    \begin{align}
-    \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
-    \end{align}
-    <p>Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:</p>
-    \begin{align}
-    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
-    \end{align}
-    
+
+    <p>und stellt die These auf, das das Verhältnis aus schwerer und träger Masse immer konstant ist, wenn alle anderen Kräfte ausgeschaltet werden (Reibung etc.). Diese Proportionalitätskonstante kann bei geeigneten Einheiten genau auf Eins normiert werden.</p>
+
+    <p><b>Physikalische Interpretation: </b> Wenn das Verhältnis aus schwerer Masse und träger Masse immer gleich ist, also nicht von der Masse eines Objektes abhängt, ist dies äquivalent dazu, dass alle Objekte gleich schnell in einem Gravitationsfeld fallen. Zumindestens wenn die Gravitation als Kraft beschrieben wird, wie wir es zum Beispiel die Newtonsche Mechanik gemacht haben.</p>
+    <p>Wenn wir im Vakuum (dort gibt es keine störenden Kräfte) zwei Objekte im selben Gravitationsfeld aus der selben Höhe fallen lassen, fallen sie ganz genau gleich schnell. Auch eine Feder und ein Stein gehorchen diesem Gesetz.</p>
+    <b>Wir halten fest: </b>
+    <p>Objekte mit unterschiedlicher träger Masse erfahren im Schwerefeld eines Objektes bei gleichen Anfangsbedingungen die gleichen Beschleunigungen. Das Verhältnis aus schwerer Masse ($m_s$) und träger Masse ($m_s$) ist für alle Körper gleich und kann bei geeigneter Einheitenwahl auf Eins normiert werden.</p>
+
+    <h2>Fahrstuhlexperimente</h2>
+
+    <h3>Starkes Äquivalenzprinzip</h3>
+    <p><b>Wir halten fest: </b></p>
+    <p>In einem kleinen Labor, das in einem Schwerefeld fällt, sind die Gesetze der Physik dieselben wie jene, die in Abwesenheit eines Schwerefeldes in einem Newtonschen Inertialsystem beobachtet werden.</p>
+
   </div>
-
         <div id="disqus_thread"></div>
 <script>
 
