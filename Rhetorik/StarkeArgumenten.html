@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Jannik Schilling</title>
@@ -9,14 +9,15 @@
 
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/DiffGeo">
-<title>Kurs Differentialgeometrie - Wichtige Sätze</title>
-<meta name="description" content="">
+<link rel="canonical" href="https://www.jannik-schilling.com/Dirac">
+<title>Kurs QM - Dirac-Formalismus</title>
+<meta name="description" content="In der Quantenmechanik wählen wir anstatt des Vektorformalismus den Diracformalismus, der auf abstrakte Weise die Quantenmechanik repräsentiert.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
@@ -27,12 +28,13 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
+
+
 <body>
 
-
-  
-
+      
 <header class="main_menu single_page_menu">
     <div class="container">
         <div class="row align-items-center">
@@ -75,8 +77,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Die Differentialgeometrie</h2>
-                        <p>Home<span>/</span>Relativitätstheorie</p>
+                        <h2>Schlussfolgern, Begründen und Beweisen</h2>
+                        <p>Home<span>/</span>Rhetorik</p>
                     </div>
                 </div>
             </div>
@@ -86,75 +88,34 @@
 
 
 
-  <div class="main">
-    <h1>Wichtige Sätze der Differentialgeometrie</h1>
-    <p>Die Allgemeine Relativitätstheorie ist eine sehr mathematiklastige Theorie, da sie fortgeschrittene Kenntnisse in fast allen Bereichen der Mathematik erfordert.</p>
-    <p>Aber insbesondere das Gebiet der Differentialgeometrie hat enorm viele Schnittmengen mit dem der ART. Daher wollen wir uns heute mit den wichtigsten mathematischen Sätzen der Differentialgeometrie befassen.</p>
+<div class="main">
+    <h1>Stärke von Argumenten und Beweislast</h1>
 
-    <h2>Ricci-Theorem</h2>
-    <p>Dann wäre da noch das Ricci-Theorem. Dieses trifft eine Aussage über die Divergenzfreiheit des Metriktensors. Dazu</p>
-    \begin{align}
-    g^{\mu\nu}_{||\kappa} &= 0\\
-    \delta^{\nu}_{\cdot \mu||\kappa} &= 0	
-    \end{align}
-    
-    Somit
-    
-    \begin{align}
-    g_{\mu\nu||\kappa}=g_{\mu\nu|\kappa}-g_{\lambda\nu}\Gamma^{\lambda}_{\mu\kappa}	
-    \end{align}
-    
-    und vor allem
-    
-    \begin{align}
-    v^{\mu}_{||\lambda}=(g^{\mu\nu}v_{\nu})_{||\lambda}=g^{\mu\nu}v_{||\lambda}.	
-    \end{align}
-    
-    <h2>Vektoroperatoren in der Differentialgeometrie</h2>
-    <h3>Divergenz eines Vektorfeldes</h3>
-    
-    Die Divergenz eines Vektorfeldes $\vec{a}$ haben wir bis jetzt durch 
-    
-    \begin{align}
-    \operatorname{div} \vec{a}=\nabla\cdot \vec{a}	=\frac{\partial a_i}{\partial x_i}
-    \end{align}
-    
-    definiert. Die allgemeine kovariante Erweiterung der Divergenz mit Kontraktion ergibt sich durch
-    
-    \begin{align}
-    v^{\mu}_{||\mu}=\frac{\partial v^{\mu}}{\partial x^{\mu}}+\Gamma_{\mu\nu}^{\mu}v^{\nu}.	
-    \end{align}
-    
-    Es ergibt sich
-    
-    \begin{align}
-    v^{\mu}_{||\mu}=\frac{1}{\sqrt{|g|}}\frac{\partial}{\partial x^{\mu}} \left( \sqrt{|g|f} v^{\mu}\right)
-    \end{align}
-    
-  </div>        
 
-        <div id="disqus_thread"></div>
+</div>
+
+<div id="disqus_thread"></div>
 <script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-      
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
 <footer class="footer-distributed">
  
     <div class="footer-left">
@@ -206,21 +167,23 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </footer>
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
 
+<script src="../kurse/js/jquery-1.12.1.min.js"></script>
+<script src="../kurse/js/popper.min.js"></script>
+<script src="../kurse/js/bootstrap.min.js"></script>
+<script src="../kurse/js/jquery.magnific-popup.js"></script>
+<script src="../kurse/js/swiper.min.js"></script>
+<script src="../kurse/js/masonry.pkgd.js"></script>
+<script src="../kurse/js/owl.carousel.min.js"></script>
+<script src="../kurse/js/jquery.nice-select.min.js"></script>
+<script src="../kurse/js/slick.min.js"></script>
+<script src="../kurse/js/jquery.counterup.min.js"></script>
+<script src="../kurse/js/waypoints.min.js"></script>
+<script src="../kurse/js/custom.js"></script>
 
 
 <script id="dsq-count-scr" src="//physik-mit-jannik.disqus.com/count.js" async></script>
+
 </body>
 </html>
+
