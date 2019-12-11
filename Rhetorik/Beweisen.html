@@ -12,8 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Dirac">
-<title>Kurs QM - Dirac-Formalismus</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Rhetorik/Beweisen">
+<title>Kurs Rhetorik - Natürliches Schließen</title>
 <meta name="description" content="In der Quantenmechanik wählen wir anstatt des Vektorformalismus den Diracformalismus, der auf abstrakte Weise die Quantenmechanik repräsentiert.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -77,7 +77,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Schlussfolgern, Begründen und Beweisen</h2>
+                        <h2>Das System des natürlichen Schließens</h2>
                         <p>Home<span>/</span>Rhetorik</p>
                     </div>
                 </div>
@@ -89,9 +89,8 @@
 
 
 <div class="main">
-    <h1>Schlussfolgern, Begründen und Beweisen</h1>
+    <h1>Das System des natürlichen Schließens</h1>
     <p>In dieser Lektion wollen wir uns mit den Grundlagen und den Grundbegriffen der Argumentationstheorie befassen. Nach dieser Lektion können Sie Argumentationen prüfen und den Argumentationsgang überprüfen.</p>
-    <h2>Das natürliche Schließen</h2>
     <p>Im Rahmen der Argumentationstheorie müssen wir uns mit der Aussagenlogik befassen. Die Aussagenlogik können wir entweder mit Wahrheitstafeln darstellen oder mit dem System des natürlichen Schließens. Denn das natürliche Schließen kommt dem alltäglichen Argumentieren sehr viel näher.</p>
     <h3>Notation für das natürliche Schließen</h3>
     <p>Ein logischer Beweis besteht aus Prämissen (den Beweisannahmen bzw. den Voraussetzungen) und der Konklusion, der Schlussfolgerung des Beweis. </p>
@@ -101,41 +100,65 @@
     P_2\\
     ...\\
     P_n\\
-    --\\
+    \hline
     K
     \end{align}
-    <h3>Abtrennungsregel (der Implikation/des Konditionals)</h3>
-        <h3>Einführung der Konjunktion</h3>
-        <h3>Beseitigung der Konjunktion</h3>
-        <h3>Einführung der Adjunktion/Disjunktion</h3>
-        <h3>Beseitigung der Adjunktion/Disjunktion</h3>
-        <h3>Einführung des Bikonditionals</h3>
-        <h3>Beseitigung des Bikonditionals</h3>
-</ul>
-
-<h2>Begründen vs. Schlussfolgern</h2>
-<p>In der Argumentationstheorie unterscheiden wir die Begriffe Begründen und Schlussfolgern.</p>
-<p><b>Definition Begründung: </b> Erst wird die Konklusion genannt, dann die Prämisse.</p>
-<p><b>Definition Schlussfolgern: </b> Erst werden die Prämissen genannt, dann die Konklusion.</p>
-<p><b>Schlüsselwörter: </b> Konklusion: deshalb, darum, saraus folgt, also, folglich, daher</p>
-<p><b>Schlüsselwörter: </b> Prämisse: weil, nämlich, denn, da</p>
- 
-<h2>Semantik und Pragmatik in der Argumentation</h2>
-<p>Die alltägliche Argumentation ist oft stark vekürzt und hat selten eine transparente logische Form. Prämissen werden oft nicht genannt, sondern vorrausgesetzt.</p>
-<p>Bei den folgenden Sätzen sind Ellipsen benutzt worden, die je nach dem ausgelassenen Satzteil verschiedene Implikaturen ergeben:</p>
-<ul>
-    <il><p>"Ich war noch nicht in New York." Hier ist die Ellipse "in meinem Leben", die durch das Wort "nicht" angedeutet wird.</p></il>
-    <il><p>"Ich habe nicht gut geschlafen" mit der Ellipse "Heute".</p></il>
-</ul>
-
-<h2>Über Schlüsse</h2>
-<ul>
-    <il><p>Ein Schluss ist schlüssig, wenn die Schlussregeln der Logik befolgt werden.</p></il>
-    <il><p>Ein Schluss ist gültig, wenn er schlüssig ist und alle Prämissen wahr sind.</p></il>
-</ul>
-<p>Wir betrachten nun einige beispielhafte Ausssagen.</p>
-<p>Alle Menschen sind sterblich. Aristoteles ist ein Mensch. Aus diesen Aussagen folgt, dass Aristoteles sterblich ist.</p>
-
+    <p>Im Rahmen des natürlichen Schließens verwenden wir meist Einführungs- und Beseitigungsregeln. Im folgenden steht, wie eben eingeführt, die Prämissen oberhalb des Folgerungsstrich, die Konklusion unterhalb.</p>
+    <p><b>Abtrennungsregel (der Implikation/des Konditionals)</b></p>
+    <p>Wenn aus der Aussage $A$ die Aussage $B$ folgt, und $A$ gilt, gilt auch $A$.</p>
+    \begin{align}
+    A\rightarrow B\\
+    A\\
+    \hline
+    B
+    \end{align}
+    <p><b>Einführung der Konjunktion</b></p>
+    <p>Aus zwei Aussagen $A$ und $B$ kann die Konjunktion (Verknüpfung) $A$ und $B$ geschlossen werden.</p>
+    \begin{align}
+    A\\
+    B\\
+    \hline
+    A \land B
+    \end{align}
+    <p><b>Beseitigung der Konjunktion</b></p>
+    <p>Aus einer Konjunktion $A$ und $B$ kann jedes einzelne Konjukt, also sowohl $A$ als auch $B$, geschlossen werden.</p>
+    \begin{align}
+    A\wedge B\\
+    \hline
+    A\\
+    B
+    \end{align}
+    <p><b>Einführung der Adjunktion/Disjunktion</b></p>
+    <p>Aus einer Aussage $A$ kann die Disjunktion $A$ oder $B$ geschlossen werden.</p>
+    \begin{align}
+    A\\
+    \hline
+    A\land B
+    \end{align}
+    <p><b>Beseitigung der Adjunktion/Disjunktion</b></p>
+    <p>Aus einer Disjunktion $A$ oder $B$ kann mit der Falschheit einer Aussage $A$ die Richtigkeit von $B$ gezeigt werden.</p>
+    \begin{align}
+    A\land B\\
+    \neg A\\
+    \hline
+    B
+    \end{align}
+    <p><b>Einführung des Bikonditionals</b></p>
+    <p>Wenn aus der Aussage $A$ die Aussage $B$ folgt und vice versa, dann sind die Aussagen $A$ und $B$ äquivalent.</p>
+    \begin{align}
+    A\rightarrow B\\
+    B\rightarrow A\\
+    \hline
+    A\leftrightarrow B
+    \end{align}
+    <p><b>Beseitigung des Bikonditionals</b></p>
+    <p>Aus der Aussage, dass $A$ und $B$ äquivalent sind, folgt, dass $A$ aus $B$ folgt, und $B$ aus $A$ folgt.</p>
+    \begin{align}
+    A\leftrightarrow B\\
+    \hline
+    A\rightarrow B\\
+    B\rightarrow A
+    \end{align}
 
 </div>
 
