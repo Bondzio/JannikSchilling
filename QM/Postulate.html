@@ -87,37 +87,36 @@
 
 <div class="main">
     <h1>Postulate der Quantenmechanik</h1>
-    <h2>1. Postulat: Die Wellenfunktion</h2>
+    <h2><b>1. Postulat:</b> Die Wellenfunktion</h2>
     <p>Zur Formulierung der QM brauchen wir den Begriff der Wellenfunktion.</p>
     <p><b>Definition: </b> Wellenfunktion.</p>
     <p>Eine Funktion $f(x,t)$ heißt quadratisch integrabel, falls</p>
     \begin{align}
     \int_{-\infty}^{\infty}\psi(x,t)\psi^*(x,t)\,\mathrm{dx}=\int_{-\infty}^{\infty}|\psi(x,t)|^2\,\mathrm{d}x<\infty.
     \end{align}
-    <p><b>1. Postulat: </b> Normierungsbedingung</p>
     <p>Wir interpretieren das Betragsquadrat der Wellenfuktion als Wahrscheinlichkeitsdichte (genauere Details siehe nöächstses Kapitel).</p>
     <p>Dementsprechend muss die Gesamtwahrscheinlichkeit, ein Teilchen irgendwo anzutreffen, genau $100\%$ betragen. Das bedeutet</p>
     \begin{align}
     1=\int_{-\infty}^{\infty} \psi(x,t)\psi^*(x,t)\, \mathrm{d}x.
     \end{align}
-    <p>Der Erwartungswert eines Teilchens von einer beliebigen Observablen $O$ ergibt sich damit zu</p>
+    <p>Der Erwartungswert eines Teilchens von einer beliebigen Observablen $\hat{O}$ ergibt sich damit zu</p>
     \begin{align}
-    \langle O(x,t)\rangle_{\psi}=\int_{-\infty}^{\infty} \psi^*(x,t)O(x,t)\psi(x,t)\,\mathrm{d}x.
+    \langle O(x,t)\rangle_{\psi}=\int_{-\infty}^{\infty} \psi^*(x,t)\hat{O}(x,t)\psi(x,t)\,\mathrm{d}x.
     \end{align}
     <h2><b>2. Postulat: </b> Observablen und Operatoren</h2>
-    Jede physikalische Größe $A$ ist im Zustandsraum durch einen hermiteschen Operator $\hat{A}$ repräsentiert. Diesen Operator nennen wir Observable und hat ein reelles Spektrum.
+    <p>Jede physikalische Größe $A$ ist im Zustandsraum durch einen hermiteschen Operator $\hat{A}$ repräsentiert. Diesen Operator nennen wir Observable und hat ein reelles Spektrum.</p>
     <h2><b>3. Postulat: </b> Messresultat</h2>
-    Die Messwahrscheinlichkeit im Falle eines diskreten nichtentarteten Spektrums ergibt sich wie folgt. Die Wahrscheinlichkeit $P(\lambda_n)$, ein System im Zustand $|\lambda_n\rangle$ mit dem Eigenwert $\lambda_n$ berechnet sich durch:
+    <p>Die Messwahrscheinlichkeit im Falle eines diskreten nichtentarteten Spektrums ergibt sich wie folgt. Die Wahrscheinlichkeit $P(\lambda_n)$, ein System im Zustand $|\lambda_n\rangle$ mit dem Eigenwert $\lambda_n$ berechnet sich durch:</p>
     \begin{align}
-    P(\lambda_n)=|\langle \lambda_n|\psi|^2.
+    P(\lambda_n)=|\langle \lambda_n|\psi\rangle|^2.
     \end{align}
     <h2><b>4. Postulat: </b> Schrödingergleichung</h2>
-    Die Dynamik eines abgeschlossenen quantenmechanischen Systems wird durch die Schrödinger-
-Gleichung beschrieben:
+    <p>Die Dynamik eines abgeschlossenen quantenmechanischen Systems wird durch die Schrödinger-
+Gleichung beschrieben:</p>
     \begin{align}
     i\hbar\frac{\partial}{\partial t}|\psi\rangle=\hat{H}|\psi\rangle.
     \end{align}
-    Hierbei ist $\bar{H}$ der Hamilton-Operator und $\|\psi\rangle$ der Zustandsvektor des Systems im Hilbert-Raum.
+    <p>Hierbei ist $\bar{H}$ der Hamilton-Operator und $\|\psi\rangle$ der Zustandsvektor des Systems im Hilbert-Raum.</p>
 
     <hr/>   
 
@@ -126,7 +125,7 @@ Gleichung beschrieben:
         <div
             class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
             <div class="thumb">
-              <a href="https://www.jannik-schilling.com/PhysikQuantum">
+              <a href="https://www.jannik-schilling.com/qm/PhysikEinleitung">
                   <img class="img-fluid" src="../Bilder/arrow-l.jpg" alt="">
               </a>
             </div>
@@ -137,8 +136,8 @@ Gleichung beschrieben:
             </div>
             <div class="detials">
               <p>Letzte Lektion</p>
-              <a href="https://www.jannik-schilling.com/physikQuantum">
-                  <h4>Kursübersicht</h4>
+              <a href="https://www.jannik-schilling.com/qm/PhysikEinleitung">
+                  <h4>Physikalische  Motivation</h4>
               </a>
             </div>
         </div>
@@ -240,26 +239,10 @@ Gleichung beschrieben:
     </div>
   </footer>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
 
 
-<script>
-        function Graviwellenfunc() {
-          //alert("Gravitationswellen");
-          self.location="Gravitationswellen.html";
-        }function KoE(){
-          self.location="ElekKovar.html"
-        }
-      </script>
+
+
 
 <script src="../kurse/js/jquery-1.12.1.min.js"></script>
 <script src="../kurse/js/popper.min.js"></script>

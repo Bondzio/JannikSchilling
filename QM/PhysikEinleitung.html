@@ -8,15 +8,15 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Alltag/Fallschirmspringer">
-<title>Kurs Alltagsphysik - Das Tempolimit</title>
-<meta name="description" content="Aktuell wird in der Politik die Einführung eines Tempolimits diskutiert. Welche physikalischen Auswirkungen hätte eine solche Einschränkung?">
+<link rel="canonical" href="https://www.jannik-schilling.com/QM/Postulate">
+<title>Kurs QM - Postulate</title>
+<meta name="description" content="In der Entstehungsphase der Quantenmechanik bestand diese vor allem aus experimentellen Befunden. Dies hat sich später geändert, insbesondere auch durch die Formulierung der Postulate der Quantenmechanik.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="../kurse/css/style.css">
 
 </head>
-
+<body>
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -73,8 +73,9 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Der Fallschirmsprung</h2>
-                        <p>Home<span>/</span>Physik im Alltag</p>
+                        <h2>Motivation
+                        </h2>
+                        <p>Home<span>/</span>Quantenmechanik</p>
                     </div>
                 </div>
             </div>
@@ -85,51 +86,57 @@
 
 
 <div class="main">
-    <h1>Der Fallschirmsprung - realistisch betrachtet</h1>
-    <p>In unserer heutigen Lektion betrachten wir einen realistischen Fallschirmsprung. Welchen Geschwindigkeiten werden Menschen dabei ausgesetzt und wie wirkt sich die Lage des Springers dazu aus?</p>
-    </p>
-    <h2>Herleitung der Formeln</h2>
-    <p>Der Luftwiderstand einer Querschnittsfläche $A$, die sich mit einer Geschwindigkeit $v$ durch die Luft ($\rho_L=1,295\frac{\text{kg}}{\text{m}^3}$), kann durch die folgende Kraft beschrieben werden.</p>
-    $$F=\frac{1}{2}\rho_LA\cdot v^2$$
-    <p>Im Folgendenen falle eine Körper der Masse $m$ im Gravitationsfled der Erde mit Luftwiderstand senkrecht nach unten.</p>
-    <p>Durch Umschreiben der Kraft $F=m\ddot z$ erhalten wir die folgende Differentialgleichung:</p>
-    $$m\ddot z=mg-\frac{1}{2}\rho_LA\cdot \dot z^2.$$
-    <p>Wir wissen, dass bei einer gewissen Geschwindigkeit die Beschleunigung Null beträgt. Damit ergibt sich:</p>
-    $$g-\frac{1}{2m}\rho_LA\cdot \dot z_g^2=0.$$
-    Damit ergibt sich die Grenzgeschwindigkeit $\dot z_g$ zu:
-    $$\dot z_{\text{Grenz}}=\sqrt{\frac{2\cdot m\cdot g}{\rho_L\cdot A}.}$$
+    <h1>Physikalische Motivation</h1>
+    <p>In diesem Kapitel möchte ich Ihnen die historische Ausgangslage näherbringen und bereits einige Konzepte der Quantenmechanik einführen.</p>
+    <p>Die Quantenmechanik basiert im Wesentlichen auf drei Beobachtungen von sehr berühmten Physikern. Dazu zählen Max Planck, Albert Einstein und Arthur Compton, die alle mit dem Nobelpreis für ihre Leistungen geehrt wurden.</p>
+    <h2>Die plancksche Quantisierung</h2>
+    <hr/>   
 
-    <h2>Beispielhafte Zahlenwerte</h2>
-    <p>Wir betrachten nun einen Fallschirmspringer der Masse $75\text{kg}$ und lässt sich aus großer Höhe in Horizontaler Lage fallen. Seine Fläche beträgt dabei $$A_1=180\text{cm}\cdot 40\text{cm}.$$</p>
-    <p>Damit ergibt sich:</p>
-    \begin{align}
-    \dot z_{\text{Grenz}}&=\sqrt{\frac{2\cdot m\cdot g}{\rho_L\cdot A}.}\\
-    &= \sqrt{\frac{2\cdot 75\text{kg}\cdot 9,81\frac{\text{m}}{\text{s}^2}}{1,295\frac{\text{kg}}{\text{m}^3} \cdot (1,8\text{m}\cdot 0,4\text{m})}}\\
-    &= 39,73\frac{\text{m}}{\text{s}}.
-    \end{align}
-    <p>Nun betrachten wir den gleichen Fallschirmspringer in vertikaler Lage. Dabei hat er die Maße $A_2=20\text{cm}\cdot 40\text{cm}$.</p>
-    \begin{align}
-    \dot z_{\text{Grenz}}&= \sqrt{\frac{2\cdot 75\text{kg}\cdot 9,81\frac{\text{m}}{\text{s}^2}}{1,295\frac{\text{kg}}{\text{m}^3} \cdot (0,2\text{m}\cdot 0,4\text{m})}}\\
-    &= 119,19\frac{\text{m}}{\text{s}}.
-    \end{align}
-    <p>Wir nehmen nun an, dass sich der Fallschirm öffnet. Welche Fläche müsste dieser Fallschirm haben, damit seine Geschwindigkeit nicht größer wird, als würde er ohne Luftwiderstand aus einer Höhe von $1,8\text{m}$ hohen Mauer springen?</p>
-    <p>Zuerst berechnen die Geschwindkeit des Mauerfalls:</p>
-    \begin{align}
-    z(t)&=-\frac{1}{2}gt^2+1,8=0\Rightarrow t_f=\sqrt{\frac{2\cdot 1,8\text{m}}{g}}=0,6\text{s}\\
-    v(t_f)&= g\cdot t_f=5,94\frac{\text{m}}{\text{s}}.
-    \end{align}
-    <p>Nun formen wir die obige Formel nach der Fläche des Fallschirms um:</p>
-    \begin{align}
-    v_g=\sqrt{\frac{2mg}{\rho_LA}}\Rightarrow A=\frac{2mg}{\rho_L\cdot v_g^2}.
-    \end{align}
-    <p>Eingesetzt ergibt sich:</p>
-    \begin{align}
-    A=\frac{2\cdot 75\text{kg}\cdot g}{1,295\frac{\text{kg}}{\text{m}^3}\cdot \left(5,94\frac{\text{m}}{\text{s}}\right)^2}=32,175\text{m}^2.
-    \end{align}
-    <p>Für einen runden Fallschirm würden sich die folgenden Größen ergeben:</p>
-    $$A=\pi r^2\Rightarrow r=\sqrt{\frac{A}{\pi}}=3,2\text{m}.$$
-
-</div>
+    <div class="navigation-area">
+      <div class="row">
+        <div
+            class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+            <div class="thumb">
+              <a href="https://www.jannik-schilling.com/qm/Einleitung">
+                  <img class="img-fluid" src="../Bilder/arrow-l.jpg" alt="">
+              </a>
+            </div>
+            <div class="arrow">
+              <a href="#">
+                  <span class="lnr text-white ti-arrow-left"></span>
+              </a>
+            </div>
+            <div class="detials">
+              <p>Letzte Lektion</p>
+              <a href="https://www.jannik-schilling.com/qm/Einleitung">
+                  <h4>Einleitung</h4>
+              </a>
+            </div>
+        </div>
+        <div
+            class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+            <div class="detials">
+              <p>Nächste Lektion</p>
+              <a href="https://www.jannik-schilling.com/qm/Postulate">
+                  <h4>Postulate der QM</h4>
+              </a>
+            </div>
+            <div class="arrow">
+              <a href="#">
+                  <span class="lnr text-white ti-arrow-right"></span>
+              </a>
+            </div>
+            <div class="thumb">
+              <a href="https://www.jannik-schilling.com/qm/Postulate">
+                  <img class="img-fluid" src="../bilder/arrow-r.png" alt="">
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+      <hr/>
 
 <div id="disqus_thread"></div>
 <script>
@@ -207,21 +214,20 @@
 
 
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
+<script src="../kurse/js/jquery-1.12.1.min.js"></script>
+<script src="../kurse/js/popper.min.js"></script>
+<script src="../kurse/js/bootstrap.min.js"></script>
+<script src="../kurse/js/jquery.magnific-popup.js"></script>
+<script src="../kurse/js/swiper.min.js"></script>
+<script src="../kurse/js/masonry.pkgd.js"></script>
+<script src="../kurse/js/owl.carousel.min.js"></script>
+<script src="../kurse/js/jquery.nice-select.min.js"></script>
+<script src="../kurse/js/slick.min.js"></script>
+<script src="../kurse/js/jquery.counterup.min.js"></script>
+<script src="../kurse/js/waypoints.min.js"></script>
+<script src="../kurse/js/custom.js"></script>
 
 
 
 </body>
 </html>
-
