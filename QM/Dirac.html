@@ -97,7 +97,7 @@
     <p>In der Quantenmechanik bildet die Gesamtheit aller quadratintegrablen Funktionen über einem endlichen Intervall $x\in[a,b]$ einen Vektorraum über den komplexen Zahlen $\mathbb{C}$. Wir nennen diesen Raum $L_2(a,b)$ oder auch Hilbert-Raum.</p>
     
     <p><b>Definition:</b></p>
-    Sei $|v\rangle$ ein Vektor eines komplexen $m$-dimensionalen Vektorraums $\mathbb{C}^m$. Für eine bestimmte Basis lässt sich der Ket-Ausdruck $|v\rangle$ als vertikaler Vektor mit komplexen Komponenten $v_i$ darstellen.
+    <p>Sei $|v\rangle$ ein Vektor eines komplexen $m$-dimensionalen Vektorraums $\mathbb{C}^m$. Für eine bestimmte Basis lässt sich der Ket-Ausdruck $|v\rangle$ als vertikaler Vektor mit komplexen Komponenten $v_i$ darstellen.</p>
     $$|v\rangle\leftrightarrow\begin{pmatrix}
     v_1\\
     v_2\\
@@ -115,35 +115,35 @@
     \langle f|g\rangle=(\langle f|)\cdot (|f\rangle)=\int_a^b f^*(x)g(x)\,\mathrm{d}x.
     \end{align}
     <p>Ein Skalarprodukt muss die folgenden drei Bedingungen erfüllen.</p>
-    <ul>
-        <li><b>Positive Definitheit</b>
+    <ul class="unordered-list">
+        <li><p><b>Positive Definitheit</b></p>
             \begin{align}
                 \langle f|f\rangle=0\Leftrightarrow f&=0\\
                 \langle f| f\rangle>0\, \forall f\neq 0.
             \end{align}
         </li>
-        <li><b>Hermizität</b>
+        <li><p><b>Hermizität</b></p>
             \begin{align}
             \langle f|g\rangle=\langle f|g\rangle^{*}.
             \end{align}
             (Damit folgt auch $\langle f|f\rangle$ ist reell).
         </li>
-        <li><b>Bilinearität</b>
+        <li><p><b>Bilinearität</b></p>
             \begin{align}
             \langle f|g+\lambda h\rangle&=\langle f| g\rangle+\lambda \langle f|h\rangle\\
             \langle f+\lambda h|g\rangle&=\langle f| g\rangle+\lambda^* \langle h|g\rangle\\            
             \end{align}
         </li>
     </ul>
-    Eine Funktion $f\in L_2(a,b)$ heißt normiert, falls
+    <p>Eine Funktion $f\in L_2(a,b)$ heißt normiert, falls</p>
     \begin{align}
     \langle f| f\rangle=1.
     \end{align}
-    Für quantenmechanische Zustände lässt sich die Normierungsbedingung wie folgt notieren.
+    <p>Für quantenmechanische Zustände lässt sich die Normierungsbedingung wie folgt notieren.</p>
     \begin{align}
     \langle f|f\rangle=\int_{-\infty}^{\infty} f(x)f^*(x)\, \mathrm{d}x=1.
     \end{align}
-    Das bedeutet:
+    <p>Das bedeutet:</p>
     <p>Wellenfunktionen sind normierte Elemente des $L_2(-\infty,\infty)$.
     </p>
     <p>Ein Vektorraum mit Skalarproduk, der bezüglich des Skalarproduktes vollständig ist, heißt Hilbert Raum. Das heißt auch, jede Cauchy-Folge konvergiert in diesem Raum.</p>
@@ -152,13 +152,13 @@
     $$|\gamma\rangle=\alpha |1\rangle+\beta |2\rangle.$$
     <p>Wir nomieren nun $|\gamma\rangle$, indem wir zuerst $\langle \gamma |$ berechnen:</p>
     $$\langle \gamma |=\alpha^{*}\langle 1|+\beta^{*}\langle 2|.$$
-    und berechnen nun $\langle \gamma |\gamma \rangle$.
+    <p>und berechnen nun $\langle \gamma |\gamma \rangle$.</p>
     $$\langle \gamma |\gamma\rangle=\alpha\alpha^{*}\langle 1|1\rangle+\alpha\beta^{*}\langle 1|2\rangle+\alpha^{*}\beta\langle 2|1\rangle+ \beta\beta^{*}\langle 2|2\rangle$$
-    Wegen der Orthonomalitätsrelation bzw. der Normierungsbedingung
+    <p>Wegen der Orthonomalitätsrelation bzw. der Normierungsbedingung</p>
     $$\langle \psi_i|\psi_j\rangle=\delta_{ij}$$
-    kürzen sich die beiden Mischterme. Wir erhalten damit
+    <p>kürzen sich die beiden Mischterme. Wir erhalten damit</p>
     $$\alpha\alpha^{*}+\beta\beta^{*}=1.$$
-    Systeme, die sich aus zwei Zuständen zusammensetzten, nennen wir auch Zwei-Niveau-Systeme. Diese treten sehr häufig in der Quantenmechanik auf und werden uns auch später noch beschäftigen.
+    <p>Systeme, die sich aus zwei Zuständen zusammensetzten, nennen wir auch Zwei-Niveau-Systeme. Diese treten sehr häufig in der Quantenmechanik auf und werden uns auch später noch beschäftigen.</p>
     <hr/>   
 
     <div class="navigation-area">
