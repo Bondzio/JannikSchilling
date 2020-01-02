@@ -11,8 +11,8 @@
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Art/Planck">
-<title>Kurs ART - Planck-Größen
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/StaticUniverse">
+<title>Kurs ART - Statisches Universum
 </title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
@@ -76,7 +76,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Planck-Größen</h2>
+                        <h2>Statisches Universum</h2>
                         <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
@@ -88,154 +88,87 @@
 
 
   <div class="main">
-    <h1>Die Planck-Größen</h1>
+ 
+    <h1>Das statische Universum</h1>	
+        
+    <p>Wir haben im Rahmen der Untersuchung der Einsteinschen Feldgleichungen die allgemeinste Form der Gleichungen kennengelernt </p>
 
-    <div class="section-top-border">
-        <h3 class="mb-30">Fazit</h3>
-        <div class="row">
-          <div class="col-lg-12">
-            <blockquote class="generic-blockquote">
-                Wir werden in diesem Artikel die sogenannten Planck-Größen herleiten. Dazu werden wir theoretische Überlegungen anstellen, was bei einem schwarzen Loch passieren würde, dessen Schwarzschildradius gleich dem Comptonradius wäre. Unsere Ergebnisse werden dabei die Planck-Masse, Planck-Länge und die Planck-Zeit sein:
+    \begin{align}
+    R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4} T_{\mu\nu}	.
+    \end{align}
+
+    <p>Für die $00$-Komponente und der $11$-Komponente ergeben sich die Friedmann-Gleichungen mit kosmologischer Konstante</p>
+
+    \begin{align}
+    \frac{3}{c^2R^2}\left(\dot R^2+c^2\kappa \right)	=\frac{8\pi G}{c^4}\varepsilon +\Lambda.
+    \end{align}
+
+    <p>Durch Multiplikation mit $c^2/3$ und unter Beachtung von $R=a(t)R_0$ erhalten wir die beiden Friedmann-Gleichungen in der Form</p>
+
+    \begin{align}
+    \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}=\frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{a^2 R_0^2}\\
+    H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\varepsilon +3p)+c^2\frac{\Lambda}{3}.
+    \end{align}
+
+    <p>Hier können wir nun die Wirkung von der kosmologischen Konstante $\Lambda$ erkennen. Wenn die kosmologische Konstante in der zweiten Friedmann-Gleichung positiv ist, erhalten wir einen weiteren Beitrag zu der Beschleunigung des Universums. Die Gravitation ist bekanntlich bestrebt, Massen zusammenzuziehen, da der obige Term aber positiv ist, erhalten wir so etwas wie "Antigravitation".</p>
+
+    <p>Einstein hätte schon früh, namlich im Jahre 1916, die Expansion des Universums postulieren können. Erst die experimentelle Bestätigung der Expansion des Universums und die Instabilität der statischen Lösungen von den Feldgleichungen konnten Einsten überzeugen.</p>
+
+    <p>Einstein wählte die kosmischen Parameter wie folgt, um ein statisches Universum zu beschreiben:</p>
+
+    <ul>
+    <li>\begin{align} \dot a =0\end{align}</li>
+    <li>\begin{align}\ddot a = 0 \end{align}</li>
+    <li>\begin{align} p=0 \end{align}</li>
+    <li><p>Kosmischer Skalenfaktor </p>
+    \begin{align} 
+    \kappa=1.
+    \end{align}</li>
+    </ul>
+
+    <p>Damit das Universum für alle Zeiten nicht expandiert, muss nicht nur $\dot a(t)$ immer Null sein, sondern auch $\ddot a(t)$ muss immer Null sein, also</p>
+
+    \begin{align}
+    \dot a(t)=\ddot a(t)=0.	
+    \end{align}
+
+    <p>Dann erhalten wir für die Friedmann-Gleichungen folgendes:</p>
+
+    \begin{align}
+        0 &= \frac{8\pi G}{3c^2}+\frac{c^2\Lambda}{3}-\frac{c^2\kappa}{a^2R_0^2}\label{eq:Friedmann_Derivation_1}\\
+        0 &= -\frac{4\pi G}{3c^2}\varepsilon +\frac{c^2\Lambda}{3}\Leftrightarrow \frac{c^2\Lambda}{3}=\frac{4\pi G}{3c^2}\label{eq:Friedmann_Derivation_2}.
+    \end{align}
+
+    <p>Wenn wir Gleichung \eqref{eq:Friedmann_Derivation_2} in Gleichung \eqref{eq:Friedmann_Derivation_1} einsetzen, erhalten wir </p>
+
+    \begin{align}
+    0=\frac{4\pi G}{c^2}-\frac{c^2\kappa}{a^2R_0^2}	\label{eq:Skalenparameter_Derivation}
+    \end{align}
+
+    <p>Damit die Subtraktion Null wird, muss $\kappa>0$ gelten. Wir wählen hier </p>
+
+    \begin{align}
+    \kappa=+1.	
+    \end{align}
+
+    <p>Aus Gleichung \eqref{eq:Skalenparameter_Derivation} folgt der Skalenparameter $a$ durch einige Umformungen</p>
+
+    \begin{align}
+    a=\frac{c^2}{\sqrt{4\pi G\varepsilon}R_0}.
+    \end{align}
+
+    <p>Dieser Skalenfaktor $a(t)=a$ ist wie gefordert konstant. Wenn wir diesen Skalenparameter nun auf Eins normieren und für die Dichte die kritische Dichte wählen, also</p>
+
+    \begin{align}
+    \rho=\frac{\varepsilon}{c^2}=0,9\cdot 10^{-26}\frac{\text{kg}}{\text{m}^3}	.
+    \end{align}
+
+    <p>Das ist die kritische Dichte, bei der die Geometrie gerade den Übergang von einem flachen zu einem geschlossenem Universum darstellt. Dann erhalten wir einen Weltradius $R_0$ mit </p>
+
+    \begin{align}
+    R_0\approx 3,3\, GPc=1,04\cdot 10^{26}\, \text{m}
+    \end{align}
     
-                \begin{align}
-                m_P &= \sqrt{\frac{\hbar c}{G}}\\
-                l_P &= \sqrt{\frac{\hbar G}{c^3}}\\
-                t_P &= \frac{l_p}{c} = \sqrt{\frac{\hbar G}{c^5}	}.
-                \end{align}
-                Die Planck-Größen sind die physikalisch kleinsten Größen, über die wir Aussagen treffen können.
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    Die Werte für die Planck-Zeit, Planck-Länge und Planck-Masse sind ziemlich einfach zu berechnen.\\
-
-    <p>Falls es ein schwarzes Loch geben würde, dessen Schwarzschildradius gleich seinem Compton-Radius sein würde, würden wir diese Länge als \glqq Planck-Länge\grqq\ bezeichnen. Das wäre dann die kleinstmögliche kausal sinnvolle Länge in unserem Universum. Die Planck.Zeit ist dann die Zeit, die benötigt wird, um diese Strecke zu durchqueren. Die Masse des Schwarzen Loches ist dann die Planck-Masse. Ob so ein schwarzes Loch existiert, können wir nach unserem heutigen Erkenntnisstand nicht beantworten.</p>
-
-    <h2>Die Planck-Masse</h2>
-    <p>Zuerst berechnen wir die Planck-Masse. In der allgemeinen Relativitätstheorie ist der Schwarzschildradius gegeben durch</p>
-
-    \begin{align}
-    r_G=\frac{mG}{c^2}.
-    \end{align}
-
-    <p>Aus der Quantentheorie kennen wir die Compton-Wellenlänge </p>
-
-    \begin{align}
-    \lambda_C=\frac{\hbar}{mc}
-    \end{align}
-
-    <p>Setzen wir diese Gleichungen gleich, erhalten wir</p>
-
-    \begin{align}
-    \frac{mG}{c^2}=\frac{\hbar}{mc}.
-    \end{align}
-
-    <p>Durch einige Umformungen erhalten wir dann die Planck-Masse.</p>
-
-    \begin{align}
-    \frac{mG}{c^2}=\frac{\hbar}{mc}\Leftrightarrow \frac{mG}{c}=\frac{\hbar}{m}\Leftrightarrow m^2=\frac{\hbar c}{G}\Rightarrow m=\sqrt{\frac{\hbar c}{G}}=m_P.	
-    \end{align}
-
-    <h2>Die Planck-Länge</h2>
-
-    <p>Wir könnten die Planck-Länge aus den Gleichungen gewinnen, die wir bereits aufgeschrieben haben. Doch wir werden hier jetzt einen anderen Weg nachvollziehen, der auf Einheiten basiert.</p>
-
-    <p>Schreiben wir uns mal die Einheiten von den wichtigsten Konstanten der Relativitätstheorie und der Quantentheorie auf:</p>
-
-    \begin{align}
-    [G] &= \text{m}^3 \cdot \text{kg}^{-1}\cdot \text{s}^{-2}	\\
-    [c] &= \text{m}\cdot \text{s}^{-1}\\
-    [\hbar] &= \text{J}\cdot \text{s}= \text{kg}\cdot \text{m}^{2}\cdot \text{s}^{-1}.
-    \end{align}
-
-    <p>Jetzt nehmen wir die einzig sinnvolle Definition für die Planck-Länge an. Sie muss ein Produkt aus den Naturkonstanten sein. Wir wählen als Ansatz also</p>
-
-    \begin{align}
-    l_P = G^{\alpha}c^{\beta}\hbar^{\gamma}.
-    \end{align}
-
-    <p>Wenn wir diese Gleichungen nun mit Einheiten aufschreiben, erhalten wir</p>
-
-    \begin{align}
-    \text{m} \equiv \text{m}^{3\alpha+\beta+2\gamma}\cdot \text{kg}^{-\alpha +\gamma}	\cdot \text{s}^{-2\alpha-\beta-\gamma}.
-    \end{align}
-
-    <p>Diese Gleichung können wir durch Koeffizientenvergleich und durch Lösen des dadurch entstehendem Gleichungssystem:</p>
-
-    \begin{align}
-    \begin{cases}
-    3\alpha+\beta+2\gamma &=1\\
-    -\alpha+\gamma &=0\\
-    -2\alpha-\beta-\gamma &= 0	
-    \end{cases}.
-    \end{align}
-
-    <p>Dieses schreiben wir zuerst in Matrixform</p>
-
-    \begin{align}
-    \left(\begin{array}{ccc|c}
-    3 & 1 & 2 & 1\\
-    -1 & 0 & 1 & 0\\
-    -2 & -1 & -1 & 0	
-    \end{array}\right)
-    \end{align}
-
-    <p>und bringen diese Matrix dann auf die Stufenform</p>
-
-    \begin{align}
-    &\left(\begin{array}{ccc|c}
-    3 & 1 & 2 & 1\\
-    -1 & 0 & 1 & 0\\
-    -2 & -1 & -1 & 0	
-    \end{array}\right)\Leftrightarrow 
-    \left(\begin{array}{ccc|c}
-    3 & 1 & 2 & 1\\
-    -1 & 0 & 1 & 0\\
-    -3 & -1 & 0 & 0	
-    \end{array}\right)\\
-    &\left(\begin{array}{ccc|c}
-    3 & 1 & 2 & 1\\
-    -1 & 0 & 1 & 0\\
-    0 & 0 & 2 & 1	
-    \end{array}\right)\Leftrightarrow \left(\begin{array}{ccc|c}
-    3 & 1 & 2 & 1\\
-    0 & \frac{1}{3} & \frac{5}{3} & \frac{1}{3}\\
-    0 & 0 & 2 & 1	
-    \end{array}\right)\\
-    &\Rightarrow \begin{cases}
-    2\gamma &= 1\Rightarrow \gamma = \frac{1}{2} \\
-    \frac{1}{3}\beta+\frac{5}{3}\gamma &= \frac{1}{3} \Rightarrow \beta = -\frac{3}{2}\\
-    3\alpha+\beta+\gamma &= 1\Rightarrow \alpha=\frac{1}{2}.
-    \end{cases}
-    \end{align}
-
-    <p>Jetzt haben wir die Exponenten bestimmt und müssen diese nur noch in unseren Ansatz einsetzen und erhalten die Planck-Länge</p>
-
-    \begin{align}
-    l_P=G^{\frac{1}{2}}c^{-\frac{3}{2}}\hbar^{\frac{1}{2}}=\sqrt{G}\cdot \frac{1}{\sqrt{c^3}}\sqrt{\hbar}=	\sqrt{\frac{\hbar G}{c^3}}.
-    \end{align}
-
-    <p>Wenn wir nun $c=2,99792458\cdot 10^{8}\, \text{m}\cdot \text{s}^{-1}$ , $\hbar \approx 1,054 571 800 \cdot 10^{-34}$ Js und $G\approx 6,67408\cdot 10^{-11}\, \text{m}^3 \text{kg}^{-1}\text{s}^{-2}$ einsetzen, erhalten wir den Näherungswert </p>
-
-    \begin{align}
-    l_P\approx 1,616228\cdot 10^{-35} \text{ m}.	
-    \end{align}
-
-    <h2>Die Planck-Zeit</h2>
-
-    <p>Für die Planck-Zeit erhalten wir dann mit der Dimension der Zeit</p> 
-
-    \begin{align}
-    \dim t = \text{Zeit} =\frac{\text{Strecke}}{\text{Geschwindigkeit}},
-    \end{align}
-
-    <p>der Strecke $l_P$ und der Geschwindigkeit $c$. Also</p>
-
-    \begin{align}
-    t_P = \frac{l_P}{c}=\frac{\sqrt{\frac{\hbar G}{c^3}}}{c}=\sqrt{\frac{\hbar G}{c^3c^2}}=\sqrt{ \frac{\hbar G}{c^5}}	
-    \end{align}
-
-
 
 <hr/>
 

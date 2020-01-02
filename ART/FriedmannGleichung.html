@@ -97,10 +97,10 @@
                 Wir werden in diesem Artikel die beiden Friedmann-Gleichungen herleiten. Denn mit diesen Gleichungen haben wir die Grundlage für das Urknallmodell an der Hand. Diese beiden Gleichungen lauten:
     
                 \begin{align}
-                \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}=\frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{a^2 R_0^2}\label{eq:FriedmannEq1}\\
-                H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\varepsilon +3p)+c^2\frac{\Lambda}{3}\label{eq:FriedmannEq2},
+                \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3}\rho +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}\label{eq:FriedmannEq1}\\
+                H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\rho c^2 +3p)+\frac{\Lambda}{3}c^2\label{eq:FriedmannEq2},
                 \end{align}
-                wobei
+                wobei wir $\Lambda$ Kosmologische Konstante nennen.
             </blockquote>
           </div>
         </div>
@@ -147,8 +147,8 @@
     <p>Die Friedmann-Gleichungen basieren auf einigen grundlegenden Beobachtungen, auch kosmologisches Prinzip genannt. </p>
 
     <ul class="unordered-list">
-    <li>Das Universum näherungsweise homogen. Das bedeutet, dass das Universum überall gleich aufgebaut ist und eine einheitliche Struktur besitzt.</li>
-    <li>Das Universum ist (bis auf einige Quantenfluktuationen am Anfang des Universums) isotrop. Das bedeutet, dass das Universum in allen Raumrichtungen die selben physikalischen Eigenschaften und Gesetze aufweist.</li>
+    <li><p>Das Universum näherungsweise homogen. Das bedeutet, dass das Universum überall gleich aufgebaut ist und eine einheitliche Struktur besitzt.</p></li>
+    <li><p>Das Universum ist (bis auf einige Quantenfluktuationen am Anfang des Universums) isotrop. Das bedeutet, dass das Universum in allen Raumrichtungen die selben physikalischen Eigenschaften und Gesetze aufweist.</p></li>
     </ul>
 
     <p>Wenn ein Universum isotrop ist, dann ist das Universum auch homogen, allerdings nicht umgekehrt.</p>
@@ -221,243 +221,79 @@
     -2\frac{\ddot R}{R}-\frac{\dot R^2}{R^2}-\frac{k}{R^2}=8\pi G\cdot p.	
     \end{align}
 
-    <h2>Der Urknall</h2>
+    <h2>Herleitung ohne Feldgleichungen</h2>
 
-    <p>Wir haben eben zwei Gleichungen erhalten, die wir voneinander subtrahieren können. Wir erhalten dann</p>
-
-    \begin{align}
-    \frac{\ddot R}{R}=-\frac{4\pi G}{3}(\rho+3p).	
-    \end{align}
-
-    <p>Innerhalb einer endlichen Zeit gibt es dann einen Punkt ohne Ausbreitung, es gilt also</p>
-
-    \begin{align}
-    R(t_{BB})=0.
-    \end{align}
-
-    <p>Folglich haben einige kosmologische Parameter Singularitäten an diesem Punkt. Der Zeitpunkt $t_{BB}$ wird als Zeitnullpunkt gesetzt, also</p>
-
-    \begin{align}
-    t_{BB}=0.	
-    \end{align}
-
-    <p>Nach diesem Zeitpunkt breitet sich das Universum aus. Der Punkt, an dem das Universum keine Ausdehnung hat, heißt "Big Bang", oder auf deutsch Urknall. Wir wollen jetzt feststellen, ob die Singularität am Anfang des Universums "nur" eine Koordinatensingularität ist, oder nicht.</p>
-
-    <!--\section{Dichte und kosmischer Skalenfaktor}
-
-    \section{Lösungen der Friedmann-Gleichung}
-
-    \section{Alter des Universums}-->
-
-    <h3>Die kosmologische Konstante</h3>	
-        
-    <p>Wir haben im Rahmen der Untersuchung der Einsteinschen Feldgleichungen die allgemeinste Form der Gleichungen kennengelernt </p>
-
-    \begin{align}
-    R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4} T_{\mu\nu}	.
-    \end{align}
-
-    <p>Für die $00$-Komponente und der $11$-Komponente ergeben sich die Friedmann-Gleichungen mit kosmologischer Konstante</p>
-
-    \begin{align}
-    \frac{3}{c^2R^2}\left(\dot R^2+c^2\kappa \right)	=\frac{8\pi G}{c^4}\varepsilon +\Lambda.
-    \end{align}
-
-    <p>Durch Multiplikation mit $c^2/3$ und unter Beachtung von $R=a(t)R_0$ erhalten wir die beiden Friedmann-Gleichungen in der Form</p>
-
-    \begin{align}
-    \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}=\frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{a^2 R_0^2}\\
-    H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\varepsilon +3p)+c^2\frac{\Lambda}{3}.
-    \end{align}
-
-    <p>Hier können wir nun die Wirkung von der kosmologischen Konstante $\Lambda$ erkennen. Wenn die kosmologische Konstante in der zweiten Friedmann-Gleichung positiv ist, erhalten wir einen weiteren Beitrag zu der Beschleunigung des Universums. Die Gravitation ist bekanntlich bestrebt, Massen zusammenzuziehen, da der obige Term aber positiv ist, erhalten wir so etwas wie "Antigravitation".</p>
-
-    <h3>Einsteins statische Lösung</h3>
-
-    <p>Einstein hätte schon früh, namlich im Jahre 1916, die Expansion des Universums postulieren können. Erst die experimentelle Bestätigung der Expansion des Universums und die Instabilität der statischen Lösungen von den Feldgleichungen konnten Einsten überzeugen.</p>
-
-    <p>Einstein wählte die kosmischen Parameter wie folgt, um ein statisches Universum zu beschreiben:</p>
-
-    <ul>
-    <li>\begin{align} \dot a =0\end{align}</li>
-    <li>\begin{align}\ddot a = 0 \end{align}</li>
-    <li>\begin{align} p=0 \end{align}</li>
-    <li><p>Kosmischer Skalenfaktor </p>
-    \begin{align} 
-    \kappa=1.
-    \end{align}</li>
-    </ul>
-
-    <p>Damit das Universum für alle Zeiten nicht expandiert, muss nicht nur $\dot a(t)$ immer Null sein, sondern auch $\ddot a(t)$ muss immer Null sein, also</p>
-
-    \begin{align}
-    \dot a(t)=\ddot a(t)=0.	
-    \end{align}
-
-    <p>Dann erhalten wir für die Friedmann-Gleichungen folgendes:</p>
-
-    \begin{align}
-        0 &= \frac{8\pi G}{3c^2}+\frac{c^2\Lambda}{3}-\frac{c^2\kappa}{a^2R_0^2}\label{eq:Friedmann_Derivation_1}\\
-        0 &= -\frac{4\pi G}{3c^2}\varepsilon +\frac{c^2\Lambda}{3}\Leftrightarrow \frac{c^2\Lambda}{3}=\frac{4\pi G}{3c^2}\label{eq:Friedmann_Derivation_2}.
-    \end{align}
-
-    <p>Wenn wir Gleichung \eqref{eq:Friedmann_Derivation_2} in Gleichung \eqref{eq:Friedmann_Derivation_1} einsetzen, erhalten wir </p>
-
-    \begin{align}
-    0=\frac{4\pi G}{c^2}-\frac{c^2\kappa}{a^2R_0^2}	\label{eq:Skalenparameter_Derivation}
-    \end{align}
-
-    <p>Damit die Subtraktion Null wird, muss $\kappa>0$ gelten. Wir wählen hier </p>
-
-    \begin{align}
-    \kappa=+1.	
-    \end{align}
-
-    <p>Aus Gleichung \eqref{eq:Skalenparameter_Derivation} folgt der Skalenparameter $a$ durch einige Umformungen</p>
-
-    \begin{align}
-    a=\frac{c^2}{\sqrt{4\pi G\varepsilon}R_0}.
-    \end{align}
-
-    <p>Dieser Skalenfaktor $a(t)=a$ ist wie gefordert konstant. Wenn wir diesen Skalenparameter nun auf Eins normieren und für die Dichte die kritische Dichte wählen, also</p>
-
-    \begin{align}
-    \rho=\frac{\varepsilon}{c^2}=0,9\cdot 10^{-26}\frac{\text{kg}}{\text{m}^3}	.
-    \end{align}
-
-    <p>Das ist die kritische Dichte, bei der die Geometrie gerade den Übergang von einem flachen zu einem geschlossenem Universum darstellt. Dann erhalten wir einen Weltradius $R_0$ mit </p>
-
-    \begin{align}
-    R_0\approx 3,3\, GPc=1,04\cdot 10^{26}\, \text{m}
-    \end{align}
-
-    <h3>Die kosmologische Konstante - Nobelpreis 2011</h3>
-
-    <p>Einstein hatte die komsmologische Konstante zwar ursprünglich eingeführt, um ein statisches Universum zu beschreiben. Da zahlreiche Beobachtungen gezeigt haben, dass das Universum expandiert, hat Einstein die Einführung der kosmologischen Konstante wieder zurückgerufen und soll sie sogar im Gespräch mit George Gamow als "größte Eselei meines Lebens" bezeichnet haben.</p>
-
-    <p>In den letzten Jahrzehnten hat die kosmologische Konstante hingegen wieder einen Aufschwung gefeiert, um die mysteriöse Dunkle Energie zu erklären. Dafür haben im Jahr 2011 die Leiter zweier langjähriger wissenschaftlicher 	Projekte zur Vermessung des Beitrages der kosmologischen Konstante zur kosmologischen Expansion den Physik-Nobelpreis erhalten. Die Physiker Saul Perlmutter (Leiter des Supernovae Cosmolgy Project) und die beiden Physiker Brian P. Schmidt und Adam G. Riess (Leiter des High-Z Supernovae Search) haben versucht, die kosmologische Konstante zu vermessen.</p>
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=\textwidth]{nobelpreis-2011}
-        \caption{Von links nach rechts: Adam G. Riess, Saul Perlmutter und Brian P. Schmidt.}
-    \end{figure}
-
-    <h2>Die Expansion des Universums</h2>
-
-    <p>Wir haben schon den Hubble-Parameter $H_0$ kennengelernt. Dieser ist definiert durch</p>
-
-    \begin{align}
-    H_0=\frac{\dot a}{a}.	
-    \end{align}
-
-    <p>Hierbei ist $a$ der Skalenfaktor. Dieser ist eine Funktion der Zeit und gibt die relative Expansion des Universums an. Mathematisch gesprochen stellt der Hubble-Parameter einen Zusammenhang zwischen den physikalischen Koordinaten und den mitbewegten Koordinaten her.</p>
-
-    <p>Aus den Friedmann-Gleichungen folgen drei Modelle für das Universum:</p>
-
-    <ul>
-    <li>Sei die kinetische Energie kleiner als die potentielle Energie, also
-
-    \begin{align}
-    E_{\text{kin}}< E_{\text{pot}}.	
-    \end{align}
-    Dann ist $\Omega_0>1$. Die Gravitation ist dann also in der Lage die Expansion abzubremsen und umzukehren. Das Universum stürzt dann durch die Gravitation wieder in sich zusammen. Es kommt dann zu einem \glqq Big Crunch\grqq\ und das Universum ist ein geschlossenes Universum.}
-    \item{Sei die kinetische Energie gleich der potentiellen Energie:
-
-    \begin{align}
-    E_{\text{kin}}=E_{\text{pot}},	
-    \end{align}
-    dann ist also $\Omega=1$. Die Expansion des Universums kommt sehr schnell zum Stillstand und das Universum ist flach.
-    </li>
-    <li>Sei die kinetische Energie größer als die potentielle Energie:
-
-    \begin{align}
-    E_{\text{kin}}>E_{\text{pot}}.	
-    \end{align}
-    Das Universum dehnt sich immer weiter aus und die Expansion verlangsamt sich nicht
-    </li>
-</ul>
-
-    <p>Dann sieht die Ausdehnung $R(t)$ abhängig von der Zeit wie folgt aus:</p>
-
-    <figure class="size-2">
-        <img src="../Bilder/expansion.png" style="width:100%">
-        <figcaption>Die Grafik zeigt die Messwerte von Edwin Hubble. Er fand einen linearen Zusammenhang zwischen der Entfernungsgeschwindigkeit und der Distanz des Objektes zu uns. Heute geben wir das Gesetz von Hubble normalerweise als Relation zwischen Entfernung und Rotverschiebung an, da wir die Rotverschiebung direkt messen können.</figcaption>
-    </figure>
-        
-    \section{Herleitung ohne Feldgleichungen}
-
-    Wir betrachten zunächst eine Kugel mit dem Radius $x$ und der Dichte $\rho_0$ zur Zeit $t_0$, was dem heutigen Zeitpunkt entspricht. Für ein kugelförmig ausdrehendes und zusammenziehendes Universum verändert sich der Radius mit der Zeit. Die neue verändernde Funktion entspricht $a(t)$. Diese Funktion wird auch Skalenfaktor genannt und ist einheitenlos, kann aber auch als eine Länge betrachtet werden. Er gibt die relative Expansion des Universums an:
+    <p>Wir betrachten zunächst eine Kugel mit dem Radius $x$ und der Dichte $\rho_0$ zur Zeit $t_0$, was dem heutigen Zeitpunkt entspricht. Für ein kugelförmig ausdrehendes und zusammenziehendes Universum verändert sich der Radius mit der Zeit. Die neue verändernde Funktion entspricht $a(t)$. Diese Funktion wird auch Skalenfaktor genannt und ist einheitenlos, kann aber auch als eine Länge betrachtet werden. Er gibt die relative Expansion des Universums an:</p>
 
     \begin{align}
     r(t)=a(t)x
     \end{align}
 
-    Damit bekommen wir für die Dichte:
+    <p>Damit erhalten wir für die Dichte:</p>
 
     \begin{align}
     \rho(t)=\rho_{0}a^{-3}.
     \end{align}
 
-    Die Masse einer ausdehnenden oder zusammenziehendender Kugel ist zeitunabhängig und konstant und wird mir folgendem Term beschrieben (vgl. $V_{Kugel}=\frac{4}{3}\pi r^3$): 
+    <p>Die Masse einer ausdehnenden oder zusammenziehendender Kugel ist zeitunabhängig und konstant und wird mir folgendem Term beschrieben (vgl. $V_{Kugel}=\frac{4}{3}\pi r^3$): </p>
 
     \begin{align}
     M(x)=\frac{4\pi}{3}\rho_0 x^3.
     \end{align}
 
-    Ein Teilchen auf der Kugelschale erfährt die Gravitationsbeschleunigung $\frac{GM(x)}{r(t)^2}$ (vgl. $a=\frac{m}{s^2}$). Die Bewegungsgleichung ist somit wie folgt zu berechnen: 
+    <p>Ein Teilchen auf der Kugelschale erfährt die Gravitationsbeschleunigung $\frac{GM(x)}{r(t)^2}$ (vgl. $a=\frac{m}{s^2}$). Die Bewegungsgleichung ist somit wie folgt zu berechnen: </p>
 
     \begin{align}
     \ddot r=\frac{d^2 r}{dt^2}=\frac{GM(x)}{r(t)^2}.
     \end{align}
 
-    Wie wir eben beschrieben haben, ist der der Radius $r(t)=a(t)x$. Somit können wir $r$ jetzt ersetzen:
+    <p> Wie wir eben beschrieben haben, ist der der Radius $r(t)=a(t)x$. Somit können wir $r$ jetzt ersetzen:</p>
 
     \begin{align}
     \ddot a(t)=\frac{\ddot r(t)}{x}=-\frac{4\pi G}{3}\frac{\rho_0}{a(t)^2}=-\frac{4\pi G}{3}\rho(t)a(t).
     \end{align}
 
-    Zur Übersichtlichkeit lassen wir ab jetzt die Abhängigkeit von $t$ weg. Somit haben wir:
+    <p>Zur Übersichtlichkeit lassen wir ab jetzt die Abhängigkeit von $t$ weg. Somit haben wir:</p>
 
     \begin{align}
     \ddot a=-\frac{4\pi G}{3}\frac{\rho_0}{a^2}
     \end{align}
 
-    Jetzt können wir mit $2\dot a$ multiplizieren. Das hat den Vorteil, dass wir zwei neue Erkenntnisse haben:
+    <p>Jetzt können wir mit $2\dot a$ multiplizieren. Das hat den Vorteil, dass wir zwei neue Erkenntnisse haben:</p>
 
     \begin{align*}
     2\dot a "a &=\frac{d\dot a^2}{dt}\\
     -\frac{\dot a}{a^2}&=\frac{d(a^{-1})}{dt}	
     \end{align*}
 
-    Jetzt multiplizieren wir mit dem Faktor $2\dot a$
+    <p>Jetzt multiplizieren wir mit dem Faktor $2\dot a$</p>
 
     \begin{align*}
-    \ddot a &= -\frac{4\pi G}{3}\frac{\rho_{0}}{a^2}  \;\;\;\;\;\;\;\; \vline\ \cdot 2\dot a\\
+    \ddot a &= -\frac{4\pi G}{3}\frac{\rho_{0}}{a^2}  \hspace{1cm} \Bigg| \cdot 2\dot a\\
     \Rightarrow 2\ddot a\dot a &= -\frac{8\pi G}{3}\rho_0\frac{\dot a}{a^2}
     \end{align*}
 
-    Setzen wir jetzt noch die vorherigen Terme ein:
+    <p>Setzen wir jetzt noch die vorherigen Terme ein:</p>
 
     \begin{align*}
     \frac{d\dot a^2}{dt}=\frac{8\pi G}{3}\rho_0	\frac{d(a^{-1})}{dt}.
     \end{align*}
 
-    Jetzt integrieren wie nach $t$:
+    <p>Jetzt integrieren wir nach $t$:</p>
 
     \begin{align}
     a^2=\frac{8\pi G}{3} \rho_0a^{-1}-Kc^2.
     \end{align}
 
-    Hier ist $-Kc^2$ eine Integrationskonstante. Jetzt sind wir fast fertig. Wir müssen noch zwei Schritte durchführen: Wir ersetzen $\rho_0$ mit $pa^3$ und dann teilen wir noch durch $a^2$ und erhalten:
+    <p>Hier ist $-Kc^2$ eine Integrationskonstante. Jetzt sind wir fast fertig. Wir müssen noch zwei Schritte durchführen: Wir ersetzen $\rho_0$ mit $pa^3$ und dann teilen wir noch durch $a^2$ und erhalten:</p>
 
     \begin{align}
     \left( \frac{\dot a}{a}\right)^2=\frac{8\pi G}{3}\rho - \frac{Kc^2}{a^2}
     \end{align}
 
-    \subsection{Herleitung der 2. Formel}
+    <h3>Herleitung der zweiten Formel</h3>
 
-    Jetzt leiten wir uns die zweite Formel her. Zuerst benutzen wir den ersten Hauptsatz der Thermodynamik (Die Änderung der inneren Energie $dU$ bei Volumenänderung $dV$ ist gleich der Arbeit oder als Formel: $dU=-P\cdot dV$, wobei $P$ der Druck der Materie ist.) In der Allgemeinen Relativitätstheorie sieht dieser Satz wie folgt aus: 
+    <p>Jetzt leiten wir uns die zweite Formel her. Zuerst benutzen wir den ersten Hauptsatz der Thermodynamik (Die Änderung der inneren Energie $dU$ bei Volumenänderung $dV$ ist gleich der Arbeit oder als Formel: $dU=-P\cdot dV$, wobei $P$ der Druck der Materie ist.) In der Allgemeinen Relativitätstheorie sieht dieser Satz wie folgt aus: </p>
 
     \begin{align}
     &\frac{d}{dt}(c^2\rho a^3) = -P\frac{d\ a^3}{dt}\\
@@ -465,14 +301,14 @@
     \Rightarrow &\dot \rho a^2 = -3a\dot a\left( \frac{P}{c^2} + \rho \right)	\label{eq:Friedmann1}.
     \end{align}
 
-    Wenn wir ein paar Termumformungen durchführen, und die so entstehende Gleichung differenzieren, erhalten wir die Gleichung
+    <p>Wenn wir ein paar Termumformungen durchführen, und die so entstehende Gleichung differenzieren, erhalten wir die Gleichung</p>
 
     \begin{align}
     \dot a^2 &= \frac{8\pi G}{3}\rho a^2-Kc^2 \hspace{1cm} \Bigg| \frac{d}{dt}\\
     2\dot a \ddot a &= \frac{8\pi G}{3} \left(\dot \rho a^2+2a \dot a \rho \right).
     \end{align}
 
-    Auf der rechten Seite der Gleichung setzen wir jetzt für $\dot \rho a^2$ Gleichung \eqref{eq:Friedmann1} ein und formen dann etwas um
+    <p>Auf der rechten Seite der Gleichung setzen wir jetzt für $\dot \rho a^2$ Gleichung \eqref{eq:Friedmann1} ein und formen dann etwas um</p>
 
     \begin{align}
     2\dot a \ddot a &= \frac{8\pi G}{3} \left(-3a\dot a \left(\frac{P}{c^2}+\rho \right) + 2a \dot a\rho \right)\\
@@ -480,7 +316,7 @@
     \Leftrightarrow \frac{\ddot a}{a} &= -\frac{4\pi G}{3} \left(\frac{3P}{c^2} + \rho \right).
     \end{align}
 
-    Jetzt haben wir die beiden Friedmann-LeMaitre-Expansionsgleichungen auch noch ohne die Feldgleichungen hergeleitet.
+    <p>Jetzt haben wir die beiden Friedmann-LeMaitre-Expansionsgleichungen auch noch ohne die Feldgleichungen hergeleitet.</p>
 
 
 <hr/>
