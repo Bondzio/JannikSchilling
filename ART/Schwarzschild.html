@@ -100,7 +100,7 @@
 
     <h2>Herleitung der Schwarzschild-Metrik</h2>
 
-    <p>In der Newtonschen Mechanik werden kugelsymetrische Massenverteilung in sehr guter Näherung durch das von ISaac NEwton gefundene Gravitationsgesetz </p>
+    <p>In der Newtonschen Mechanik werden kugelsymetrische Massenverteilung in sehr guter Näherung durch das von Isaac Newton gefundene Gravitationsgesetz </p>
 
     \begin{align}
     F_G=-G\frac{mM}{r^2} && \text{bzw. } && \phi_m=-G\frac{M}{r}
@@ -364,7 +364,19 @@
 
     <p>bestimmen können. Wir berechnen nun die nicht-verschwindenen Komponenten des Krümmungstensors.</p>
 
-
+    <p>Dazu bestimmen wir jeden einzelnen Term durch stumpfes Ausrechnen:</p>
+    \begin{align}
+    \partial_t \Gamma^t_{rr}&=0\\
+    -\partial_r \Gamma^t_{tr}&= \frac{2GM}{r^3}\left(1-\frac{2GM}{r}\right)^{-1}+\frac{2G^2M^2}{r^4}\left(1-\frac{2GM}{r}\right)^{-2}\\
+    \Gamma_{rr}^k\Gamma^t_{kt}&=\Gamma^{r}_{\cdot rr}\Gamma^t_{rt}\\
+    &= \frac{2G^2M^2}{r^4}\left(1-\frac{2GM}{r}\right)^{-2}\\
+    -\Gamma^k_{\cdot tr}\Gamma_{rk}^t&=-(\Gamma^t_{\cdot rt})^2\\
+    &= -\frac{G^2M^2}{r^4}\left(1-\frac{2GM}{r}\right)^{-2}
+    \end{align}
+    <p>Die Addition dieser Terme ergibt</p>
+    \begin{align}
+    R^t_{\cdot rtr}=\frac{2GM}{r^3}\left(1-\frac{2GM}{r}\right)^{-1}.
+    \end{align}
     <h2>Folgerungen aus der Schwarzschild-Metrik</h2>
 
     <p>Wir wollen uns im folgenden mit der Zeitdilatation in der Schwarzschild-Metrik befassen. Dazu müssen wir uns mit der Koordinatenzeit $t$ befassen. Dazu benutzen wir die Schwarzschild-Metrik</p>
