@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/DiffGeo/Kurven">
-<title>Kurs Mathematik - Die e-Funktion</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/KosmoKonstante">
+<title>Kurs ART - Kosmologische Konstante</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -27,9 +27,11 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
+
+
 <body>
-  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -73,8 +75,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Kurven</h2>
-                        <p>Home<span>/</span>Mathematik in der Oberstufe</p>
+                        <h2>Kosmologische Konstante</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -85,47 +87,85 @@
 
 
   <div class="main">
-    <h1>Die e-Funktion und ihre Ableitung</h1>
-    <p>In diesem Artikel wollen wir Exponentialfunktionen und ihre Ableitungen betrachten.</p>
-    <p><b>Definition:</b> Es sei $a\in\mathbb{R}$. Dann nennen wir $f$ Exponentialfunktion</p>
+    <h1>Kosmologische Konstante</h1>
+    <p>Zu der Zeit Einsteins hielten die meisten Forscher ein statisches Universum für die sinnvollste Option. Doch dies passte mit den eben hergeleiteten Feldgleichungen nicht zusammen, da die so beschriebenen Universen instabil waren. Dazu änderte er die Feldgleichungen und ergänzte eine Konstante $\Lambda$. Später verwarf er diese Idee und bezeichnete sie angeblich als die "größte Eselei seines Lebens".</p>
+    
+    <p>Wenn die kosmologische Konstante in der heutigen Wissenschaft keine Rolle mehr spielen würde, würde ich ihr kein eigenes Kapitel widmen. Sie ist nämlich in den Fokus gerutscht als Wissenschaftler eine Beschleunigung der Expansion mit der Zeit gemessen haben. Um diesen Effekt zu erklären, führten die Wissenschaftler die kosmologische Konstante wieder ein. Ihr Wert ist zwar sehr klein, aber nicht Null.</p>
+    
+    <p>Heute interpretieren wir die Kosmologische Konstante nicht mehr als Parameter der Allgemeinen Relativitätstheorie, sondern als zeitlich konstante Energiedichte $\rho_{vac}$</p>
+    
     \begin{align}
-    f(x)=a^x.
+    \Lambda =\frac{8\pi G}{c^2}\rho_{vac}\approx 1,9\cdot 10^{-29}\ \text{m/kg} \cdot \rho_{vac}.
     \end{align}
-    <p>Die Ableitung einer Exponentialfunktion lässt sich mit dem Differentialquotienten bestimmen:
-    </p>
+    
+    <p>Die Annahme der zeitlichen Konstanz der Vakuumenergiedichte führt zu der Zustandsgleichung</p>
+    
     \begin{align}
-    f'(x)&=\operatorname{lim}_{h\rightarrow 0} \frac{a^{x+h}-a^x}{h}\\
-    &=\lim_{h\rightarrow 0}\frac{a^xa^h-a^x}{h}\\
-    &= \lim_{h\rightarrow 0}\frac{a^h-1}{h}\\
-    &= a^x\cdot \left(\lim_{h\rightarrow 0}\frac{a^h-1}{h}\right).
+    \rho_{vac}=-\frac{p}{c^2},	
     \end{align}
-    <p>Der hier auftredende Ausdruck ist eine Konstante:</p>
+    
+    <p>das heißt eine positive Vakuumdichte führt zu negativem Druck $p$, der für die Expansion des Universums verantwortlich ist.</p>
+    
+    <p>Forscher haben herausgefunden, dass ca. 70\%  der Materie des Universums durch die dunkle Energie bestimmt sind. Mit dem Parameter $\Omega_{\Lambda}$ können wir auch schreiben</p>
+    
     \begin{align}
-    C=\lim_{h\rightarrow 0}\frac{a^h-1}{h}.
+    \Omega_{\Lambda}\approx 0,7.	
     \end{align}
-    <p>Die Ableitung der Exponentialfunktion unterscheidet sich von der Ursprungsfunktion also nur durch eine Konstante $C$:</p>
-
+    
+    <p>Einstein hat mit der kosmologischen Konstante die allgemeinste Form der Einsteinschen Feldgleichungen gefunden, also</p>
+    
     \begin{align}
-    f'(x)=C\cdot f(x).
-    \end{align}
-    <p>Wir wollen nun $a$ so wählen, dass $C=1$ wird. Damit folgt für $a$</p>
-    \begin{align}
-    a=\lim_{h\rightarrow 0}(1+h)^{1/h}.
-    \end{align}
-    <p>Dieser Grenzwert entspricht formal dem Grenzwwert einer Folge $\lim_{t\rightarrow 0}(1+t)^\left(\frac{1}{t}\right)$ reeller Zahlen. Der Grenzwert wurde erstmals von dem Mathematiker Leonhard Euler bestimmt und wird daher \glqq Eulersche Zahl\grqq\ genannt. Damit ergibt sich die Exponentialfunktion</p>
-    \begin{align}
-    f(x)=e^x && f'(x)=e^x
-    \end{align}
-    <p>Die Konstante $e$ heißt eulersche Zahl und hat den Wert:</p>
-    \begin{align}
-    e=2,71828...
+    R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda  g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}.	
     \end{align}
 
-    <h2>Die Umkehrfunktion der Eulerschen Funktion</h2>
-    <p>Es sei $f(x)=x^2$. Dann nennen wir $f^{-1}(x)$ die Umkehrfunktion zu $f$. Es gilt</p>
-    $$f^{-1}(x)=\sqrt{x}.$$
+    <hr />  
 
-</div>
+<div class="navigation-area">
+  <div class="row">
+    <div
+        class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+        <div class="thumb">
+          <a href="https://www.jannik-schilling.com/art/krummungstensor">
+              <img class="img-fluid" src="../Bilder/arrow-l.jpg" alt="">
+          </a>
+        </div>
+        <div class="arrow">
+          <a href="#">
+              <span class="lnr text-white ti-arrow-left"></span>
+          </a>
+        </div>
+        <div class="detials">
+          <p>Letzte Lektion</p>
+          <a href="https://www.jannik-schilling.com/art/krummungstensor">
+              <h4>Der Krümmungstensor</h4>
+          </a>
+        </div>
+    </div>
+    <div
+        class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+        <div class="detials">
+          <p>Nächste Lektion</p>
+          <a href="https://www.jannik-schilling.com/art/schwarzschild">
+              <h4>Die Schwarzschild-Metrik</h4>
+          </a>
+        </div>
+        <div class="arrow">
+          <a href="#">
+              <span class="lnr text-white ti-arrow-right"></span>
+          </a>
+        </div>
+        <div class="thumb">
+          <a href="https://www.jannik-schilling.com/art/schwarzschild">
+              <img class="img-fluid" src="../bilder/arrow-r.png" alt="">
+          </a>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <hr/>
 
         <div id="disqus_thread"></div>
 <script>
@@ -202,20 +242,20 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
-
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
 
 
 

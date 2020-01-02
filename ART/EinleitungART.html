@@ -84,31 +84,30 @@
   <div class="main">
     <h1>Einführung in die ART</h1>
 
-    <h2>Massen-Äquivalenz</h2>
-    
-    <p><b>Achtung! </b> Massenäquivalenz meint hier nicht $E=mc^2$, sondern das Verhältnis aus schwerer Masse und träger Masse!</p>
+    <h2>Verschiedene Massen?!</h2>
 
-    <p>Wir wollen nun drei verschiedene Gleichungen der Newtonschen Mechanik betrachten. In all diesen drei Gleichungen treten verschiedene Arten von Masse auf.</p>
+    <p>Wir wollen nun drei verschiedene Massen betrachten, die in der Newtonschen Mechanik auftreten.</p>
 
     <ul class="unordered-list">
-    <li><p>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung ist. Es gilt</p>
+    <li><p>Die träge Masse $m_t$ ist nach dem zweiten Newtonschem Axiom ein Maß für den Trägheitswiderstand eines Körpers entgegen seiner Beschleunigung. Es gilt</p>
     \begin{align}
     m_t \ddot x=F	
     \end{align}</li>
-    <li><p>Die passive Gravitationsmasse $m_g$ ist als Faktor mit</p>
+    <li><p>Die passive Gravitationsladung $m_g$ ist als Faktor mit</p>
 
     \begin{align}
     F=-m_G\nabla\phi	
     \end{align}
 
     <p>definiert ist.</p></li>
-    <li><p>Die aktive Gravitationsmasse $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit</p>
+    <li><p>Die aktive Gravitationsladung $M_G$ charakterisiert die Quellstärke des von der Materie erzeugten Gravitationsfeldes mit</p>
 
     \begin{align}
-    \phi=-\frac{GM_G}{r}.	
+    \phi=-\frac{GM_G  }{r}.	
     \end{align}</li>
     </ul>
 
+    
     <h2>Schwaches Äquivalenzprinzip</h2>
 
     <p>Die schwere Masse bezeichnet die Eigenschaft eines beliebigen Körpers in einem Gravitationsfeld einer anderen Masse eine Kraft zu erfahren.</p>
@@ -122,10 +121,10 @@
     <p>Die Massen $m_t$ und $m_t^{'}$ erfahren in dem Gravitationsfeld $Q$ eine Kraft, und besitzen somit auch schwere schwere Massen $q_1$ und $q_2$. Wenn wir nun diese Objekte fallen lassen, kommen wir zu der Erkenntnis, dass beide Objekte unabhängig von ihrer trägen Masse gleich schnell fallen. Das bedeutet für die Beschleunigungen der Objekte $\partial_t^2\vec{r}_1$ und $\partial_t^2\vec{r}_2$, dass beide Beschleunigungen gleich groß sind</p> 
 
     \begin{align}
-    \partial_t^2\vec{r}_1=\\partial_t^2 \vec{r}_2.	
+    \partial_t^2\vec{r}_1=\partial_t^2 \vec{r}_2.	
     \end{align}
 
-    <p>Dies können wir nun mit dem zweiten Newtonschen Axiom ($F=ma$, wenn $m(t)$ konstant ist) formulieren durch</p>
+    <p>Dies können wir nun mit dem zweiten Newtonschen Axiom ($F=ma$) formulieren durch</p>
 
     \begin{align}
     m_t\cdot r_1 &= F_{Q_1}\\
@@ -152,11 +151,49 @@
     <b>Wir halten fest: </b>
     <p>Objekte mit unterschiedlicher träger Masse erfahren im Schwerefeld eines Objektes bei gleichen Anfangsbedingungen die gleichen Beschleunigungen. Das Verhältnis aus schwerer Masse ($m_s$) und träger Masse ($m_s$) ist für alle Körper gleich und kann bei geeigneter Einheitenwahl auf Eins normiert werden.</p>
 
-    <h2>Fahrstuhlexperimente</h2>
+    <div class="section-top-border">
+      <h3 class="mb-30">Das schwache Äquivalenzprinzip</h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <blockquote class="generic-blockquote">
+            “Das schwache Äquivalenzprinzip charakterisert die Masse eines Objekts als die einzige Größe, die auf die Stärke der Gravitation wirkt. Weiterhin sind sowohl die schwere Masse als auch die träge Masse äquivalent zueinander. ”
+          </blockquote>
+        </div>
+      </div>
+    </div>
 
-    <h3>Starkes Äquivalenzprinzip</h3>
-    <p><b>Wir halten fest: </b></p>
-    <p>In einem kleinen Labor, das in einem Schwerefeld fällt, sind die Gesetze der Physik dieselben wie jene, die in Abwesenheit eines Schwerefeldes in einem Newtonschen Inertialsystem beobachtet werden.</p>
+    <h2>Starkes Äquivalenzprinzip</h2>
+    <p>Neben dem schwachen Äquivalenzprinzip, das bereits in der klassischen Mechanik postuliert wird, hat Albert Einstein dieses Prinzip erweitert.</p>
+    <div class="section-top-border">
+      <h3 class="mb-30">Block Quotes</h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <blockquote class="generic-blockquote">
+            “In einem kleinen Labor, das in einem Schwerefeld fällt, sind die Gesetze der Physik dieselben wie jene, die in Abwesenheit eines Schwerefeldes in einem Newtonschen Inertialsystem beobachtet werden.”
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+        <h2>Trägheitssatz von Sylvester</h2>
+    
+    <p>Der Trägheitssatz von Sylvester ist in der Allgemeinen Relativitätstheorie elementar. Der Satz sagt aus, dass sich jede Metrik $g_{\mu\nu}$ in einer Orthonomalbasis als Diaogonalmatrix mit Einträgen $\pm 1$ darstellen. Wir weisen dann dieser Metrik die Signatur bzw. die Trägheit $(r,s)$ zu.</p>
+    <br>
+    <p><b>Signatur/Trägheit einer Matrix</b></p>
+    <br>
+    <p>Wenn die Koeffizientenmatrix der Metrik $r$-mal den Eintrag $+1$ und $s$-mal den Eintrag $-1$, so sprechen wir von einer $(r,s)$ Signatur.</p>
+    
+    <p>So hat zum Beispiel die Minkowski-Metrik eine Signatur von $(3,1)$ bzw. $(1,3)$.</p>
+    
+    <p>Das bedeutet nichts anderes, als dass die Gravitation lokal wegtransformiert werden kann. </p>
+    <br>
+    <center>
+    <p><b>Trägheitssatz von Sylvester</b></p>
+    </center>
+    <br>
+    <p>Die Gravitation lässt sich für jede Metrik lokal wegtransformiert. Wir können also - wie wir es beim Differenzieren machen - in einer genügend kleinen Umgebung eines Punktes Koordinaten finden, sodass sich "kräftefreie" Teilchen auf Geraden bewegen.</p>
+    
+    
 
     <hr />  
 
@@ -289,16 +326,7 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </footer>
 
-<script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  </script>
+
 
   <script src="../kurse/js/jquery-1.12.1.min.js"></script>
   <script src="../kurse/js/popper.min.js"></script>

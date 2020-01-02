@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+<meta charset="UTF-8">
+
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/FriedmannGleichung">
+<title>Kurs ART - Friedmann-Gleichungen
+</title>
+<meta name="description" content="">
+<meta name="og:title" property="og:title" content="">
+<meta name="twitter:card" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
+<link rel="stylesheet" href="../kurse/css/animate.css">
+<link rel="stylesheet" href="../kurse/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../kurse/css/themify-icons.css">
+<link rel="stylesheet" href="../kurse/css/flaticon.css">
+<link rel="stylesheet" href="../kurse/css/magnific-popup.css">
+<link rel="stylesheet" href="../kurse/css/slick.css">
+<link rel="stylesheet" href="../kurse/css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="main_menu single_page_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--<a class="navbar-brand logo_1" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>
+                    <a class="navbar-brand logo_2" href="index.html"> <img src="JS.png" height="50px" alt="logo"> </a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/">Startseite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/about">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/cource.html">Kurse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.jannik-schilling.com/blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Friedmann-Gleichungen</h2>
+                        <p>Home<span>/</span>ART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <div class="main">
+    <h1>Friedmann-Gleichungen</h1>
+    <div class="section-top-border">
+        <h3 class="mb-30">Fazit</h3>
+        <div class="row">
+          <div class="col-lg-12">
+            <blockquote class="generic-blockquote">
+                Wir werden in diesem Artikel die beiden Friedmann-Gleichungen herleiten. Denn mit diesen Gleichungen haben wir die Grundlage für das Urknallmodell an der Hand. Diese beiden Gleichungen lauten:
+    
+                \begin{align}
+                \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}=\frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{a^2 R_0^2}\label{eq:FriedmannEq1}\\
+                H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\varepsilon +3p)+c^2\frac{\Lambda}{3}\label{eq:FriedmannEq2},
+                \end{align}
+                wobei
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    <p>Der russische Physiker Alexander Friedmann haben in seinen Arbeiten \cite{friedmann1922krummung} und in \cite{friedmann1924moglichkeit} ein einfaches Modell erstellt, das den Feldgleichungen genügt. In diesen Arbeiten charakterisiert er alle entstehenden Universen durch den auftretenden Parameter $\Omega$. Durch geeignete Wahl dieses Parameters ($\Omega < 0$, $\Omega =0$ oder $\Omega >0$) sagen die Gleichungen drei verschiedene Expansionsraten voraus.</p>
+
+    <p>Auch der belgische Physiker und Theologe Georges Lemaître hat einen großen Beitrag zu der Entwicklung und Deutung der Friedmann-Gleichungen beigetragen und gilt daher heute als Begründer der Urknalltheorie.</p>
+
+    <div class="section-top-border text-right">
+        <h3 class="mb-30">Edwin Hubbles Messung</h3>
+        <div class="row">
+            <div class="col-md-9">
+                <p class="text-right">Die Friedmann-Gleichungen sind die heutige Begründung für ein dynamisches Universum. Ursache für die Popularität dieser Gleichungen sind die Beobachtungen von Edwin Hubble im Jahr 1929. Der ehemalige Boxer stellte fest, dass die Rotverschiebung $z$ </p>
+
+                \begin{align}
+                z=\frac{\lambda_{\text{observed}}-\lambda_{\text{emitted}}}{\lambda_{\text{emitted}}}	
+                \end{align}
+            
+                <p class="text-right">von Spektrallinien entfernter Galaxien proportional zu der Entfernung $d$ wächst.</p>
+                <p class="text-right">Die Grafik zeigt die Messwerte von Edwin Hubble. Er fand einen linearen Zusammenhang zwischen der Entfernungsgeschwindigkeit und der Distanz des Objektes zu uns. Heute geben wir das Gesetz von Hubble normalerweise als Relation zwischen Entfernung und Rotverschiebung an, da wir die Rotverschiebung direkt messen können.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="../Bilder/hubble.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <p>Diese Rotverschiebung wurde früher als Dopplereffekt gedeutet, also</p>
+
+    \begin{align}
+    \frac{\lambda_{\text{observed}}-\lambda_{\text{emitted}}}{\lambda_{\text{emitted}}}=\frac{v}{c}.
+    \end{align}
+
+    <p>Damit können wir die Fluchtgeschwindigkeit entfernter Galaxien durch die Beziehung </p>
+
+    \begin{align}
+    v=cz=H_0 d,	
+    \end{align}
+
+    <p>ausdrücken. Dieses Gesetz heißt Hubble-Gesetz. Die Expansion des Universums können wir mit Hilfe der Hubble-Konstante $H_0$ ausdrücken. Diese Konstante gibt die durch die Expansion verursachte Geschwindigkeit eines Objektes an.</p>
+
+    <h2>Modell eines einfachen Universums</h2>
+
+    <p>Die Friedmann-Gleichungen basieren auf einigen grundlegenden Beobachtungen, auch kosmologisches Prinzip genannt. </p>
+
+    <ul class="unordered-list">
+    <li>Das Universum näherungsweise homogen. Das bedeutet, dass das Universum überall gleich aufgebaut ist und eine einheitliche Struktur besitzt.</li>
+    <li>Das Universum ist (bis auf einige Quantenfluktuationen am Anfang des Universums) isotrop. Das bedeutet, dass das Universum in allen Raumrichtungen die selben physikalischen Eigenschaften und Gesetze aufweist.</li>
+    </ul>
+
+    <p>Wenn ein Universum isotrop ist, dann ist das Universum auch homogen, allerdings nicht umgekehrt.</p>
+
+
+    <h3>Der Energie-Impuls-Tensor</h3>
+
+    <p>Zuerst wollen wir den Energie-Imuls-Tensor für die Feldgleichungen festlegen. Als Modell für unser einfaches Universum wählen wir den Energie-Impuls-Tensor einer idealen Flüssigkeit.</p>
+
+    <p>Dieser hat die Eigenschaft, dass die Koeffizientenmatrix dieses Tensors nur Diagonalelemente besitzt, da keine der Raumrichtungen ausgezeichnet sein sollen. Diese Eigenschaft des Universums heißt Isotropie. Der einfachste Tensor mit dieser Eigenschaft ist der Energie-Impuls-Tensor einer idealen Flüssigkeit, weshalb wir diesen im Folgenden verwenden wollen.</p>
+
+    <p>Der Energie-Impuls-Tensor ergibt sich durch</p>
+
+    \begin{align}
+    T_{\mu\nu}=\begin{pmatrix}
+    \rho & 0&0&0\\
+    0&p&0&0\\
+    0&0&p&0\\
+    0&0&0&p	
+    \end{pmatrix}=\operatorname{diag}(\rho, p, p, p).	
+    \end{align}
+
+    <p>Selbstverständlich könnten wir auch andere Energie-Impuls-Tensoren verwenden, die diese Eigenschaften erfüllen. Wir könnten genauso gut den Energie-Impuls-Tensor einer vikosen Flüssigkeit verwenden.</p>
+
+    <h3>Ricci-Tensor und Ricci-Skalar</h3>
+
+    <p>Aus den vorherigen Abschnitten wissen wir, dass der Riemannschen Krümmungungstensors mit den Christoffel-Symbolen zusammenhängt. Mit der Robertson-Walker-Metrik erhalten wir die nicht-verschwindenden Komponenten des Ricci-Tensors, der sich durch Kontraktion des Krümmungstensors ergibt:</p>
+
+    \begin{align}
+    R_{00}=-3\frac{\ddot R}{R},&& R_{ij}=-\left[\frac{\ddot R}{R}+2\frac{\dot R^2}{R^2}+\frac{2k}{R^2}\right]\cdot G_{ij}.	
+    \end{align}
+
+    <p>Es bleibt nur $R_{ii}$ übrig</p>
+
+    \begin{align}
+    R_{ii}=\frac{\ddot R}{R}+2\frac{\dot R^2}{R^2}+\frac{2k}{R^2}	
+    \end{align}
+
+    <p>Der Ricci-Skalar ergibt sich über $R^{\mu\nu}$ durch Multiplikation mit $g_{\mu\nu}$, wir erhalten also</p>
+
+    \begin{align}
+    R=(-6)\left[\frac{\ddot R}{R}+\frac{\dot R^2}{R^2}+\frac{k}{R^2}\right]	.
+    \end{align}
+
+    <h3>Die Zeitkomponente</h3>
+
+    <p>Mit den Feldgleichungen $(R_{\mu\nu}-\frac{1}{2} R\, g_{\mu\nu}=8\pi G\, T_{\mu\nu})$ erhalten wir </p>
+
+    \begin{align}
+    -3\frac{\ddot R}{R}+\frac{1}{2}\cdot 6 \left[\frac{\ddot R}{R}+\frac{\dot R^2}{R^2}+\frac{k}{R^2}\right]=8\pi G \cdot \rho.
+    \end{align}
+
+    <p>Durch einige Umformungen erhalten wir</p>
+
+    \begin{align}
+    \frac{\dot R^2}{R^2}+\frac{k}{R^2}=\frac{8\pi G}{3}\cdot \rho.	
+    \end{align}
+
+    <h3>Die räumliche Komponente</h3>
+
+    <p>Wir erhalten die räumliche Komponente, indem wir unsere Erkenntnisse in die Feldgleichungen einsetzen, also</p>
+
+    \begin{align}
+    \frac{\ddot R}{R}+2\frac{\dot R^2}{R^2}+\frac{2k}{R^2}-3\cdot \left[\frac{\ddot R}{R}+\frac{\dot R^2}{R^2}+\frac{k}{R^2}\right]=8\pi G\cdot p	.
+    \end{align}
+
+    <p>Durch einige Vereinfachungen ergibt sich</p>
+
+    \begin{align}
+    -2\frac{\ddot R}{R}-\frac{\dot R^2}{R^2}-\frac{k}{R^2}=8\pi G\cdot p.	
+    \end{align}
+
+    <h2>Der Urknall</h2>
+
+    <p>Wir haben eben zwei Gleichungen erhalten, die wir voneinander subtrahieren können. Wir erhalten dann</p>
+
+    \begin{align}
+    \frac{\ddot R}{R}=-\frac{4\pi G}{3}(\rho+3p).	
+    \end{align}
+
+    <p>Innerhalb einer endlichen Zeit gibt es dann einen Punkt ohne Ausbreitung, es gilt also</p>
+
+    \begin{align}
+    R(t_{BB})=0.
+    \end{align}
+
+    <p>Folglich haben einige kosmologische Parameter Singularitäten an diesem Punkt. Der Zeitpunkt $t_{BB}$ wird als Zeitnullpunkt gesetzt, also</p>
+
+    \begin{align}
+    t_{BB}=0.	
+    \end{align}
+
+    <p>Nach diesem Zeitpunkt breitet sich das Universum aus. Der Punkt, an dem das Universum keine Ausdehnung hat, heißt "Big Bang", oder auf deutsch Urknall. Wir wollen jetzt feststellen, ob die Singularität am Anfang des Universums "nur" eine Koordinatensingularität ist, oder nicht.</p>
+
+    <!--\section{Dichte und kosmischer Skalenfaktor}
+
+    \section{Lösungen der Friedmann-Gleichung}
+
+    \section{Alter des Universums}-->
+
+    <h3>Die kosmologische Konstante</h3>	
+        
+    <p>Wir haben im Rahmen der Untersuchung der Einsteinschen Feldgleichungen die allgemeinste Form der Gleichungen kennengelernt </p>
+
+    \begin{align}
+    R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4} T_{\mu\nu}	.
+    \end{align}
+
+    <p>Für die $00$-Komponente und der $11$-Komponente ergeben sich die Friedmann-Gleichungen mit kosmologischer Konstante</p>
+
+    \begin{align}
+    \frac{3}{c^2R^2}\left(\dot R^2+c^2\kappa \right)	=\frac{8\pi G}{c^4}\varepsilon +\Lambda.
+    \end{align}
+
+    <p>Durch Multiplikation mit $c^2/3$ und unter Beachtung von $R=a(t)R_0$ erhalten wir die beiden Friedmann-Gleichungen in der Form</p>
+
+    \begin{align}
+    \left(\frac{\dot a}{a}\right)^2 &= \frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{R^2}=\frac{8\pi G}{3c^2}\varepsilon +c^2\frac{\Lambda}{3}-\frac{c^2\kappa}{a^2 R_0^2}\\
+    H^2(t)=\frac{\ddot a}{a} &= -\frac{4\pi G}{3c^2}(\varepsilon +3p)+c^2\frac{\Lambda}{3}.
+    \end{align}
+
+    <p>Hier können wir nun die Wirkung von der kosmologischen Konstante $\Lambda$ erkennen. Wenn die kosmologische Konstante in der zweiten Friedmann-Gleichung positiv ist, erhalten wir einen weiteren Beitrag zu der Beschleunigung des Universums. Die Gravitation ist bekanntlich bestrebt, Massen zusammenzuziehen, da der obige Term aber positiv ist, erhalten wir so etwas wie "Antigravitation".</p>
+
+    <h3>Einsteins statische Lösung</h3>
+
+    <p>Einstein hätte schon früh, namlich im Jahre 1916, die Expansion des Universums postulieren können. Erst die experimentelle Bestätigung der Expansion des Universums und die Instabilität der statischen Lösungen von den Feldgleichungen konnten Einsten überzeugen.</p>
+
+    <p>Einstein wählte die kosmischen Parameter wie folgt, um ein statisches Universum zu beschreiben:</p>
+
+    <ul>
+    <li>\begin{align} \dot a =0\end{align}</li>
+    <li>\begin{align}\ddot a = 0 \end{align}</li>
+    <li>\begin{align} p=0 \end{align}</li>
+    <li><p>Kosmischer Skalenfaktor </p>
+    \begin{align} 
+    \kappa=1.
+    \end{align}</li>
+    </ul>
+
+    <p>Damit das Universum für alle Zeiten nicht expandiert, muss nicht nur $\dot a(t)$ immer Null sein, sondern auch $\ddot a(t)$ muss immer Null sein, also</p>
+
+    \begin{align}
+    \dot a(t)=\ddot a(t)=0.	
+    \end{align}
+
+    <p>Dann erhalten wir für die Friedmann-Gleichungen folgendes:</p>
+
+    \begin{align}
+        0 &= \frac{8\pi G}{3c^2}+\frac{c^2\Lambda}{3}-\frac{c^2\kappa}{a^2R_0^2}\label{eq:Friedmann_Derivation_1}\\
+        0 &= -\frac{4\pi G}{3c^2}\varepsilon +\frac{c^2\Lambda}{3}\Leftrightarrow \frac{c^2\Lambda}{3}=\frac{4\pi G}{3c^2}\label{eq:Friedmann_Derivation_2}.
+    \end{align}
+
+    <p>Wenn wir Gleichung \eqref{eq:Friedmann_Derivation_2} in Gleichung \eqref{eq:Friedmann_Derivation_1} einsetzen, erhalten wir </p>
+
+    \begin{align}
+    0=\frac{4\pi G}{c^2}-\frac{c^2\kappa}{a^2R_0^2}	\label{eq:Skalenparameter_Derivation}
+    \end{align}
+
+    <p>Damit die Subtraktion Null wird, muss $\kappa>0$ gelten. Wir wählen hier </p>
+
+    \begin{align}
+    \kappa=+1.	
+    \end{align}
+
+    <p>Aus Gleichung \eqref{eq:Skalenparameter_Derivation} folgt der Skalenparameter $a$ durch einige Umformungen</p>
+
+    \begin{align}
+    a=\frac{c^2}{\sqrt{4\pi G\varepsilon}R_0}.
+    \end{align}
+
+    <p>Dieser Skalenfaktor $a(t)=a$ ist wie gefordert konstant. Wenn wir diesen Skalenparameter nun auf Eins normieren und für die Dichte die kritische Dichte wählen, also</p>
+
+    \begin{align}
+    \rho=\frac{\varepsilon}{c^2}=0,9\cdot 10^{-26}\frac{\text{kg}}{\text{m}^3}	.
+    \end{align}
+
+    <p>Das ist die kritische Dichte, bei der die Geometrie gerade den Übergang von einem flachen zu einem geschlossenem Universum darstellt. Dann erhalten wir einen Weltradius $R_0$ mit </p>
+
+    \begin{align}
+    R_0\approx 3,3\, GPc=1,04\cdot 10^{26}\, \text{m}
+    \end{align}
+
+    <h3>Die kosmologische Konstante - Nobelpreis 2011</h3>
+
+    <p>Einstein hatte die komsmologische Konstante zwar ursprünglich eingeführt, um ein statisches Universum zu beschreiben. Da zahlreiche Beobachtungen gezeigt haben, dass das Universum expandiert, hat Einstein die Einführung der kosmologischen Konstante wieder zurückgerufen und soll sie sogar im Gespräch mit George Gamow als "größte Eselei meines Lebens" bezeichnet haben.</p>
+
+    <p>In den letzten Jahrzehnten hat die kosmologische Konstante hingegen wieder einen Aufschwung gefeiert, um die mysteriöse Dunkle Energie zu erklären. Dafür haben im Jahr 2011 die Leiter zweier langjähriger wissenschaftlicher 	Projekte zur Vermessung des Beitrages der kosmologischen Konstante zur kosmologischen Expansion den Physik-Nobelpreis erhalten. Die Physiker Saul Perlmutter (Leiter des Supernovae Cosmolgy Project) und die beiden Physiker Brian P. Schmidt und Adam G. Riess (Leiter des High-Z Supernovae Search) haben versucht, die kosmologische Konstante zu vermessen.</p>
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{nobelpreis-2011}
+        \caption{Von links nach rechts: Adam G. Riess, Saul Perlmutter und Brian P. Schmidt.}
+    \end{figure}
+
+    <h2>Die Expansion des Universums</h2>
+
+    <p>Wir haben schon den Hubble-Parameter $H_0$ kennengelernt. Dieser ist definiert durch</p>
+
+    \begin{align}
+    H_0=\frac{\dot a}{a}.	
+    \end{align}
+
+    <p>Hierbei ist $a$ der Skalenfaktor. Dieser ist eine Funktion der Zeit und gibt die relative Expansion des Universums an. Mathematisch gesprochen stellt der Hubble-Parameter einen Zusammenhang zwischen den physikalischen Koordinaten und den mitbewegten Koordinaten her.</p>
+
+    <p>Aus den Friedmann-Gleichungen folgen drei Modelle für das Universum:</p>
+
+    <ul>
+    <li>Sei die kinetische Energie kleiner als die potentielle Energie, also
+
+    \begin{align}
+    E_{\text{kin}}< E_{\text{pot}}.	
+    \end{align}
+    Dann ist $\Omega_0>1$. Die Gravitation ist dann also in der Lage die Expansion abzubremsen und umzukehren. Das Universum stürzt dann durch die Gravitation wieder in sich zusammen. Es kommt dann zu einem \glqq Big Crunch\grqq\ und das Universum ist ein geschlossenes Universum.}
+    \item{Sei die kinetische Energie gleich der potentiellen Energie:
+
+    \begin{align}
+    E_{\text{kin}}=E_{\text{pot}},	
+    \end{align}
+    dann ist also $\Omega=1$. Die Expansion des Universums kommt sehr schnell zum Stillstand und das Universum ist flach.
+    </li>
+    <li>Sei die kinetische Energie größer als die potentielle Energie:
+
+    \begin{align}
+    E_{\text{kin}}>E_{\text{pot}}.	
+    \end{align}
+    Das Universum dehnt sich immer weiter aus und die Expansion verlangsamt sich nicht
+    </li>
+</ul>
+
+    <p>Dann sieht die Ausdehnung $R(t)$ abhängig von der Zeit wie folgt aus:</p>
+
+    <figure class="size-2">
+        <img src="../Bilder/expansion.png" style="width:100%">
+        <figcaption>Die Grafik zeigt die Messwerte von Edwin Hubble. Er fand einen linearen Zusammenhang zwischen der Entfernungsgeschwindigkeit und der Distanz des Objektes zu uns. Heute geben wir das Gesetz von Hubble normalerweise als Relation zwischen Entfernung und Rotverschiebung an, da wir die Rotverschiebung direkt messen können.</figcaption>
+    </figure>
+        
+    \section{Herleitung ohne Feldgleichungen}
+
+    Wir betrachten zunächst eine Kugel mit dem Radius $x$ und der Dichte $\rho_0$ zur Zeit $t_0$, was dem heutigen Zeitpunkt entspricht. Für ein kugelförmig ausdrehendes und zusammenziehendes Universum verändert sich der Radius mit der Zeit. Die neue verändernde Funktion entspricht $a(t)$. Diese Funktion wird auch Skalenfaktor genannt und ist einheitenlos, kann aber auch als eine Länge betrachtet werden. Er gibt die relative Expansion des Universums an:
+
+    \begin{align}
+    r(t)=a(t)x
+    \end{align}
+
+    Damit bekommen wir für die Dichte:
+
+    \begin{align}
+    \rho(t)=\rho_{0}a^{-3}.
+    \end{align}
+
+    Die Masse einer ausdehnenden oder zusammenziehendender Kugel ist zeitunabhängig und konstant und wird mir folgendem Term beschrieben (vgl. $V_{Kugel}=\frac{4}{3}\pi r^3$): 
+
+    \begin{align}
+    M(x)=\frac{4\pi}{3}\rho_0 x^3.
+    \end{align}
+
+    Ein Teilchen auf der Kugelschale erfährt die Gravitationsbeschleunigung $\frac{GM(x)}{r(t)^2}$ (vgl. $a=\frac{m}{s^2}$). Die Bewegungsgleichung ist somit wie folgt zu berechnen: 
+
+    \begin{align}
+    \ddot r=\frac{d^2 r}{dt^2}=\frac{GM(x)}{r(t)^2}.
+    \end{align}
+
+    Wie wir eben beschrieben haben, ist der der Radius $r(t)=a(t)x$. Somit können wir $r$ jetzt ersetzen:
+
+    \begin{align}
+    \ddot a(t)=\frac{\ddot r(t)}{x}=-\frac{4\pi G}{3}\frac{\rho_0}{a(t)^2}=-\frac{4\pi G}{3}\rho(t)a(t).
+    \end{align}
+
+    Zur Übersichtlichkeit lassen wir ab jetzt die Abhängigkeit von $t$ weg. Somit haben wir:
+
+    \begin{align}
+    \ddot a=-\frac{4\pi G}{3}\frac{\rho_0}{a^2}
+    \end{align}
+
+    Jetzt können wir mit $2\dot a$ multiplizieren. Das hat den Vorteil, dass wir zwei neue Erkenntnisse haben:
+
+    \begin{align*}
+    2\dot a "a &=\frac{d\dot a^2}{dt}\\
+    -\frac{\dot a}{a^2}&=\frac{d(a^{-1})}{dt}	
+    \end{align*}
+
+    Jetzt multiplizieren wir mit dem Faktor $2\dot a$
+
+    \begin{align*}
+    \ddot a &= -\frac{4\pi G}{3}\frac{\rho_{0}}{a^2}  \;\;\;\;\;\;\;\; \vline\ \cdot 2\dot a\\
+    \Rightarrow 2\ddot a\dot a &= -\frac{8\pi G}{3}\rho_0\frac{\dot a}{a^2}
+    \end{align*}
+
+    Setzen wir jetzt noch die vorherigen Terme ein:
+
+    \begin{align*}
+    \frac{d\dot a^2}{dt}=\frac{8\pi G}{3}\rho_0	\frac{d(a^{-1})}{dt}.
+    \end{align*}
+
+    Jetzt integrieren wie nach $t$:
+
+    \begin{align}
+    a^2=\frac{8\pi G}{3} \rho_0a^{-1}-Kc^2.
+    \end{align}
+
+    Hier ist $-Kc^2$ eine Integrationskonstante. Jetzt sind wir fast fertig. Wir müssen noch zwei Schritte durchführen: Wir ersetzen $\rho_0$ mit $pa^3$ und dann teilen wir noch durch $a^2$ und erhalten:
+
+    \begin{align}
+    \left( \frac{\dot a}{a}\right)^2=\frac{8\pi G}{3}\rho - \frac{Kc^2}{a^2}
+    \end{align}
+
+    \subsection{Herleitung der 2. Formel}
+
+    Jetzt leiten wir uns die zweite Formel her. Zuerst benutzen wir den ersten Hauptsatz der Thermodynamik (Die Änderung der inneren Energie $dU$ bei Volumenänderung $dV$ ist gleich der Arbeit oder als Formel: $dU=-P\cdot dV$, wobei $P$ der Druck der Materie ist.) In der Allgemeinen Relativitätstheorie sieht dieser Satz wie folgt aus: 
+
+    \begin{align}
+    &\frac{d}{dt}(c^2\rho a^3) = -P\frac{d\ a^3}{dt}\\
+    \Rightarrow & \dot \rho a^3 + 3\rho a^2\dot a = -3Pa^2\frac{\dot a}{c^2}\\
+    \Rightarrow &\dot \rho a^2 = -3a\dot a\left( \frac{P}{c^2} + \rho \right)	\label{eq:Friedmann1}.
+    \end{align}
+
+    Wenn wir ein paar Termumformungen durchführen, und die so entstehende Gleichung differenzieren, erhalten wir die Gleichung
+
+    \begin{align}
+    \dot a^2 &= \frac{8\pi G}{3}\rho a^2-Kc^2 \hspace{1cm} \Bigg| \frac{d}{dt}\\
+    2\dot a \ddot a &= \frac{8\pi G}{3} \left(\dot \rho a^2+2a \dot a \rho \right).
+    \end{align}
+
+    Auf der rechten Seite der Gleichung setzen wir jetzt für $\dot \rho a^2$ Gleichung \eqref{eq:Friedmann1} ein und formen dann etwas um
+
+    \begin{align}
+    2\dot a \ddot a &= \frac{8\pi G}{3} \left(-3a\dot a \left(\frac{P}{c^2}+\rho \right) + 2a \dot a\rho \right)\\
+    2 \dot a \ddot a	&= \frac{8\pi G}{3} a\dot a \left( -\frac{3P}{c^2}-3\rho+2\rho\right)\\
+    \Leftrightarrow \frac{\ddot a}{a} &= -\frac{4\pi G}{3} \left(\frac{3P}{c^2} + \rho \right).
+    \end{align}
+
+    Jetzt haben wir die beiden Friedmann-LeMaitre-Expansionsgleichungen auch noch ohne die Feldgleichungen hergeleitet.
+
+
+<hr/>
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <img src="../Bilder/Jannik_mini.jpg">
+      <h3>Jannik<span>Schilling</span></h3>
+
+      <p class="footer-links">
+        <a href="https://www.jannik-schilling.com/">Home</a>
+        |
+        <a href="https://www.jannik-schilling.com/blog.html/">Blog</a>
+        |
+        <a href="https://www.jannik-schilling.com/impressum/">Impressum</a>
+        |
+        <a href="https://www.jannik-schilling.com/datenschutz">Datenschutz</a>
+
+      </p>
+
+      <p class="footer-company-name">© 2019 Jannik Schilling</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>Espluguesring 23,
+           22926 Ahrensburg</span>
+          Deutschland</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+49 152 33765747</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:Jannik@Schilling.land">Jannik@Schilling.land</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Über mich</span>
+        Mein Name ist Jannik Schilling. Ich bin 15 Jahre alt und bin Physik-Student an der Uni Hamburg.</p>
+      <div class="footer-icons">
+        <!--<a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>-->
+        <a href="https://www.linkedin.com/in/jannik-schilling/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.xing.com/profile/Jannik_Schilling7/"><i class="fa fa-xing"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
+
+
+
+</body>
+</html>
+

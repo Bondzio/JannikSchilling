@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/DiffGeo/Kurven">
-<title>Kurs Mathematik - Die e-Funktion</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/FeldgleichungLosung">
+<title>Kurs ART - Lösungen der Feldgleichungen
+</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -27,9 +28,11 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
+
+
 <body>
-  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -73,8 +76,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Kurven</h2>
-                        <p>Home<span>/</span>Mathematik in der Oberstufe</p>
+                        <h2>Lösungen der Feldgleichungen</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -85,47 +88,92 @@
 
 
   <div class="main">
-    <h1>Die e-Funktion und ihre Ableitung</h1>
-    <p>In diesem Artikel wollen wir Exponentialfunktionen und ihre Ableitungen betrachten.</p>
-    <p><b>Definition:</b> Es sei $a\in\mathbb{R}$. Dann nennen wir $f$ Exponentialfunktion</p>
-    \begin{align}
-    f(x)=a^x.
-    \end{align}
-    <p>Die Ableitung einer Exponentialfunktion lässt sich mit dem Differentialquotienten bestimmen:
-    </p>
-    \begin{align}
-    f'(x)&=\operatorname{lim}_{h\rightarrow 0} \frac{a^{x+h}-a^x}{h}\\
-    &=\lim_{h\rightarrow 0}\frac{a^xa^h-a^x}{h}\\
-    &= \lim_{h\rightarrow 0}\frac{a^h-1}{h}\\
-    &= a^x\cdot \left(\lim_{h\rightarrow 0}\frac{a^h-1}{h}\right).
-    \end{align}
-    <p>Der hier auftredende Ausdruck ist eine Konstante:</p>
-    \begin{align}
-    C=\lim_{h\rightarrow 0}\frac{a^h-1}{h}.
-    \end{align}
-    <p>Die Ableitung der Exponentialfunktion unterscheidet sich von der Ursprungsfunktion also nur durch eine Konstante $C$:</p>
+    <h1>Lösungen der Feldgleichungen</h1>
+    <p>In der Physik ist es neben der Aufstellung von Gleichungen mindestens genauso wichtig, diese Gleichungen auch zu lösen.</p>
+    <h2>Die Robertson-Walker-Metrik</h2>
+    <p>Um Lösungen der Einsteinschen Feldgleichungen suchen wir eine geeignete Metrik. Für diese eignet sich die sogenannte Robertson-Walker-Metrik. Diese ist gegeben durch</p>
 
     \begin{align}
-    f'(x)=C\cdot f(x).
-    \end{align}
-    <p>Wir wollen nun $a$ so wählen, dass $C=1$ wird. Damit folgt für $a$</p>
-    \begin{align}
-    a=\lim_{h\rightarrow 0}(1+h)^{1/h}.
-    \end{align}
-    <p>Dieser Grenzwert entspricht formal dem Grenzwwert einer Folge $\lim_{t\rightarrow 0}(1+t)^\left(\frac{1}{t}\right)$ reeller Zahlen. Der Grenzwert wurde erstmals von dem Mathematiker Leonhard Euler bestimmt und wird daher \glqq Eulersche Zahl\grqq\ genannt. Damit ergibt sich die Exponentialfunktion</p>
-    \begin{align}
-    f(x)=e^x && f'(x)=e^x
-    \end{align}
-    <p>Die Konstante $e$ heißt eulersche Zahl und hat den Wert:</p>
-    \begin{align}
-    e=2,71828...
+    ds^2=dt^2-R^2(t)\cdot \left[\frac{dr^2}{1-kr^2}+r^2d\Theta^2+r^2\sin^2(\Theta)\cdot d\varphi^2\right].	
     \end{align}
 
-    <h2>Die Umkehrfunktion der Eulerschen Funktion</h2>
-    <p>Es sei $f(x)=x^2$. Dann nennen wir $f^{-1}(x)$ die Umkehrfunktion zu $f$. Es gilt</p>
-    $$f^{-1}(x)=\sqrt{x}.$$
+    <p>Die Metrik für kosmologische Zwecke muss einige Anforderungen erfüllen</p>
 
-</div>
+    <ul class="unordered-list">
+    <il><p>Das Universum ist auf großen Maßstäben homogen und isotrop.</p></il>
+    <il><p>Das Universum soll die größtmögliche Symmetrie haben.</p></il>
+    \end{itemize}
+
+    <p>Die Robertson-Walker-Metrik ist die Metrik mit höchster Symmetriestufe, die diese Bedingung erfüllt.</p>
+
+    <p>Mit dieser Metrik erhalten vier drei verschieden klassifizierte Lösungen der Einsteinschen Feldgleichungen, die alle durch den Parameter $k$ unterschieden sind.</p>
+
+    \begin{itemize}
+    \item{$k=1$: Geschlossene, im Prinzip kugelförmige Lösung}	
+    \item{$k=0$: Flache Lösung}
+    \item{$k=-1$: Offene Lösung}
+    \end{itemize}
+
+    <p><b>Anmerkung:</b> Der Parameter $k$ kann natürlich jeden beliebigen Wert annehmen, doch die entstehenden Fälle sind (fast) identisch mit den Fällen $k\in\{-1;0;1\}$.</p>
+
+    <p>Wir haben in den vorherigen Kapiteln die Einsteinschen Feldgleichungen herleiten. Aus diesen Gleichungen ergeben sich interessante kosmische Objekte. Diese Objekte können durch verschiedene Eigenschaften charakterisiert werden, im wesentlichen gibt es aber vier verschiedene mathematische Lösungen, die durch den Drehimpuls und die Ladung charakterisiert sind. Alle diese vier Lösungen wurden schon gefunden. Diese wollen wir im Folgenden herleiten bzw. die Konsequenzen aus diesen Metriken besprechen.</p>
+
+    <p><b>Charakterisierung von Schwarzen Löcher</b></p>
+	
+    \begin{tabular}{|c|c|c|}
+    & 	$L=0$ & $L\neq 0$\\\hline
+    $Q=0$ & Schwarzschild & Kerr\\
+    $Q\neq 0$ & Reissner-Nordström & Kerr-Newman  
+    \end{tabular}
+
+    <p>Wie gehabt rechnen wir mit $G=c=1$.</p>
+
+    <h2>Übersicht über die verschiedenen Lösungen</h2>
+
+    In diesem Abschnitt finden Sie alle exakten Metriken, die die Feldgleichungen der Allgemeinen Relativitätstheorie lösen. Wir werden diese Lösungen in den Folgenden Abschnitten herleiten und diskutieren.
+
+    <h3>Schwarzschild-Lösung</h3>
+
+    \begin{align}
+    ds^2=-\left(1-\frac{r_s}{r}\right)dt^2+\frac{1}{1-\frac{r_s}{r}}dr^2+r^2(d\theta^2+\sin^2\theta d\varphi^2)	
+    \end{align}
+
+    <h3>Reissner-Nordström-Lösung</h3>
+    \begin{align}
+    ds^2=-\left(1-\frac{r_s}{r}+\frac{Q^2}{r^2}\right)\, dt^2 +\left(1-\frac{r_s}{r}+\frac{Q^2}{r^2}\right)^{-1}\, dr^2	+ r^2(d\theta^2+\sin^2\theta\, d\varphi^2)
+    \end{align}
+
+    <p>Kerr-Lösung</p>
+
+    \begin{align}
+    ds^2 &= -\left(1-\frac{2mr}{\rho^2}\right)\, dt^2 +\rho^2\triangle^{-1}\, dr^2+ \rho^2\, d\theta^2	+4mar\rho^{-2}\sin^2\theta\, dtd\varphi\\\notag
+    &+\sin^2\theta\left[r^2+a^2+2mr\rho^{-2}a^2\sin^2\theta\right]\, d\varphi^2
+    \end{align}
+
+    <p>mit den Koeffizienten</p>
+
+    \begin{align}
+    \rho^2 &= r^2+a^2\cos^2\theta\\
+    \triangle &= r^2-2mr+a^2	
+    \end{align}
+
+    <h3>Kerr-Newman-Lösung</h3>
+
+    \begin{align}
+    ds^2 &= \left(1-\frac{2mr}{\rho^2}\right)\, dt^2-\rho^2\triangle^{-1}\, dr^2-\rho^2\, d\theta^2	+4mar\rho^{-2}\sin^2\theta\, dtd\varphi\\\notag
+    &-\sin^2\theta\left[r^2+a^2+2mr\rho^{-2}a^2\sin^2\theta\right]\, d\varphi^2	
+    \end{align}
+
+    <p>mit leicht abweichenden Koeffizienten</p>
+
+    \begin{align}
+    \rho^2 &= r^2+a^2\cos^2\theta+Q^2\\
+    \triangle &= r^2-2mr+a^2		
+    \end{align}
+
+    <p>Die Metriken gehen selbstverständlich bei passenden Werten für das Drehmoment und die Ladung ineinander über. Welche Metrik für ein Problem passend ist, muss individuell entschieden werden.</p>
+
+<hr/>
 
         <div id="disqus_thread"></div>
 <script>
@@ -202,20 +250,20 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
-
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
 
 
 

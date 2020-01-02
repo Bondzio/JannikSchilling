@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -11,8 +12,8 @@
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/DiffGeo/Kurven">
-<title>Kurs Mathematik - Die e-Funktion</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/AquivalenzPrinzip">
+<title>Kurs ART - Mathematische Fassung des Äquivalenzprinzip</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -27,9 +28,12 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
+
 </head>
+
+
 <body>
-  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -73,8 +77,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Kurven</h2>
-                        <p>Home<span>/</span>Mathematik in der Oberstufe</p>
+                        <h2>Einsteinsche Feldgleichungen</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -85,47 +89,90 @@
 
 
   <div class="main">
-    <h1>Die e-Funktion und ihre Ableitung</h1>
-    <p>In diesem Artikel wollen wir Exponentialfunktionen und ihre Ableitungen betrachten.</p>
-    <p><b>Definition:</b> Es sei $a\in\mathbb{R}$. Dann nennen wir $f$ Exponentialfunktion</p>
-    \begin{align}
-    f(x)=a^x.
-    \end{align}
-    <p>Die Ableitung einer Exponentialfunktion lässt sich mit dem Differentialquotienten bestimmen:
-    </p>
-    \begin{align}
-    f'(x)&=\operatorname{lim}_{h\rightarrow 0} \frac{a^{x+h}-a^x}{h}\\
-    &=\lim_{h\rightarrow 0}\frac{a^xa^h-a^x}{h}\\
-    &= \lim_{h\rightarrow 0}\frac{a^h-1}{h}\\
-    &= a^x\cdot \left(\lim_{h\rightarrow 0}\frac{a^h-1}{h}\right).
-    \end{align}
-    <p>Der hier auftredende Ausdruck ist eine Konstante:</p>
-    \begin{align}
-    C=\lim_{h\rightarrow 0}\frac{a^h-1}{h}.
-    \end{align}
-    <p>Die Ableitung der Exponentialfunktion unterscheidet sich von der Ursprungsfunktion also nur durch eine Konstante $C$:</p>
 
+    <h1>Mathematische Bedeutung des Äquivalenzprinzip</h1>
+    
+    <p>Wir wollen das Äquivalenzprinzip mathematisch beschreiben. Die Formulierungen, die wir eben gefunden haben, lassen sich mit Hilfe einer Koordinatentransformation beschreiben. Die geforderten physikalischen Bedingungen bedeuten, dass die Raum-Zeit inklusive Gravitation lokal flach ist, also lokal minkowskisch ist. Dies wollen mit der Raumzeitkoordinate $x^{\alpha}$ ausdrücken. Das bedeutet, dann, dass es an jedem Punkt $P$ der Raumzeit eine Koordinatentransformation</p>
+    
     \begin{align}
-    f'(x)=C\cdot f(x).
+    x^{\alpha}\rightarrow \xi^{\alpha}	
     \end{align}
-    <p>Wir wollen nun $a$ so wählen, dass $C=1$ wird. Damit folgt für $a$</p>
+    
+    <p>gibt, die von $x^{\mu}$ abhängt. Die Metrik transformiert sich dann nach der Folgenden Vorschrift</p>
+    
     \begin{align}
-    a=\lim_{h\rightarrow 0}(1+h)^{1/h}.
+    g_{\mu\nu}(x^{\alpha})\rightarrow \overline{g}_{\mu\nu}(\xi^{\alpha})	
     \end{align}
-    <p>Dieser Grenzwert entspricht formal dem Grenzwwert einer Folge $\lim_{t\rightarrow 0}(1+t)^\left(\frac{1}{t}\right)$ reeller Zahlen. Der Grenzwert wurde erstmals von dem Mathematiker Leonhard Euler bestimmt und wird daher \glqq Eulersche Zahl\grqq\ genannt. Damit ergibt sich die Exponentialfunktion</p>
+    
+    <p>transformiert. Die Metrik $\overline{g}_{\mu\nu}$ am Punkt $P$ mit $P=\xi^{\alpha}_P$ muss minkowskisch sein, also</p>
+    
     \begin{align}
-    f(x)=e^x && f'(x)=e^x
+    \overline{g}_{\mu\nu}(\xi^{\alpha}_P)=\eta_{\mu\nu}	
     \end{align}
-    <p>Die Konstante $e$ heißt eulersche Zahl und hat den Wert:</p>
+    
+    <p>muss gelten. In der Umgebung des Punktes $P$ muss dann die Ableitung verschwinden, also</p>
+    
     \begin{align}
-    e=2,71828...
+    \left.\frac{\partial \overline{g}_{\mu\nu}(\xi^{\alpha})}{\partial \xi^{\beta}}\right|_{\xi_P^{\alpha}}=0.	
     \end{align}
+    
+    <p>Höhere Ableitung verschwinden im Allgemeinen nicht, sodass die Metrik die folgende Form hat</p>
+    
+    \begin{align}
+    \overline{g}_{\mu\nu}(\xi_P^{\alpha})=\eta_{\mu\nu}+\frac{1}{2}\left(\frac{\partial^2\overline{g}_{\mu\nu}}{\partial \xi^{\alpha}\xi^{\beta}} \xi^{\alpha}\xi^{\beta}\right).	
+    \end{align}
+    
+    <p>Wir sehen hier, dass das Äquivalenzprinzip fast die gleiche Aussage trifft, wie der Satz von Sylvester und das Postulat, dass die Natur eine pseudo-Riemannsche Mannigfaltigkeit ist.</p>
+    
 
-    <h2>Die Umkehrfunktion der Eulerschen Funktion</h2>
-    <p>Es sei $f(x)=x^2$. Dann nennen wir $f^{-1}(x)$ die Umkehrfunktion zu $f$. Es gilt</p>
-    $$f^{-1}(x)=\sqrt{x}.$$
+    <hr />  
 
-</div>
+<div class="navigation-area">
+  <div class="row">
+    <div
+        class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+        <div class="thumb">
+          <a href="https://www.jannik-schilling.com/art/krummungstensor">
+              <img class="img-fluid" src="../Bilder/arrow-l.jpg" alt="">
+          </a>
+        </div>
+        <div class="arrow">
+          <a href="#">
+              <span class="lnr text-white ti-arrow-left"></span>
+          </a>
+        </div>
+        <div class="detials">
+          <p>Letzte Lektion</p>
+          <a href="https://www.jannik-schilling.com/art/krummungstensor">
+              <h4>Der Krümmungstensor</h4>
+          </a>
+        </div>
+    </div>
+    <div
+        class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+        <div class="detials">
+          <p>Nächste Lektion</p>
+          <a href="https://www.jannik-schilling.com/art/schwarzschild">
+              <h4>Die Schwarzschild-Metrik</h4>
+          </a>
+        </div>
+        <div class="arrow">
+          <a href="#">
+              <span class="lnr text-white ti-arrow-right"></span>
+          </a>
+        </div>
+        <div class="thumb">
+          <a href="https://www.jannik-schilling.com/art/schwarzschild">
+              <img class="img-fluid" src="../bilder/arrow-r.png" alt="">
+          </a>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <hr/>
 
         <div id="disqus_thread"></div>
 <script>
@@ -202,20 +249,20 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
-
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
 
 
 

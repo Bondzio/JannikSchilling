@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/DiffGeo/Kurven">
-<title>Kurs Mathematik - Die e-Funktion</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/FriedmannGleichung">
+<title>Kurs ART - Friedmann-Gleichungen
+</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -27,9 +28,11 @@
 <link rel="stylesheet" href="../kurse/css/magnific-popup.css">
 <link rel="stylesheet" href="../kurse/css/slick.css">
 <link rel="stylesheet" href="../kurse/css/style.css">
+
 </head>
+
+
 <body>
-  
 
 <header class="main_menu single_page_menu">
     <div class="container">
@@ -73,8 +76,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Kurven</h2>
-                        <p>Home<span>/</span>Mathematik in der Oberstufe</p>
+                        <h2>Das Flachheits-Problem</h2>
+                        <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
             </div>
@@ -85,47 +88,79 @@
 
 
   <div class="main">
-    <h1>Die e-Funktion und ihre Ableitung</h1>
-    <p>In diesem Artikel wollen wir Exponentialfunktionen und ihre Ableitungen betrachten.</p>
-    <p><b>Definition:</b> Es sei $a\in\mathbb{R}$. Dann nennen wir $f$ Exponentialfunktion</p>
-    \begin{align}
-    f(x)=a^x.
-    \end{align}
-    <p>Die Ableitung einer Exponentialfunktion lässt sich mit dem Differentialquotienten bestimmen:
-    </p>
-    \begin{align}
-    f'(x)&=\operatorname{lim}_{h\rightarrow 0} \frac{a^{x+h}-a^x}{h}\\
-    &=\lim_{h\rightarrow 0}\frac{a^xa^h-a^x}{h}\\
-    &= \lim_{h\rightarrow 0}\frac{a^h-1}{h}\\
-    &= a^x\cdot \left(\lim_{h\rightarrow 0}\frac{a^h-1}{h}\right).
-    \end{align}
-    <p>Der hier auftredende Ausdruck ist eine Konstante:</p>
-    \begin{align}
-    C=\lim_{h\rightarrow 0}\frac{a^h-1}{h}.
-    \end{align}
-    <p>Die Ableitung der Exponentialfunktion unterscheidet sich von der Ursprungsfunktion also nur durch eine Konstante $C$:</p>
+    <h1>Das Flachheitsproblem</h1>
+
+    <p>Neueste Forschungen zeigen, dass die Krümmung des Universums verschwindend gering ist. Dies ist auch ein Problem für die Urknalltheorie. Dieses Problem lässt sich auch mit Hilfe der kritischen Dichte $\rho_c$ darstellen</p>
 
     \begin{align}
-    f'(x)=C\cdot f(x).
-    \end{align}
-    <p>Wir wollen nun $a$ so wählen, dass $C=1$ wird. Damit folgt für $a$</p>
-    \begin{align}
-    a=\lim_{h\rightarrow 0}(1+h)^{1/h}.
-    \end{align}
-    <p>Dieser Grenzwert entspricht formal dem Grenzwwert einer Folge $\lim_{t\rightarrow 0}(1+t)^\left(\frac{1}{t}\right)$ reeller Zahlen. Der Grenzwert wurde erstmals von dem Mathematiker Leonhard Euler bestimmt und wird daher \glqq Eulersche Zahl\grqq\ genannt. Damit ergibt sich die Exponentialfunktion</p>
-    \begin{align}
-    f(x)=e^x && f'(x)=e^x
-    \end{align}
-    <p>Die Konstante $e$ heißt eulersche Zahl und hat den Wert:</p>
-    \begin{align}
-    e=2,71828...
+    \Omega-1=\frac{\rho}{\rho_c}-1	
     \end{align}
 
-    <h2>Die Umkehrfunktion der Eulerschen Funktion</h2>
-    <p>Es sei $f(x)=x^2$. Dann nennen wir $f^{-1}(x)$ die Umkehrfunktion zu $f$. Es gilt</p>
-    $$f^{-1}(x)=\sqrt{x}.$$
+    <p>darstellen. Mit der Friedmann-Gleichung</p>
 
-</div>
+    \begin{align}
+    H^2(t)=\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G\rho}{3}-\frac{k}{a^2}	
+    \end{align}
+
+    <p>und mit</p>
+
+    \begin{align}
+    \Omega=\frac{\rho}{\rho_0} && \rho_c=\frac{3H^2}{8\pi G}	
+    \end{align}
+
+    <p>erhalten wir</p>
+
+    \begin{align}
+    |\Omega-1|=\frac{|k|}{a^2 H^2(t)}.	
+    \end{align}
+
+    <p>Hier ist $\Omega$ gegeben durch</p>
+
+    \begin{align}
+    \Omega=\Omega_{\text{Materie}}+\Omega_{\Lambda}.
+    \end{align}
+
+    <p>Aus der ersten Friedmann-Gleichung erhalten wir, dass diese Gleichung proportional zu der Dichte $\rho$ ist, also $H^2\propto \rho$ gilt. Das gilt natürlich nur für sehr kleine Werte für $k$ und $\Lambda$ (das passiert zum Beispiel, when Strahlung oder Materie dominiert).</p>
+
+    <p>Wenn $a_m$ proportional zu $t^{\frac{2}{3}}$ ist, dann ist das Universum materiedominiert, wenn $a_m$ proportional zu $t^{\frac{1}{2}}$ ist, ist das Universum strahlungsdominiert.</p>
+
+    \begin{subequations}
+    \begin{align}
+    a_M &\propto t^{\frac{2}{3}}	\\
+    a_M &\propto t^{\frac{1}{2}}
+    \end{align}.
+    \end{subequations}
+
+    <p>Somit erhalten wir </p>
+
+    \begin{align}
+    \text{Strahlungsdominiert: } |\Omega-1|&\propto t\\
+    \text{Materiedominiert: } |\Omega-1|&\propto t^{\frac{2}{3}}.
+    \end{align}
+
+    <p>In beiden Fällen wird $|\Omega-1|$ mit der Zeit größer, sodass das Universum nicht stabil ist. Falls $\Omega$ heute sehr nah an der Einheit ist, dann muss $\Omega$ in der Vergangenheit sehr nah an der Einheit gewesen sein. Dieses \glqq Fine-Tuning-Argument\grqq\ heißt Flachheitsproblem.</p>
+
+    <p>Dieses Problem lässt sich durch das Inflationsmodell lösen. Das Inflationsmodell nimmt $\ddot R>0$ an. Durch eine Umformungskette erhalten wir</p>
+
+    \begin{align}
+    \ddot R>0\Leftrightarrow \frac{d}{dt}\left(\dot R\right)>0\Leftrightarrow \frac{d}{dt}(HR)>0.	
+    \end{align}
+
+    <p>Für den letzten Schritt haben wir</p>
+
+    \begin{align}
+    H\equiv \frac{\dot R}{R}	
+    \end{align}
+
+    <p>ausgenutzt. Das bedeutet aber auch, dass $R^2H^2$ mit der Zeit größer wird und somit wird</p>
+
+    \begin{align}
+    |\Omega-1|=\frac{|k|}{H^2 R^2}	
+    \end{align}
+
+    <p>mit der Zeit immer kleiner. Das bedeutet auch, dass das Universum stabil ist. Somit können wir das Flachheitsproblem durch das Inflationsmodell lösen.</p>
+
+<hr/>
 
         <div id="disqus_thread"></div>
 <script>
@@ -202,20 +237,20 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
-
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
 
 
 

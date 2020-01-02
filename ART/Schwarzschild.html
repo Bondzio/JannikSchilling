@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,16 +9,17 @@
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Art/Kommutator">
-<title>Kurs ART - Schwarzschild-Metrik</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/FeldgleichungLosung">
+<title>Kurs ART - Lösungen der Feldgleichungen
+</title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../kurse/css/bootstrap.min.css">
@@ -75,7 +78,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Schwarzschild-Metrik</h2>
+                        <h2>Lösungen der Feldgleichungen</h2>
                         <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
@@ -86,95 +89,374 @@
 
 
 
-<div class="main">
-    <h1>Die Schwarzschild-Metrik</h1>
+  <div class="main">
+    
+    <h1>Schwarzschild-Lösung</h1>
 
-    <p>Die Schwarzschild-Metrik ist eine Lösung der Einsteinschen-Feldgleichugnen für statische ($J=0$) und ungeladene ($Q=0$) Schwarze Löcher.</p>
-    <p>Die gesamte Schwarzschild-Lösung besteht aus einer inneren und äußeren Metrik, die an ihren Grenzen stetig und differenzierbar ineinander übergehen.</p>
-    <h2>Das Linienelement</h2>
-    In der Schwarzschild-Metrik betrachten wir die Zeitkoordonate $x^0\mapsto t$ und die Kugelkoordinaten ${(x^1,x^2,x^3)\mapsto (r,\theta,\varphi)}$. Außerdem definieren wir den Schwarzschild-Radius:
-    $$r_s=\frac{2GM}{c^2}.$$
-    Damit ergibt sich das Linienelement zu
+    <p>Wie wir eben gesehen haben, ist die Metrik für ein ladungsloses nicht-rotierendes Objekt (z.B. schwarzes Loch) gegeben durch</p>
     \begin{align}
-    \mathrm{d}s^2=g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=-c^2\left(1-\frac{r_s}{r}\right)\mathrm{d}t^2+\frac{1}{1-\frac{r_s}{r}}\mathrm{d}r^2+r^2\mathrm{d}\theta^2+r^2\sin^2\theta\mathrm{d}\phi^2.
+    ds^2=\left(1-\frac{r_s}{r}\right)dt^2-\frac{1}{1-\frac{r_s}{r}}dr^{2} - r^2(d\theta^2+\sin^2\theta d\varphi^2)	
     \end{align}
-    Hierbei haben wir die übliche Signatur $(-,+,+,+)$ verwendet.
 
-    <figure class="size-2">
-            <img src="../Bilder/schwarzschild.gif" style="width:100%">
-            <figcaption>
-                    Yukterez (Simon Tyran, Vienna) [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Newton_versus_Schwarzschild_trajectories.gif">via Wikimedia Commons</a></figcaption>
-          </figure>
+    <h2>Herleitung der Schwarzschild-Metrik</h2>
 
-          <hr />  
+    <p>In der Newtonschen Mechanik werden kugelsymetrische Massenverteilung in sehr guter Näherung durch das von ISaac NEwton gefundene Gravitationsgesetz </p>
 
-<div class="navigation-area">
-  <div class="row">
-    <div
-        class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-        <div class="thumb">
-          <a href="https://www.jannik-schilling.com/art/feldgleichungen">
-              <img class="img-fluid" src="../Bilder/arrow-l.jpg" alt="">
-          </a>
-        </div>
-        <div class="arrow">
-          <a href="#">
-              <span class="lnr text-white ti-arrow-left"></span>
-          </a>
-        </div>
-        <div class="detials">
-          <p>Letzte Lektion</p>
-          <a href="https://www.jannik-schilling.com/art/feldgleichungen">
-              <h4>Die Feldgleichungen</h4>
-          </a>
-        </div>
-    </div>
-    <div
-        class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-        <div class="detials">
-          <p>Nächste Lektion</p>
-          <a href="https://www.jannik-schilling.com/art/Gravitationswellen">
-              <h4>Gravitationswellen</h4>
-          </a>
-        </div>
-        <div class="arrow">
-          <a href="#">
-              <span class="lnr text-white ti-arrow-right"></span>
-          </a>
-        </div>
-        <div class="thumb">
-          <a href="https://www.jannik-schilling.com/art/Gravitationswellen">
-              <img class="img-fluid" src="../bilder/arrow-r.png" alt="">
-          </a>
-        </div>
-    </div>
-  </div>
-</div>
+    \begin{align}
+    F_G=-G\frac{mM}{r^2} && \text{bzw. } && \phi_m=-G\frac{M}{r}
+    \end{align}
 
-  <hr/>
+    <p>beschrieben. Dieses Gravitationsgesetz sollte sich aus der Allgemeinen Relativitätstheorie für schwache Felder ergeben.</p>
 
-<div id="disqus_thread"></div>
+    <p>Um diese Aussage zu verifizieren, suchen wir eine kugelsymmetrische Lösung der Einsteinschen Feldgleichungen mit verschwindender kosmologischer Konstante, sodass sich die Newtonsche Lösung als Grenzfall ergibt.</p>
+    <p>Um dies zu realisieren betrachten wir die Vakuum-Feldgleichungen. Das bedeutet einfach, dass die Abwesenheit jeglicher Energie und Materie, es gilt also </p>
+
+    \begin{align}	
+    T_{\mu\nu}=0.
+    \end{align}
+
+    <p>Da der Ricci-Skalar durch die Spur $T$ des Energie-Impuls-Tensors über</p>
+
+    \begin{align}
+    R=-\kappa T	
+    \end{align}
+
+    <p>zusammenhängt, verschwindet der Rcci-Skalar, wenn der Energie-Impuls-Tensor verschwindet.</p>
+
+    <p>Die Feldgleichungen ergeben sich somit zu </p>
+
+    \begin{align}
+    R_{\mu\nu}=0	
+    \end{align}
+
+    <p>Das Verschwinden des Ricci-Tensors bedeutet nicht, dass der Raum flach ist!</p>
+
+    <p>Wir wählen jetzt einen Ansatz für die die Metrik, die solche Vorgaben erfüllt:</p>
+
+    \begin{align}
+    ds^2=-e^{2\phi(r)}c^2\ dt^2 + e^{2\psi(r)}\ dr^2 + r^2\ d\Omega^2.	
+    \end{align}
+
+    <p>Dieser Ansatz ist vollkommen willkürlich. Wir hätten anstatt $e^{2\phi(r)}$ auch nur $\phi(r)$ verwenden können. In der Literatir zu diesem Thema ist es aber üblich, die gesuchten Funktionen zu exponieren. Wir werden sehen, dass dies uns unseren Rechenweg erleichtert. Das Differential $d\Omega^2$ ergibt sich durch </p>
+
+    \begin{align}
+    d\Omega^2=d\vartheta^2+\sin^2(\vartheta)\ d\varphi^2.	
+    \end{align}
+
+    <p>Dieses Differential hängt wie in Kugelkoordinaten von den sphärischen Winkelkoordinaten $\vartheta$ und $\varphi$ ab. In einem euklidischen Raum würde mit diesen Koordinaten</p>
+
+    \begin{align}
+    dl^2=d\vartheta^2+r^2\ d \varphi^2	
+    \end{align}
+
+    <p>gelten.</p>
+
+    <p>Unser Ansatz für die Metrik ist bewusst zeitunabhängig gewählt, da wir uns erst einmal mit statischen Metriken befassen.</p>
+
+    <h3>Christoffelsymbole berechnen</h3>
+
+    <p>Als nächsten Schritt berechnen wir die Christoffelsybole für den von uns gewählten Ansatz. Wir erhalten die nicht-verschwindenen Christofelsymbole:</p>
+
+    \begin{subequations}
+    \begin{align}
+    \Gamma^{t}_{ \cdot tr} &= \frac{d\phi}{dr}	 = 0\\
+    \Gamma_{\cdot tt}^r &= c^2\frac{d\phi}{dr}e^{2(\phi-\psi)} && \Gamma_{ \cdot rr}^r=\frac{d\phi}{dr}	\\
+        \Gamma^{r}_{ \cdot \vartheta\vartheta} &= -re^{-2\psi} && \Gamma^{r}_{ \cdot \varphi\varphi} = -r\sin^2(\vartheta)e^{ -2\psi}\label{eq:christoffel_three}\\
+        \Gamma^{\vartheta}_{\cdot r \vartheta} &= \frac{1}{r} && \Gamma^{\vartheta}_{\cdot \varphi \varphi }=-\sin(\vartheta)\cos(\vartheta)\\
+        \Gamma_{\cdot r \varphi}^{\varphi} &= \frac{1}{r} && \Gamma_{ \cdot \vartheta \varphi}^{\varphi}=\cot( \vartheta).
+    \end{align}
+    \end{subequations}
+
+    <h3>Ricci-Tensor berechnen</h3>
+
+    <p>Mit den Christoffelsymbolen können wir den Ricci-Tensor berechnen.</p>
+
+    \begin{subequations}
+    \begin{align}
+    R_{tt} &= c^2 \frac{e^{2[\phi(r)-\psi(r)]}}{r}\left(\frac{d\phi^2}{d^2 r} r + \frac{\partial^{2} \phi}{\partial^2 r}r-\frac{d\psi}{dr}\frac{d\phi}{dr}r+2\frac{d \phi}{dr}\right)\label{eq:ricci_zeit_schwarzschild}\\
+    R_{rr} &= \frac{1}{r}\left(-\frac{\partial^2 \phi}{d^2 r}r-\frac{\partial^{2} \phi^2}{\partial^2 r}r+ \frac{\partial \phi}{\partial r}\frac{\partial \psi}{\partial r}r + 2\frac{d\psi}{dr}\right)\label{eq:ricci_raum1_schwarzschild}\\
+    R_{ \vartheta \vartheta} &= e^{-2\psi(r)}\left( \frac{d\psi}{dr}r + e^{2\psi(r)}-1-\frac{ d\phi}{dr}r\right)\\
+    R_{ \varphi\varphi} &= \sin^2(\vartheta)R_{ \vartheta\vartheta}
+    \end{align}
+    \end{subequations}
+
+    <p>Wir multiplizieren nun die obige Gleichung mit $re^{2[\phi(r)-\psi(r)]}/c^2$ und Gleichung \eqref{eq:ricci_raum1_schwarzschild} mit $r$ und bilden dann die Summe der beiden Terme unter Verwendung von $R_{\mu\nu}=0$:</p>
+
+    \begin{align}
+    \frac{\partial \phi}{\partial r}+\frac{\partial \psi}{ \partial r}=0\label{eq:schwarzschild_herleitung2}.	
+    \end{align}
+
+    <p>Wenn wir dieser Ergebnis in $e^{2\phi(r)}R_{\vartheta\vartheta}=0$ einsetzen, erhalten wir </p>
+
+
+    \begin{align}
+    2\frac{\partial \psi}{\partial r}+e^{2\psi(r)}-1=0.
+    \end{align}
+
+    <p>Wenn wir die Variablen separieren, erhalten wir</p>
+
+    \begin{align}
+    \int \frac{d\psi}{1-e^{2\psi}}=\int \frac{dr}{2r}.	
+    \end{align}
+
+    <p>Durch die Substitution $x=e^{2\phi}$ und eine einfache Partialbruchzerlegung finden wir die Gleichung </p>
+
+    \begin{align}
+    \mathcal{C}+\psi-\frac{1}{2}\ln\left( 1-e^{2\psi}\right)	=\frac{1}{2}\ln(r).
+    \end{align}
+
+    <p>Hierbei sind in $\mathcal{C}$ alle Integrationskonstanten zusammengefasst. Nach Exponieren und mit der Abkürzung $\mathcal{B}=e^{2\psi}$ erhalten wir</p>
+
+    \begin{align}
+    \mathcal{B}\frac{e^{2\psi}}{1-e^{2\psi}}=r && e^{2\psi}=\frac{r}{\mathcal{B}+r}=\frac{1}{1+\mathcal{B}/r}.	
+    \end{align}
+
+    <p>Durch Umformungen erhalten wir </p>
+
+    \begin{align}
+    \frac{\partial \psi}{\partial r}=\frac{\mathcal{B}}{2r(\mathcal{B}+r)}\label{eq:schwarzschild_herleitung1}.
+    \end{align}
+
+    <p>Wenn wir Gleichung \eqref{eq:schwarzschild_herleitung1} in Gleichung \eqref{eq:schwarzschild_herleitung2} einsetzen, erhalten wir nach erneuter Partialbruchzerlegung und Integration </p>
+
+    \begin{align}
+    e^{2\phi}=\mathcal{D}\left(1+\frac{\mathcal{B}}{r}\right).	
+    \end{align}
+
+    <p>Die Bestimmung der Konstanten $\mathcal{B}$ und $\mathcal{D}$ erfolgt über die Betrachtung des nicht-relativistischen Grenzfalls und des Grenzfalls $r\rightarrow \infty$. Für $r\rightarrow\infty$ soll $g_{\mu\nu}$ in $\eta_{\mu\nu}$ übergehen (bei unendlicher Ausdehnung sollte die Massenverteilung keinen Einfluss mehr auf die Metrik haben). Daraus folgt für den Grenzwert</p> 
+
+    \begin{align}
+    \lim\limits_{r\rightarrow \infty} e^{2\phi(r)}=\mathcal{D}.
+    \end{align}
+
+    <p>Es ergibt sich also $\mathcal{D}=1$:</p>
+
+    <p>Wir wissen, dass im newtonschen Grenzfall $g_{tt}=-(c^2+2\phi_m)$ mit dem Potential $\phi_m$ gilt. Das Potential $\phi_m$ ist in der newtonschen Theorie gegeben durch</p>
+
+    \begin{align}
+    \phi_m=-\frac{GM}{r}.	
+    \end{align}
+
+    <p>Dies führt zu der Bedingung </p>
+
+    \begin{align}
+    1+\frac{B}{r}=1-2\frac{GM}{c^2}.	
+    \end{align}
+
+    <p>In dieser Gleichung sehen wir eine wichtige Eigenschaft der Gravitationswechselwirkung, den Schwarzschild-Radius. Dieser ist definiert durch</p>
+
+    \begin{align}
+    r_s=2\frac{GM}{c^2}.	
+    \end{align}
+
+    <p>Jetzt haben wir alles was wir brauchen, um die Schwarzschild-Metrik zu bestimmen. Tragen wir diese Ergebnisse zusammen, erhalten wir </p>
+
+    \begin{align}
+    \mathcal{D} &= 1 \\
+    \mathcal{B} &= -2\frac{ GM}{c^2}.	
+    \end{align}
+
+    <p>Also</p> 
+
+    \begin{align}
+    e^{2\phi} &= \mathcal{D}\left(1+\frac{\mathcal{B}}{r}\right)=1\cdot \left(1+\frac{r_s}{r}\right)	\\
+    e^{2\psi} &= \frac{1}{1+\mathcal{B}/r}=\frac{1}{1-r_s/r}
+    \end{align}
+    
+    <p>Dann erhalten wir für die Metrik</p>
+
+    \begin{align}
+    ds^2=c^2\left(1-\frac{r_s}{r}\right)\, dt^2 - \frac{dr^2}{1-\frac{ r_s}{r}}-r^2\, d\Omega^2
+    \end{align}
+
+    <p>mit </p>
+    \begin{align}
+    d\Omega^2=d\vartheta^2+\sin^2(\vartheta)\, d\varphi^2.
+    \end{align}
+
+    <p>Wir haben gerade die Schwarzschild-Metrik hergeleitet!</p>
+
+    <h3>Einsetzen in die Feldgleichungen</h3>
+
+    <p>Wir haben jetzt zwar eine Metrik gefunden, die die von uns gestellten Bedingungen erfüllt. Doch um wirklich sicher zu gehen, dass die Schwarzschild-Metrik die Einsteinschen-Feldgleichungen löst, wollen wir diese nun in die Feldgleichungen einsetzen. Dazu werden wir wie folgt vorgehen:</p>
+
+    <ul>
+    <il>Metriktensor bestimmen</il>
+    <il>Christoffelsymbole berechnen</il>
+    <il>Krümmungstensor bestimmen</il>
+    <il>Ricci-Tensor und Ricci-Skalar bestimmen</il>
+    <il>Ergebnisse zusammenfassen und prüfen</il>
+    </ul>
+
+    \textbf{Schritt 1: Metriktensor bestimmen}
+
+    Den Metriktensor bei gegebene Linienelement zu bestimmen ist einfach. Wir müssen einfach nur die Koeffizienten der Differentiale ablesen und an der passenden Stelle in der Koeffizientenmatrix des Fundamentaltensors einsetzen. Der Metriktensor ergibt sich dann zu
+
+    \begin{align}
+    g_{\mu\nu}=\begin{pmatrix}
+    -\left(1-r_s/r\right) & 0&0&0\\
+    0 & (1-r_s/r)^{-1}& 0 & 0\\
+    0 & 0 & r^2 & 0\\
+    0 &0&0 & r^2\sin^2({\vartheta}	)
+    \end{pmatrix}.
+    \end{align}
+
+    Wir haben hier die Vorzeichensignatur $+2$ verwendet haben, also $(-,+,+,+)$. Der kontravariante metrische Tensor $g^{\mu\nu}$ ist einfach das Inverse von $g_{\mu\nu}$:
+
+    \begin{align}
+    g^{\mu\nu}=\begin{pmatrix}
+    -(1-r_s/r)^{-1} &0&0&0\\
+    0 & (1-r_s/r) & 0& 0\\
+    0 & 0 & r^{-2} & 0\\
+    0 & 0 & 0 & r^{-2}\sin^{-2}(\vartheta)
+    \end{pmatrix}	
+    \end{align}
+
+    Die Komponenten $x^{i}$ sind dabei durch ein Quadrupel wie folgt defniert
+
+    \begin{align}
+    x^{i}=(t,r,\vartheta, \varphi).
+    \end{align}
+
+
+    \textbf{Schritt 2: Christoffelsymbole berechnen}
+
+    Wir bestimmen jetzt alle Christoffelsymbole, also insgesamt $3^3=27$ Stück. Da allerdings 
+
+    \begin{align}
+    \Gamma^{\sigma}_{\mu \nu}=\Gamma^{\sigma}_{\nu\mu}	
+    \end{align}
+
+    gilt, reduziert sich die Zahl an zu bestimmenden Christoffelsymbolen zu . Fangen wir an, diese zu bestimmen. Um uns Schreibarbeit zu sparen, schreiben wir anstatt $\frac{\partial g_{ij}}{\partial x^{i}}$ im Folgenden $\partial_i g_{ij}$.
+
+    Christoffelsymbole zweiter Art ergeben sich bekanntlich durch
+
+    \begin{align}
+    \Gamma^{ \sigma}_{ \cdot \mu\nu} &= \frac{1}{2}g^{\sigma\kappa}\left(\partial_{\mu}g_{\kappa \nu}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}\right).
+    \end{align}
+
+    Da $g_{\mu\nu}$ und $g^{\mu\nu}$ Diagonalmatrizen sind, sind die Werte abseits der Hauptdiagonale Null. Es folgt also, dass die einzige Summe bei den Christoffelsymbolen nicht notwendig ist, da immer nur ein kontravarianter Metriktensor beiträgt. Es ergibt sich also
+
+
+    \begin{align}
+    \Gamma^{\sigma}_{\mu\nu}	=\frac{1}{2}g^{\sigma\sigma}\left(\partial_{\nu} g_{\mu\sigma}+\partial_{\mu}g_{\nu\sigma}-\partial_{\sigma}g_{ \mu\nu}\right).
+    \end{align}
+
+    \begin{subequations}
+    \begin{align}
+    \Gamma_{01}^0 &= \frac{1}{2}g^{00}(\partial_1 g_{00} + \partial_0 g_{10} - \partial_0 g_{10} )=\frac{1}{2}\frac{1}{1-\frac{r_s}{r}}\left(\frac{\partial \left(1-\frac{r_s}{r}\right)}{\partial r}\right)=\frac{r_s}{2r^2\left(1-\frac{r_s}{r}\right)} \\
+    \Gamma_{00}^{1} &= \frac{1}{2}g^{11}(\partial_{0}g_{01}+\partial_0 g_{01}-\partial_{1} g_{00})= \frac{1}{2}\left(1-\frac{r_s}{r}\right)\left(-\frac{\partial \left(1-\frac{r_s}{r}\right)}{\partial r}\right)=\frac{r_s\left(1-\frac{r_s}{r}\right)}{2r^2} \\
+    \Gamma_{11}^1 &= \frac{1}{2}g^{11}(\partial_1 g_{11}+\partial_1 g_{11}-\partial_1 g_{11})=\frac{1}{2}\left(1-\frac{r_s}{r}\right)\left(-\frac{r_s}{r^2}\right)=-\frac{r_s}{2r^2\left(1-\frac{r_s}{r}\right)}\\
+    \Gamma^1_{\cdot 22} &= \frac{1}{2}g^{11}(\partial_2 g_{21}+\partial_2 g_{21}-\partial_{1} g_{22})=\frac{1}{2} \left(1-\frac{r_s}{r}\right)\left(-\frac{\partial r^2}{\partial r}\right)=r_s-r\\
+    \Gamma_{33}^{1} &= \frac{1}{2}g^{11}(\partial_3 g_{31}+ \partial_3 g_{31}- \partial_1 g_{33})=\frac{1}{2}\left( 1-\frac{r_s}{r}\right)\left(-\frac{\partial r^2\sin^2(\vartheta)}{\partial r}\right)\\\notag
+    &=(-r+r_s) \sin	^2(\vartheta)\\
+    \Gamma_{21}^2 &= \frac{1}{2}g^{22}(\partial_1 g_{22} + \partial_2 g_{12} - \partial _2 g_{21})=\frac{1}{2r^2}\left( \frac{\partial r^2}{\partial r}\right)=\frac{1}{r}\\
+    \Gamma_{33}^2 &= \frac{1}{2}g^{22}(\partial_3 g_{32}+ \partial_3 g_{32}- \partial_2 g_{33})= \frac{1}{2r^2}\left(-\frac{\partial r^2\sin^2(\vartheta)}{\partial \vartheta}\right) = -\frac{2r^2\sin(\vartheta)\cos(\vartheta)}{2r^2}\\\notag
+    &= \sin(\vartheta)\cos(\vartheta) \\
+    \Gamma_{31}^{3} &= \frac{1}{2}g^{33}(\partial_1 g_{33}+ \partial_3 g_{31}- \partial_3 g_{31})=\frac{1}{2r^2\sin^2(\vartheta)} \left(\frac{\partial r^2\sin^2(\vartheta)}{\partial r}\right)=\frac{r\sin^2(\vartheta)}{r^2\sin^2(\vartheta)}\\\notag
+    &=\frac{1}{r}\\
+    \Gamma_{32}^3 &= \frac{1}{2}g^{33}( \partial_2 g_{33}+ \partial_3 g_{23}-\partial_3 g_{32})=\frac{1}{2r^2\sin^2(\vartheta)}\left(\frac{\partial r^2\sin^2(\vartheta)}{\partial \vartheta}\right)\\\notag
+    &=\frac{ 2\sin(\vartheta)\cos(\vartheta)r^2}{2r^2\sin^2(\vartheta)}=\frac{\cos(\vartheta)}{\sin(\vartheta)}=\cot(\vartheta)
+    \end{align}
+    \end{subequations}
+
+    \textbf{Schritt 3: Krümmungstensor berechnen}
+
+    Wir wissen, dass wir den Krümmungstensor mithilfe der Christoffelsymbole über
+
+    \begin{align}
+    R^{\lambda}_{\alpha\beta\gamma }= \frac{\partial \Gamma_{\cdot \alpha\gamma}^{\lambda}}{\partial x^{\beta} }	 - \frac{\partial \Gamma^{\lambda}_{\cdot \alpha \beta}}{\partial x^{\gamma}}+\Gamma_{\alpha\gamma}^{\sigma} \Gamma_{\sigma\beta}^{\lambda} - \Gamma_{\alpha\beta}^{\sigma}\Gamma^{\lambda}_{\sigma\gamma }
+    \end{align}
+
+    bestimmen können. Da wir nicht alle 256 Komponenten des Krümmungstensors bestimmen wollen (die Anzahl an Komponenten lässt sich zwar durch Ausnutzung von Symetrien stark reduzieren, wir haben aber immer noch viel zu berechnen), beschränken wir uns hier auf die nicht-verschwindenen Komponenten.
+
+    \section{Eigenschaften der Schwarzschild-Metrik}
+
+    \section{Folgerung aus der Schwarzschild-Metrik}
+
+    Wir wollen uns im folgenden mit der Zeitdilatation in der Schwarzschild-Metrik befassen. Dazu müssen wir uns mit der Koordinatenzeit $t$ befassen. Dazu benutzen wir die Schwarzschild-Metrik
+    \begin{align}
+    ds^2=-c^2\left(1-\frac{r_s}{r}\right)\, \mathrm{d}t^2+\frac{\mathrm{d}r^2}{1-\frac{r_s}{r}}+r^2\cdot (\mathrm{d}\vartheta^2+\sin^2(\vartheta)\, \mathrm{d}\varphi^2).	
+    \end{align}
+    Die Laborzeit muss offensichtlich im Unendlichen sein, da dann die Schwarzschild-Metrik in die Minkowski-Metrik übergeht. Wir betrachten einen an einem festen Koordinatenpunkt ruhenden Beobachter. Dann gilt also
+    \begin{align}
+    \mathrm{d}r=\mathrm{d}\Omega=0.	
+    \end{align}
+    Damit ergibt sich für ihn die Feldgleichung
+    \begin{align}
+    \mathrm{d}s^2=c^2\left(1-\frac{r_s}{r}\right)\, \mathrm{d}t^2.	
+    \end{align}
+    Mit der Eigenzeit $\mathrm{d}\tau$
+    \begin{align}
+    \mathrm{d}\tau^2=1-\frac{r_s}{r}	
+    \end{align}
+    ergibt sich
+    \begin{align}
+    ds^2=c^2\, \mathrm{d}\tau^2.
+    \end{align}
+
+    Damit können wir die Ungleichung 
+    \begin{align}
+    \mathrm{d}\tau = \sqrt{1-\frac{r_s}{r}}\, \mathrm{d}t<\mathrm{d}t\label{eq:Gravitationsrotverschiebung}.	
+    \end{align}
+    Diese Ungleichung lässt einen revolutionären Schluss zu.
+    \newline
+
+    \fbox{\parbox{\linewidth}{
+    \begin{center}
+        \textbf{Zeitdilatation im Gravitationsfeld}
+    \end{center}
+    Eine ruhende Uhr geht in einem Schwerefeld langsamer als eine ruhende Uhr ohne Anwesenheit eines Schwerefeldes. Diese Erkenntnis ist die Zeitdilataion bei der Anwesenheit eine Schwerefeldes.}}
+
+    \section{Gravitationsrotverschiebung}
+
+    Wir messen Zeit immer mit periodischen Vorgängen. Unsere Vorfahren haben dafür zum Beispiel die (annähernd) periodische Bewegung eines Fadenpendels benutzt. Für die heutigen Präzisionsmessungen reichen solche Zeitmessungen nicht mehr aus.\\
+
+    Ein viel genauer zu beobachtender Vorgang ist hingegen ein atomarer Übergang zwischen zwei Niveaus eines Atoms. Es gilt die Gleichung
+    \begin{align}
+    h\nu_0=\frac{h}{T_0}.	
+    \end{align}
+    Hier ist $T_0$ die Periodendauer dieses Übergangs. Bei einem solchen Übergang wird von dem Atom Licht emittiert (ausgesendet). Das ausgesandte Licht wird nach Gleichung \eqref{eq:Gravitationsrotverschiebung} rotverschoben. \\
+
+    Wir betrachten ein Atom in Ruhe bei der Radialkoordinate $r$. Wir können für das Eigenzeitintervall nun die Periode $T_0$ eines solchen Übergangs in Gleichung \eqref{eq:Gravitationsrotverschiebung} ein. Damit erhalten wir
+    \begin{align}
+        \Delta t=\frac{T_0}{\sqrt{1-\frac{r_s}{r}}}=T(r)>T_0.
+    \end{align}
+    Die Frequenz $\nu=\frac{1}{T}$ ergibt sich dann zu 
+    \begin{align}
+    \nu(r)=\frac{1}{T(r)}=\sqrt{1-\frac{r_s}{r}}\frac{1}{T_0}=\sqrt{1-\frac{r_s}{r}}\nu_0<\nu_0.	
+    \end{align}
+    Wir können für die Wellenlänge des emittierten Lichtes nach der Quantenphysik nun $\lambda=\frac{c}{\nu}$ einsetzen. Damit gilt dann
+    \begin{align}
+    \lambda(r)=	\frac{1}{\sqrt{1-\frac{r_s}{r}}}\lambda_0>\lambda_0.
+    \end{align}
+
+    Diese Gleichung drückt dann die Gravitationsrotverschiebung der Schwarzschild-Metrik aus.
+
+<hr/>
+
+        <div id="disqus_thread"></div>
 <script>
-    
-    /**
-    *  RECOMMENDED CONFIGURATION VARI\hat{A}\hat{B}LES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARI\hat{A}\hat{B}LES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-vari\hat{A}\hat{B}les*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL vari\hat{A}\hat{B}le
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier vari\hat{A}\hat{B}le
-    };
-    */
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://www.jannik-schilling.com/;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-jannik-schilling-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+      
 <footer class="footer-distributed">
  
     <div class="footer-left">
@@ -228,24 +510,23 @@
 
 
 
-
-
-
-  <script src="../kurse/js/jquery-1.12.1.min.js"></script>
-  <script src="../kurse/js/popper.min.js"></script>
-  <script src="../kurse/js/bootstrap.min.js"></script>
-  <script src="../kurse/js/jquery.magnific-popup.js"></script>
-  <script src="../kurse/js/swiper.min.js"></script>
-  <script src="../kurse/js/masonry.pkgd.js"></script>
-  <script src="../kurse/js/owl.carousel.min.js"></script>
-  <script src="../kurse/js/jquery.nice-select.min.js"></script>
-  <script src="../kurse/js/slick.min.js"></script>
-  <script src="../kurse/js/jquery.counterup.min.js"></script>
-  <script src="../kurse/js/waypoints.min.js"></script>
-  <script src="../kurse/js/custom.js"></script>
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="../kurse/js/jquery-1.12.1.min.js"></script>
+    <script src="../kurse/js/popper.min.js"></script>
+    <script src="../kurse/js/bootstrap.min.js"></script>
+    <script src="../kurse/js/jquery.magnific-popup.js"></script>
+    <script src="../kurse/js/swiper.min.js"></script>
+    <script src="../kurse/js/masonry.pkgd.js"></script>
+    <script src="../kurse/js/owl.carousel.min.js"></script>
+    <script src="../kurse/js/jquery.nice-select.min.js"></script>
+    <script src="../kurse/js/slick.min.js"></script>
+    <script src="../kurse/js/jquery.counterup.min.js"></script>
+    <script src="../kurse/js/waypoints.min.js"></script>
+    <script src="../kurse/js/custom.js"></script>
 
 
 
 </body>
 </html>
+
