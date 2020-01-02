@@ -97,6 +97,16 @@
         \end{align}
         <p>Diese Koeffizienten treten in der ART besonders häufig auf.</p>
 
+        <h2>Das Transformationsverhalten</h2>
+        <p>Wir wollen nun überprüfen, ob die Christoffelsymbole Tensoren sind. Dazu betrachten wir das Transformationsverhalten:</p>
+        \begin{align}
+        \Gamma_{\kappa\lambda}^{\nu}'&=\frac{\partial x'^{\nu}}{\partial \eta^{\phi}}\frac{\partial^2\eta^{\phi}}{\partial x'^{\kappa}\partial x'^{\lambda}}=\frac{\partial x'^{\nu}}{\partial x^{\alpha}}\frac{\partial x^{\alpha}}{\partial \eta^{\phi}}\left(\frac{\partial \eta^{\phi}}{\partial x'^{\lambda}}\right)\\
+        &= \frac{\partial x'^{\nu}}{\partial \eta^{\phi}}\left(\frac{\partial^2\eta^{\phi}}{\partial x^{\beta}\partial x^{\alpha}}\frac{\partial x^{\beta}}{\partial x'^{\kappa}}\frac{\partial x^{\gamma}}{\partial x'^{\lambda}}+\frac{\partial^2 x^{\gamma}}{\partial x'^{\kappa}\partial x'^{\lambda}}\frac{\partial \eta^{\phi}}{\partial x^{\gamma}}\right)\\
+        &= \frac{\partial x'^{\nu}}{\partial x^{\alpha}}\frac{\partial x^{\beta}}{\partial x'^{\kappa}}\frac{\partial x^{\gamma}}{\partial x'^{\lambda}}\Gamma^{\alpha}_{\cdot\beta\gamma}+\frac{\partial x'^{\nu}}{\partial x^{\alpha}}\frac{\partial^2x^{\alpha}}{\partial x'^{\kappa}\partial x'^{\lambda}}.
+        \end{align}
+        <p>Wegen des zweiten Summanden sind die Christoffelsymbole keine Tensoren. Dies ist übrigens auch der Grund dafür, weshalb sie Symbole heißen.</p>
+        
+        <h2>Notation</h2>
         <p>In der Relativitätstheorie ist insbesondere die ältere Notation geläufig:</p>
         $$[\mu\nu,\kappa]=\Gamma_{\mu\nu\kappa}$$
         <p>und für Christoffelsymbole zweiter Art:</p>

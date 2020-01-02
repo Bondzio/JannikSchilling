@@ -13,8 +13,8 @@
 <meta charset="UTF-8">
 
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/Art/FeldgleichungLosung">
-<title>Kurs ART - Lösungen der Feldgleichungen
+<link rel="canonical" href="https://www.jannik-schilling.com/Art/Schwarzschild">
+<title>Kurs ART - Schwarzschild-Metrik
 </title>
 <meta name="description" content="">
 <meta name="og:title" property="og:title" content="">
@@ -78,7 +78,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Lösungen der Feldgleichungen</h2>
+                        <h2>Schwarzschild-Metrik</h2>
                         <p>Home<span>/</span>ART</p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
 
     <p>Wie wir eben gesehen haben, ist die Metrik für ein ladungsloses nicht-rotierendes Objekt (z.B. schwarzes Loch) gegeben durch</p>
     \begin{align}
-    ds^2=\left(1-\frac{r_s}{r}\right)dt^2-\frac{1}{1-\frac{r_s}{r}}dr^{2} - r^2(d\theta^2+\sin^2\theta d\varphi^2)	
+    \mathrm{d}s^2=\left(1-\frac{r_s}{r}\right)dt^2-\frac{1}{1-\frac{r_s}{r}}dr^{2} - r^2(d\theta^2+\sin^2\theta d\varphi^2)	
     \end{align}
 
     <h2>Herleitung der Schwarzschild-Metrik</h2>
@@ -157,7 +157,6 @@
 
     <p>Als nächsten Schritt berechnen wir die Christoffelsybole für den von uns gewählten Ansatz. Wir erhalten die nicht-verschwindenen Christofelsymbole:</p>
 
-    \begin{subequations}
     \begin{align}
     \Gamma^{t}_{ \cdot tr} &= \frac{d\phi}{dr}	 = 0\\
     \Gamma_{\cdot tt}^r &= c^2\frac{d\phi}{dr}e^{2(\phi-\psi)} && \Gamma_{ \cdot rr}^r=\frac{d\phi}{dr}	\\
@@ -165,20 +164,17 @@
         \Gamma^{\vartheta}_{\cdot r \vartheta} &= \frac{1}{r} && \Gamma^{\vartheta}_{\cdot \varphi \varphi }=-\sin(\vartheta)\cos(\vartheta)\\
         \Gamma_{\cdot r \varphi}^{\varphi} &= \frac{1}{r} && \Gamma_{ \cdot \vartheta \varphi}^{\varphi}=\cot( \vartheta).
     \end{align}
-    \end{subequations}
 
     <h3>Ricci-Tensor berechnen</h3>
 
     <p>Mit den Christoffelsymbolen können wir den Ricci-Tensor berechnen.</p>
 
-    \begin{subequations}
     \begin{align}
     R_{tt} &= c^2 \frac{e^{2[\phi(r)-\psi(r)]}}{r}\left(\frac{d\phi^2}{d^2 r} r + \frac{\partial^{2} \phi}{\partial^2 r}r-\frac{d\psi}{dr}\frac{d\phi}{dr}r+2\frac{d \phi}{dr}\right)\label{eq:ricci_zeit_schwarzschild}\\
     R_{rr} &= \frac{1}{r}\left(-\frac{\partial^2 \phi}{d^2 r}r-\frac{\partial^{2} \phi^2}{\partial^2 r}r+ \frac{\partial \phi}{\partial r}\frac{\partial \psi}{\partial r}r + 2\frac{d\psi}{dr}\right)\label{eq:ricci_raum1_schwarzschild}\\
     R_{ \vartheta \vartheta} &= e^{-2\psi(r)}\left( \frac{d\psi}{dr}r + e^{2\psi(r)}-1-\frac{ d\phi}{dr}r\right)\\
     R_{ \varphi\varphi} &= \sin^2(\vartheta)R_{ \vartheta\vartheta}
     \end{align}
-    \end{subequations}
 
     <p>Wir multiplizieren nun die obige Gleichung mit $re^{2[\phi(r)-\psi(r)]}/c^2$ und Gleichung \eqref{eq:ricci_raum1_schwarzschild} mit $r$ und bilden dann die Summe der beiden Terme unter Verwendung von $R_{\mu\nu}=0$:</p>
 
@@ -280,17 +276,17 @@
 
     <p>Wir haben jetzt zwar eine Metrik gefunden, die die von uns gestellten Bedingungen erfüllt. Doch um wirklich sicher zu gehen, dass die Schwarzschild-Metrik die Einsteinschen-Feldgleichungen löst, wollen wir diese nun in die Feldgleichungen einsetzen. Dazu werden wir wie folgt vorgehen:</p>
 
-    <ul>
-    <il>Metriktensor bestimmen</il>
-    <il>Christoffelsymbole berechnen</il>
-    <il>Krümmungstensor bestimmen</il>
-    <il>Ricci-Tensor und Ricci-Skalar bestimmen</il>
-    <il>Ergebnisse zusammenfassen und prüfen</il>
+    <ul class="unordered-list">
+    <li><p>Metriktensor bestimmen</p></li>
+    <li><p>Christoffelsymbole berechnen</p></li>
+    <li><p>Krümmungstensor bestimmen</p></li>
+    <li><p>Ricci-Tensor und Ricci-Skalar bestimmen</p></li>
+    <li><p>Ergebnisse zusammenfassen und prüfen</p></li>
     </ul>
 
-    \textbf{Schritt 1: Metriktensor bestimmen}
+    <h3>Schritt 1: Metriktensor bestimmen</h3>
 
-    Den Metriktensor bei gegebene Linienelement zu bestimmen ist einfach. Wir müssen einfach nur die Koeffizienten der Differentiale ablesen und an der passenden Stelle in der Koeffizientenmatrix des Fundamentaltensors einsetzen. Der Metriktensor ergibt sich dann zu
+    <p>Den Metriktensor bei gegebene Linienelement zu bestimmen ist einfach. Wir müssen einfach nur die Koeffizienten der Differentiale ablesen und an der passenden Stelle in der Koeffizientenmatrix des Fundamentaltensors einsetzen. Der Metriktensor ergibt sich dann zu</p>
 
     \begin{align}
     g_{\mu\nu}=\begin{pmatrix}
@@ -301,7 +297,7 @@
     \end{pmatrix}.
     \end{align}
 
-    Wir haben hier die Vorzeichensignatur $+2$ verwendet haben, also $(-,+,+,+)$. Der kontravariante metrische Tensor $g^{\mu\nu}$ ist einfach das Inverse von $g_{\mu\nu}$:
+    <p>Wir haben hier die Vorzeichensignatur $+2$ verwendet haben, also $(-,+,+,+)$. Der kontravariante metrische Tensor $g^{\mu\nu}$ ist einfach das Inverse von $g_{\mu\nu}$:</p>
 
     \begin{align}
     g^{\mu\nu}=\begin{pmatrix}
@@ -312,37 +308,36 @@
     \end{pmatrix}	
     \end{align}
 
-    Die Komponenten $x^{i}$ sind dabei durch ein Quadrupel wie folgt defniert
+    <p>Die Komponenten $x^{i}$ sind dabei durch ein Quadrupel wie folgt defniert</p>
 
     \begin{align}
     x^{i}=(t,r,\vartheta, \varphi).
     \end{align}
 
 
-    \textbf{Schritt 2: Christoffelsymbole berechnen}
+    <h3>Schritt 2: Christoffelsymbole berechnen</h3>
 
-    Wir bestimmen jetzt alle Christoffelsymbole, also insgesamt $3^3=27$ Stück. Da allerdings 
+    <p>Wir bestimmen jetzt alle Christoffelsymbole, also insgesamt $3^3=27$ Stück. Da allerdings </p>
 
     \begin{align}
     \Gamma^{\sigma}_{\mu \nu}=\Gamma^{\sigma}_{\nu\mu}	
     \end{align}
 
-    gilt, reduziert sich die Zahl an zu bestimmenden Christoffelsymbolen zu . Fangen wir an, diese zu bestimmen. Um uns Schreibarbeit zu sparen, schreiben wir anstatt $\frac{\partial g_{ij}}{\partial x^{i}}$ im Folgenden $\partial_i g_{ij}$.
+    <p>gilt, reduziert sich die Zahl an zu bestimmenden Christoffelsymbolen zu . Fangen wir an, diese zu bestimmen. Um uns Schreibarbeit zu sparen, schreiben wir anstatt $\frac{\partial g_{ij}}{\partial x^{i}}$ im Folgenden $\partial_i g_{ij}$.</p>
 
-    Christoffelsymbole zweiter Art ergeben sich bekanntlich durch
+    <p>Christoffelsymbole zweiter Art ergeben sich bekanntlich durch</p>
 
     \begin{align}
     \Gamma^{ \sigma}_{ \cdot \mu\nu} &= \frac{1}{2}g^{\sigma\kappa}\left(\partial_{\mu}g_{\kappa \nu}+\partial_{\nu}g_{\mu\kappa}-\partial_{\kappa}g_{\mu\nu}\right).
     \end{align}
 
-    Da $g_{\mu\nu}$ und $g^{\mu\nu}$ Diagonalmatrizen sind, sind die Werte abseits der Hauptdiagonale Null. Es folgt also, dass die einzige Summe bei den Christoffelsymbolen nicht notwendig ist, da immer nur ein kontravarianter Metriktensor beiträgt. Es ergibt sich also
+    <p>Da $g_{\mu\nu}$ und $g^{\mu\nu}$ Diagonalmatrizen sind, sind die Werte abseits der Hauptdiagonale Null. Es folgt also, dass die einzige Summe bei den Christoffelsymbolen nicht notwendig ist, da immer nur ein kontravarianter Metriktensor beiträgt. Es ergibt sich also</p>
 
 
     \begin{align}
     \Gamma^{\sigma}_{\mu\nu}	=\frac{1}{2}g^{\sigma\sigma}\left(\partial_{\nu} g_{\mu\sigma}+\partial_{\mu}g_{\nu\sigma}-\partial_{\sigma}g_{ \mu\nu}\right).
     \end{align}
 
-    \begin{subequations}
     \begin{align}
     \Gamma_{01}^0 &= \frac{1}{2}g^{00}(\partial_1 g_{00} + \partial_0 g_{10} - \partial_0 g_{10} )=\frac{1}{2}\frac{1}{1-\frac{r_s}{r}}\left(\frac{\partial \left(1-\frac{r_s}{r}\right)}{\partial r}\right)=\frac{r_s}{2r^2\left(1-\frac{r_s}{r}\right)} \\
     \Gamma_{00}^{1} &= \frac{1}{2}g^{11}(\partial_{0}g_{01}+\partial_0 g_{01}-\partial_{1} g_{00})= \frac{1}{2}\left(1-\frac{r_s}{r}\right)\left(-\frac{\partial \left(1-\frac{r_s}{r}\right)}{\partial r}\right)=\frac{r_s\left(1-\frac{r_s}{r}\right)}{2r^2} \\
@@ -358,80 +353,73 @@
     \Gamma_{32}^3 &= \frac{1}{2}g^{33}( \partial_2 g_{33}+ \partial_3 g_{23}-\partial_3 g_{32})=\frac{1}{2r^2\sin^2(\vartheta)}\left(\frac{\partial r^2\sin^2(\vartheta)}{\partial \vartheta}\right)\\\notag
     &=\frac{ 2\sin(\vartheta)\cos(\vartheta)r^2}{2r^2\sin^2(\vartheta)}=\frac{\cos(\vartheta)}{\sin(\vartheta)}=\cot(\vartheta)
     \end{align}
-    \end{subequations}
 
-    \textbf{Schritt 3: Krümmungstensor berechnen}
+    <h3>Schritt 3: Krümmungstensor berechnen</h3>
 
-    Wir wissen, dass wir den Krümmungstensor mithilfe der Christoffelsymbole über
+    <p>Wir wissen, dass wir den Krümmungstensor mithilfe der Christoffelsymbole über</p>
 
     \begin{align}
     R^{\lambda}_{\alpha\beta\gamma }= \frac{\partial \Gamma_{\cdot \alpha\gamma}^{\lambda}}{\partial x^{\beta} }	 - \frac{\partial \Gamma^{\lambda}_{\cdot \alpha \beta}}{\partial x^{\gamma}}+\Gamma_{\alpha\gamma}^{\sigma} \Gamma_{\sigma\beta}^{\lambda} - \Gamma_{\alpha\beta}^{\sigma}\Gamma^{\lambda}_{\sigma\gamma }
     \end{align}
 
-    bestimmen können. Da wir nicht alle 256 Komponenten des Krümmungstensors bestimmen wollen (die Anzahl an Komponenten lässt sich zwar durch Ausnutzung von Symetrien stark reduzieren, wir haben aber immer noch viel zu berechnen), beschränken wir uns hier auf die nicht-verschwindenen Komponenten.
+    <p>bestimmen können. Wir berechnen nun die nicht-verschwindenen Komponenten des Krümmungstensors.</p>
 
-    \section{Eigenschaften der Schwarzschild-Metrik}
 
-    \section{Folgerung aus der Schwarzschild-Metrik}
+    <h2>Folgerungen aus der Schwarzschild-Metrik</h2>
 
-    Wir wollen uns im folgenden mit der Zeitdilatation in der Schwarzschild-Metrik befassen. Dazu müssen wir uns mit der Koordinatenzeit $t$ befassen. Dazu benutzen wir die Schwarzschild-Metrik
+    <p>Wir wollen uns im folgenden mit der Zeitdilatation in der Schwarzschild-Metrik befassen. Dazu müssen wir uns mit der Koordinatenzeit $t$ befassen. Dazu benutzen wir die Schwarzschild-Metrik</p>
     \begin{align}
     ds^2=-c^2\left(1-\frac{r_s}{r}\right)\, \mathrm{d}t^2+\frac{\mathrm{d}r^2}{1-\frac{r_s}{r}}+r^2\cdot (\mathrm{d}\vartheta^2+\sin^2(\vartheta)\, \mathrm{d}\varphi^2).	
     \end{align}
-    Die Laborzeit muss offensichtlich im Unendlichen sein, da dann die Schwarzschild-Metrik in die Minkowski-Metrik übergeht. Wir betrachten einen an einem festen Koordinatenpunkt ruhenden Beobachter. Dann gilt also
+    <p>Die Laborzeit muss offensichtlich im Unendlichen sein, da dann die Schwarzschild-Metrik in die Minkowski-Metrik übergeht. Wir betrachten einen an einem festen Koordinatenpunkt ruhenden Beobachter. Dann gilt also</p>
     \begin{align}
     \mathrm{d}r=\mathrm{d}\Omega=0.	
     \end{align}
-    Damit ergibt sich für ihn die Feldgleichung
+    <p>Damit ergibt sich für ihn die Feldgleichung</p>
     \begin{align}
     \mathrm{d}s^2=c^2\left(1-\frac{r_s}{r}\right)\, \mathrm{d}t^2.	
     \end{align}
-    Mit der Eigenzeit $\mathrm{d}\tau$
+    <p>Mit der Eigenzeit $\mathrm{d}\tau$</p>
     \begin{align}
     \mathrm{d}\tau^2=1-\frac{r_s}{r}	
     \end{align}
-    ergibt sich
+    <p>ergibt sich</p>
     \begin{align}
     ds^2=c^2\, \mathrm{d}\tau^2.
     \end{align}
 
-    Damit können wir die Ungleichung 
+    <p>Damit können wir die Ungleichung </p>
     \begin{align}
     \mathrm{d}\tau = \sqrt{1-\frac{r_s}{r}}\, \mathrm{d}t<\mathrm{d}t\label{eq:Gravitationsrotverschiebung}.	
     \end{align}
-    Diese Ungleichung lässt einen revolutionären Schluss zu.
-    \newline
+    <p>Diese Ungleichung lässt einen revolutionären Schluss zu.</p>
 
-    \fbox{\parbox{\linewidth}{
-    \begin{center}
-        \textbf{Zeitdilatation im Gravitationsfeld}
-    \end{center}
-    Eine ruhende Uhr geht in einem Schwerefeld langsamer als eine ruhende Uhr ohne Anwesenheit eines Schwerefeldes. Diese Erkenntnis ist die Zeitdilataion bei der Anwesenheit eine Schwerefeldes.}}
+    <p>Eine ruhende Uhr geht in einem Schwerefeld langsamer als eine ruhende Uhr ohne Anwesenheit eines Schwerefeldes. Diese Erkenntnis ist die Zeitdilataion bei der Anwesenheit eine Schwerefeldes.</p>
 
-    \section{Gravitationsrotverschiebung}
+    <h3>Gravitationsrotverschiebung</h3>
 
-    Wir messen Zeit immer mit periodischen Vorgängen. Unsere Vorfahren haben dafür zum Beispiel die (annähernd) periodische Bewegung eines Fadenpendels benutzt. Für die heutigen Präzisionsmessungen reichen solche Zeitmessungen nicht mehr aus.\\
+    <p>Wir messen Zeit immer mit periodischen Vorgängen. Unsere Vorfahren haben dafür zum Beispiel die (annähernd) periodische Bewegung eines Fadenpendels benutzt. Für die heutigen Präzisionsmessungen reichen solche Zeitmessungen nicht mehr aus.</p>
 
-    Ein viel genauer zu beobachtender Vorgang ist hingegen ein atomarer Übergang zwischen zwei Niveaus eines Atoms. Es gilt die Gleichung
+    <p>Ein viel genauer zu beobachtender Vorgang ist hingegen ein atomarer Übergang zwischen zwei Niveaus eines Atoms. Es gilt die Gleichung</p>
     \begin{align}
     h\nu_0=\frac{h}{T_0}.	
     \end{align}
-    Hier ist $T_0$ die Periodendauer dieses Übergangs. Bei einem solchen Übergang wird von dem Atom Licht emittiert (ausgesendet). Das ausgesandte Licht wird nach Gleichung \eqref{eq:Gravitationsrotverschiebung} rotverschoben. \\
+    <p>Hier ist $T_0$ die Periodendauer dieses Übergangs. Bei einem solchen Übergang wird von dem Atom Licht emittiert (ausgesendet). Das ausgesandte Licht wird nach Gleichung \eqref{eq:Gravitationsrotverschiebung} rotverschoben.</p>
 
-    Wir betrachten ein Atom in Ruhe bei der Radialkoordinate $r$. Wir können für das Eigenzeitintervall nun die Periode $T_0$ eines solchen Übergangs in Gleichung \eqref{eq:Gravitationsrotverschiebung} ein. Damit erhalten wir
+    <p>Wir betrachten ein Atom in Ruhe bei der Radialkoordinate $r$. Wir können für das Eigenzeitintervall nun die Periode $T_0$ eines solchen Übergangs in Gleichung ein. Damit erhalten wir</p>
     \begin{align}
         \Delta t=\frac{T_0}{\sqrt{1-\frac{r_s}{r}}}=T(r)>T_0.
     \end{align}
-    Die Frequenz $\nu=\frac{1}{T}$ ergibt sich dann zu 
+    <p>Die Frequenz $\nu=\frac{1}{T}$ ergibt sich dann zu </p>
     \begin{align}
     \nu(r)=\frac{1}{T(r)}=\sqrt{1-\frac{r_s}{r}}\frac{1}{T_0}=\sqrt{1-\frac{r_s}{r}}\nu_0<\nu_0.	
     \end{align}
-    Wir können für die Wellenlänge des emittierten Lichtes nach der Quantenphysik nun $\lambda=\frac{c}{\nu}$ einsetzen. Damit gilt dann
+    <p>Wir können für die Wellenlänge des emittierten Lichtes nach der Quantenphysik nun $\lambda=\frac{c}{\nu}$ einsetzen. Damit gilt dann</p>
     \begin{align}
     \lambda(r)=	\frac{1}{\sqrt{1-\frac{r_s}{r}}}\lambda_0>\lambda_0.
     \end{align}
 
-    Diese Gleichung drückt dann die Gravitationsrotverschiebung der Schwarzschild-Metrik aus.
+    <p>Diese Gleichung drückt dann die Gravitationsrotverschiebung der Schwarzschild-Metrik aus.</p>
     <hr />  
 
 <div class="navigation-area">

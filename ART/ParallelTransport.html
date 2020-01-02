@@ -89,20 +89,30 @@
   <div class="main">
         <h1>Der Paralleltransport</h1>
         <p>Wir haben bereits gesehen, dass sich die Christoffelsymbole additiv aus Ableitungen eines Vektorfelds zusammensetzen. Denn in Zukunft wollen wir mit diesen Ableitungen das Krümmungsverhalten von Vektorfeldern bestimmen. Um diese Definition zu rechtfertigen, betrachten wir nun den Paralelltransport.</p>
-        <figure class="size-4">
-        <img style="display: block; text-align: center;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Parallel_Transport.svg/1200px-Parallel_Transport.svg.png" width="60%" alt="Parallel Transport.svg">
-        <figcaption><em>        <p><a href="https://commons.wikimedia.org/wiki/File:Parallel_Transport.svg#/media/Datei:Parallel_Transport.svg"></a><br>Von <a href="//commons.wikimedia.org/wiki/User:Fred_the_Oyster" title="User:Fred the Oyster">Fred the Oyster</a> - <a href="//commons.wikimedia.org/wiki/File:Parallel_transport.png" class="image"></a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=35124171">Link</a></p></em></figcaption>
-        </figure>
-        <p>In einem euklischen Raum können wir einfach die Vektoren am Anfang und am Ende der Bewegung vergleichen, da man die Tangentialräume kanonisch identifizieren kann.</p>
-        <p>Für eine beliebige Mannigfaltigkeit geht das natürlich nicht mehr, denn nun müssen wir auch die eigentliche Bewegung betrachten.</p>
-        <p>Wir sagen, dass der Vektor entlang der Kurve parallel verschoben wurde.</p>
-        <p>Es sei $\gamma: I\rightarrow M$ eine reguläre Kurve und $X$ ein Vektorfeld längs $\gamma$. Da $\gamma$ eine reguläre Kurve ist, ist $\gamma'\neq 0$. Wir wollen hier</p>
-        <p>Es bietet sich in diesem Kontekt an die kovariante Ableitung $\nabla_{\gamma'}X$ zu berechnen. Formal ist das aber leider nicht möglich, da weder $\gamma'$ noch $X$ Vektorfelder sind. Für $\gamma'$ lösen wir dieses Problem, indem wir an jedem Punkt $p$ das Vektorfeld $Y(p)=\gamma'(p)$ betrachten.</p>
-        <p>Für das Vektorfeld $X$ setzen wir $X$ auf einem $M$ zu einem $\hat{X}$ fort und hoffen, dass $\nabla_{\gamma'}\hat{X}$ nicht von der Wahl von $\hat{X}$ abhängt.</p>
-        <p>Es ergibt sich</p>
-        \begin{align}
-        \nabla_{\gamma'}\hat{X}=\sum_i\gamma^{i}\sum_k\left(\partial_i(\hat{X}^k)+\sum_j\Gamma_{\cdot ij}^{k}\hat{X}^j\right)\partial_K=D_{\gamma}\hat{X}(\gamma')+\sum \hat{X}^j\nabla_{\gamma'}\partial_j.
-        \end{align}
+        <div class="section-top-border text-left">
+          <h3 class="mb-30">Definition</h3>
+          <div class="row">
+              <div class="col-md-9">
+
+                <p>In einem euklischen Raum können wir einfach die Vektoren am Anfang und am Ende der Bewegung vergleichen, da man die Tangentialräume kanonisch identifizieren kann.</p>
+                <p>Für eine beliebige Mannigfaltigkeit geht das natürlich nicht mehr, denn nun müssen wir auch die eigentliche Bewegung betrachten.</p>
+
+                <p>Wir sagen, dass der Vektor entlang der Kurve parallel verschoben wurde.</p>
+                <p>Es sei $\gamma: I\rightarrow M$ eine reguläre Kurve und $X$ ein Vektorfeld längs $\gamma$. Da $\gamma$ eine reguläre Kurve ist, ist $\gamma'\neq 0$. Wir wollen hier</p>
+                <p>Es bietet sich in diesem Kontekt an die kovariante Ableitung $\nabla_{\gamma'}X$ zu berechnen. Formal ist das aber leider nicht möglich, da weder $\gamma'$ noch $X$ Vektorfelder sind. Für $\gamma'$ lösen wir dieses Problem, indem wir an jedem Punkt $p$ das Vektorfeld $Y(p)=\gamma'(p)$ betrachten.</p>
+                <p>Für das Vektorfeld $X$ setzen wir $X$ auf einem $M$ zu einem $\hat{X}$ fort und hoffen, dass $\nabla_{\gamma'}\hat{X}$ nicht von der Wahl von $\hat{X}$ abhängt.</p>
+                <p>Es ergibt sich</p>
+                \begin{align}
+                \nabla_{\gamma'}\hat{X}=\sum_i\gamma^{i}\sum_k\left(\partial_i(\hat{X}^k)+\sum_j\Gamma_{\cdot ij}^{k}\hat{X}^j\right)\partial_K=D_{\gamma}\hat{X}(\gamma')+\sum \hat{X}^j\nabla_{\gamma'}\partial_j.
+                \end{align}
+              </div>
+              <div class="col-md-3">
+                  <img src="../Bilder/Parallel_Transport.svg.png" alt="" class="img-fluid">
+                  <figcaption><em> <p><a href="https://commons.wikimedia.org/wiki/File:Parallel_Transport.svg#/media/Datei:Parallel_Transport.svg"></a><br>Von <a href="//commons.wikimedia.org/wiki/User:Fred_the_Oyster" title="User:Fred the Oyster">Fred the Oyster</a> - <a href="//commons.wikimedia.org/wiki/File:Parallel_transport.png" class="image"></a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=35124171">Link</a></p></em></figcaption>
+              </div>
+          </div>
+      </div>
+  
         <p>Auf der rechten Seite wird $\hat{X}$ nur an der Stelle $\gamma'$ ausgewertet. Damit hängt $\nabla_{\gamma'}$ nur von $\hat{X}$ ab.</p>
         <p>Dies sichert uns die Notation $\nabla_{\gamma'}\hat{X}$, da sich durch ein geeignetes $\hat{X}$ die Existenz zeigen lässt.</p>
         <p><b>Definition: </b> Sei $\gamma: I\rightarrow M$ eine reguläre Kurve. Ein Vektorfeld $X$ längs $\gamma$ heißt parallel, falls $\nabla_{\gamma'}X=0$ gilt. Wir nennen $\gamma$ Geodätische, falls $\gamma'$ parallel ist:</p>
