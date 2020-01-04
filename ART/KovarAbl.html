@@ -93,8 +93,8 @@
         <div class="col-lg-12">
           <blockquote class="generic-blockquote">
             Das Ziel des heutigen Artikels ist es, die sog. kovariante Ableitung zu definieren. Dazu werden wir den normalen Ableitungsoperator $\frac{\partial}{\partial \tau}$ durch den kovarianten Ableitungsoperator $\frac{\mathrm{D}}{\mathrm{D}\tau}$ ersetzen.
-            Wie ich später zeigen werde, lässt sich der Operator als
-            $$\mathrm{D}u^{\kappa}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma^{\kappa}_{\cdot \mu\nu}\right)\mathrm{d}x^{\nu}$$
+            Wie ich später zeigen werde, lässt sich die kovariante Ableitung als
+            $$\frac{\mathrm{D}u^{\kappa}}{\mathrm{d}x^{\nu}}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma^{\kappa}_{\cdot \mu\nu}\right)\mathrm{d}x^{\nu}$$
             schreiben.
           </blockquote>
         </div>
@@ -156,18 +156,25 @@
     0=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}\cdot u^{\mu}\right)\mathrm{d}x^{\nu}.	
     \end{align}
     
-   <p> Für das kovariante Differential $Du^{\kappa}$ ergibt sich schließlich</p>
    <p><b>Definition: </b> Die kovariante Ableitung</p>
+   <p>Wir nennen</p>
     \begin{align}
-    Du^{\kappa}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}u^{\mu}\right).	
+    \frac{Du^{\kappa}}{\mathrm{d}x^{\nu}}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}u^{\mu}\right).	
     \end{align}
-    <p>Wir sagen, $\frac{\mathrm{D}u^{\kappa}}{\mathrm{d}x^{\nu}}$ ist die kovariante Ableitung von $u^{\mu}$ nach $x^{\nu}$.</p>
-    
-    <h2>Fazit</h2>
-    <p>Wir haben den kovarianten Differentialoperator definiert:</p>
-    \begin{align}
-    Du^{\kappa}=\left(\frac{\partial u^{\kappa}}{\partial x^{\nu}}+\Gamma_{\mu\nu}^{\kappa}u^{\mu}\right)
-    \end{align}
+    <p>die kovariante Ableitung von $u^{\kappa}$ nach $x^{\nu}$.</p>
+    <h2>Notation</h2>
+    <p>Um die Notation von Ableitungen zu verkürzen, definieren wir Kurzschreibweisen.</p>
+    <p>Für die kovariante Ableitung schreiben wir</p>
+    $$u^{\kappa}_{||\mu}:=\frac{\mathrm{d}u^{\kappa}}{\mathrm{d}x^{\nu}}$$
+    <p>und für partielle Ableitungen schreiben wir</p>
+    $$u^{\kappa}_{|\mu}:=\frac{\partial u^{\kappa}}{\partial x^{\mu}}.$$
+  
+    <br/>
+    <h2>Kovariante Ableitung von kovarianten Tensoren</h2>
+    <p><b>Definition: </b> Die kovariante Ableitung für einen kontravarianten Tensor</p>
+    <p>Analog zu der kovarianten Ableitung für einen kontravarianten Tensor, nennen wir</p>
+    $$w_{\nu ||\mu}=w_{v|\mu}-\Gamma^{\lambda}_{\cdot\mu\nu}w_{\lambda}$$
+    <p>die kovariante Ableitung von $w_{\nu}$ nach $\mu$.</p>
 
     <hr />  
   
