@@ -89,51 +89,52 @@
   <div class="main">
     <h1>Geschwindigkeit, Beschleunigung und Impuls in der SRT</h1>
     <h2>Die Geschwindigkeit</h2>
-    In der Newtonschen Mechanik können wir die Geschwindigkeit über einen Differenzenquotienten definieren
-        \begin{align}
-        \vec{v}=\frac{\mathrm{d}\vec{x}(t)}{\mathrm{d}t}.
-        \end{align}
-        Diese Beschreibung hat für uns zwei Probleme. Zum einen wollen wir in Komponentenschreibweise achten und zum anderen (und das ist das größerer Problem) ist die Zeit kein Lorentz-Skalar. Damit ist also $\frac{\mathrm{d}x^{\mu}}{\mathrm{d}t}$ nicht Lorentz-kovariant, was wir gefordert haben. Wir können aber die Zeit $t$ mit der Eigenzeit $\tau$ ersetzen, da diese ein Lorentz-Skalar ist. Die Größe
-        \begin{align}
-        u^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}	
-        \end{align}
-        ist also ein kontravarianter Vierervektor mit dem Namen Vierergeschwindgigkeit. Mit der Definition des  Eigenzeitdifferentials folgt dann 
-        \begin{align}
-        u^{\mu}=\gamma(t)\frac{\mathrm{d}x^{\mu}}{\mathrm{d}t}=\gamma(t)\begin{pmatrix}	
-        c\\
+    <p>In der Newtonschen Mechanik können wir die Geschwindigkeit über die zeitliche Änderung des Ortsvektors definieren</p>
+    \begin{align}
+    \vec{v}=\frac{\mathrm{d}\vec{r}(t)}{\mathrm{d}t}.
+    \end{align}
+    <p>Diese Formulierung der Geschwindigkeit beeinhaltet zwei Probleme. Zum einen wollen wir in Komponentenschreibweise arbeiten und zum anderen (und das ist das größerer Problem) ist die Zeit kein Lorentz-Skalar. Damit ist also $\frac{\mathrm{d}x^{\mu}}{\mathrm{d}t}$ nicht Lorentz-kovariant, was wir gefordert haben. Wir können aber die Zeit $t$ mit der Eigenzeit $\tau$ ersetzen, da diese ein Lorentz-Skalar ist. Die Größe</p>
+    \begin{align}
+    u^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}	
+    \end{align}
+    <p>ist also ein kontravarianter Vierervektor mit dem Namen Vierergeschwindgigkeit. Mit der Definition des  Eigenzeitdifferentials folgt dann </p>
+    \begin{align}
+    u^{\mu}=\gamma(t)\frac{\mathrm{d}x^{\mu}}{\mathrm{d}t}=\gamma(t)\begin{pmatrix}	
+    c\\
+    \dot x\\
+    \dot y\\
+    \dot z	
+    \end{pmatrix}=\gamma(t)\begin{pmatrix}
+    c\\
+    \vec{v}	
+    \end{pmatrix}.
+    \end{align}
+    <p>Mit Indexmanipulation folgt für $u_{\mu}$ das folgende</p>
+    \begin{align}
+    u_{\mu}=\eta_{\mu\nu}u^{\nu}=\gamma(t)\begin{pmatrix}
+        -c\\
         \dot x\\
         \dot y\\
-        \dot z	
-        \end{pmatrix}=\gamma(t)\begin{pmatrix}
+        \dot z
+    \end{pmatrix}=\gamma(t)\begin{pmatrix}
         c\\
-        \vec{v}	
-        \end{pmatrix}.
-        \end{align}
-        Mit Indexmanipulation folgt für $u_{\mu}$ das folgende
-        \begin{align}
-        u_{\mu}=\eta_{\mu\nu}u^{\nu}=\gamma(t)\begin{pmatrix}
-            -c\\
-            \dot x\\
-            \dot y\\
-            \dot z
-        \end{pmatrix}=\gamma(t)\begin{pmatrix}
-            c\\
-            -\vec{v}
-        \end{pmatrix}.
-        \end{align}
-        Wir verjüngen jetzt die Vierergeschwindigkeit
-        \begin{align}
-        u_{\mu}u^{\mu}=-\gamma c^2+\gamma\vec{v}^2=\gamma c^2(1-\beta^2)=\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\right)\cdot \left(1-\frac{v^2}{c^2}\right)c^2=c^2
-        \end{align}
-        Damit ist die Kontraktion $u_{\mu}u^{\mu}>0$, daher ist $u^{\mu}$ ein zeitartiger Vektor.
+        -\vec{v}
+    \end{pmatrix}.
+    \end{align}
+    <p>Wir verjüngen jetzt die Vierergeschwindigkeit</p>
+    \begin{align}
+    u_{\mu}u^{\mu}=-\gamma c^2+\gamma\vec{v}^2=\gamma c^2(1-\beta^2)=\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\right)\cdot \left(1-\frac{v^2}{c^2}\right)c^2=c^2
+    \end{align}
+    <p>Damit ist die Kontraktion $u_{\mu}u^{\mu}>0$, daher ist $u^{\mu}$ ein zeitartiger Vektor.</p>
+   
     <h2>Die Viererbeschleunigung</h2>
-    
+
     <h2>Der Impuls</h2>
-    In der Newtonschen Mechanik gilt
+    <p>In der Newtonschen Mechanik gilt</p>
     \begin{align}
     p=mv.
     \end{align}
-    In Komponentenschreibweise ergibt sich damit
+    <p>In Komponentenschreibweise ergibt sich damit</p>
     \begin{align}
         p^{\mu}=mu^{\mu}=m\gamma\begin{pmatrix}
     c\\

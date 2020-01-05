@@ -136,7 +136,7 @@
         \begin{align}
         (x-vt)^2+y^2+z^2-c^2t^2=x^2+y^2+z^2-c^2t^2 \underbrace{-2xvt+v^2t^2}_{\text{Störender Term}}.
         \end{align}
-    
+        <h3>Ansatz für die Lorentz-TF</h3>
         <p>Wir wollen nun den Term $-2xvt+v^2t^2$ wegtransformieren. Dazu müssen wir nun auch die Zeit transformieren, was uns später zu der Zeitdilatation führt.</p>
         <p>Um uns Arbeit zu sparen, probieren wir zuerst einen linearen Ansatz, und modifizieren diesen anschließend etwas.</p>
     
@@ -151,8 +151,8 @@
             <p>Wir wählen jetzt $\alpha=\frac{xv}{c^2}$ und erhalten damit</p>
     
             \begin{align}
-            x'^2+y'^2+z'^2-c^2t'^2 &=x^2-2xvt+v^2t^2+y^2+z^2-c^2t^2+2c^2t\frac{xv}{c^2}-c^2\left(\frac{xv}{c^2}\right)^2
-            &= x^2-\frac{v^2}{c^2}x^2+y^2+z^2-c^2t^2+v^2t^2
+            x'^2+y'^2+z'^2-c^2t'^2 &=x^2-2xvt+v^2t^2+y^2+z^2-c^2t^2+2c^2t\frac{xv}{c^2}-c^2\left(\frac{xv}{c^2}\right)^2\\
+            &= x^2-\frac{v^2}{c^2}x^2+y^2+z^2-c^2t^2+v^2t^2\\
             &= x^2\left(1-\frac{v^2}{c^2}\right)+y^2+z^2-c^2t^2\left(1-\frac{v^2}{c^2}\right).
             \end{align}
             <p>Bei diesem Ansatz stören die Faktoren $\left(1-\frac{v^2}{c^2}\right)$ vor $x^2$ und $t^2$. Damit diese Faktoren verschwinden, müssen wir unseren Ansatz leicht verändern. Da jeder Faktor vor $x'$ quadriert wird, müssen wir den Reziproken der Wurzel aus dem Faktor wählen.</p>
@@ -178,7 +178,7 @@
         <h2>Matrixdarstellung der Lorentz-Transformation</h2>
         <p>Die Lorentz-Transformationen $\Lambda$ sind alle Transformationen, welche die Minkowski-(Pseudo)-Metrik invariant lassen.</p>
         <p>Somit folgt für alle Vierer-Vektoren $x$ und $y$</p>
-    
+  
         \begin{align}
         \langle x,y\rangle=\langle\Lambda x, \Lambda y\rangle.	
         \end{align}
@@ -189,7 +189,7 @@
             \Lambda^{\alpha}_{\cdot \mu} \eta_{\alpha \beta} \Lambda^{\beta}_{\cdot \nu}=\eta_{\mu\nu}.
         \end{align}
     
-        <p>In der Kurzschreibweise ergibt sich die koordinatenünabhängige Notation</p>
+        <p>In der Kurzschreibweise ergibt sich die koordinatenunabhängige Notation</p>
     
         \begin{align}
         \Lambda^T \eta \Lambda=\eta.
@@ -202,16 +202,16 @@
     
         \begin{align}
         \begin{pmatrix}
-        A&C
+        A&C\\
         B&D	
         \end{pmatrix}\begin{pmatrix}
-        1&0
+        1&0\\
         0&-1	
         \end{pmatrix}\begin{pmatrix}
-        A &B
+        A &B\\
         C&D	
         \end{pmatrix}=\begin{pmatrix}
-        1 & 0
+        1 & 0\\
         0 & -1	
         \end{pmatrix},	
         \end{align}
@@ -283,27 +283,27 @@
         \end{align}
         <p>Für die transformierten Größen ergibt sich</p>
         \begin{align}
-        x^{0'} &= \gamma (x^0-\beta x^1)\notag
-        x^{1'} &= \gamma (x^1-\beta x^0)\notag
-        x^{2'} &= x^2\notag
+        x^{0'} &= \gamma (x^0-\beta x^1)\\
+        x^{1'} &= \gamma (x^1-\beta x^0)\\
+        x^{2'} &= x^2\\
         x^{3'} &= x^3.	
         \end{align}
         <p>Dies können wir nun mit einer $4\times 4$ Matrix und einem vierdimensionalem Vektor schreiben, wie wir es eben bei der zweidimensionalen Herleitung gemacht haben.</p>
         \begin{align}
         \begin{pmatrix}
-        x^{0'}
-        x^{1'}
-        x^{2'}
+        x^{0'}\\
+        x^{1'}\\
+        x^{2'}\\
         x^{3'}	
         \end{pmatrix}=\begin{pmatrix}
-        \gamma &-\beta \gamma &0 &0
-        -\beta \gamma & \gamma & 0 & 0
-        0 & 0& 1 &0
+        \gamma &-\beta \gamma &0 &0\\
+        -\beta \gamma & \gamma & 0 & 0\\
+        0 & 0& 1 &0\\
         0&0&0&1
         \end{pmatrix}\begin{pmatrix}
-        x^0
-        x^1
-        x^2
+        x^0\\
+        x^1\\
+        x^2\\
         x^3	
         \end{pmatrix}
         \end{align}
@@ -318,8 +318,39 @@
         \end{align}
         <p>Die Lorentztransformationen lassen sich auch miteinander verknüpfen. Hierbei entspricht die Hintereinanderausführung der Lorentz-Transformationen einer Matrixmultiplikation.</p>
     
+        <h2>Allgemeine Lorentz-Transformation</h2>
+        <p>Allgemein können wir eine Lorentz-Metrik wie folgt beschreiben, wenn sich zwei Bezugssysteme mit einer Geschwindigkeit $\vec{v}$ zueinander bewegen:</p>
+        \begin{align}
+        \Lambda^{\mu}_{\cdot\nu}(\vec{\beta})&=\begin{pmatrix}
+        \gamma & -\gamma b_j\\
+        -\gamma b_i & \delta_{ij}+(\gamma-1)\frac{\beta_i\beta_j}{\beta^2}
+        \end{pmatrix}\equiv (\Lambda^{\prime \mu}_{\cdot\nu})^{-1}\\
+        \Lambda^{\prime\mu}_{\cdot\nu}(\vec{\beta})&=\begin{pmatrix}
+        \gamma & \gamma b_j\\
+        \gamma b_i & \delta_{ij}+(\gamma-1)\frac{\beta_i\beta_j}{\beta^2}
+        \end{pmatrix}\equiv (\Lambda^{ \mu}_{\cdot\nu})^{-1}
+        \end{align}
+        <p><b>Beispiel: </b> Allgemeine Lorentz-Transformation</p>
+        <p>Es gilt</p>
+        \begin{align}
+        x^{\prime\mu}&=\Lambda^{\mu}_{\cdot\nu}\Leftrightarrow \begin{pmatrix}
+        ct'\\
+        x_i'
+        \end{pmatrix}=\begin{pmatrix}
+        \gamma & -\gamma b_j\\
+        -\gamma b_i & \delta_{ij}+(\gamma-1)\frac{\beta_i\beta_j}{\beta^2}
+        \end{pmatrix}\begin{pmatrix}
+        ct\\
+        x_j
+        \end{pmatrix}\\
+        &= \begin{pmatrix}
+        \gamma ct-\gamma \beta_j x_j\\
+        x_i-\gamma\beta_i ct+(\gamma-1)\beta_i\frac{\beta_jx_j}{\beta^2}.
+        \end{pmatrix}
+        \end{align}
         <p>Einsteins Erkenntnis liegt darin, dass die Lorentz-Transformation sich nicht nur auf die Elektrodynamik beschränkt, sondern eine allgemeine Eigenschaft von Raum und Zeit ist.</p>
     
+      
         <hr/>   
 
         <div class="navigation-area">

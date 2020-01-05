@@ -91,48 +91,55 @@
 
     <h1>Der Minkowski-Raum</h1>
 
-    <p></p><b>Definition des Minkowski-Raum</b></p>
-    <p>Wir wollen im folgenden die Beschaffenheit eines Raumes mit dem "Metriktensor" beschreiben. Für die spezielle Relativitätstheorie reicht es, einen Tensor als Matrix zu betrachten. Wir können den Metrik-Tensor aus dem Skalarprodukt bzw. dem Wegelelement bestimmen. Es gilt</p>
+    <p><b>Definition: </b> Der Minkowski-Raum</p>
+    <p>Der Minkowski-Raum ist ein vierdimensionaler reeller Vektorraum mit einem Skalarprodukt der Form</p>
     \begin{align}
-    \mathrm{d}s^2=-c^2\mathrm{d} t^2+\mathrm{d} x^2+\mathrm{d} y^2+\mathrm{d} z^2.
+    \vec{x}\cdot\vec{y}=-x_0y_0+x_1y_1+x_2y_2+x_3y_3.
     \end{align}
-    <p>Wir führen jetzt den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
+    <p>Die Koordinate $x^0$ sei dabei definiert als</p>
+    $$x_0=ct.$$
+    <p>Wir führen nun den Metriktensor des Minkowski-Raum $\eta_{\mu\nu}$ ein. Dieser ist definiert durch</p>
     \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-    -c^2 &0&0&0
-    0 &1&0&0
-    0&0&1&0
+    \eta_{\mu\nu}=\eta^{\mu\nu}=\begin{pmatrix}
+    -1 &0&0&0\\
+    0 &1&0&0\\
+    0&0&1&0\\
     0&0&0&1.	
     \end{pmatrix}	
     \end{align}
-    <p>Im folgenden wollen wir mit natürlichen Einheiten rechen, also $c=1$. Damit ergibt sich dann für $\eta_{\mu\nu}$ der folgende Tensor:</p>
-    \begin{align}
-    \eta_{\mu\nu}=\begin{pmatrix}
-        -1&0&0&0
-        0&1&0&0
-        0&0&1&0
-        0&0&0&1.
-    \end{pmatrix}	
-    \end{align}	
-    <p>Wir wollen jetzt mit dem Metriktensor das Skalarprodukt im Minkowski-Raum berechnen. In drei Dimensionen ergibt sich das Skalarprodukt in einem kartesischen Koordinatensystem durch</p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b}=a_1b_1+a_2b_2+a_3b_3.	
-    \end{align}
-    <p>Wir wollen das Skalarprodukt nun auf vier Dimensionen verallgemeinern und insbesondere im Minkowski-Raum berechnen. </p>
-    \begin{align}
-    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b^{\mu} &=a_0b^0+a_1b^1+a_2b^2+a_3b^3
-    &=-a^0b^0+a^1b^1+a^2b^2+a^3b^3
-    &=\eta_{\mu\nu}a^{\mu}b^{\nu}
-    \end{align}
 
-    <p>Wir werden ab jetzt die Einsteinsche Summenkonvention benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
+    <h2>Ko- und Kontravarianz</h2>
+    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
+    \begin{align}
+    x_{\mu}:=\eta_{\mu\nu}x^{\nu}.	
+    \end{align}
+    <p>Analog können wir auch kontravariante Vektoren definieren.</p>
+    <p><b>Definition: </b> Kontravarianter Vektor</p>
+    <p>Sei</p> $$x^{\mu}=(x^0,x^1,x^2,x^3)$$ 
+    <p>ein <b>kontravarianter Vierervektor</b>. Dann transformieren sich seine Komponenten durch</p>
+    $$x^{\prime\mu}=\Lambda^{\nu}_{\mu} x^{\mu}.$$
+    <br />
+    <p><b>Definition: </b> Kovarianter Vektor</p>
+    <p>Sei</p> $$x_{\mu}=(x_0,x_1,x_2,x_3)$$ 
+    <p>ein <b>kovarianter Vierervektor</b>. Dann transformieren sich seine Komponenten durch</p>
+    $$x^{\prime}_{\mu}=\left(\Lambda^{\mu}_{\nu}\right)^{-1\, T} x_{\mu}.$$
 
-    <p>Wir bilden das Skalarprodukt zweier Vektoren also, indem wir den Metriktensor mit den kontravarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
+    <h2>Das Skalarprodukt</h2>
+    <p><b>Folgerung: </b> Das Skalarprodukt</p>
+    <p>Wir wollen im folgenden das Skalarprodukt mit dem Metriktensor umschreiben. Es gilt </p>
+    \begin{align}
+    (\vec{a},\vec{b})=\vec{a}\cdot \vec{b} =\sum_{\mu}a_{\mu}b_{\mu} &=-a_0b_0+a_1b_1+a_2b_2+a_3b_3\\
+    &=\eta^{\mu\nu}a_{\mu}b_{\nu}=\eta_{\mu\nu}a^{\mu}b^{\nu}
+    \end{align}
+    <p><b>Konvention: </b> Einsteinsche Summenkonvention</p>
+    <p>Wir werden ab jetzt die <b>Einsteinsche Summenkonvention</b> benutzen, müssen also über doppelt unten und oben auftretende Indizes summieren.</p>
+    <br />
+    <p>Wir bilden das Skalarprodukt zweier Vektoren, indem wir den Metriktensor mit den kovarianten Komponenten der beiden Vektoren multiplizieren und dann aufsummieren. Dieses Prinzip gilt nicht nur bei dem Metrik-Tensor des Minkowski-Raums sondern auch für allgemeine Metrik-Tensoren $g_{\mu\nu}$:</p>
 
     \begin{align}
     \vec{a}\cdot \vec{b}=\eta_{\mu\nu}a^{\mu}b^{\nu} && \vec{a}\cdot \vec{b}=g_{\mu\nu}a^{\mu}b^{\nu}.
     \end{align}
-    <p>Der Minkowski-Raum ist also ein vierdimensionaler reeller Vektorraum mit dem Skalarprodukt aus Gleichung.</p>
+    
 
     <p><b>Anmerkungen</b></p>
     <ul class="unordered-list">
@@ -146,36 +153,10 @@
         <li><p>Wenn wir von der Minkowski-Metrik sprechen, ist dies strenggenommen nicht richtig. Von einer Metrik verlangen wir, dass Abstände nicht negativ werden können. Dies ist bei der Minkowski-Metrik aber der Fall, weshalb wir strenggenommen von einer Pseudo-Metrik sprechen müssten.</p></li>
     </ul>
 
-    <h2>Herunter- und Hinaufziehen von Indizes</h2>
-    <p>Wir führen zu dem kovarianten Metriktensor $\eta_{\mu\nu}$ noch den kontravarianten Metriktensor $\eta^{\mu\nu}$ ein. Wir müssen $\eta^{\mu\nu}$ so wählen, dass</p>
-    \begin{align}
-    \eta_{\mu\nu}\eta^{\mu\nu}=E_4=\mathrm{d}elta^{\mu}_{\nu}	
-    \end{align}
-    <p>gilt. Damit finden wir, dass im Minkowski-Raum</p>
-    \begin{align}
-    \eta^{\mu\nu}=\begin{pmatrix}
-    -1 &0&0&0
-    0&1&0&0
-    0&0&1&0
-    0&0&0&1	
-    \end{pmatrix}	
-    \end{align}
-    <p>gilt.</p>
-    <p>Mit dem jeweiligen Metriktensor können wir dann die Indizes von Vektoren hoch- und runterziehen.</p>
-
-    <h2>Ko- und Kontravarianz</h2>
-    <p>In der Speziellen Relativitätstheorie können wir durch die Bilinearform $\eta$ jedem Vektor $x^{\mu}$ einen dualen Vektor $x_{\mu}$ zuordnen:</p>
-    \begin{align}
-    x_{\mu}=\eta_{\mu\nu}x^{\nu}.	
-    \end{align}
-
-    <p>Bei dualen Vektoren kehren sich also alle Vorzeichen der räumlichen Komponenten um. </p>
-
-
-    <h3>Längen berechnen</h3>
+    <h2>Das Linienelement</h2>
     <p>Durch Multiplikation mit dem Metriktensor können Tensorindizes hoch- und tiefgestellt werden. Für den Vektor $\vec{V}$ gilt:</p>
     \begin{align}
-        V_n&=V^mg_{mn}
+        V_n&=V^mg_{mn}\\
         V^n &= V_m g^{mn}.
     \end{align}
     <p>Hierbei ist der Vektor $\vec{V}$ immer dasselbe physikalische Objekt. Einmal drücken wir diesen Vektor mit kontravatianten Komponenten aus, das andere mal mit kovarianten Komponenten.</p>
@@ -183,9 +164,11 @@
     \begin{align}
         T^m_n=g^{mr}T_{rn}.
     \end{align}
+    <p><b>Herleitung: </b> Das Linienelement</p>
+    <br />
     <p>Dieses Wissen wollen wir nun anwenden. Wir betrachten nun den infinitesimal kleinen Vektor $\mathrm{d} \vec{s}$. Wir schreiben diesen Vektor nun in Tensorschreibweise mit den kontravarianten Komponenten. Es gilt offensichtlich</p>
     \begin{align}
-        \mathrm{d} x^m=\mathrm{d} x^1 \cdot \vec{e}_1+\mathrm{d} x^2\cdot \vec{e}_2.
+        \mathrm{d} x^m=\mathrm{d} x^m\vec{e}^m.
     \end{align}
     <p>Wie wir bereits betrachtet haben, können wir daraus einen Tensor gewinnen. Dieser ergibt sich dann durch</p>
     \begin{align}
@@ -203,9 +186,10 @@
     \begin{align}
     \lambda=\mathrm{d} x^m \mathrm{d} x^n g_{mn}.	
     \end{align}
-    <p>Der Skalar $\lambda$ ist also genau das Linien-Element $\mathrm{d} s^2$:</p>
+    <p><b>Definition: </b> Das Linienelement</p>
+    <p>Wir nennen den Skalar $\lambda$ das Linienelement $\mathrm{d} s^2$. Es gilt</p>
     \begin{align}
-    \mathrm{d} s^2=\mathrm{d} x^m \mathrm{d} x^ng_{mn}=\mathrm{d} x^m \mathrm{d} x_m=\mathrm{d} x_m \mathrm{d} x_n g^{mn}.	
+    \mathrm{d} s^2=g_{mn}\mathrm{d} x^m \mathrm{d} x^n=g^{mn}\mathrm{d} x_m \mathrm{d} x_n.	
     \end{align}
     
     <hr/>   
