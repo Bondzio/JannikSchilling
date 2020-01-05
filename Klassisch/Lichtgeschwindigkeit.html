@@ -1,6 +1,4 @@
-  
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 
@@ -12,8 +10,8 @@
 
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="../favicon.ico">
-<link rel="canonical" href="https://www.jannik-schilling.com/SRT/SRTEinfuhrung">
-<title>Kurs SRT - Physikalische Motivation der SRT</title>
+<link rel="canonical" href="https://www.jannik-schilling.com/Klassisch/Lichtgeschwindigkeit">
+<title>Kurs Klass. Phys. - Lichtgeschwindigkeit</title>
 <meta name="description" content="Die spezielle Relativitätstheorie beschreibt die klassische Physik auch bei hohen Geschwindigkeiten.">
 <meta name="og:title" property="og:title" content="">
 <meta name="twitter:card" content="">
@@ -75,8 +73,8 @@
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>Physikalische Grundlagen</h2>
-                        <p>Home<span>/</span>SRT</p>
+                        <h2>Die Lichtgeschwindigkeit</h2>
+                        <p>Home<span>/</span>Klassiche Physik</p>
                     </div>
                 </div>
             </div>
@@ -88,112 +86,75 @@
 
   <div class="main">
          
-    <h1>Einführung in die Spezielle Relativitätstheorie</h1>
+    <h1>Lichtgeschwindigkeit</h1>
+    <p>In diesem Artikel möchte ich zeigen, wie man von den Maxwell-Gleichungen zu der Lichtgeschwindigkeit gelangt und zeigt, dass Licht ein elektromagnetisches Feld ist.</p>
+    <h2>Maxwell-Gleichungen</h2>
 
-    <p>Die Lichtgeschwindigkeit wurde wegen ihrer enormen Bedeutung genau auf den nachfolgenden Wert festgelegt.</p>
+    <p>Die Maxwell-Gleichungen sind die Grundgleichungen der Elektrodynamik. Wenn wir die Verteilung der elektrischen Ladungen und die Ströme $\rho(\vec{x},t)$ sowie $\vec{j}(\vec{x},t)$ kennen, können wir die elektrischen und magnetischen Felder $\vec{E}(\vec{x},t)$ und $\vec{B}(\vec{x},t)$ bestimmen. Es gelten die Maxwell-Gleichungen in differentieller Form</p>
     \begin{align}
-        c=299.792.458\frac{\text{m}}{\text{s}}
+    \operatorname{div} \vec{E} &= \frac{\rho(\vec{r})}{\epsilon_0}	 
+    \operatorname{div} \vec{B}&= 0
+    \operatorname{rot} \vec{B} &= \mu_0\left(\vec{j}+\epsilon_0\frac{\partial \vec{E}}{\partial t}\right)
+    \operatorname{rot} \vec{E} &= -\frac{\partial \vec{B}}{\partial t},
     \end{align}
 
-    <p>Die Spezielle Relativitätstheorie basiert auf dem experimentellen Befund, dass die Messung der Vakuumlichtgeschwindigkeit in jedem Inertialsystem denselben Wert liefert, der zudem von der Ausbreitungsrichtung des Lichts unabhängig ist (Isotropie des Raumes).</p>
+    <p>als auch in der integralen Form</p>
 
-    <h2>Geschichte der Speziellen Relativitätstheorie</h2>
-
-    <p>Die spezielle Relativitätstheorie wird in der öffentlichen Diskussion fast ausschließlich Albert Einstein zugeschrieben. Aber auch andere Physiker, insbesondere H. Lorentz und J. Poincare haben einen großen Beitrag bei der Erschließung der neuen Theorie geleistet. Die meist-zitierten Quellen kommen von Albert Einstein, Henrik Lorentz und Poincare.</p>
-
-    <p>Die Lichtgeschwindigkeit hängt eng zusammen mit der Elektrodynamik von Maxwell. Licht ist nämlich nichts anderes als eine elektromagnetische Welle. Durch Lösen der Maxwell-Gleichungen im Vakuum ergibt sich dann die Ausbreitungsgeschwindigkeit einer Welle durch</p>
     \begin{align}
-        c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.
+    \iint \vec{E}\cdot \mathrm{d}\vec{A} &=\frac{Q}{\epsilon_0}
+    \iint \vec{B}\cdot \mathrm{d}\vec{A} &= 0
+    \oint \vec{B}\cdot \mathrm{d}\vec{r} &=\mu_0\vec{j}+\mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}
+    \oint \vec{E}\cdot \mathrm{d}\vec{r}&= -\dot{\vec{B}}(t).
     \end{align}
 
-    <h2>Galilei-Transformation</h2>
+    <p>Wir erhalten wir nun aus den Maxwell-Gleichung eine Wellengleichung für das Licht?</p>
 
-    <p>In diesem Abschnitt wollen wir auf die Galilei-Invarianz der Newtonschen Bewegungsgleichungen eingehen und ich möchte Ihnen das Prinzip hinter Transformationsivarianz näherbringen, da wir dieses Prinzip noch zahlreich gebrauchen werden.</p>
+    <p>Wie betrachten zur Herstellung einer Wellengleichung die beiden Maxwell-Gleichungen 3 und 4 mit $I=0$:</p>
+    \begin{align*}
+    \operatorname{rot}\vec{E}=-\dot{\vec{B}}	&& \operatorname{rot}\vec{B}=\mu_0\epsilon_0\dot E.
+    \end{align*}
 
-    <p>Wir wollen feststellen, welche Forderung aus der Galilei-Invarianz für ein Kraftfeld $F$ entstehen. Wir betrachten dazu die Newtonschen Bewegungsgleichungen</p>
+    <p>Wir bilden jetzt von beiden Gleichungen die Rotation und erhalten damit</p>
     \begin{align}
-        m\ddot{x}^{i}(t)=F^{i}(x_n^{i},\dot{x}_n^{i},t).
+    \operatorname{rot}(\operatorname{rot}\vec{E})=-\operatorname{rot}\left(\frac{\partial\vec{B}}{\partial t}\right) && \operatorname{rot}\left(\frac{\partial \vec{B}}{\partial t }\right)=\mu_0\epsilon_0\frac{\partial^2 \vec{E}}{\partial t^2}.
     \end{align}
 
-    <h2>Probleme der Klassischen Mechanik</h2>
-    <p>In der Newtonschen Mechanik beschreiben wir die Bewegung von Teilchen durch Bahnkurven. Als mathematischen Formalismus wählen wir dazu das Prinzip des Ortsvektor $\vec{r}$. Wir wählen ein beliebiges Koordinatensystem als Basis für unsere Beschreibung der Bewegung eines Objektes. Die Spitze des Ortsvektor $\vec{r}(t)$ zeigt immer auf einen Massenpunkt (Trajektorie).</p>
-    <br>
-
-    <p>Dazu brauchen wir den Begriff der Zeit. Wir wählen einen beliebigen Zeitnullpunkt und benutzen diesen zum Beschreiben der Bewegung eines Massenpunkts. Es gilt das Prinzip der Universalität der Zeit $t=t'$.</p>
-    <br>
-    <p>Wir können die Bewegung eines Punktteilchens mit Masse $m$ in der Newtonschen Mechanik durch eine Differentialgleichung beschreiben. Für ein Kraftfeld $\vec{F}(\vec{r}(t), \dot{\vec{r}}, t)$ gilt mit dem zweiten Newtonschen Axiom $\vec{F}=m\vec{a}$:</p>
+    <p>Jetzt können wir die zweite Gleichung in die erste Gleichung einsetzen und erhalten damit</p>
     \begin{align}
-        \vec{F}=m\vec{a}=m\ddot{\vec{r}}\Leftrightarrow \ddot{\vec{r}}=\frac{1}{m}\vec{F}(\vec{r}(t), \dot{\vec{r}}(t), t).
-    \end{align}
-    <p>Durch lösen der auftretenden Differentialgleichung ergibt sich die Bahnkurve $\vec{r}(t)$ in drei Dimensionen (oder $x(t)$ in einer Dimension).</p>
-
-    <p>Das erste Newtonsche Axiom definiert den Begriff eines Inertialsystems. Ein Inertialsystem ist ein unbeschleunigtes Bezugssystem. Ein Wechsel von einem ruhenden Inertialsystem in ein mit Geschwindigkeit $\vec{v}$ bewegtes Inertialsystem $\vec{v}$. Damit gilt</p>
-    \begin{align}
-    \vec{x}\rightarrow \vec{x}'=\vec{x}-\vec{v}t	
-    \end{align}
-    <p>Dies ist die spezielle Galilei-Transformation. Die allgemeinste Galilei-Transformation ergibt sich mit der Drehmatrix $D$</p>
-    \begin{align}
-    \vec{x}' &=D\vec{x}-\vec{v}t-\vec{x}_0	
-    t'&= t-t_0.
-    \end{align}
-    <p>Die Newtonsche Mechanik ist also invariant unter der Galilei-Transformation.</p>  
-
-
-    <h2>Axiome der Speziellen Relativitätsthoerie</h2>
-
-    <p>Die Beschäftigung mit Relativität war lange auch mit der Elektrodynamik verknüpft. Lorentz leitete den Gamma-Faktor beispielsweise aus den Maxwell-GLeichungen her, ohne viele weitere physikalische Annahmen zu treffen.</p>
-
-    <p>Heute versuchen wir die Spezielle Relativitätstheorie mit so wenig Annahmen wie möglich zu verstehen. Wir können zeigen, dass die drei folgenden Axiome bereits die Struktur der speziellen Relativitätstheorie implizieren - also auch die der Lorentz-Transformation:</p>
-    <br>
-    <ul class="unordered-list">
-    <li><p>Der Raum ist homogen und isotrop.</p></li>
-    <li><p>Das Relativitätsprinzip gilt.</p></li>
-    <li><p>Die Lichtgeschwindigkeit $c$ ist in allen Bezugssystemen gleich.</p></li>	
-    </ul>
-    <br>
-    <p>Das erste Axiom nahm Eistein als "Erfahrungswert" an, das zweite Axiom war für Einstein die Konsequenz aus den gescheiterten Versuchen, den Äther relativ zu dem ausgezeichneten Ruhesystem nachzuweisen. Insbesondere das Michelson-Morley-Experient wurde später als das Experiment gewählt, das die Äthertheorie widerlegt. </p>
-    <br>
-    <p>Das dritte Axiom ist das Minimum, auf das sich die Aussagen der Maxwell-Gleichungen reduzieren lassen, weil erst dann die Gesetze der Relativitätstheorie zusammen mit den Axiomen 1 und 2 eindeutig werden.</p>
-    <br>
-    <p>Der Ausgangspunkt der Speziellen Relativitätstheorie knüpft nun genau hier an. Das Problem dieser Gleichungen lautet wie folgt:</p>
-
-    <p><b>Die Maxwell-Gleichungen sind nicht invariant unter Galilei-Transformationen.</b></p>
-    <p>Das ist natürlich eine Provokation für die moderne Physik: Die Newtonsche Mechanik und die Elektrodynamik sind in unterschiedlichen Bezugssystem nicht dieselben und hängen von der Wahl von Bezugssysten ab. </p>
-    <br>
-    <p>Daraus ergeben sich drei Möglichkeiten für die Mechanik, die alle weitreichende Folgen haben.</p>
-    <br>
-    <ul class="unordered-list">
-        <li><p>Die Maxwell-Gleichungen gelten nur in einer ausgezeichneten Gruppe von Inertialsystemen.</p></li>
-        <li><p>Die Maxwell-Gleichungen sind in der obigen Form falsch und müssen modifiziert bzw. fallengelassen werden. Die Galilei-Transformation ist dann gültig.</p></li>
-        <li><p>Die Newtonsche Mechanik ist in der obigen Form nicht gültig. Dann wäre aber auch die Galilei-Transformation falsch.</p></li>
-    </ul>
-    <br>
-    <p>Möglichkeit 1 wurde durch Experimente widerlegt. Es gibt keinen sogenannten Weltäther, damit gelten die Maxwell-Gleichungen in allen Inertialsystemen und auch die Lichtgeschwindigkeit ist in allen Inertialsystemen gleich.</p>
-
-    <p>Stattdessen scheint Möglichkeit 3 wahr zu sein. Dieses werden wir als Ansatz wählen, um die Newtonsche Mechanik zu korrigieren. All diese Überlegungen enden in der Speziellen Relativitätstheorie.</p>
-
-    <h3>Ein Experimenteller Befund</h3>
-
-    <p><b>Experiment von Fizeau</b></p>
-
-    <p>Ein sehr spannendes Ergebnis ist das Experiment von Fizeau (1851). Dieser fand für die Lichtgeschwindigkeit in einem bewegter Flüssigkeit mit Brechungsindex $n$ und Geschwindigkeit $v$ relativ zum Laborsystem das Ergebnis</p>
-    \begin{align}
-    c'=\frac{c}{n}+v\left(1-\frac{1}{n^2}\right)	
-    \end{align}
-    <p>erhielt. Bis auf den $\frac{1}{n^2}$ Term war das Ergebnis wie erwartet. Dieser Term kann in der Speziellen Relativitätstheorie einfach durch die relativistische Geschwindigkeitsaddition erklärt werden, wenn $v\ll \frac{c}{n}$ gilt</p>
-    \begin{align}
-        c'=\frac{\frac{c}{n}+v}{1+\frac{vc}{nc^2}}.
+    \operatorname{rot}\operatorname{rot}\vec{E}=-\mu_0\epsilon_0\frac{\partial^2 E}{\partial t^2}.	
     \end{align}
 
+    <p>Mittels</p>
+    \begin{align}
+        \operatorname{rot}\operatorname{rot}\vec{E}=-\operatorname{div}(\operatorname{grad}\vec{E})+\operatorname{grad}(\mathrm{d}iv\vec{E})
+    \end{align}
+
+    <p>erhalten wir die Wellengleichung der Elektrodynamik</p>
+
+    <p><b>Wellengleichung der Elektrodynamik</b></p>
+    \begin{align}
+    -\left(\frac{\partial^2}{\partial^2x}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\vec{E}(\vec{r},t)&=-\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t)\notag
+    -\Delta \vec{E}(\vec{r},t)&= -\mu_0\epsilon_0\frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t). 	
+    \end{align}
+
+    <p>In der klassischen Mechanik gibt es die Wellengleichung in der Form</p>
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\Delta A(\vec{r},t).	
+    \end{align}
+
+    <p>Der Koeffizientenvergleich zwischen den beiden Gleichungen liefert</p>
+    \begin{align}
+    \frac{\partial^2 A(\vec{r},t)}{\partial t^2}=c^2\Delta A(\vec{r},t) && \frac{1}{\mu_0\epsilon_0}\Delta \vec{E}(\vec{r},t)&= \frac{\partial^2}{\partial t^2} \vec{E}(\vec{r},t).
+    \end{align}
+
+    <p>Und der Vergleich der beiden Vorfaktoren liefert Gleichung die Definition der Lichtgeschwindigkeit:</p>
+    \begin{align*}
+    c^2=\frac{1}{\epsilon_0\mu_0}\Leftrightarrow c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.	
+    \end{align*}
   
-    <h2>Einführung in die relativistische Mechanik</h2>
-    <p>Unser Ziel ist die Formulierung einer Lorentz-kovarianten Mechanik. Für den Grenzfall $v\ll c$ soll diese Mechanik in die Newtonsche Mechanik übergehen. Dazu betrachten wir ein Punktteilchen in der vierdimensionalen Raum-Zeit. Zur Beschreibung benutzen wir einen kontravarianten Vierervektor der Form</p>
-    \begin{align}
-    x^{\mu}=x^{\mu}(t)=\begin{pmatrix}
-      ct\\
-      \vec{x}(t)
-    \end{pmatrix}.	
-    \end{align}
+  
+  
+
 
     <hr/>   
 
