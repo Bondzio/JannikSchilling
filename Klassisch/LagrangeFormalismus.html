@@ -88,6 +88,74 @@
 
   <div class="main">
     <h1>Der Lagrange-Formalismus</h1>
+    <p>Mit dem Lagrange-Formalismus können wir mechanische Systeme auf sehr elegante Weise beschreiben.</p>
+    <p>Dazu betrachten wir als erstes sogenannte <b>Zwangsbedingungen</b></p>
+    <h2>Zwangsbedingunen</h2>
+    <p>Wenn eine Bewegung durch eine Bedingung eingeschränkt wird, nennen wir diese Bedingung <b>Zwangsbedingung</b>. Ein Beispiel für Zwangsbedingungen ist das ebene Fadenpendel.</p>
+    <ul class="unordered-list">
+      <il><p>Ein ebenes Pendel steht nur in der $(x,y)$-Ebene, die $z$-Komponente ist stets null.</p></il>
+      <il><p>Außerdem ist die Länge $l$ des Pendels fest und ergibt sich stets durch</p>
+      $$x^2+y^2-l^2=0.$$</il>
+    </ul>
+    <p>Wir könnten uns nun fragen, warum es sinnvoll ist, diese Zwangsbedingungen aufzustellen. Die Frage lässt sich leicht beantworten: Die Freiheitsgrade des Systems werden durch Zwangsbedingungen reduziert.</p>
+    <p>Bei $m$ Zwangsbedingungen sind für ein $N$-Teilchen-System nur</p> 
+    $$f=3N-m$$
+    <p>Freiheitsgerade zur vollständigen Beschreibung des Systems notwendig. Das heißt auch, dass wir nur $f$ Koordinaten brauchen!</p>
+    <br>
+    <p><b>Definition:</b> Generalisierte Koordinaten</p>
+    <p>Wir nennen $q_1,...,q_f$ generalisierte Koordinaten und transformieren die ursprünglichen Koordinaten $x_i$:</p>
+    $$x_i=x_i(q_1,...,q_f,t)\,\, \forall i\in\{1,...,3N\}.$$
+    <p>Wir definieren nun die Lagrangefunktion $\mathcal{L}$.</p>
+    <br>
+    <p><b>Definition:</b> Die Lagrange-Funktion</p>
+    <p>Wir definieren die Lagrange-Funktion $\mathcal{L}$ durch</p>
+    $$\mathcal{L}(q_1,...,q_f,\dot q_1,..., \dot q_f,t)=T(q_1,...,q_f,\dot q_1,..., \dot q_f,t)-V(q_1,...,q_f,\dot q_1,..., \dot q_f,t),$$
+    <p>wobei $T$ die kinetische Energie bezeichnet und $V$ die potentielle Energie des Systems.</p>
+    <br>
+    <p>Mit dieser Lagrange-Funktion können wir nun eine Bewegungsgleichung formulieren, die sog. Euler-Lagrange-Gleichung:</p>
+    $$\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial\mathcal{L}}{\partial \dot q_i}-\frac{\partial\mathcal{L}}{\partial q_i}=0, \,\,\, i=1,...,f.$$
+    <p>Diese Gleichungen stellen ein System von $f$ partiellen Differentialgleichungen dar, deren Lösung die <b>Bewegungsgleichungen des Systems</b> genannt werden.
+    </p>
+    <h2>So stellst du Lagrange-Gleichungen auf!</h2>
+    <ul class="unordered-list">
+      <il>Stelle die Zwangsbedingungen des Systems auf</il>
+      <il>Wähle Koordinaten, die die Zwangsbedingungen erfüllen</il>
+      <il>Transformiere kartesische Koordinaten in passende generalisierte Koordinaten</il>
+      <il>Stelle die Lagrange-Funktion in diesen Koordinaten auf</il>
+      <il>Löse die Euler-Lagrange-Gleichungen zweiter Art</il>
+    </ul>
+
+    <h2>Beispiel: Das Fadenpendel</h2>
+    <p>Wie bereits behandelt, sind die Zwangsbedingungen eines ebenes Fadenpendels gegeben durch</p>
+    $$z(t)=0\,\, x^2+y^2-l^2=0.$$
+    <p>Wir wählen Polarkoordinaten mit $\rho=l$ und $z=0$. Es gilt:</p>
+    $$\vec{r}=\begin{pmatrix}
+    l\sin\phi\\
+    l\cos\phi\\
+    0
+    \end{pmatrix}.$$
+    <p>Hierbei ist $\phi$ der einzige Freiheitsgrad des Systems. Die Ableitung lautet</p>
+    $$\dot{\vec{r}}=\begin{pmatrix}
+    l\dot \phi\cos\phi\\
+    -l\dot\phi\sin\phi\\
+    0
+    \end{pmatrix}.$$
+    <p>Für die Lagrange-Funktion gilt damit:</p>
+    \begin{align}
+    \mathcal{L}&=T-V=\frac{1}{2}m\vec{r}^2-mgy\\
+    &= \frac{1}{2}ml^2\dot \phi^2+mgl\cos\phi.
+    \end{align}
+    <p>Mit der Euler-Lagrange-Gleichung ergibt sich schließlich</p>
+    \begin{align}
+    \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial\dot\phi}-\frac{\partial \mathcal{L}}{\partial \phi}=0.
+    \end{align
+    <p>Einsetzen ergibt schließlich</p>
+    \begin{align}
+    \frac{\mathrm{d}}{\mathrm{d}t}(ml^2\dot\phi)+mgl\sin\phi=0\Leftrightarrow ml^2\ddot\phi=-mgl\sin\phi.
+    \end{align}
+    <p>Für kleine Winkel nähern wir $\sin\phi\approx \phi$ und erhalten die bekannte Bewegungsgleichung</p>
+    $$\ddot \phi=-\frac{g}{l}\phi.$$
+
   </div>
         <div id="disqus_thread"></div>
 <script>
